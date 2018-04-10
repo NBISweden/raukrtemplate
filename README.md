@@ -14,7 +14,7 @@ This package can be installed from R/RStudio as follows:
 install.packages("devtools")
 
 # install this package from GitHub
-devtools::install_github("royfrancis/RaukR")
+devtools::install_github("NBISweden/pkg-RaukR")
 ```
 
 Other supporting packages may be automatically installed, otherwise install manually:
