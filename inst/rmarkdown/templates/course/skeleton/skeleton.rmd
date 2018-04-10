@@ -1,0 +1,109 @@
+---
+output:
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    theme: united
+    highlight: tango
+    df_print: paged
+    code_folding: hide
+    self_contained: false
+    keep_md: false
+    encoding: 'UTF-8'
+    css: ./assets/course.css
+---
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE,results='hide'}
+## REPORT OPTIONS
+## code relating to the report creation
+## default working directory is the location of this document
+## all code is run in the working directory as the root
+
+# remove all variables
+rm(list=ls())
+
+# load libraries for document creation
+library(knitr) # runs pandoc
+library(bookdown) # for markdown
+library(captioner) # for table and figure captions
+
+# prepare captions
+tc <- captioner::captioner(prefix="<b>Tab. </b>")
+fc <- captioner::captioner(prefix="<b>Fig. </b>")
+
+# set knit options
+opts_knit$set(progress=TRUE,verbose=TRUE)
+opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=TRUE,warning=FALSE,message=FALSE)
+```
+
+```{r,echo=FALSE,results='hide'}
+## LIBRARIES AND VARIABLES
+# load the packages you need
+
+#library(ggplot2)
+#library(tidyverse)
+
+#colours
+rv_col_dark <- "#125687"
+rv_col_light <- "#e7eef3"
+rv_year <- 2018
+```
+
+<img src="./assets/logo_60.png" alt="logo_raukr" style="height:70px; position:absolute; top:1em; right:0; padding-right:40px; margin-top:7px">
+
+<h3 class="toc-ignore rtitle">`r paste0("RaukR ",rv_year)`</h3>
+<h1 class="toc-ignore rstitle">Introduction to Some Fancy Analyses</h1>
+<h4 class="toc-ignore">`r format(Sys.Date(),format="%d-%b-%Y")`</h4>
+<h4 class="toc-ignore">Your Name</h4>
+
+---
+
+<p class="abstract">
+This is the course work material for RaukR `r rv_year`. Your can write general instructions here.
+</p>
+
+---
+
+# R Markdown
+
+* This is an R Markdown presentation. 
+* Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
+
+```{r,echo=TRUE,eval=FALSE}
+This is R code.
+```
+
+# R Output  
+
+```{r,echo=TRUE}
+data(iris)
+str(iris)
+```
+
+# Session Info
+
+* For R Markdown, see <http://rmarkdown.rstudio.com> and <https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html>
+
+This document has been created in RStudio using R Markdown and related packages. For details about the OS, packages and versions, see detailed information below: 
+
+```{r}
+sessionInfo()
+```
+
+---
+
+<div style="padding-bottom: 1.5em">
+<span style="float:left; vertical-align:middle">
+<b>`r format(Sys.Date(),format="%Y")`</b> | [SciLifeLab](https://www.scilifelab.se/) > [NBIS](https://nbis.se/) > [RaukR](https://nbisweden.github.io/workshop-RaukR-1806/)
+</span>
+<span style="float:right; vertical-align:middle">
+<span class="footericon" style="padding-right:4px; padding-left:4px">
+<a href="https://nbisweden.github.io/workshop-RaukR-1806/"><img src="./assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a>
+</span>
+<span class="footericon" style="padding-right:4px; padding-left:4px">
+<a href="https://twitter.com/hashtag/RaukR?src=hash"><img src="./assets/icons8-twitter-26.png" alt="twitter" border="0" style="height:15px"></a>
+</span>
+</span>
+</div>
