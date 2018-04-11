@@ -1,9 +1,9 @@
-![](./inst/rmarkdown/templates/course/skeleton/assets/logo_96.png)
+
+<img src="docs/assets/logo.svg" align="right" width="96" height="96">
 
 # RaukR
 
 This is an R package for the RaukR R course. This package contains presentation and coursework R Markdown templates.
-
 
 ## Installation  
 
@@ -17,10 +17,10 @@ install.packages("devtools")
 devtools::install_github("NBISweden/RaukR")
 ```
 
-Other supporting packages may be automatically installed, otherwise install manually:
+Supporting packages should install automatically, otherwise install manually:
 
 ```
-# for reports
+# general
 install.packages("knitr","markdown","rmarkdown")
 
 # for course template
@@ -30,13 +30,21 @@ install.packages("captioner","bookdown")
 install.packages("xaringan")
 ```
 
+The standard templates are to be used for preparing your own material. The 'demo' template contains detailed examples of R Markdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several extra R packages listed below. If you just want to view the rendered demo output and not render it yourself, see section 'Rendering' below.
+
+```
+install.packages(c("bsplus","dplyr", "tidyr", "stringr", "kableExtra", 
+"formattable", "DT", "highcharter", "plotly","ggiraph", "dygraphs",
+"networkD3", "leaflet", "crosstalk"))
+```
+
 ## Course Template  
 
-The coursework template for use can be accessed from within RStudio as shown below. Use this to prepare your own course work material/workshop.
+The course template for use can be accessed from within RStudio as shown below. Use this to prepare your own course work material/workshop.
 
 `File > New File > R Markdown... > From Template > RaukR Course Template`
 
-For full demo, use the template below. The demo template contains detailed examples of R Markdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several extra R packages which needs to be installed. These are listed at the beginning of the template itself. If you just want to view the demo, see section 'Rendering' below.
+For demo, use the template below. 
 
 `File > New File > R Markdown... > From Template > RaukR Course Demo`
 
@@ -46,18 +54,16 @@ The presentation template for use can be accessed from within RStudio as shown b
 
 `File > New File > R Markdown... > From Template > RaukR Presentation Template`
 
-For full demo, use the template below. The demo template contains detailed examples of R Markdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several extra R packages which needs to be installed. These are listed at the beginning of the template itself. If you just want to view the demo, see section 'Rendering' below.
+For demo, use the template below.
 
 `File > New File > R Markdown... > From Template > RaukR Presentation Demo`
 
-The presentation is based on the [`xaringen`](https://github.com/yihui/xaringan) R package which is a wrapper around javascript presentation library [remark.js](https://github.com/gnab/remark).
-
 ## Rendering
 
-Once you have created your own `.rmd` file based on the template and saved to a suitable location, the `.rmd` document can be rendered to HTML by running the below in the document directory. 
+Once you have created your own `.Rmd` file based on the template and saved to a suitable location, the `.Rmd` document can be rendered to HTML by running the below in the document directory. 
 
 ```
-rmarkdown::render("your-file-name.rmd")
+rmarkdown::render("your-file-name.Rmd")
 ```
 
 Note the `assets` directory or any other supporting directories such as `your-file-name_files` must not be deleted. They must be provided when sharing the HTML document. The final HTML document is NOT standalone. It is dependent on the child directories.
@@ -66,29 +72,33 @@ To view example of rendered HTML content, go [here](https://NBISweden.github.io/
 
 ## Tips & Tricks
 
-+ General chunk options are set at the beginning `opts_chunk$set()`
-+ If you want to add your own content (images, data etc), add to `./assets/` or a new directory
+### Common
 
-### Course Template
-
-+ Set the title here: `<h1 class="toc-ignore rstitle">Introduction to Some Fancy Analyses</h1>`
-+ Set the author name here: `<h4 class="toc-ignore">Your Name</h4>`
-+ Best if you don't edit the YAML matter and the bottom HTML footer.
+* For `your-report.Rmd`, add your own content to a new directory called `your-report_assets`
+* Set the title in YAML: `title: "Introduction to Some Fancy Analyses"`
+* Set a subtitle if required: `subtitle: "A subtitle, if required"`
+* Set the author name: `author: Your Name`
+* The date is automatically added
+* If you want to add your own CSS: `css: ["./assets/course.css","your-styles.css"]`
+* Best if you don't edit other YAML matter
+* Use `.pull-left-50[<content>]` to create 50% left column
+* Similarly, there is `.pull-left-40[]` and `.pull-left-30[]`. Same for right
 
 ### Presentation Template
 
-+ Set title, subtitle and your name in the top YAML
-+ Replace 'cover.jpg' to change cover slide picture
-+ Replace 'end.jpg' to change end slide picture
-+ Many standard R Markdown (Pandoc) do not work in xaringen/remarkjs slides
-+ The [remarkjs wiki](https://github.com/gnab/remark/wiki) is good source of help
-+ Name slides using the syntax below. This can be used to hyperlink from another slide
+* Replace 'assets/cover.jpg' to change cover slide picture
+* Replace 'assets/end.jpg' to change end slide picture
+* Many standard R Markdown (Pandoc) do not work in xaringen/remarkjs slides
+* Check out [xaringan](https://github.com/yihui/xaringan)
+* The [remarkjs wiki](https://github.com/gnab/remark/wiki) is good source of help
+* Press **H** for keyboard shortcut help
+* Fitting content on the slide will be trial and error. Overflow content will be just invisible.
+* Name slides using the syntax below. This can be used to hyperlink from another slide
 
 ```
 ---
 name: intro
 ```
-+ Press **H** for keyboard shortcut help
 
 ## Contact
 

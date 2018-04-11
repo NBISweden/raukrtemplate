@@ -9,8 +9,8 @@ output:
   xaringan::moon_reader:
     encoding: 'UTF-8'
     self_contained: false
-    chakra: './assets/remark-latest.min.js'
-    css: './assets/presentation.css'
+    chakra: 'assets/remark-latest.min.js'
+    css: 'assets/presentation.css'
     lib_dir: libs
     nature:
       ratio: '4:3'
@@ -24,7 +24,7 @@ output:
 class: spaced 
 
 ```{r setup,include=FALSE}
-knitr::opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=FALSE,warning=FALSE,message=FALSE)
+opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=FALSE,warning=FALSE,message=FALSE)
 
 # report related
 library(knitr)
@@ -64,7 +64,7 @@ library(crosstalk) # linking plots
 * Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
 * This presentation is a demonstration of the capabilities of the R Markdown environment.
 * In RStudio, you create a `.Rmd` text file, then click the **Knit** button.
-<img src="./assets/knit-button.png" class="fancyimage">
+<img src="assets/knit-button.png" class="fancyimage">
 * `.Rmd` documents can also be rendered as such:
 ```{r,echo=TRUE,eval=FALSE}
 rmarkdown::render("report.Rmd",output_format="html_document")
@@ -119,17 +119,36 @@ name: images
 
 ## Images  
 
-### Using Markdown  
+.pull-left-50[
+### Using Markdown
 
-.left[![Left aligned.](./assets/logo_60.png)]  
-.center[![Center aligned.](./assets/logo_60.png)]  
-.right[![Right aligned.](./assets/logo_60.png)]  
+This image is 30% size.  
+<img src="assets/cover.jpg" style="width: 30%;" />
 
+This image is 30% size, has shadow and corners rounded.  
+<img src="assets/cover.jpg" style="width: 30%;" class="fancyimage" />
+
+This image is 20% size, has shadow and corners rounded.  
+<img src="assets/cover.jpg" style="width: 20%;" class="fancyimage" />
+]
+
+--
+
+.pull-right-50[
 ### Using R  
 
+This image is restricted to a size of 50 pixels.  
+
 ```{r,echo=TRUE,fig.retina=NULL,out.width=50}
-knitr::include_graphics("./assets/logo_60.png")
+knitr::include_graphics("assets/cover.jpg")
 ```
+
+This image is restricted to a size of 200 pixels.  
+
+```{r,echo=TRUE,fig.retina=NULL,out.width=200}
+knitr::include_graphics("assets/cover.jpg")
+```
+]
 
 ---
 name: text-output
@@ -157,14 +176,20 @@ name: math
 
 Some examples of rendering equations.
 
-.pull-left-small[
+.pull-left-40[
+
+### Left Col 40%
+
 $e^{i\pi} + 1 = 0$
 $$\frac{E \times X^2 \prod I}{2+7} = 432$$
 $$\sum_{i=1}^n X_i$$
 $$\int_0^{2\pi} \sin x~dx$$
 ]
 
-.pull-right-large[
+.pull-right-60[
+
+### Right Col 60%
+
 $\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$
 $\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
 ]
@@ -220,7 +245,7 @@ name: plot-static-base
 * Plots using base R are widely used and may be good enough for most situations. 
 * But they lack a consistent coding framework.  
 
-```{r,fig.height=6,fig.width=6}
+```{r,fig.height=5,fig.width=5}
 {plot(x=iris$Sepal.Length,y=iris$Sepal.Width,
       col=c("coral","steelblue","forestgreen")[iris$Species],
       xlab="Sepal Length",ylab="Sepal Width",pch=19)
@@ -235,7 +260,7 @@ name: plot-static-ggplot
 
 R package [`ggplot2`](http://ggplot2.org/) is the most versatile and complete plotting solution in any programming language ever.  
 
-```{r,fig.height=6,fig.width=8}
+```{r,fig.height=5,fig.width=7}
 iris %>%
   ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
   geom_point(size=2)+
@@ -298,9 +323,9 @@ name: plot-interactive-ggiraph
 
 ## Interactive Plots | `ggiraph`  
 
-`ggiraph` is also an R package that can be used to convert a static ggplot2 object into an interactive plot.
+[`ggiraph`](https://github.com/davidgohel/ggiraph) is also an R package that can be used to convert a static ggplot2 object into an interactive plot.
 
-```{r,fig.height=5,fig.width=7}
+```{r,fig.height=4,fig.width=6}
 p <- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
       geom_point_interactive(aes(tooltip=paste0("<b>Petal Length:</b> ",Petal.Length,"\n<b>Sepal Length: </b>",Sepal.Length,"\n<b>Species: </b>",Species)),size=2)+
   theme_bw()
@@ -317,7 +342,7 @@ name: plot-interactive-dygraphs
 
 R package [`dygraphs`](http://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.  
 
-```{r,fig.height=6,fig.width=9}
+```{r,fig.height=4,fig.width=7}
 lungDeaths <- cbind(ldeaths, mdeaths, fdeaths)
 dygraph(lungDeaths,main="Deaths from Lung Disease (UK)") %>%
   dyOptions(colors=c("#66C2A5","#FC8D62","#8DA0CB"))
@@ -334,7 +359,8 @@ R package `networkD3` allows the use of interactive network graphs from the [D3.
 data(MisLinks,MisNodes)
 forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
              Target="target",Value="value",NodeID="name",
-             Group="group",opacity=0.4)
+             Group="group",opacity=0.4,
+             height=500,width=600)
 ```
 
 ---
@@ -345,7 +371,7 @@ name: plot-interactive-leaflet
 R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).  
 
 ```{r}
-leaflet(height=500,width=700) %>% 
+leaflet(height=450,width=650) %>% 
   addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
   #addProviderTiles(providers$Esri.NatGeoWorldMap) %>%
   addMarkers(lat=57.639327,lng=18.288534,popup="RaukR") %>%
@@ -357,7 +383,7 @@ name: plot-interactive-crosstalk
 
 ## Linking Plots | `crosstalk`
 
-R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows `crosstalk` enabled plotting libraries to be linked. Through the shared 'key' variable, data points can be manipulated simultaneously on two independent plots.
+R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows crosstalk enabled plotting libraries to be linked. Through the shared 'key' variable, data points can be manipulated simultaneously on two independent plots.
 
 ```{r,fig.height=4,message=FALSE,warning=FALSE}
 shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])

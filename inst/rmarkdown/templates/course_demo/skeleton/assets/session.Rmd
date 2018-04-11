@@ -1,0 +1,9 @@
+# Session Info
+
+* This document has been created in RStudio using R Markdown and related packages.
+* For R Markdown, see <http://rmarkdown.rstudio.com>
+* For details about the OS, packages and versions, see detailed information below: 
+
+```{r,echo=TRUE}
+sessionInfo()
+```

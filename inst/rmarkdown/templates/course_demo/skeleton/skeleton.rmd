@@ -1,4 +1,8 @@
 ---
+title: "Course Demo"
+subtitle: "Demonstration of R Markdown Course Template"
+author: "Your Name"
+date: "`r format(Sys.Date(),format='%d-%b-%Y')`"
 output:
   bookdown::html_document2:
     toc: true
@@ -11,39 +15,13 @@ output:
     code_folding: hide
     self_contained: false
     keep_md: false
-    encoding: 'UTF-8'
-    css: ./assets/course.css
+    encoding: "UTF-8"
+    css: ["assets/course.css"]
 ---
 
 ```{r,echo=FALSE,message=FALSE,warning=FALSE,results='hide'}
-## REPORT OPTIONS
-## code relating to the report creation
-## default working directory is the location of this document
-## all code is run in the working directory as the root
-
-# remove all variables
-rm(list=ls())
-
-# load libraries for document creation
-library(knitr) # runs pandoc
-library(bookdown) # for markdown
-library(captioner) # for table and figure captions
-#library(extrafont) # for custom font
-#font_import(pattern="Gidole",prompt=FALSE) # font related windows
-#loadfonts(device="win") # font related windows
-# font used in plots
-# basefont <- "Roboto"  # font related windows
-# windowsFonts(sans=basefont)  # font related windows
-# windowsFonts(serif=basefont)  # font related windows
-
-# prepare captions
-tc <- captioner::captioner(prefix="<b>Tab. </b>")
-fc <- captioner::captioner(prefix="<b>Fig. </b>")
-
-# set knit options
-opts_knit$set(progress=TRUE,verbose=TRUE)
-opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=TRUE,warning=FALSE,message=FALSE)
-#options(knitr.table.format = "html") 
+# run setup code
+source("assets/setup.R")
 ```
 
 ```{r,echo=FALSE,results='hide'}
@@ -87,20 +65,14 @@ theme_report <- function (basesize=12,font="Roboto") {
 #colours
 rv_col_dark <- "#125687"
 rv_col_light <- "#e7eef3"
-rv_year <- 2018
 ```
 
-<img src="./assets/logo_60.png" alt="logo_raukr" style="height:70px; position:absolute; top:1em; right:0; padding-right:40px; margin-top:7px">
-
-<h3 class="toc-ignore rtitle">`r paste0("RaukR ",rv_year)`</h3>
-<h1 class="toc-ignore rstitle">Introduction to Some Fancy Analyses</h1>
-<h4 class="toc-ignore">`r format(Sys.Date(),format="%d-%b-%Y")`</h4>
-<h4 class="toc-ignore">Your Name</h4>
+<img src="assets/logo.svg" alt="logo_raukr" class="trlogo">
 
 ---
 
 <p class="abstract">
-This is the course work material for RaukR `r rv_year`. Your can write general instructions here.
+This is the course work material for RaukR 2018. Your can write general instructions here. This font is slightly larger and the line spacing is larger as well.
 </p>
 
 ---
@@ -111,7 +83,7 @@ This is the course work material for RaukR `r rv_year`. Your can write general i
 * Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
 * This presentation is a demonstration of the capabilities of the R Markdown environment.
 * In RStudio, you create a `.Rmd` text file, then click the **Knit** button.
-<img src="./assets/knit-button.png" class="fancyimage">
+<img src="assets/knit-button.png" class="fancyimage">
 * `.Rmd` documents can also be rendered as such:
 
 ```{r,echo=TRUE,eval=FALSE}
@@ -166,14 +138,14 @@ Use `<div>content</div>` for block content and `<span>content</span>` for inline
 <p class="text-right" style="background-color: aliceblue">This content is aligned right.</p>
 <p class="text-center" style="background-color: aliceblue">This content is aligned center.</p>
 
-<p class="float-left" style="background-color: aliceblue">This content is pulled left.</p>
-<p class="float-right text-center" style="background-color: aliceblue">This content is pulled right and text centered.</p>
+<p class="pull-left-50" style="background-color: aliceblue">This content is pulled left.</p>
+<p class="pull-right-50 text-center" style="background-color: aliceblue">This content is pulled right and text centered.</p>
 
-<p class="float-left-small" style="background-color: aliceblue">This content is pulled left.</p>
-<p class="float-right-large" style="background-color: aliceblue">This content is pulled right.</p>
+<p class="pull-left-30" style="background-color: aliceblue">This content is pulled left.</p>
+<p class="pull-right-70" style="background-color: aliceblue">This content is pulled right.</p>
 
-<p class="float-left-large" style="background-color: aliceblue">This content is pulled left.</p>
-<p class="float-right-small" style="background-color: aliceblue">This content is pulled right.</p>
+<p class="pull-left-70" style="background-color: aliceblue">This content is pulled left.</p>
+<p class="pull-right-30" style="background-color: aliceblue">This content is pulled right.</p>
 
 ## Links and Code  
 
@@ -203,29 +175,29 @@ genome `sacCer3/R64-1-1`. Three different mapping protocols were used.
 # Images  
 ## Using Markdown  
 
-![tiny-logo](./assets/logo_60.png)   
+![tiny-logo](assets/logo.svg){width=5%}   
 
 This image is 50% size.  
-<img src="./assets/cover.jpg" style="width: 50%;" />
+<img src="assets/htmlwidgets.png" style="width: 50%;" />
 
 This image is 50% size, has shadow and corners rounded.  
-<img src="./assets/cover.jpg" style="width: 50%;" class="fancyimage" />
+<img src="assets/htmlwidgets.png" style="width: 50%;" class="fancyimage" />
 
 This image is 25% size, has shadow and corners rounded.  
-<img src="./assets/cover.jpg" style="width: 25%;" class="fancyimage" />
+<img src="assets/htmlwidgets.png" style="width: 25%;" class="fancyimage" />
 
 ## Using R  
 
-This image is restricted to a size of 50 pixels.  
+This image is restricted to a size of 100 pixels.  
 
-```{r,echo=TRUE,fig.retina=NULL,out.width=50}
-knitr::include_graphics("./assets/logo_60.png")
+```{r,echo=TRUE,fig.retina=NULL,out.width=100}
+knitr::include_graphics("assets/htmlwidgets.png")
 ```
 
 This image is restricted to a size of 300 pixels.  
 
 ```{r,echo=TRUE,fig.retina=NULL,out.width=300}
-knitr::include_graphics("./assets/cover.jpg")
+knitr::include_graphics("assets/htmlwidgets.png")
 ```
 
 # R Output  
@@ -246,6 +218,11 @@ $$\int_0^{2\pi} \sin x~dx$$
 $\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$
 $\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
 $\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
+
+```{r,echo=FALSE}
+bs_accordion(id="answer1") %>%
+  bs_append(title="Answer", content="The answer is bla bla.")
+```
 
 # R tables  
 ## Paged  
@@ -466,29 +443,11 @@ htmltools::div(lf,py)
 
 Total size is 70 GB.
 
-# Session Info
-
-* For more interactive graphics in R, go to <https://www.htmlwidgets.org/>
-* For R Markdown, see <http://rmarkdown.rstudio.com> and <https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html>
-
-This document has been created in RStudio using R Markdown and related packages. For details about the OS, packages and versions, see detailed information below: 
-
-```{r}
-sessionInfo()
+```{r, echo=FALSE, child="assets/session.Rmd"}
 ```
 
----
+```{r, echo=FALSE, child="assets/build.Rmd"}
+```
 
-<div style="padding-bottom: 1.5em">
-<span style="float:left; vertical-align:middle">
-<b>`r format(Sys.Date(),format="%Y")`</b> | [SciLifeLab](https://www.scilifelab.se/) > [NBIS](https://nbis.se/) > [RaukR](https://nbisweden.github.io/workshop-RaukR-1806/)
-</span>
-<span style="float:right; vertical-align:middle">
-<span class="footericon" style="padding-right:4px; padding-left:4px">
-<a href="https://nbisweden.github.io/workshop-RaukR-1806/"><img src="./assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a>
-</span>
-<span class="footericon" style="padding-right:4px; padding-left:4px">
-<a href="https://twitter.com/hashtag/RaukR?src=hash"><img src="./assets/icons8-twitter-26.png" alt="twitter" border="0" style="height:15px"></a>
-</span>
-</span>
-</div>
+```{r, echo=FALSE, child="assets/footer.Rmd"}
+```

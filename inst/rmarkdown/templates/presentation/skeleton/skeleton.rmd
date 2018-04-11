@@ -9,8 +9,8 @@ output:
   xaringan::moon_reader:
     encoding: 'UTF-8'
     self_contained: false
-    chakra: './assets/remark-latest.min.js'
-    css: './assets/presentation.css'
+    chakra: 'assets/remark-latest.min.js'
+    css: 'assets/presentation.css'
     lib_dir: libs
     nature:
       ratio: '4:3'
@@ -23,13 +23,9 @@ output:
 ---
 class: spaced 
 
-```{r setup,include=FALSE}
-opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=FALSE,warning=FALSE,message=FALSE)
-
-# report related
-library(knitr)
-library(markdown)
-library(rmarkdown)
+```{r,echo=FALSE,message=FALSE,warning=FALSE,results='hide'}
+# run setup code
+source("assets/setup.R")
 ```
 
 ```{r,echo=FALSE,message=FALSE,warning=FALSE}

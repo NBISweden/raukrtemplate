@@ -1,0 +1,4 @@
+
+<p style="text-align: left; font-size: small;">
+Page built on: <i class="fa fa-calendar" aria-hidden="true"></i> `r format(Sys.time(),format='%d-%b-%Y')` at <i class="fa fa-clock-o" aria-hidden="true"></i> `r format(Sys.time(),format='%X')`.
+</p>

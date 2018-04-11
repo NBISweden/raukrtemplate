@@ -1,4 +1,21 @@
+RaukR 1.0.1
+===========
+* 11-Apr-2018
+* updated README.md
+* course: setup R code in template moved to ./assets/setup.R
+* course: sessioninfo section in template moved to ./assets/session.Rmd
+* course: doc build date and time added to to ./assets/build.Rmd
+* course: template footer moved to ./assets/footer.html
+* course: PNG logo replaced with SVG
+* course: fixed logo overlapping with title
+* course: updated css style
+* presentation: border removed from inline code style
+* presentation: cover title colour changed to blue
+* presentation: PNG logo replaced with SVG
+* presentation: fixed logo overlapping with title
+* presentation: updated css style
+
 RaukR 1.0.0
 ===========
 * 10-Apr-2018
-* Created the package with course and presentation rmarkdown templates
+* created the package with course and presentation rmarkdown templates

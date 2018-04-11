@@ -5,17 +5,24 @@
 /* FONTS -------------------------------------------------------------------- */
 /*@import url("https://fonts.googleapis.com/css?family=Roboto");*/
 
+:root {
+  --primary-color: #125687;
+  --border-col: #375D81;
+  --text-color: #1A1A1A;
+  --code-bg-col: #F2F2F2;
+}
+
 /* body font */
 body {
   font-size: 16px;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #1A1A1A;
+  color: var(--text-color);
 }
 
 /* heading font */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #1A1A1A;
+  color: var(--text-color);
 }
 
 /* heading sizes */
@@ -43,25 +50,41 @@ h6 {
   font-size: 1.2rem;
 }
 
+blockquote  {
+    background: var(--code-bg-col);
+    border-left: 5px solid #ddd;
+}
+
 /* report title style */
-.rtitle {
-  margin-top: 1.2em;
+.title {
   margin-bottom: 0.5em;
+  margin-right: 70px;
 }
 
 /* report subtitle style */
-.rstitle {
+.subtitle {
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+/* report subtitle style */
+.author {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+/* report subtitle style */
+.date {
+  margin-top: 0.3em;
 }
 
 /* link colour: raukr */
 a {
-  color: #125687;
+  color: var(--primary-color);
 }
 
 a:hover {
-  color: #125687;
+  color: var(--primary-color);
   opacity: 0.6;
   text-decoration: underline;
 }
@@ -73,7 +96,7 @@ code {
 }
 
 pre {
-    background-color: #F2F2F2;
+    background-color: var(--code-bg-color);
 }
 
 /* abstract paragraph style */
@@ -90,7 +113,7 @@ pre {
 
 /* table even shading colour */
 .even {
-    background-color: #F2F2F2;
+    background-color: var(--code-bg-color);
 }
 
 /* IMAGES ------------------------------------------------------------------- */
@@ -106,26 +129,42 @@ img {
   border-radius: 2px;
 }
 
+.trlogo {
+  position:absolute;
+  height:70px;
+  top:2.5em;
+  right:0;
+  padding-right:40px;
+  margin-top:7px;
+}
+
 /* LAYOUT ------------------------------------------------------------------- */
 
 /* floating bar highlight */
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
-  background-color: #125687;
-  border-color: #375D81;
+  background-color: var(--primary-color);
+  border-color: var(--border-color);
 }
 
 /* button */
 .btn-primary {
-  background-color: #125687;
-  border-color: #375D81;
+  background-color: var(--primary-color);
+  border-color: var(--border-color);
   margin-top: 0.5em;
   margin-bottom: 0.3em;
 }
 
 /* button active states */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .open>.dropdown-toggle.btn-primary {
-    background-color: #5988ab;
-    border-color: #375D81;
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+    opacity: 0.8;
+}
+
+/* panel */
+.panel-default>.panel-heading, .panel-primary>.panel-heading {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 /* hover effect footer icons */
@@ -148,30 +187,68 @@ img {
   text-align: center;
 }
 
-/* float 50% width */
-.float-right {
-  width: 50%;
+/* float 50%-50% width */
+.pull-right-50 {
+  width: 49%;
   float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
-.float-left {
-  width: 50%;
+.pull-left-50 {
+  width: 49%;
   float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
 
 /* float 30% 70% width */
-.float-right-small {
-  width: 30%;
+.pull-right-30 {
+  width: 29%;
   float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
-.float-right-large {
-  width: 70%;
+.pull-right-70 {
+  width: 69%;
   float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
-.float-left-small {
-  width: 30%;
+.pull-left-30 {
+  width: 29%;
   float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
-.float-left-large {
-  width: 70%;
+.pull-left-70 {
+  width: 69%;
   float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+
+/* float 40% 60% width */
+.pull-right-40 {
+  width: 39%;
+  float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-right-60 {
+  width: 59%;
+  float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-left-40 {
+  width: 39%;
+  float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-left-60 {
+  width: 59%;
+  float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }

@@ -2,11 +2,18 @@
 /* Xaringen, remark.js                  */
 /* 2018 Roy Francis                     */
 
+:root {
+  --primary-color: #125687;
+  --border-col: #375D81;
+  --text-color: #1A1A1A;
+  --code-bg-col: #f1f1f1;
+}
+
 /* FONTS -------------------------------------------------------------------- */
 /* body font family 90% black */
 body,p,h1,h2,h3,h4,h5,h6 { 
   font-family: 'Roboto', 'DIN', 'Helvetica', sanserif;
-  color: #1A1A1A;
+  color: var(--text-color);
 }
 
 /* title font family, weight and size 60% black*/
@@ -55,16 +62,16 @@ h6 {
 
 /* code font size */
 .remark-code{
-  font-size: 90% !important;
+  font-size: 80% !important;
   border-radius: 2px;
 }
 
 /* code inline */
 .remark-inline-code{
-  /* background: #F5F5F5;  lighter */
-  /* background: #e7e8e2; darker */
+  /* background: var(--code-bg-color);  lighter */
   border-radius: 3px;
-  border: 1px solid #e1e1e8;
+  /* border: 1px solid #e1e1e8; */
+  margin-right: 2px;
   padding: 2px 4px;
   font-size: 80% !important;
   color: #d14;
@@ -83,10 +90,10 @@ h6 {
 
 /* link colour */
 a {
-  color: #125687;
+  color: var(--primary-color);
 }
 a:hover {
-  color: #125687;
+  color: var(--primary-color);
   opacity: 0.6;
   text-decoration: underline;
 }
@@ -113,7 +120,10 @@ a:hover {
 }
 
 .title-slide.remark-slide-content:before{
-  content:url(logo_96.png);
+  position: absolute;
+  content:url(logo.svg);
+  height:96px;
+  width:96px;
   -webkit-filter: drop-shadow(1px 1px 3px grey);
   filter: drop-shadow(1px 1px 3px grey);
 }
@@ -126,10 +136,11 @@ a:hover {
 .title-slide h1 {
   text-align: left;
   font-weight: 600;
-  border-bottom-style: solid; 
-  border-bottom-color: #125687;
+  border-bottom-style: solid;
+  border-bottom-color: var(--primary-color);
   padding-bottom: 0.3em;
   margin-bottom: 0.3em;
+  color: var(--primary-color);
 }
 
 .title-slide h2 {
@@ -167,6 +178,7 @@ a:hover {
 /* set images to 100% width */
 img, video, iframe {
   max-width: 100%;
+  margin: 8px;
 }
 
 /* image styling */
@@ -177,8 +189,10 @@ img, video, iframe {
 
 /* logo every slide top right */
 .remark-slide-content:before {
-  content:url(logo_60.png);
-  position: absolute;
+  content:url(logo.svg);
+  height:60px;
+  width:60px;
+  float: right;
   right: 4em;
   top: 1em;
 }
@@ -206,41 +220,67 @@ img, video, iframe {
   width: 100%;
 }
 
-/* float 49%-49% width */
-.pull-right {
+/* float 50%-50% width */
+.pull-right-50 {
   width: 49%;
   float: right;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-.pull-left {
+.pull-left-50 {
   width: 49%;
   float: left;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
 
-/* float 29% 69% width */
-.pull-right-small {
+/* float 30% 70% width */
+.pull-right-30 {
   width: 29%;
   float: right;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-.pull-right-large {
+.pull-right-70 {
   width: 69%;
   float: right;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-.pull-left-small {
+.pull-left-30 {
   width: 29%;
   float: left;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-.pull-left-large {
+.pull-left-70 {
   width: 69%;
+  float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+
+/* float 40% 60% width */
+.pull-right-40 {
+  width: 39%;
+  float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-right-60 {
+  width: 59%;
+  float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-left-40 {
+  width: 39%;
+  float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-left-60 {
+  width: 59%;
   float: left;
   margin-right: 0.5%;
   margin-left: 0.5%;

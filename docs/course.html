@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Your Name" />
+
+
+<title>Introduction To Some Fancy Analyses</title>
+
+<script src="course_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="course_files/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="course_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="course_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="course_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="course_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="course_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="course_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="course_files/navigation-1.1/tabsets.js"></script>
+<script src="course_files/navigation-1.1/codefolding.js"></script>
+<link href="course_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="course_files/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+div.sourceCode {
+  overflow-x: visible;
+}
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="assets\course.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Introduction To Some Fancy Analyses</h1>
+<h3 class="subtitle"><em>A subtitle, if required</em></h3>
+<h4 class="author"><em>Your Name</em></h4>
+<h4 class="date"><em>11-Apr-2018</em></h4>
+
+</div>
+
+
+<p><img src="assets/logo.svg" alt="logo_raukr" class="trlogo"></p>
+<hr />
+<p class="abstract">
+This is the course work material for RaukR 2018. Your can write general instructions here. This font is slightly larger and the line spacing is larger as well.
+</p>
+<hr />
+<div id="r-markdown" class="section level1">
+<h1><span class="header-section-number">1</span> R Markdown</h1>
+<ul>
+<li>This is an R Markdown presentation.</li>
+<li>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">This is R code.</code></pre></div>
+</div>
+<div id="r-output" class="section level1">
+<h1><span class="header-section-number">2</span> R Output</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(iris)
+<span class="kw">str</span>(iris)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+<div id="session-info" class="section level1">
+<h1><span class="header-section-number">3</span> Session Info</h1>
+<ul>
+<li>This document has been created in RStudio using R Markdown and related packages.</li>
+<li>For R Markdown, see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a></li>
+<li>For details about the OS, packages and versions, see detailed information below:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sessionInfo</span>()</code></pre></div>
+<pre><code>## R version 3.4.0 (2017-04-21)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 7 x64 (build 7601) Service Pack 1
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United Kingdom.1252 
+## [2] LC_CTYPE=English_United Kingdom.1252   
+## [3] LC_MONETARY=English_United Kingdom.1252
+## [4] LC_NUMERIC=C                           
+## [5] LC_TIME=English_United Kingdom.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] markdown_0.8           gdtools_0.1.6          bindrcpp_0.2          
+##  [4] crosstalk_1.0.0        leaflet_1.1.0          networkD3_0.4         
+##  [7] dygraphs_1.1.1.4       ggiraph_0.4.2          plotly_4.7.1          
+## [10] highcharter_0.5.0.9999 DT_0.4                 formattable_0.2.0.1   
+## [13] kableExtra_0.7.0       htmltools_0.3.6        htmlTable_1.11.2      
+## [16] bsplus_0.1.1           forcats_0.2.0          stringr_1.2.0         
+## [19] dplyr_0.7.4            purrr_0.2.4            readr_1.1.1           
+## [22] tidyr_0.8.0            tibble_1.4.2           ggplot2_2.2.1         
+## [25] tidyverse_1.2.1        captioner_2.2.3        bookdown_0.7          
+## [28] rmarkdown_1.9          knitr_1.20            
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-131        xts_0.10-1          lubridate_1.7.2    
+##  [4] RColorBrewer_1.1-2  httr_1.3.1          rprojroot_1.3-2    
+##  [7] tools_3.4.0         backports_1.1.2     R6_2.2.2           
+## [10] lazyeval_0.2.1      colorspace_1.3-2    mnormt_1.5-5       
+## [13] curl_3.1            compiler_3.4.0      cli_1.0.0          
+## [16] rvest_0.3.2         Cairo_1.5-9         xml2_1.2.0         
+## [19] officer_0.2.2       labeling_0.3        scales_0.5.0       
+## [22] checkmate_1.8.5     psych_1.7.8         digest_0.6.15      
+## [25] foreign_0.8-69      R.utils_2.6.0       base64enc_0.1-3    
+## [28] pkgconfig_2.0.1     highr_0.6           rvg_0.1.8          
+## [31] htmlwidgets_1.0     rlang_0.1.6         readxl_1.0.0       
+## [34] TTR_0.23-3          xaringan_0.6        rstudioapi_0.7     
+## [37] quantmod_0.4-12     shiny_1.0.5         bindr_0.1          
+## [40] zoo_1.8-1           jsonlite_1.5        zip_1.0.0          
+## [43] R.oo_1.21.0         magrittr_1.5        rlist_0.4.6.1      
+## [46] Rcpp_0.12.15        munsell_0.4.3       R.methodsS3_1.7.1  
+## [49] stringi_1.1.6       yaml_2.1.16         plyr_1.8.4         
+## [52] grid_3.4.0          parallel_3.4.0      crayon_1.3.4       
+## [55] lattice_0.20-35     haven_1.1.1         hms_0.4.1          
+## [58] pillar_1.1.0        igraph_1.1.2        uuid_0.1-2         
+## [61] reshape2_1.4.3      glue_1.2.0          evaluate_0.10.1    
+## [64] data.table_1.10.4-3 modelr_0.1.1        httpuv_1.3.5       
+## [67] cellranger_1.1.0    gtable_0.2.0        assertthat_0.2.0   
+## [70] xfun_0.1            mime_0.5            xtable_1.8-2       
+## [73] broom_0.4.3         viridisLite_0.3.0</code></pre>
+<p style="text-align: left; font-size: small;">
+Page built on: <i class="fa fa-calendar" aria-hidden="true"></i> 11-Apr-2018 at <i class="fa fa-clock-o" aria-hidden="true"></i> 21:33:18.
+</p>
+<hr/>
+<div style="padding-bottom: 1.5em">
+<p><span style="float:left; vertical-align:middle"> <b>2018</b> | <a href="https://www.scilifelab.se/">SciLifeLab</a> &gt; <a href="https://nbis.se/">NBIS</a> &gt; <a href="https://nbisweden.github.io/workshop-RaukR-1806/">RaukR</a> </span> <span style="float:right; vertical-align:middle"> <span class="footericon" style="padding-right:4px; padding-left:4px"> <a href="https://nbisweden.github.io/workshop-RaukR-1806/"><img src="assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a> </span> <span class="footericon" style="padding-right:4px; padding-left:4px"> <a href="https://twitter.com/hashtag/RaukR?src=hash"><img src="assets/icons8-twitter-26.png" alt="twitter" border="0" style="height:15px"></a> </span> </span></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
