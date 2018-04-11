@@ -5,7 +5,7 @@ Version: 1.0.0
 Author: Roy Francis
 Maintainer: The package maintainer <roy.m.francis@outlook.com>
 Description: Course and presentation R Markdown templates for RaukR course.
-URL: https://github.com/NBISweden/pkg-RaukR
+URL: https://github.com/NBISweden/RaukR
 Depends:
     R(>= 3.3.0),
     bookdown,
