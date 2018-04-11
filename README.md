@@ -14,7 +14,7 @@ This package can be installed from R/RStudio as follows:
 install.packages("devtools")
 
 # install this package from GitHub
-devtools::install_github("NBISweden/pkg-RaukR")
+devtools::install_github("NBISweden/RaukR")
 ```
 
 Other supporting packages may be automatically installed, otherwise install manually:
@@ -62,7 +62,7 @@ rmarkdown::render("your-file-name.rmd")
 
 Note the `assets` directory or any other supporting directories such as `your-file-name_files` must not be deleted. They must be provided when sharing the HTML document. The final HTML document is NOT standalone. It is dependent on the child directories.
 
-To view example of rendered HTML content, go [here](https://NBISweden.github.io/pkg-RaukR/).
+To view example of rendered HTML content, go [here](https://NBISweden.github.io/RaukR/).
 
 ## Tips & Tricks
 
