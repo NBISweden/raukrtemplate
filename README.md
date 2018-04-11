@@ -81,8 +81,6 @@ To view example of rendered HTML content, go [here](https://NBISweden.github.io/
 * The date is automatically added
 * If you want to add your own CSS: `css: ["./assets/course.css","your-styles.css"]`
 * Best if you don't edit other YAML matter
-* Use `.pull-left-50[<content>]` to create 50% left column
-* Similarly, there is `.pull-left-40[]` and `.pull-left-30[]`. Same for right
 
 ### Presentation Template
 
@@ -93,11 +91,20 @@ To view example of rendered HTML content, go [here](https://NBISweden.github.io/
 * The [remarkjs wiki](https://github.com/gnab/remark/wiki) is good source of help
 * Press **H** for keyboard shortcut help
 * Fitting content on the slide will be trial and error. Overflow content will be just invisible.
+* Use `.pull-left-50[<content>]` to create 50% left column
+* Similarly, there is `.pull-left-40[]` and `.pull-left-30[]`. Same for right
 * Name slides using the syntax below. This can be used to hyperlink from another slide
 
 ```
 ---
 name: intro
+```
+
+* This increases spacing between lines on this slide
+
+```
+---
+class: spaced
 ```
 
 ## Contact
