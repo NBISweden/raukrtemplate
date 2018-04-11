@@ -24,7 +24,7 @@ output:
 class: spaced 
 
 ```{r setup,include=FALSE}
-opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=FALSE,warning=FALSE,message=FALSE)
+knitr::opts_chunk$set(dev="png",dev.args=list(type="cairo"),dpi=96,results="hold",fig.show="hold",fig.align="left",echo=FALSE,warning=FALSE,message=FALSE)
 
 # report related
 library(knitr)
