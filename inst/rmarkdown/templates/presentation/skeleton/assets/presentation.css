@@ -4,9 +4,9 @@
 
 :root {
   --primary-color: #125687;
-  --border-col: #375D81;
+  --border-color: #375D81;
   --text-color: #1A1A1A;
-  --code-bg-col: #f1f1f1;
+  --code-bg-color: #f1f1f1;
 }
 
 /* FONTS -------------------------------------------------------------------- */

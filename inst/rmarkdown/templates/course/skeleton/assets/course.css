@@ -7,9 +7,9 @@
 
 :root {
   --primary-color: #125687;
-  --border-col: #375D81;
+  --border-color: #375D81;
   --text-color: #1A1A1A;
-  --code-bg-col: #F2F2F2;
+  --code-bg-color: #F2F2F2;
 }
 
 /* body font */
@@ -51,7 +51,7 @@ h6 {
 }
 
 blockquote  {
-    background: var(--code-bg-col);
+    background: var(--code-bg-color);
     border-left: 5px solid #ddd;
 }
 
