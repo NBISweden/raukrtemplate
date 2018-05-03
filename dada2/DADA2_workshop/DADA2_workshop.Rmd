@@ -1,0 +1,388 @@
+---
+output:
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    theme: united
+    highlight: tango
+    df_print: paged
+    code_folding: hide
+    self_contained: true
+    keep_md: false
+    encoding: 'UTF-8'
+    css: ./assets/course.css
+---
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE,results='hide'}
+## REPORT OPTIONS
+## code relating to the report creation
+## default working directory is the location of this document
+## all code is run in the working directory as the root
+
+# remove all variables
+rm(list=ls())
+
+# load libraries for document creation
+library(knitr) # runs pandoc
+library(bookdown) # for markdown
+library(captioner) # for table and figure captions
+#library(extrafont) # for custom font
+#font_import(pattern="Gidole",prompt=FALSE) # font related windows
+#loadfonts(device="win") # font related windows
+# font used in plots
+# basefont <- "Roboto"  # font related windows
+# windowsFonts(sans=basefont)  # font related windows
+# windowsFonts(serif=basefont)  # font related windows
+
+# prepare captions
+tc <- captioner::captioner(prefix="<b>Tab. </b>")
+fc <- captioner::captioner(prefix="<b>Fig. </b>")
+
+# set knit options
+opts_knit$set(progress=TRUE,verbose=TRUE)
+opts_chunk$set(dev="CairoPNG",results="hold",fig.show="hold",fig.align="left",echo=TRUE,warning=FALSE,message=FALSE)
+#options(knitr.table.format = "html") 
+```
+
+```{r,echo=FALSE,results='hide'}
+## LIBRARIES AND VARIABLES
+# only load the packages you need
+
+# data handling
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+# tables
+library(kableExtra) # complete table
+library(formattable) # table with conditional formatting
+library(DT) # interactive table
+
+# graphics
+library(ggplot2) # static graphics
+
+# interactive graphics
+library(highcharter)
+library(plotly)
+library(ggiraph) # convert ggplot to interactive
+library(dygraphs) # time series
+library(networkD3) # network graph
+library(leaflet) # interactive maps
+library(crosstalk) # linking plots
+
+# custom ggplot theme
+theme_report <- function (basesize=12,font="Roboto") { 
+    theme_bw(base_size=basesize, base_family=font) %+replace% 
+        theme(
+            panel.border=element_blank(),
+            panel.grid.minor=element_blank(),
+            panel.grid.major.x=element_blank(),
+            legend.position="top",
+            legend.direction="horizontal"
+        )
+}
+
+#colours
+rv_col_dark <- "#125687"
+rv_col_light <- "#e7eef3"
+rv_year <- 2018
+```
+
+<img src="./assets/logo_60.png" alt="logo_raukr" style="height:70px; position:absolute; top:1em; right:0; padding-right:40px; margin-top:7px">
+
+<h3 class="toc-ignore rtitle">`r paste0("RaukR ",rv_year)`</h3>
+<h1 class="toc-ignore rstitle">Analyzing amplicon data using DADA2</h1>
+<h4 class="toc-ignore">`r format(Sys.Date(),format="%d-%b-%Y")`</h4>
+<h4 class="toc-ignore">John Sundh & Marcin Kierczak</h4>
+
+---
+
+<p class="abstract">
+In this workshop we will use the DADA2 pipeline to analyze amplicon sequence datasets. We will use a subset of the samples used in the study by Kraemer et al (2018) **
+[Influence of pig farming on the human's nasal microbiota: The key role of the airborne microbial communities](http://aem.asm.org/content/early/2018/01/08/AEM.02470-17.short?rss=1)**. 
+
+However, if you have data of your own that you would like to analyze feel free to do so and modify the steps here according to your own data.
+
+The code is hidden by default. Click on the 'Code' button on the right side to show the code.
+</p>
+
+---
+
+# Setup
+
+## Loading DADA2
+Load the R package and check the version
+```{r echo=TRUE}
+library(dada2)
+print("DADA2 version:")
+packageVersion("dada2")
+```
+## Download the example data
+The original [Kraemer et al (2018)](http://aem.asm.org/content/early/2018/01/08/AEM.02470-17.short?rss=1) study included 255 samples from 43 pig farmers, 56 pigs and 27 air samples as well as 43 control subjects. For the purpose of this workshop we have scaled the sample number down to 24 total samples. Some general information for these samples are shown below. As you can see there are samples from 9 locations: 3 pig farms, 3 cow farms and 3 for negative controls. Two samples were taken per human individual (anterior and posterior nares).
+
+```{r, eval=TRUE, include=FALSE, echo=TRUE}
+df <- read.table("info/example_subset_info.tsv", sep="\t", header = TRUE)
+datatable(df[,c(9,3,4,11,14,15)], options = list(pageLength=26, order=list(5, 'asc')))
+```
+
+The raw data for these samples can be downloaded from here: [Dropbox link](https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0)
+
+See code below for how to download and unpack the samples from the terminal:
+
+```{bash echo=TRUE, eval=FALSE, include=TRUE}
+curl -o data/example_data.tar.gz -L https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0
+tar -C data -xvf data/example_data.tar.gz
+```
+
+# DADA2 pipeline
+First of all we need to store the names of the sample files. 
+```{r, eval=TRUE}
+path <- paste(getwd(),"data",sep = "/")
+fR1 <- sort(list.files(path, pattern="L1_R1.fastq.gz", full.names = TRUE))
+fR2 <- sort(list.files(path, pattern="L1_R2.fastq.gz", full.names = TRUE))
+```
+
+Let's also extract the sample names from the files.
+```{r, eval=TRUE}
+sample.names <- regmatches(basename(fR1),regexpr("[0-9]+",basename(fR1)))
+head(sample.names)
+```
+
+## Trimming and filtering reads
+DADA2 comes with a function to plot the quality distribution of nucleotides in your reads. Let's take a look at the profiles for the forward and reverse reads of the first sample in our list.
+
+```{r, eval=TRUE}
+plotQualityProfile(c(fR1[1],fR2[1]))
+```
+
+This plot shows the distribution of quality scores for each position in the reads. Darker greyscale indicates a higher count. The green line is the mean and the dashed lines represent the 25th and 75th quantiles. 
+
+Because DADA2 uses quality scores to build the error model so low-quality nucleotides typically seen in Illumina sequencing (especially for the reverse reads as you can see) isn't too much of a problem. However, getting rid of regions with very low quality can make DADA2 more sensitive.
+Also, adapters and primers with ambiguous nucleotides will cause problems so we need to make sure those are removed.
+
+The function `filterAndTrim` in DADA2 can trim reads to a certain length and filter out reads based on expected errors after trimming.
+
+First we'll specify the output directory and file names for the filtered reads:
+```{r, eval=FALSE, include=TRUE}
+filt_path <- file.path(path, "filtered")
+filtfR1 <- file.path(filt_path, paste0(sample.names, "_R1_filt.fastq.gz"))
+filtfR2 <- file.path(filt_path, paste0(sample.names, "_R2_filt.fastq.gz"))
+```
+
+In the study by Kraemer the Methods section in the supplementary material states that:
+
+> Forward reads were trimmed at 200 bp and reverse reads were trimmed at 150 bp to remove low quality regions. The 20 first base pairs and instances of a quality score less than or equal to two were truncated from all reads. Reads (and their respective forward and reverse read) containing ambiguous bases and more than two expected errors were filtered out.
+
+**QUESTION:** How would you use the `filterAndTrim` function to process the reads like the original study? Take a look at the documentation for the function using `help(filterAndTrim)`.
+
+```{r, eval=FALSE, include=TRUE}
+filt_trim <- filterAndTrim(fR1, filtfR1, fR2, filtfR2, truncLen=c(200,150), trimLeft = 20,
+              maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE,
+              compress=TRUE, multithread=TRUE)
+```
+
+## Estimating the error model
+
+The error model used by DADA2 to infer the correct sequences is made up of transition probabilities and is estimated, or *learned*, from the data. This is done with the function `learnErrors`.
+
+```{r, eval=FALSE, include=TRUE}
+error_ratesR1 <- learnErrors(filtfR1, multithread=TRUE)
+error_ratesR2 <- learnErrors(filtfR2, multithread=TRUE)
+```
+
+### Plotting the estimated error rates
+`plotErrors` can be used to plot the observed nucleotide transitions as a function of quality. This is what forms the error model of DADA2. The plot can be used to check how well the error model fits your data. Run the function on the forward and reverse reads. Does the model (the fitted line) seem to match the observed error rates?
+
+```{r, eval=FALSE, include=TRUE}
+plotErrors(error_ratesR1)
+plotErrors(error_ratesR2)
+```
+
+## Dereplication
+In the dereplication step all identical reads are combined and the total abundance of the unique reads is stored. This is done via the `derepFastq` function.
+
+```{r, eval=FALSE, include=TRUE}
+derepR1 <- derepFastq(filtfR1, verbose=TRUE)
+names(derepR1) <- sample.names
+derepR2 <- derepFastq(filtfR2, verbose=TRUE)
+names(derepR2) <- sample.names
+```
+
+## Inferring ASVs
+
+The core algorithm of DADA2 is the sequence variant inference which is done with the aptly named function `dada`. In a paired-end dataset the algorithm is run separately for each read in a fragment.
+
+```{r, eval=FALSE, include=TRUE}
+dadaR1 <- dada(derepR1, err=error_ratesR1, multithread=TRUE)
+dadaR2 <- dada(derepR2, err=error_ratesR2, multithread=TRUE)
+```
+
+### To pool or not to pool
+By default DADA2 infers ASVs separately for each sample in a dataset. However, the `dada(...)` function can be set to take into account information from **all** samples (pooling). By not pooling samples the  computation time and memory requirements are lowered. However, having more information can increase sensitivity of the algorithm. Take a moment to think about why pooling may increase sensitivity, then re-run the ASV inference using pooled samples.
+
+```{r, eval=FALSE, include=TRUE}
+dadaR1_pooled <- dada(derepR1, err=error_ratesR1, multithread=TRUE, pool = TRUE)
+dadaR2_pooled <- dada(derepR2, err=error_ratesR2, multithread=TRUE, pool = TRUE)
+```
+
+### Merging reads
+After ASVs have been inferred for each read the pairs are merged and potential pairs with insufficient overlap or too many mismatches in the overlapping regions are removed.
+
+```{r, eval=FALSE, include=TRUE}
+mergers <- mergePairs(dadaR1, derepR1, dadaR2, derepR2, verbose=TRUE)
+```
+
+### Make sequence table
+When the ASVs have been inferred, DADA2 can create a *sequence table* with counts for each ASV across the provided samples.
+
+```{r, eval=FALSE, include=TRUE}
+seqtab <- makeSequenceTable(mergers)
+```
+
+### Remove chimeras
+DADA2 has now performed error correction on the sequences but *chimeras* may still remain. Chimeric sequences are identified if they can be put together by the left- and right-segment of two more abundant sequences in the data. In the default `consensus` method a sequence is removed if it is flagged as chimeric in a fraction of the samples (`0.9` by default). The original study used the `pooled` strategy instead in which all samples are pooled prior to chimera evaluation.
+
+```{r, eval=FALSE, include=TRUE}
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="pooled", multithread=TRUE, verbose=TRUE)
+```
+
+What proportion of the sequences are chimeras? And how much do these chimeric sequences make up of the total abundance?
+```{r, eval=FALSE, include=TRUE}
+print(1-dim(seqtab.nochim)[2] / dim(seqtab)[2])
+print((1-sum(seqtab.nochim)/sum(seqtab))*100)
+```
+
+### Check sequences throughout the pipeline
+DADA2 also comes with a built-in way to follow the number of sequences through the pipeline.
+```{r, eval=FALSE, include=TRUE}
+getN <- function(x) sum(getUniques(x))
+track <- cbind(filt_trim, sapply(dadaR1, getN), sapply(dadaR2, getN), sapply(mergers, getN), rowSums(seqtab.nochim))
+colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
+```
+
+You should see something like this:
+
+```{r, eval=TRUE, echo=TRUE, include=TRUE}
+track <- read.table("results/track.tsv")
+datatable(track, options = list(pageLength=24))
+```
+
+## Assign taxonomy
+
+DADA2 can assign a taxonomy to the inferred ASVs. Here we'll do it using the formatted data from the Ribosomal Database Project (RDP). For other database see [here](https://benjjneb.github.io/dada2/training.html).
+
+`curl -o data/rdp_species_assignment_16.fa.gz https://zenodo.org/record/801828/files/rdp_species_assignment_16.fa.gz`
+
+`curl -o data/rdp_train_set_16.fa.gz https://zenodo.org/record/801828/files/rdp_train_set_16.fa.gz`
+
+```{r, eval=FALSE, include=TRUE}
+taxa <- assignTaxonomy(seqtab.nochim, "data/rdp_train_set_16.fa.gz", multithread=TRUE)
+```
+
+Add species level assignments.
+
+```{r, eval=FALSE, include=TRUE}
+taxa <- addSpecies(taxa, "data/rdp_species_assignment_16.fa.gz")
+```
+
+# Analysis
+
+## Sample differences ($\beta$ diversity)
+*Beta diversity* refers to the the difference in community composition between samples. We can take the sequence abundance table `seqtab` and plot the dissimilarities in a reduced space using Nonmetric Multidimensional Scaling (NMDS). There are several ways of doing this type of analysis but here we'll use function `metaMDS` from the `vegan` package
+
+```{r, eval=TRUE, include=c(2:8), echo=TRUE}
+seqtab.nochim <- read.table("results/seqtab.nochim.tsv", sep="\t", header=TRUE)
+library(vegan)
+# Transform to proportions
+seqtab.prop <- seqtab.nochim/rowSums(seqtab.nochim)
+mds <- metaMDS(seqtab.prop, k=3)
+df$MDS1 <- mds$points[as.character(df$sample_alias),1]
+df$MDS2 <- mds$points[as.character(df$sample_alias),2]
+ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(size=3) +   geom_text(aes(label=sample_id,hjust=0),nudge_x=0.05,size=3)
+```
+
+What conclusions regarding the community compositions would you draw from this plot?
+
+The `metaMDS` function also provides so called 'species scores' so that we can plot how the sequences themselves are spread in this reduced space. Let's add some taxonomic information on top of that plot as well.
+
+```{r, eval=TRUE, include=TRUE, echo=TRUE}
+taxa <- read.table("results/taxa.tsv", header=TRUE, sep="\t", row.names = 1)
+# Merge with taxonomy
+seqtab.prop_t <- t(seqtab.prop)
+seqtab.prop_taxa <- merge(taxa, seqtab.prop_t[rownames(taxa),], by=0)
+# Sum to rank
+rank <- "Phylum"
+seqtab.prop_rank <- aggregate(seqtab.prop_taxa[,sample.names], by=list(rank=seqtab.prop_taxa[,rank]), FUN=sum, drop=TRUE)
+rownames(seqtab.prop_rank) <- seqtab.prop_rank$rank
+seqtab.prop_rank <- seqtab.prop_rank[,sample.names]
+# Get means across all samples
+rank_means <- rowMeans(seqtab.prop_rank)
+# Select phyla with top 10 mean abundances
+top_phyla <- names(rank_means[sort.list(rank_means, decreasing=TRUE)][1:10])
+# Add the species scores and phyla
+ASVs <- rownames(taxa[taxa$Phylum%in%top_phyla,])
+phyla <- taxa[taxa$Phylum%in%top_phyla,"Phylum"]
+mds1 <- mds$species[ASVs,1]
+mds2 <- mds$species[ASVs,2]
+species_df <- data.frame(phylum=phyla, MDS1=mds1, MDS2=mds2)
+ggplot() + geom_point(data = species_df, mapping=aes(x=MDS1, y=MDS2, color=phylum)) + scale_color_brewer(palette="Set3") + geom_point(data=df, mapping=aes(x=MDS1, y=MDS2), size=3) + geom_text(data=df, aes(x = MDS1, y=MDS2, label=sample_id,hjust=0),nudge_x=0.05,size=3)
+```
+
+Let's also take a quick glance at the differences with a bar plot.
+```{r, eval=TRUE, echo=TRUE, include=TRUE}
+library(reshape2)
+seqtab_tmp <- seqtab.prop_rank
+seqtab_tmp$Phylum <- rownames(seqtab.prop_rank)
+seqtab.prop_rank_melt <- melt(seqtab_tmp[top_phyla,], id.vars = c("Phylum"), variable.name = "Sample", value.name = "proportion")
+# Reorder by location number 
+sample_alias <- df[sort.list(df$location.number),"sample_alias"]
+# Set xticklabels
+xticklabels <- paste(df[sort.list(df$location.number),"location.number"], df[sort.list(df$location.number),"sample_type"], sep="/")
+seqtab.prop_rank_melt$sample <- factor(seqtab.prop_rank_melt$Sample, levels = sample_alias)
+ggplot(data=seqtab.prop_rank_melt, mapping=aes(x=Sample, y=proportion, fill=Phylum)) + geom_col()+ scale_fill_brewer(palette="Set3") + scale_x_discrete(name="Location/sample_type", limits=as.factor(sample_alias), labels=xticklabels) + theme(axis.text.x = element_text(angle = 90, hjust=1.1, vjust = 0.5))
+```
+
+## $\alpha$ diversity (using Phyloseq)
+Results from DADA2 can be directly imported into the [phyloseq](https://joey711.github.io/phyloseq/) package. Let's give it a quick try.
+
+First create the phyloseq object by supplying a DADA2 sequence table and a dataframe of metadata.
+```{r, eval=TRUE, include=TRUE}
+library(phyloseq)
+ps_sample_df <- df
+rownames(ps_sample_df) <- as.character(df$sample_alias)
+ps <- phyloseq(otu_table(seqtab.nochim[as.character(df$sample_alias),], taxa_are_rows=FALSE), sample_data(ps_sample_df,tax_table(taxa)))
+```
+
+Plot Richness and Shannon diversity metrics by sample type. Essentially we are recreating Fig. 1A in the original article. Do the results that we get from this limited study appear to be similar?
+```{r,eval=TRUE, echo=TRUE}
+plot_richness(ps, x="sample_type", measures=c("Observed")) + geom_boxplot(aes(fill=sample_type)) + scale_x_discrete(limits=c("pig","air","pigf","cowf","ne"), labels = c("pig","air","pig farmer","cow farmer","non-exposed"))
+```
+
+# Session Info
+
+* For more interactive graphics in R, go to <https://www.htmlwidgets.org/>
+* For R Markdown, see <http://rmarkdown.rstudio.com> and <https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html>
+
+This document has been created in RStudio using R Markdown and related packages. For details about the OS, packages and versions, see detailed information below: 
+
+```{r}
+sessionInfo()
+```
+
+---
+
+<div style="padding-bottom: 1.5em">
+<span style="float:left; vertical-align:middle">
+<b>`r format(Sys.Date(),format="%Y")`</b> | [SciLifeLab](https://www.scilifelab.se/) > [NBIS](https://nbis.se/) > [RaukR](https://nbisweden.github.io/workshop-RaukR-1806/)
+</span>
+<span style="float:right; vertical-align:middle">
+<span class="footericon" style="padding-right:4px; padding-left:4px">
+<a href="https://nbisweden.github.io/workshop-RaukR-1806/"><img src="./assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a>
+</span>
+<span class="footericon" style="padding-right:4px; padding-left:4px">
+<a href="https://twitter.com/hashtag/RaukR?src=hash"><img src="./assets/icons8-twitter-26.png" alt="twitter" border="0" style="height:15px"></a>
+</span>
+</span>
+</div>

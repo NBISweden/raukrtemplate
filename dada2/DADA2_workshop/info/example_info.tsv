@@ -1,0 +1,256 @@
+	date	Experiment	MBases	MBytes	organism	Run	SRA	Accession	sample_alias	tax_id	scientific_name	sample_title	sample_description	location number	sample_type	sample_id	sample_position
+0	2017-06-30	ERX2079340	11	5	human metagenome	ERR2020093	ERS1803201	SAMEA104144183	103	646099	human metagenome	ne_40_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	40	ne	40_0	left_ant
+1	2017-07-09	ERX2079341	29	13	human metagenome	ERR2020094	ERS1803202	SAMEA104144184	105	646099	human metagenome	ne_40_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	40	ne	40_0	left_post
+2	2017-06-30	ERX2079342	10	5	human metagenome	ERR2020095	ERS1803203	SAMEA104144185	107	646099	human metagenome	ne_41_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	41	ne	41_0	left_ant
+3	2017-07-09	ERX2079343	14	6	human metagenome	ERR2020096	ERS1803204	SAMEA104144186	109	646099	human metagenome	ne_41_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	41	ne	41_0	left_post
+4	2017-07-03	ERX2079344	16	7	pig metagenome	ERR2020097	ERS1803205	SAMEA104144187	11	1176744	pig metagenome	pig_1_2__	nasal swab from pig	1	pig	1_2	NA
+5	2017-07-03	ERX2079345	7	3	pig metagenome	ERR2020098	ERS1803206	SAMEA104144188	112	1176744	pig metagenome	pig_10_1__	nasal swab from pig	10	pig	10_1	NA
+6	2017-06-30	ERX2079346	16	7	pig metagenome	ERR2020099	ERS1803207	SAMEA104144189	113	1176744	pig metagenome	pig_10_2__	nasal swab from pig	10	pig	10_2	NA
+7	2017-07-03	ERX2079347	6	3	air metagenome	ERR2020100	ERS1803208	SAMEA104144190	114	655179	air metagenome	air sample from pig farm_10_0__	air sample from pig farm	10	air	10_air	NA
+8	2017-06-30	ERX2079348	9	4	human metagenome	ERR2020101	ERS1803209	SAMEA104144191	115	646099	human metagenome	pigf_10_0_left_ant	nasal swab from pig farmer left nare anterior	10	pigf	10_0	left_ant
+9	2017-06-30	ERX2079349	5	2	human metagenome	ERR2020102	ERS1803210	SAMEA104144192	117	646099	human metagenome	pigf_10_0_left_post	nasal swab from pig farmer left nare posterior	10	pigf	10_0	left_post
+10	2017-06-30	ERX2079350	13	6	pig metagenome	ERR2020103	ERS1803211	SAMEA104144193	12	1176744	pig metagenome	pig_1_3__	nasal swab from pig	1	pig	1_3	NA
+11	2017-06-30	ERX2079351	8	3	pig metagenome	ERR2020104	ERS1803212	SAMEA104144194	120	1176744	pig metagenome	pig_11_1__	nasal swab from pig	11	pig	11_1	NA
+12	2017-06-30	ERX2079352	4	2	pig metagenome	ERR2020105	ERS1803213	SAMEA104144195	121	1176744	pig metagenome	pig_11_2__	nasal swab from pig	11	pig	11_2	NA
+13	2017-06-30	ERX2079353	11	5	air metagenome	ERR2020106	ERS1803214	SAMEA104144196	122	655179	air metagenome	air sample from pig farm_11_0__	air sample from pig farm	11	air	11_air	NA
+14	2017-06-30	ERX2079354	17	8	human metagenome	ERR2020107	ERS1803215	SAMEA104144197	123	646099	human metagenome	pigf_11_0_left_ant	nasal swab from pig farmer left nare anterior	11	pigf	11_0	left_ant
+15	2017-06-30	ERX2079355	16	7	human metagenome	ERR2020108	ERS1803216	SAMEA104144198	125	646099	human metagenome	pigf_11_0_left_post	nasal swab from pig farmer left nare posterior	11	pigf	11_0	left_post
+16	2017-06-30	ERX2079356	15	7	human metagenome	ERR2020109	ERS1803217	SAMEA104144199	127	646099	human metagenome	ne_42_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	42	ne	42_0	left_ant
+17	2017-06-30	ERX2079357	6	3	human metagenome	ERR2020110	ERS1803218	SAMEA104144200	129	646099	human metagenome	ne_42_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	42	ne	42_0	left_post
+18	2017-06-30	ERX2079358	14	6	air metagenome	ERR2020111	ERS1803219	SAMEA104144201	13	655179	air metagenome	air sample from pig farm_1_0__	air sample from pig farm	1	air	1_air	NA
+19	2017-06-30	ERX2079359	24	11	human metagenome	ERR2020112	ERS1803220	SAMEA104144202	131	646099	human metagenome	ne_43_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	43	ne	43_0	left_ant
+20	2017-06-30	ERX2079362	7	3	human metagenome	ERR2020115	ERS1803223	SAMEA104144205	137	646099	human metagenome	ne_44_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	44	ne	44_0	left_post
+21	2017-06-30	ERX2079386	33	15	pig metagenome	ERR2020139	ERS1803247	SAMEA104144229	226	1176744	pig metagenome	pig_13_1__	nasal swab from pig	13	pig	13_1	NA
+22	2017-07-09	ERX2079387	47	22	pig metagenome	ERR2020140	ERS1803248	SAMEA104144230	227	1176744	pig metagenome	pig_13_2__	nasal swab from pig	13	pig	13_2	NA
+23	2017-06-30	ERX2079388	32	15	air metagenome	ERR2020141	ERS1803249	SAMEA104144231	228	655179	air metagenome	air sample from pig farm_13_0__	air sample from pig farm	13	air	13_air	NA
+24	2017-06-30	ERX2079416	38	18	human metagenome	ERR2020169	ERS1803277	SAMEA104144259	315	646099	human metagenome	ne_53_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	53	ne	53_0	left_post
+25	2017-06-30	ERX2079452	34	16	pig metagenome	ERR2020205	ERS1803313	SAMEA104144295	50	1176744	pig metagenome	pig_5_1__	nasal swab from pig	5	pig	5_1	NA
+26	2017-06-30	ERX2079363	18	8	human metagenome	ERR2020116	ERS1803224	SAMEA104144206	143	646099	human metagenome	ne_45_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	45	ne	45_0	left_ant
+27	2017-06-30	ERX2079364	16	7	human metagenome	ERR2020117	ERS1803225	SAMEA104144207	145	646099	human metagenome	ne_45_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	45	ne	45_0	left_post
+28	2017-06-30	ERX2079365	13	6	human metagenome	ERR2020118	ERS1803226	SAMEA104144208	148	646099	human metagenome	ne_46_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	46	ne	46_0	left_ant
+29	2017-06-30	ERX2079366	13	5	human metagenome	ERR2020119	ERS1803227	SAMEA104144209	150	646099	human metagenome	ne_46_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	46	ne	46_0	left_post
+30	2017-06-30	ERX2079367	19	9	human metagenome	ERR2020120	ERS1803228	SAMEA104144210	152	646099	human metagenome	ne_47_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	47	ne	47_0	left_ant
+31	2017-06-30	ERX2079368	15	7	human metagenome	ERR2020121	ERS1803229	SAMEA104144211	154	646099	human metagenome	ne_47_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	47	ne	47_0	left_post
+32	2017-06-30	ERX2079369	16	7	human metagenome	ERR2020122	ERS1803230	SAMEA104144212	157	646099	human metagenome	ne_48_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	48	ne	48_0	left_ant
+33	2017-06-30	ERX2079370	6	3	human metagenome	ERR2020123	ERS1803231	SAMEA104144213	158	646099	human metagenome	ne_48_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	48	ne	48_0	left_post
+34	2017-06-30	ERX2079371	24	11	human metagenome	ERR2020124	ERS1803232	SAMEA104144214	193	646099	human metagenome	cowf_30_1_left_ant	nasal swab from cow farmer left nare anterior	30	cowf	30_1	left_ant
+35	2017-06-30	ERX2079372	30	14	human metagenome	ERR2020125	ERS1803233	SAMEA104144215	195	646099	human metagenome	cowf_30_1_left_post	nasal swab from cow farmer left nare posterior	30	cowf	30_1	left_post
+36	2017-06-30	ERX2079373	14	6	human metagenome	ERR2020126	ERS1803234	SAMEA104144216	197	646099	human metagenome	cowf_30_2_left_ant	nasal swab from cow farmer left nare anterior	30	cowf	30_2	left_ant
+37	2017-06-30	ERX2079374	15	7	human metagenome	ERR2020127	ERS1803235	SAMEA104144217	199	646099	human metagenome	cowf_30_2_left_post	nasal swab from cow farmer left nare posterior	30	cowf	30_2	left_post
+38	2017-07-09	ERX2079375	18	8	human metagenome	ERR2020128	ERS1803236	SAMEA104144218	2	646099	human metagenome	pigf_1_1_left_ant	nasal swab from pig farmer left nare anterior	1	pigf	1_1	left_ant
+39	2017-07-09	ERX2079376	10	4	human metagenome	ERR2020129	ERS1803237	SAMEA104144219	201	646099	human metagenome	cowf_30_3_left_ant	nasal swab from cow farmer left nare anterior	30	cowf	30_3	left_ant
+40	2017-06-30	ERX2079377	6	3	human metagenome	ERR2020130	ERS1803238	SAMEA104144220	203	646099	human metagenome	cowf_30_3_left_post	nasal swab from cow farmer left nare posterior	30	cowf	30_3	left_post
+41	2017-06-30	ERX2079378	12	5	human metagenome	ERR2020131	ERS1803239	SAMEA104144221	205	646099	human metagenome	cowf_30_4_left_ant	nasal swab from cow farmer left nare anterior	30	cowf	30_4	left_ant
+42	2017-06-30	ERX2079379	12	6	human metagenome	ERR2020132	ERS1803240	SAMEA104144222	207	646099	human metagenome	cowf_30_4_left_post	nasal swab from cow farmer left nare posterior	30	cowf	30_4	left_post
+43	2017-06-30	ERX2079380	14	6	pig metagenome	ERR2020133	ERS1803241	SAMEA104144223	210	1176744	pig metagenome	pig_12_1__	nasal swab from pig	12	pig	12_1	NA
+44	2017-06-30	ERX2079381	15	7	pig metagenome	ERR2020134	ERS1803242	SAMEA104144224	211	1176744	pig metagenome	pig_12_2__	nasal swab from pig	12	pig	12_2	NA
+45	2017-06-30	ERX2079382	22	10	human metagenome	ERR2020135	ERS1803243	SAMEA104144225	217	646099	human metagenome	pigf_12_2_left_ant	nasal swab from pig farmer left nare anterior	12	pigf	12_2	left_ant
+46	2017-06-30	ERX2079383	20	9	human metagenome	ERR2020136	ERS1803244	SAMEA104144226	219	646099	human metagenome	pigf_12_2_left_post	nasal swab from pig farmer left nare posterior	12	pigf	12_2	left_post
+47	2017-06-30	ERX2079384	16	7	human metagenome	ERR2020137	ERS1803245	SAMEA104144227	221	646099	human metagenome	pigf_12_3_left_ant	nasal swab from pig farmer left nare anterior	12	pigf	12_3	left_ant
+48	2017-07-09	ERX2079385	30	14	human metagenome	ERR2020138	ERS1803246	SAMEA104144228	223	646099	human metagenome	pigf_12_3_left_post	nasal swab from pig farmer left nare posterior	12	pigf	12_3	left_post
+49	2017-07-09	ERX2079389	11	5	human metagenome	ERR2020142	ERS1803250	SAMEA104144232	233	646099	human metagenome	pigf_13_2_left_ant	nasal swab from pig farmer left nare anterior	13	pigf	13_2	left_ant
+50	2017-06-30	ERX2079390	0	0	human metagenome	ERR2020143	ERS1803251	SAMEA104144233	235	646099	human metagenome	pigf_13_2_left_post	nasal swab from pig farmer left nare posterior	13	pigf	13_2	left_post
+51	2017-06-30	ERX2079391	5	2	human metagenome	ERR2020144	ERS1803252	SAMEA104144234	238	646099	human metagenome	pigf_13_3_left_ant	nasal swab from pig farmer left nare anterior	13	pigf	13_3	left_ant
+52	2017-07-09	ERX2079392	14	6	human metagenome	ERR2020145	ERS1803253	SAMEA104144235	240	646099	human metagenome	pigf_13_3_left_post	nasal swab from pig farmer left nare posterior	13	pigf	13_3	left_post
+53	2017-07-09	ERX2079393	15	7	human metagenome	ERR2020146	ERS1803254	SAMEA104144236	242	646099	human metagenome	pigf_13_4_left_ant	nasal swab from pig farmer left nare anterior	13	pigf	13_4	left_ant
+54	2017-06-30	ERX2079361	27	13	human metagenome	ERR2020114	ERS1803222	SAMEA104144204	135	646099	human metagenome	ne_44_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	44	ne	44_0	left_ant
+55	2017-06-30	ERX2079360	16	7	human metagenome	ERR2020113	ERS1803221	SAMEA104144203	133	646099	human metagenome	ne_43_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	43	ne	43_0	left_post
+56	2017-07-09	ERX2079339	14	6	pig metagenome	ERR2020092	ERS1803200	SAMEA104144182	10	1176744	pig metagenome	pig_1_1__	nasal swab from pig	1	pig	1_1	NA
+57	2017-07-09	ERX2079394	10	4	human metagenome	ERR2020147	ERS1803255	SAMEA104144237	244	646099	human metagenome	pigf_13_4_left_post	nasal swab from pig farmer left nare posterior	13	pigf	13_4	left_post
+58	2017-07-09	ERX2079395	14	6	human metagenome	ERR2020148	ERS1803256	SAMEA104144238	246	646099	human metagenome	pigf_13_5_left_ant	nasal swab from pig farmer left nare anterior	13	pigf	13_5	left_ant
+59	2017-07-03	ERX2079396	7	3	human metagenome	ERR2020149	ERS1803257	SAMEA104144239	248	646099	human metagenome	pigf_13_5_left_post	nasal swab from pig farmer left nare posterior	13	pigf	13_5	left_post
+60	2017-07-09	ERX2079397	5	2	human metagenome	ERR2020150	ERS1803258	SAMEA104144240	264	646099	human metagenome	cowf_31_2_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_2	left_ant
+61	2017-07-03	ERX2079398	7	3	human metagenome	ERR2020151	ERS1803259	SAMEA104144241	266	646099	human metagenome	cowf_31_2_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_2	left_post
+62	2017-07-03	ERX2079399	14	6	human metagenome	ERR2020152	ERS1803260	SAMEA104144242	268	646099	human metagenome	cowf_31_3_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_3	left_ant
+63	2017-07-03	ERX2079400	19	9	human metagenome	ERR2020153	ERS1803261	SAMEA104144243	270	646099	human metagenome	cowf_31_3_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_3	left_post
+64	2017-07-21	ERX2079401	19	9	human metagenome	ERR2020154	ERS1803262	SAMEA104144244	276	646099	human metagenome	cowf_31_5_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_5	left_ant
+65	2017-06-30	ERX2079402	15	7	human metagenome	ERR2020155	ERS1803263	SAMEA104144245	278	646099	human metagenome	cowf_31_5_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_5	left_post
+66	2017-06-30	ERX2079403	9	4	human metagenome	ERR2020156	ERS1803264	SAMEA104144246	280	646099	human metagenome	cowf_31_6_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_6	left_ant
+67	2017-07-21	ERX2079404	17	7	human metagenome	ERR2020157	ERS1803265	SAMEA104144247	282	646099	human metagenome	cowf_31_6_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_6	left_post
+68	2017-06-30	ERX2079405	4	2	human metagenome	ERR2020158	ERS1803266	SAMEA104144248	284	646099	human metagenome	cowf_31_7_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_7	left_ant
+69	2017-06-30	ERX2079406	6	2	human metagenome	ERR2020159	ERS1803267	SAMEA104144249	286	646099	human metagenome	cowf_31_7_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_7	left_post
+70	2017-06-30	ERX2079407	8	4	human metagenome	ERR2020160	ERS1803268	SAMEA104144250	297	646099	human metagenome	ne_50_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	50	ne	50_0	left_ant
+71	2017-06-30	ERX2079408	6	2	human metagenome	ERR2020161	ERS1803269	SAMEA104144251	299	646099	human metagenome	ne_50_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	50	ne	50_0	left_post
+72	2017-06-30	ERX2079409	14	6	pig metagenome	ERR2020162	ERS1803270	SAMEA104144252	30	1176744	pig metagenome	pig_3_1__	nasal swab from pig	3	pig	3_1	NA
+73	2017-06-30	ERX2079410	3	1	human metagenome	ERR2020163	ERS1803271	SAMEA104144253	301	646099	human metagenome	ne_51_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	51	ne	51_0	left_ant
+74	2017-06-30	ERX2079411	4	2	human metagenome	ERR2020164	ERS1803272	SAMEA104144254	304	646099	human metagenome	ne_51_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	51	ne	51_0	left_post
+75	2017-07-21	ERX2079412	8	4	human metagenome	ERR2020165	ERS1803273	SAMEA104144255	309	646099	human metagenome	ne_52_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	52	ne	52_0	left_ant
+76	2017-07-21	ERX2079413	17	7	pig metagenome	ERR2020166	ERS1803274	SAMEA104144256	31	1176744	pig metagenome	pig_3_2__	nasal swab from pig	3	pig	3_2	NA
+77	2017-07-21	ERX2079414	15	6	human metagenome	ERR2020167	ERS1803275	SAMEA104144257	312	646099	human metagenome	ne_52_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	52	ne	52_0	left_post
+78	2017-06-30	ERX2079415	21	9	human metagenome	ERR2020168	ERS1803276	SAMEA104144258	313	646099	human metagenome	ne_53_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	53	ne	53_0	left_ant
+79	2017-06-30	ERX2079417	10	5	air metagenome	ERR2020170	ERS1803278	SAMEA104144260	32	655179	air metagenome	air sample from pig farm_3_0__	air sample from pig farm	3	air	3_air	NA
+80	2017-07-03	ERX2079418	15	7	human metagenome	ERR2020171	ERS1803279	SAMEA104144261	33	646099	human metagenome	pigf_3_1_left_ant	nasal swab from pig farmer left nare anterior	3	pigf	3_1	left_ant
+81	2017-06-30	ERX2079419	11	5	human metagenome	ERR2020172	ERS1803280	SAMEA104144262	35	646099	human metagenome	pigf_3_1_left_post	nasal swab from pig farmer left nare posterior	3	pigf	3_1	left_post
+82	2017-06-30	ERX2079420	7	3	human metagenome	ERR2020173	ERS1803281	SAMEA104144263	37	646099	human metagenome	pigf_3_2_left_ant	nasal swab from pig farmer left nare anterior	3	pigf	3_2	left_ant
+83	2017-06-30	ERX2079421	17	8	pig metagenome	ERR2020174	ERS1803282	SAMEA104144264	382	1176744	pig metagenome	pig_17_1__	nasal swab from pig	17	pig	17_1	NA
+84	2017-06-30	ERX2079422	15	7	pig metagenome	ERR2020175	ERS1803283	SAMEA104144265	383	1176744	pig metagenome	pig_17_2__	nasal swab from pig	17	pig	17_2	NA
+85	2017-06-30	ERX2079423	14	6	air metagenome	ERR2020176	ERS1803284	SAMEA104144266	384	655179	air metagenome	air sample from pig farm_17_0__	air sample from pig farm	17	air	17_air	NA
+86	2017-06-30	ERX2079424	12	6	human metagenome	ERR2020177	ERS1803285	SAMEA104144267	385	646099	human metagenome	pigf_17_1_left_ant	nasal swab from pig farmer left nare anterior	17	pigf	17_1	left_ant
+87	2017-07-03	ERX2079425	16	8	human metagenome	ERR2020178	ERS1803286	SAMEA104144268	387	646099	human metagenome	pigf_17_1_left_post	nasal swab from pig farmer left nare posterior	17	pigf	17_1	left_post
+88	2017-07-09	ERX2079426	10	5	human metagenome	ERR2020179	ERS1803287	SAMEA104144269	389	646099	human metagenome	pigf_17_2_left_ant	nasal swab from pig farmer left nare anterior	17	pigf	17_2	left_ant
+89	2017-07-03	ERX2079427	14	6	human metagenome	ERR2020180	ERS1803288	SAMEA104144270	39	646099	human metagenome	pigf_3_2_left_post	nasal swab from pig farmer left nare posterior	3	pigf	3_2	left_post
+90	2017-07-03	ERX2079428	14	6	human metagenome	ERR2020181	ERS1803289	SAMEA104144271	391	646099	human metagenome	pigf_17_2_left_post	nasal swab from pig farmer left nare posterior	17	pigf	17_2	left_post
+91	2017-06-30	ERX2079429	16	7	human metagenome	ERR2020182	ERS1803290	SAMEA104144272	4	646099	human metagenome	pigf_1_1_left_post	nasal swab from pig farmer left nare posterior	1	pigf	1_1	left_post
+92	2017-06-30	ERX2079430	22	10	pig metagenome	ERR2020183	ERS1803291	SAMEA104144273	418	1176744	pig metagenome	pig_19_1__	nasal swab from pig	19	pig	19_1	NA
+93	2017-06-30	ERX2079431	9	4	pig metagenome	ERR2020184	ERS1803292	SAMEA104144274	419	1176744	pig metagenome	pig_19_2__	nasal swab from pig	19	pig	19_2	NA
+94	2017-06-30	ERX2079432	17	8	pig metagenome	ERR2020185	ERS1803293	SAMEA104144275	42	1176744	pig metagenome	pig_4_1__	nasal swab from pig	4	pig	4_1	NA
+95	2017-06-30	ERX2079433	24	11	human metagenome	ERR2020186	ERS1803294	SAMEA104144276	421	646099	human metagenome	pigf_19_1_left_ant	nasal swab from pig farmer left nare anterior	19	pigf	19_1	left_ant
+96	2017-06-30	ERX2079434	8	4	human metagenome	ERR2020187	ERS1803295	SAMEA104144277	423	646099	human metagenome	pigf_19_1_left_post	nasal swab from pig farmer left nare posterior	19	pigf	19_1	left_post
+97	2017-06-30	ERX2079435	16	7	human metagenome	ERR2020188	ERS1803296	SAMEA104144278	425	646099	human metagenome	pigf_19_2_left_ant	nasal swab from pig farmer left nare anterior	19	pigf	19_2	left_ant
+98	2017-06-30	ERX2079436	6	3	human metagenome	ERR2020189	ERS1803297	SAMEA104144279	427	646099	human metagenome	pigf_19_2_left_post	nasal swab from pig farmer left nare posterior	19	pigf	19_2	left_post
+99	2017-06-30	ERX2079437	10	4	human metagenome	ERR2020190	ERS1803298	SAMEA104144280	429	646099	human metagenome	cowf_32_0_left_ant	nasal swab from cow farmer left nare anterior	32	cowf	32_0	left_ant
+100	2017-06-30	ERX2079438	24	11	pig metagenome	ERR2020191	ERS1803299	SAMEA104144281	43	1176744	pig metagenome	pig_4_2__	nasal swab from pig	4	pig	4_2	NA
+101	2017-06-30	ERX2079439	5	2	human metagenome	ERR2020192	ERS1803300	SAMEA104144282	431	646099	human metagenome	cowf_32_0_left_post	nasal swab from cow farmer left nare posterior	32	cowf	32_0	left_post
+102	2017-06-30	ERX2079440	16	7	air metagenome	ERR2020193	ERS1803301	SAMEA104144283	44	655179	air metagenome	air sample from pig farm_4_0__	air sample from pig farm	4	air	4_air	NA
+103	2017-06-30	ERX2079441	23	11	human metagenome	ERR2020194	ERS1803302	SAMEA104144284	45	646099	human metagenome	pigf_4_0_left_ant	nasal swab from pig farmer left nare anterior	4	pigf	4_0	left_ant
+104	2017-06-30	ERX2079442	23	11	human metagenome	ERR2020195	ERS1803303	SAMEA104144285	47	646099	human metagenome	pigf_4_0_left_post	nasal swab from pig farmer left nare posterior	4	pigf	4_0	left_post
+105	2017-06-30	ERX2079443	9	4	human metagenome	ERR2020196	ERS1803304	SAMEA104144286	484	646099	human metagenome	cowf_33_1_left_ant	nasal swab from cow farmer left nare anterior	33	cowf	33_1	left_ant
+106	2017-06-30	ERX2079444	7	3	human metagenome	ERR2020197	ERS1803305	SAMEA104144287	487	646099	human metagenome	cowf_33_1_left_post	nasal swab from cow farmer left nare posterior	33	cowf	33_1	left_post
+107	2017-06-30	ERX2079445	13	6	human metagenome	ERR2020198	ERS1803306	SAMEA104144288	488	646099	human metagenome	cowf_33_2_left_ant	nasal swab from cow farmer left nare anterior	33	cowf	33_2	left_ant
+108	2017-06-30	ERX2079446	7	3	human metagenome	ERR2020199	ERS1803307	SAMEA104144289	490	646099	human metagenome	cowf_33_2_left_post	nasal swab from cow farmer left nare posterior	33	cowf	33_2	left_post
+109	2017-06-30	ERX2079447	8	3	pig metagenome	ERR2020200	ERS1803308	SAMEA104144290	493	1176744	pig metagenome	pig_22_1__	nasal swab from pig	22	pig	22_1	NA
+110	2017-06-30	ERX2079448	20	9	pig metagenome	ERR2020201	ERS1803309	SAMEA104144291	494	1176744	pig metagenome	pig_22_2__	nasal swab from pig	22	pig	22_2	NA
+111	2017-06-30	ERX2079449	17	8	air metagenome	ERR2020202	ERS1803310	SAMEA104144292	495	655179	air metagenome	air sample from pig farm_22_0__	air sample from pig farm	22	air	22_air	NA
+112	2017-06-30	ERX2079450	18	8	human metagenome	ERR2020203	ERS1803311	SAMEA104144293	496	646099	human metagenome	pigf_22_1_left_ant	nasal swab from pig farmer left nare anterior	22	pigf	22_1	left_ant
+113	2017-06-30	ERX2079451	27	12	human metagenome	ERR2020204	ERS1803312	SAMEA104144294	498	646099	human metagenome	pigf_22_1_left_post	nasal swab from pig farmer left nare posterior	22	pigf	22_1	left_post
+114	2017-06-30	ERX2079453	11	5	human metagenome	ERR2020206	ERS1803314	SAMEA104144296	500	646099	human metagenome	pigf_22_2_left_ant	nasal swab from pig farmer left nare anterior	22	pigf	22_2	left_ant
+115	2017-06-30	ERX2079454	8	4	human metagenome	ERR2020207	ERS1803315	SAMEA104144297	502	646099	human metagenome	pigf_22_2_left_post	nasal swab from pig farmer left nare posterior	22	pigf	22_2	left_post
+116	2017-06-30	ERX2079455	12	5	human metagenome	ERR2020208	ERS1803316	SAMEA104144298	509	646099	human metagenome	cowf_34_2_left_ant	nasal swab from cow farmer left nare anterior	34	cowf	34_2	left_ant
+117	2017-06-30	ERX2079456	20	9	pig metagenome	ERR2020209	ERS1803317	SAMEA104144299	51	1176744	pig metagenome	pig_5_2__	nasal swab from pig	5	pig	5_2	NA
+118	2017-06-30	ERX2079457	14	6	human metagenome	ERR2020210	ERS1803318	SAMEA104144300	511	646099	human metagenome	cowf_34_2_left_post	nasal swab from cow farmer left nare posterior	34	cowf	34_2	left_post
+119	2017-06-30	ERX2079458	12	5	human metagenome	ERR2020211	ERS1803319	SAMEA104144301	518	646099	human metagenome	ne_65_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	65	ne	65_0	left_ant
+120	2017-06-30	ERX2079459	14	6	air metagenome	ERR2020212	ERS1803320	SAMEA104144302	52	655179	air metagenome	air sample from pig farm_5_0__	air sample from pig farm	5	air	5_air	NA
+121	2017-06-30	ERX2079460	6	3	human metagenome	ERR2020213	ERS1803321	SAMEA104144303	520	646099	human metagenome	ne_65_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	65	ne	65_0	left_post
+122	2017-06-30	ERX2079461	11	5	pig metagenome	ERR2020214	ERS1803322	SAMEA104144304	527	1176744	pig metagenome	pig_23_1__	nasal swab from pig	23	pig	23_1	NA
+123	2017-06-30	ERX2079462	19	8	pig metagenome	ERR2020215	ERS1803323	SAMEA104144305	528	1176744	pig metagenome	pig_23_2__	nasal swab from pig	23	pig	23_2	NA
+124	2017-06-30	ERX2079463	3	1	air metagenome	ERR2020216	ERS1803324	SAMEA104144306	529	655179	air metagenome	air sample from pig farm_23_0__	air sample from pig farm	23	air	23_air	NA
+125	2017-06-30	ERX2079464	7	3	human metagenome	ERR2020217	ERS1803325	SAMEA104144307	530	646099	human metagenome	pigf_23_1_left_ant	nasal swab from pig farmer left nare anterior	23	pigf	23_1	left_ant
+126	2017-06-30	ERX2079465	22	10	human metagenome	ERR2020218	ERS1803326	SAMEA104144308	532	646099	human metagenome	pigf_23_1_left_post	nasal swab from pig farmer left nare posterior	23	pigf	23_1	left_post
+127	2017-06-30	ERX2079466	8	3	human metagenome	ERR2020219	ERS1803327	SAMEA104144309	534	646099	human metagenome	pigf_23_2_left_ant	nasal swab from pig farmer left nare anterior	23	pigf	23_2	left_ant
+128	2017-06-30	ERX2079467	21	9	human metagenome	ERR2020220	ERS1803328	SAMEA104144310	536	646099	human metagenome	pigf_23_2_left_post	nasal swab from pig farmer left nare posterior	23	pigf	23_2	left_post
+129	2017-06-30	ERX2079468	15	7	human metagenome	ERR2020221	ERS1803329	SAMEA104144311	538	646099	human metagenome	pigf_23_3_left_ant	nasal swab from pig farmer left nare anterior	23	pigf	23_3	left_ant
+130	2017-06-30	ERX2079469	8	3	human metagenome	ERR2020222	ERS1803330	SAMEA104144312	54	646099	human metagenome	pigf_5_0_left_ant	nasal swab from pig farmer left nare anterior	5	pigf	5_0	left_ant
+131	2017-06-30	ERX2079470	5	2	human metagenome	ERR2020223	ERS1803331	SAMEA104144313	540	646099	human metagenome	pigf_23_3_left_post	nasal swab from pig farmer left nare posterior	23	pigf	23_3	left_post
+132	2017-06-30	ERX2079471	23	11	pig metagenome	ERR2020224	ERS1803332	SAMEA104144314	543	1176744	pig metagenome	pig_24_1__	nasal swab from pig	24	pig	24_1	NA
+133	2017-06-30	ERX2079472	13	6	pig metagenome	ERR2020225	ERS1803333	SAMEA104144315	544	1176744	pig metagenome	pig_24_2__	nasal swab from pig	24	pig	24_2	NA
+134	2017-06-30	ERX2079473	11	5	air metagenome	ERR2020226	ERS1803334	SAMEA104144316	545	655179	air metagenome	air sample from pig farm_24_0__	air sample from pig farm	24	air	24_air	NA
+135	2017-06-30	ERX2079474	13	6	human metagenome	ERR2020227	ERS1803335	SAMEA104144317	546	646099	human metagenome	pigf_24_1_left_ant	nasal swab from pig farmer left nare anterior	24	pigf	24_1	left_ant
+136	2017-06-30	ERX2079475	10	4	human metagenome	ERR2020228	ERS1803336	SAMEA104144318	548	646099	human metagenome	pigf_24_1_left_post	nasal swab from pig farmer left nare posterior	24	pigf	24_1	left_post
+137	2017-06-30	ERX2079476	14	6	human metagenome	ERR2020229	ERS1803337	SAMEA104144319	55	646099	human metagenome	pigf_5_0_left_post	nasal swab from pig farmer left nare posterior	5	pigf	5_0	left_post
+138	2017-06-30	ERX2079477	15	7	human metagenome	ERR2020230	ERS1803338	SAMEA104144320	550	646099	human metagenome	pigf_24_2_left_ant	nasal swab from pig farmer left nare anterior	24	pigf	24_2	left_ant
+139	2017-06-30	ERX2079478	7	3	human metagenome	ERR2020231	ERS1803339	SAMEA104144321	552	646099	human metagenome	pigf_24_2_left_post	nasal swab from pig farmer left nare posterior	24	pigf	24_2	left_post
+140	2017-06-30	ERX2079479	8	3	pig metagenome	ERR2020232	ERS1803340	SAMEA104144322	555	1176744	pig metagenome	pig_25_1__	nasal swab from pig	25	pig	25_1	NA
+141	2017-06-30	ERX2079480	18	8	pig metagenome	ERR2020233	ERS1803341	SAMEA104144323	556	1176744	pig metagenome	pig_25_2__	nasal swab from pig	25	pig	25_2	NA
+142	2017-06-30	ERX2079481	7	3	air metagenome	ERR2020234	ERS1803342	SAMEA104144324	557	655179	air metagenome	air sample from pig farm_25_0__	air sample from pig farm	25	air	25_air	NA
+143	2017-06-30	ERX2079482	13	6	human metagenome	ERR2020235	ERS1803343	SAMEA104144325	560	646099	human metagenome	pigf_25_0_left_post	nasal swab from pig farmer left nare posterior	25	pigf	25_0	left_post
+144	2017-06-30	ERX2079483	17	7	pig metagenome	ERR2020236	ERS1803344	SAMEA104144326	563	1176744	pig metagenome	pig_26_1__	nasal swab from pig	26	pig	26_1	NA
+145	2017-06-30	ERX2079484	24	11	pig metagenome	ERR2020237	ERS1803345	SAMEA104144327	564	1176744	pig metagenome	pig_26_2__	nasal swab from pig	26	pig	26_2	NA
+146	2017-06-30	ERX2079485	24	11	air metagenome	ERR2020238	ERS1803346	SAMEA104144328	565	655179	air metagenome	air sample from pig farm_26_0__	air sample from pig farm	26	air	26_air	NA
+147	2017-06-30	ERX2079486	21	10	human metagenome	ERR2020239	ERS1803347	SAMEA104144329	566	646099	human metagenome	pigf_26_1_left_ant	nasal swab from pig farmer left nare anterior	26	pigf	26_1	left_ant
+148	2017-06-30	ERX2079487	13	6	human metagenome	ERR2020240	ERS1803348	SAMEA104144330	568	646099	human metagenome	pigf_26_1_left_post	nasal swab from pig farmer left nare posterior	26	pigf	26_1	left_post
+149	2017-06-30	ERX2079488	9	4	human metagenome	ERR2020241	ERS1803349	SAMEA104144331	570	646099	human metagenome	pigf_26_2_left_ant	nasal swab from pig farmer left nare anterior	26	pigf	26_2	left_ant
+150	2017-06-30	ERX2079489	9	4	human metagenome	ERR2020242	ERS1803350	SAMEA104144332	572	646099	human metagenome	pigf_26_2_left_post	nasal swab from pig farmer left nare posterior	26	pigf	26_2	left_post
+151	2017-06-30	ERX2079490	8	4	human metagenome	ERR2020243	ERS1803351	SAMEA104144333	574	646099	human metagenome	pigf_26_3_left_ant	nasal swab from pig farmer left nare anterior	26	pigf	26_3	left_ant
+152	2017-06-30	ERX2079491	2	0	human metagenome	ERR2020244	ERS1803352	SAMEA104144334	576	646099	human metagenome	pigf_26_3_left_post	nasal swab from pig farmer left nare posterior	26	pigf	26_3	left_post
+153	2017-06-30	ERX2079492	6	2	pig metagenome	ERR2020245	ERS1803353	SAMEA104144335	58	1176744	pig metagenome	pig_6_1__	nasal swab from pig	6	pig	6_1	NA
+154	2017-06-30	ERX2079493	7	3	pig metagenome	ERR2020246	ERS1803354	SAMEA104144336	59	1176744	pig metagenome	pig_6_2__	nasal swab from pig	6	pig	6_2	NA
+155	2017-06-30	ERX2079494	17	7	human metagenome	ERR2020247	ERS1803355	SAMEA104144337	6	646099	human metagenome	pigf_1_2_left_ant	nasal swab from pig farmer left nare anterior	1	pigf	1_2	left_ant
+156	2017-06-30	ERX2079495	7	3	air metagenome	ERR2020248	ERS1803356	SAMEA104144338	60	655179	air metagenome	air sample from pig farm_6_0__	air sample from pig farm	6	air	6_air	NA
+157	2017-06-30	ERX2079496	7	3	human metagenome	ERR2020249	ERS1803357	SAMEA104144339	61	646099	human metagenome	pigf_6_0_left_ant	nasal swab from pig farmer left nare anterior	6	pigf	6_0	left_ant
+158	2017-06-30	ERX2079497	8	3	human metagenome	ERR2020250	ERS1803358	SAMEA104144340	63	646099	human metagenome	pigf_6_0_left_post	nasal swab from pig farmer left nare posterior	6	pigf	6_0	left_post
+159	2017-06-30	ERX2079498	13	6	pig metagenome	ERR2020251	ERS1803359	SAMEA104144341	66	1176744	pig metagenome	pig_7_1__	nasal swab from pig	7	pig	7_1	NA
+160	2017-06-30	ERX2079499	21	9	pig metagenome	ERR2020252	ERS1803360	SAMEA104144342	67	1176744	pig metagenome	pig_7_2__	nasal swab from pig	7	pig	7_2	NA
+161	2017-06-30	ERX2079500	8	3	air metagenome	ERR2020253	ERS1803361	SAMEA104144343	68	655179	air metagenome	air sample from pig farm_7_0__	air sample from pig farm	7	air	7_air	NA
+162	2017-06-30	ERX2079501	23	11	human metagenome	ERR2020254	ERS1803362	SAMEA104144344	69	646099	human metagenome	pigf_7_0_left_ant	nasal swab from pig farmer left nare anterior	7	pigf	7_0	left_ant
+163	2017-06-30	ERX2079502	16	7	human metagenome	ERR2020255	ERS1803363	SAMEA104144345	71	646099	human metagenome	pigf_7_0_left_post	nasal swab from pig farmer left nare posterior	7	pigf	7_0	left_post
+164	2017-06-30	ERX2079503	12	5	pig metagenome	ERR2020256	ERS1803364	SAMEA104144346	74	1176744	pig metagenome	pig_8_1__	nasal swab from pig	8	pig	8_1	NA
+165	2017-06-30	ERX2079504	15	7	pig metagenome	ERR2020257	ERS1803365	SAMEA104144347	75	1176744	pig metagenome	pig_8_2__	nasal swab from pig	8	pig	8_2	NA
+166	2017-06-30	ERX2079505	13	6	air metagenome	ERR2020258	ERS1803366	SAMEA104144348	76	655179	air metagenome	air sample from pig farm_8_0__	air sample from pig farm	8	air	8_air	NA
+167	2017-06-30	ERX2079506	7	3	human metagenome	ERR2020259	ERS1803367	SAMEA104144349	77	646099	human metagenome	pigf_8_0_left_ant	nasal swab from pig farmer left nare anterior	8	pigf	8_0	left_ant
+168	2017-06-30	ERX2079507	8	3	human metagenome	ERR2020260	ERS1803368	SAMEA104144350	79	646099	human metagenome	pigf_8_0_left_post	nasal swab from pig farmer left nare posterior	8	pigf	8_0	left_post
+169	2017-06-30	ERX2079508	10	4	human metagenome	ERR2020261	ERS1803369	SAMEA104144351	8	646099	human metagenome	pigf_1_2_left_post	nasal swab from pig farmer left nare posterior	1	pigf	1_2	left_post
+170	2017-06-30	ERX2079509	13	6	pig metagenome	ERR2020262	ERS1803370	SAMEA104144352	82	1176744	pig metagenome	pig_9_1__	nasal swab from pig	9	pig	9_1	NA
+171	2017-06-30	ERX2079510	11	5	pig metagenome	ERR2020263	ERS1803371	SAMEA104144353	83	1176744	pig metagenome	pig_9_2__	nasal swab from pig	9	pig	9_2	NA
+172	2017-06-30	ERX2079511	9	4	air metagenome	ERR2020264	ERS1803372	SAMEA104144354	84	655179	air metagenome	air sample from pig farm_9_0__	air sample from pig farm	9	air	9_air	NA
+173	2017-06-30	ERX2079512	6	3	human metagenome	ERR2020265	ERS1803373	SAMEA104144355	85	646099	human metagenome	pigf_9_0_left_ant	nasal swab from pig farmer left nare anterior	9	pigf	9_0	left_ant
+174	2017-06-30	ERX2079513	8	3	human metagenome	ERR2020266	ERS1803374	SAMEA104144356	87	646099	human metagenome	pigf_9_0_left_post	nasal swab from pig farmer left nare posterior	9	pigf	9_0	left_post
+175	2017-06-30	ERX2079514	5	2	human metagenome	ERR2020267	ERS1803375	SAMEA104144357	184	646099	human metagenome	ne_49_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	49	ne	49_0	left_ant
+176	2017-06-30	ERX2079515	4	2	human metagenome	ERR2020268	ERS1803376	SAMEA104144358	186	646099	human metagenome	ne_49_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	49	ne	49_0	left_post
+177	2017-06-30	ERX2079516	9	5	human metagenome	ERR2020269	ERS1803377	SAMEA104144359	20	646099	human metagenome	pigf_2_0_left_ant	nasal swab from pig farmer left nare anterior	2	pigf	2_0	left_ant
+178	2017-06-30	ERX2079517	15	8	human metagenome	ERR2020270	ERS1803378	SAMEA104144360	22	646099	human metagenome	pigf_2_0_left_post	nasal swab from pig farmer left nare posterior	2	pigf	2_0	left_post
+179	2017-06-30	ERX2079518	15	8	pig metagenome	ERR2020271	ERS1803379	SAMEA104144361	24	1176744	pig metagenome	pig_2_1__	nasal swab from pig	2	pig	2_1	NA
+180	2017-06-30	ERX2079519	14	7	pig metagenome	ERR2020272	ERS1803380	SAMEA104144362	25	1176744	pig metagenome	pig_2_2__	nasal swab from pig	2	pig	2_2	NA
+181	2017-06-30	ERX2079520	7	3	pig metagenome	ERR2020273	ERS1803381	SAMEA104144363	251	1176744	pig metagenome	pig_14_1__	nasal swab from pig	14	pig	14_1	NA
+182	2017-06-30	ERX2079521	5	3	pig metagenome	ERR2020274	ERS1803382	SAMEA104144364	252	1176744	pig metagenome	pig_14_2__	nasal swab from pig	14	pig	14_2	NA
+183	2017-06-30	ERX2079522	3	2	air metagenome	ERR2020275	ERS1803383	SAMEA104144365	253	655179	air metagenome	air sample from pig farm_14_0__	air sample from pig farm	14	air	14_air	NA
+184	2017-06-30	ERX2079523	23	13	human metagenome	ERR2020276	ERS1803384	SAMEA104144366	255	646099	human metagenome	pigf_14_0_left_ant	nasal swab from pig farmer left nare anterior	14	pigf	14_0	left_ant
+185	2017-06-30	ERX2079524	22	12	human metagenome	ERR2020277	ERS1803385	SAMEA104144367	257	646099	human metagenome	pigf_14_0_left_post	nasal swab from pig farmer left nare posterior	14	pigf	14_0	left_post
+186	2017-06-30	ERX2079525	4	2	air metagenome	ERR2020278	ERS1803386	SAMEA104144368	26	655179	air metagenome	air sample from pig farm_2_0__	air sample from pig farm	2	air	2_air	NA
+187	2017-06-30	ERX2079526	21	12	human metagenome	ERR2020279	ERS1803387	SAMEA104144369	288	646099	human metagenome	cowf_31_8_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_8	left_ant
+188	2017-06-30	ERX2079527	13	7	human metagenome	ERR2020280	ERS1803388	SAMEA104144370	290	646099	human metagenome	cowf_31_8_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_8	left_post
+189	2017-06-30	ERX2079528	22	13	human metagenome	ERR2020281	ERS1803389	SAMEA104144371	292	646099	human metagenome	cowf_31_9_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_9	left_ant
+190	2017-06-30	ERX2079529	8	4	human metagenome	ERR2020282	ERS1803390	SAMEA104144372	294	646099	human metagenome	cowf_31_9_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_9	left_post
+191	2017-06-30	ERX2079530	12	6	human metagenome	ERR2020283	ERS1803391	SAMEA104144373	325	646099	human metagenome	ne_54_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	54	ne	54_0	left_ant
+192	2017-06-30	ERX2079531	7	4	human metagenome	ERR2020284	ERS1803392	SAMEA104144374	327	646099	human metagenome	ne_54_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	54	ne	54_0	left_post
+193	2017-06-30	ERX2079532	5	2	human metagenome	ERR2020285	ERS1803393	SAMEA104144375	329	646099	human metagenome	ne_55_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	55	ne	55_0	left_ant
+194	2017-06-30	ERX2079533	1	1	human metagenome	ERR2020286	ERS1803394	SAMEA104144376	331	646099	human metagenome	ne_55_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	55	ne	55_0	left_post
+195	2017-06-30	ERX2079534	6	3	human metagenome	ERR2020287	ERS1803395	SAMEA104144377	333	646099	human metagenome	ne_56_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	56	ne	56_0	left_ant
+196	2017-06-30	ERX2079535	1	0	human metagenome	ERR2020288	ERS1803396	SAMEA104144378	335	646099	human metagenome	ne_56_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	56	ne	56_0	left_post
+197	2017-06-30	ERX2079536	4	2	human metagenome	ERR2020289	ERS1803397	SAMEA104144379	337	646099	human metagenome	ne_57_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	57	ne	57_0	left_ant
+198	2017-06-30	ERX2079537	14	8	human metagenome	ERR2020290	ERS1803398	SAMEA104144380	339	646099	human metagenome	ne_57_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	57	ne	57_0	left_post
+199	2017-06-30	ERX2079538	23	12	human metagenome	ERR2020291	ERS1803399	SAMEA104144381	341	646099	human metagenome	ne_58_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	58	ne	58_0	left_ant
+200	2017-06-30	ERX2079539	6	3	human metagenome	ERR2020292	ERS1803400	SAMEA104144382	343	646099	human metagenome	ne_58_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	58	ne	58_0	left_post
+201	2017-06-30	ERX2079540	13	7	human metagenome	ERR2020293	ERS1803401	SAMEA104144383	345	646099	human metagenome	ne_59_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	59	ne	59_0	left_ant
+202	2017-06-30	ERX2079541	5	3	human metagenome	ERR2020294	ERS1803402	SAMEA104144384	347	646099	human metagenome	ne_59_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	59	ne	59_0	left_post
+203	2017-06-30	ERX2079542	15	8	human metagenome	ERR2020295	ERS1803403	SAMEA104144385	349	646099	human metagenome	ne_60_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	60	ne	60_0	left_ant
+204	2017-06-30	ERX2079543	5	3	human metagenome	ERR2020296	ERS1803404	SAMEA104144386	351	646099	human metagenome	ne_60_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	60	ne	60_0	left_post
+205	2017-06-30	ERX2079544	9	5	human metagenome	ERR2020297	ERS1803405	SAMEA104144387	353	646099	human metagenome	ne_61_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	61	ne	61_0	left_ant
+206	2017-06-30	ERX2079545	10	6	human metagenome	ERR2020298	ERS1803406	SAMEA104144388	355	646099	human metagenome	ne_61_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	61	ne	61_0	left_post
+207	2017-06-30	ERX2079546	20	11	pig metagenome	ERR2020299	ERS1803407	SAMEA104144389	366	1176744	pig metagenome	pig_15_1__	nasal swab from pig	15	pig	15_1	NA
+208	2017-06-30	ERX2079547	10	6	pig metagenome	ERR2020300	ERS1803408	SAMEA104144390	367	1176744	pig metagenome	pig_15_2__	nasal swab from pig	15	pig	15_2	NA
+209	2017-06-30	ERX2079548	10	6	air metagenome	ERR2020301	ERS1803409	SAMEA104144391	368	655179	air metagenome	air sample from pig farm_15_0__	air sample from pig farm	15	air	15_air	NA
+210	2017-06-30	ERX2079549	19	11	human metagenome	ERR2020302	ERS1803410	SAMEA104144392	369	646099	human metagenome	pigf_15_0_left_ant	nasal swab from pig farmer left nare anterior	15	pigf	15_0	left_ant
+211	2017-06-30	ERX2079550	11	6	human metagenome	ERR2020303	ERS1803411	SAMEA104144393	371	646099	human metagenome	pigf_15_0_left_post	nasal swab from pig farmer left nare posterior	15	pigf	15_0	left_post
+212	2017-06-30	ERX2079551	14	8	pig metagenome	ERR2020304	ERS1803412	SAMEA104144394	374	1176744	pig metagenome	pig_16_1__	nasal swab from pig	16	pig	16_1	NA
+213	2017-06-30	ERX2079552	18	10	pig metagenome	ERR2020305	ERS1803413	SAMEA104144395	375	1176744	pig metagenome	pig_16_2__	nasal swab from pig	16	pig	16_2	NA
+214	2017-06-30	ERX2079553	17	9	air metagenome	ERR2020306	ERS1803414	SAMEA104144396	376	655179	air metagenome	air sample from pig farm_16_0__	air sample from pig farm	16	air	16_air	NA
+215	2017-06-30	ERX2079554	14	8	human metagenome	ERR2020307	ERS1803415	SAMEA104144397	377	646099	human metagenome	pigf_16_0_left_ant	nasal swab from pig farmer left nare anterior	16	pigf	16_0	left_ant
+216	2017-06-30	ERX2079555	21	11	human metagenome	ERR2020308	ERS1803416	SAMEA104144398	379	646099	human metagenome	pigf_16_0_left_post	nasal swab from pig farmer left nare posterior	16	pigf	16_0	left_post
+217	2017-06-30	ERX2079556	8	5	pig metagenome	ERR2020309	ERS1803417	SAMEA104144399	410	1176744	pig metagenome	pig_18_1__	nasal swab from pig	18	pig	18_1	NA
+218	2017-06-30	ERX2079557	19	11	pig metagenome	ERR2020310	ERS1803418	SAMEA104144400	411	1176744	pig metagenome	pig_18_2__	nasal swab from pig	18	pig	18_2	NA
+219	2017-06-30	ERX2079558	7	4	air metagenome	ERR2020311	ERS1803419	SAMEA104144401	412	655179	air metagenome	air sample from pig farm_18_0__	air sample from pig farm	18	air	18_air	NA
+220	2017-06-30	ERX2079559	23	12	human metagenome	ERR2020312	ERS1803420	SAMEA104144402	413	646099	human metagenome	pigf_18_0_left_ant	nasal swab from pig farmer left nare anterior	18	pigf	18_0	left_ant
+221	2017-06-30	ERX2079560	8	4	human metagenome	ERR2020313	ERS1803421	SAMEA104144403	415	646099	human metagenome	pigf_18_0_left_post	nasal swab from pig farmer left nare posterior	18	pigf	18_0	left_post
+222	2017-06-30	ERX2079561	8	5	pig metagenome	ERR2020314	ERS1803422	SAMEA104144404	435	1176744	pig metagenome	pig_20_2__	nasal swab from pig	20	pig	20_2	NA
+223	2017-06-30	ERX2079562	7	4	air metagenome	ERR2020315	ERS1803423	SAMEA104144405	436	655179	air metagenome	air sample from pig farm_20_0__	air sample from pig farm	20	air	20_air	NA
+224	2017-06-30	ERX2079563	8	4	human metagenome	ERR2020316	ERS1803424	SAMEA104144406	437	646099	human metagenome	pigf_20_0_left_ant	nasal swab from pig farmer left nare anterior	20	pigf	20_0	left_ant
+225	2017-06-30	ERX2079564	8	4	human metagenome	ERR2020317	ERS1803425	SAMEA104144407	439	646099	human metagenome	pigf_20_0_left_post	nasal swab from pig farmer left nare posterior	20	pigf	20_0	left_post
+226	2017-06-30	ERX2079565	7	4	human metagenome	ERR2020318	ERS1803426	SAMEA104144408	442	646099	human metagenome	cowf_31_10_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_10	left_ant
+227	2017-06-30	ERX2079566	4	2	human metagenome	ERR2020319	ERS1803427	SAMEA104144409	444	646099	human metagenome	cowf_31_10_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_10	left_post
+228	2017-06-30	ERX2079567	10	5	human metagenome	ERR2020320	ERS1803428	SAMEA104144410	450	646099	human metagenome	cowf_31_12_left_ant	nasal swab from cow farmer left nare anterior	31	cowf	31_12	left_ant
+229	2017-06-30	ERX2079568	14	8	human metagenome	ERR2020321	ERS1803429	SAMEA104144411	452	646099	human metagenome	cowf_31_12_left_post	nasal swab from cow farmer left nare posterior	31	cowf	31_12	left_post
+230	2017-06-30	ERX2079569	17	10	pig metagenome	ERR2020322	ERS1803430	SAMEA104144412	460	1176744	pig metagenome	pig_21_1__	nasal swab from pig	21	pig	21_1	NA
+231	2017-06-30	ERX2079570	22	13	pig metagenome	ERR2020323	ERS1803431	SAMEA104144413	461	1176744	pig metagenome	pig_21_2__	nasal swab from pig	21	pig	21_2	NA
+232	2017-06-30	ERX2079571	24	13	air metagenome	ERR2020324	ERS1803432	SAMEA104144414	462	655179	air metagenome	air sample from pig farm_21_0__	air sample from pig farm	21	air	21_air	NA
+233	2017-06-30	ERX2079572	13	7	human metagenome	ERR2020325	ERS1803433	SAMEA104144415	463	646099	human metagenome	pigf_21_1_left_ant	nasal swab from pig farmer left nare anterior	21	pigf	21_1	left_ant
+234	2017-06-30	ERX2079573	16	9	human metagenome	ERR2020326	ERS1803434	SAMEA104144416	465	646099	human metagenome	pigf_21_1_left_post	nasal swab from pig farmer left nare posterior	21	pigf	21_1	left_post
+235	2017-06-30	ERX2079574	10	6	human metagenome	ERR2020327	ERS1803435	SAMEA104144417	467	646099	human metagenome	pigf_21_2_left_ant	nasal swab from pig farmer left nare anterior	21	pigf	21_2	left_ant
+236	2017-06-30	ERX2079575	15	8	human metagenome	ERR2020328	ERS1803436	SAMEA104144418	469	646099	human metagenome	pigf_21_2_left_post	nasal swab from pig farmer left nare posterior	21	pigf	21_2	left_post
+237	2017-06-30	ERX2079576	11	6	human metagenome	ERR2020329	ERS1803437	SAMEA104144419	471	646099	human metagenome	ne_62_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	62	ne	62_0	left_ant
+238	2017-06-30	ERX2079577	16	9	human metagenome	ERR2020330	ERS1803438	SAMEA104144420	473	646099	human metagenome	ne_62_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	62	ne	62_0	left_post
+239	2017-06-30	ERX2079578	20	10	human metagenome	ERR2020331	ERS1803439	SAMEA104144421	475	646099	human metagenome	ne_63_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	63	ne	63_0	left_ant
+240	2017-06-30	ERX2079579	9	4	human metagenome	ERR2020332	ERS1803440	SAMEA104144422	477	646099	human metagenome	ne_63_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	63	ne	63_0	left_post
+241	2017-06-30	ERX2079580	16	9	human metagenome	ERR2020333	ERS1803441	SAMEA104144423	479	646099	human metagenome	ne_64_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	64	ne	64_0	left_ant
+242	2017-06-30	ERX2079581	3	2	human metagenome	ERR2020334	ERS1803442	SAMEA104144424	481	646099	human metagenome	ne_64_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	64	ne	64_0	left_post
+243	2017-06-30	ERX2079582	17	9	human metagenome	ERR2020335	ERS1803443	SAMEA104144425	558	646099	human metagenome	pigf_25_0_left_ant	nasal swab from pig farmer left nare anterior	25	pigf	25_0	left_ant
+244	2017-06-30	ERX2079583	7	4	pig metagenome	ERR2020336	ERS1803444	SAMEA104144426	587	1176744	pig metagenome	pig_27_1__	nasal swab from pig	27	pig	27_1	NA
+245	2017-06-30	ERX2079584	21	12	pig metagenome	ERR2020337	ERS1803445	SAMEA104144427	588	1176744	pig metagenome	pig_27_2__	nasal swab from pig	27	pig	27_2	NA
+246	2017-06-30	ERX2079585	24	13	air metagenome	ERR2020338	ERS1803446	SAMEA104144428	589	655179	air metagenome	air sample from pig farm_27_0__	air sample from pig farm	27	air	27_air	NA
+247	2017-06-30	ERX2079586	24	13	human metagenome	ERR2020339	ERS1803447	SAMEA104144429	590	646099	human metagenome	pigf_27_0_left_ant	nasal swab from pig farmer left nare anterior	27	pigf	27_0	left_ant
+248	2017-06-30	ERX2079587	15	8	human metagenome	ERR2020340	ERS1803448	SAMEA104144430	592	646099	human metagenome	pigf_27_0_left_post	nasal swab from pig farmer left nare posterior	27	pigf	27_0	left_post
+249	2017-06-30	ERX2079588	13	7	pig metagenome	ERR2020341	ERS1803449	SAMEA104144431	603	1176744	pig metagenome	pig_28_1__	nasal swab from pig	28	pig	28_1	NA
+250	2017-06-30	ERX2079589	31	18	pig metagenome	ERR2020342	ERS1803450	SAMEA104144432	604	1176744	pig metagenome	pig_28_2__	nasal swab from pig	28	pig	28_2	NA
+251	2017-06-30	ERX2079590	14	8	air metagenome	ERR2020343	ERS1803451	SAMEA104144433	605	655179	air metagenome	air sample from pig farm_28_0__	air sample from pig farm	28	air	28_air	NA
+252	2017-06-30	ERX2079591	10	5	human metagenome	ERR2020344	ERS1803452	SAMEA104144434	606	646099	human metagenome	pigf_28_0_left_ant	nasal swab from pig farmer left nare anterior	28	pigf	28_0	left_ant
+253	2017-06-30	ERX2079592	19	11	human metagenome	ERR2020345	ERS1803453	SAMEA104144435	608	646099	human metagenome	pigf_28_0_left_post	nasal swab from pig farmer left nare posterior	28	pigf	28_0	left_post
+254	2017-06-30	ERX2079593	10	5	air metagenome	ERR2020346	ERS1803454	SAMEA104144436	212	655179	air metagenome	air sample from pig farm_12_0__	air sample from pig farm	12	air	12_air	NA

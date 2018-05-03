@@ -1,0 +1,1275 @@
+
+1. 212
+Identifiers:	BioSample: SAMEA104144436; SRA: ERS1803454
+Organism:	air metagenome
+Accession: SAMEA104144436	ID: 7653932
+
+2. 608
+Identifiers:	BioSample: SAMEA104144435; SRA: ERS1803453
+Organism:	human metagenome
+Accession: SAMEA104144435	ID: 7653931
+
+3. 606
+Identifiers:	BioSample: SAMEA104144434; SRA: ERS1803452
+Organism:	human metagenome
+Accession: SAMEA104144434	ID: 7653930
+
+4. 605; air sample from pig farm_28_0__
+Identifiers:	BioSample: SAMEA104144433; SRA: ERS1803451
+Organism:	air metagenome
+Accession: SAMEA104144433	ID: 7653929
+
+5. 604
+Identifiers:	BioSample: SAMEA104144432; SRA: ERS1803450
+Organism:	pig metagenome
+Accession: SAMEA104144432	ID: 7653928
+
+6. 603
+Identifiers:	BioSample: SAMEA104144431; SRA: ERS1803449
+Organism:	pig metagenome
+Accession: SAMEA104144431	ID: 7653927
+
+7. 592
+Identifiers:	BioSample: SAMEA104144430; SRA: ERS1803448
+Organism:	human metagenome
+Accession: SAMEA104144430	ID: 7653926
+
+8. 590; pigf_27_0_left_ant
+Identifiers:	BioSample: SAMEA104144429; SRA: ERS1803447
+Organism:	human metagenome
+Accession: SAMEA104144429	ID: 7653925
+
+9. 589
+Identifiers:	BioSample: SAMEA104144428; SRA: ERS1803446
+Organism:	air metagenome
+Accession: SAMEA104144428	ID: 7653924
+
+10. 588
+Identifiers:	BioSample: SAMEA104144427; SRA: ERS1803445
+Organism:	pig metagenome
+Accession: SAMEA104144427	ID: 7653923
+
+11. 587; pig_27_1__
+Identifiers:	BioSample: SAMEA104144426; SRA: ERS1803444
+Organism:	pig metagenome
+Accession: SAMEA104144426	ID: 7653922
+
+12. 558
+Identifiers:	BioSample: SAMEA104144425; SRA: ERS1803443
+Organism:	human metagenome
+Accession: SAMEA104144425	ID: 7653921
+
+13. 481; ne_64_0_left_post
+Identifiers:	BioSample: SAMEA104144424; SRA: ERS1803442
+Organism:	human metagenome
+Accession: SAMEA104144424	ID: 7653920
+
+14. 479
+Identifiers:	BioSample: SAMEA104144423; SRA: ERS1803441
+Organism:	human metagenome
+Accession: SAMEA104144423	ID: 7653919
+
+15. 477; ne_63_0_left_post
+Identifiers:	BioSample: SAMEA104144422; SRA: ERS1803440
+Organism:	human metagenome
+Accession: SAMEA104144422	ID: 7653918
+
+16. 475; ne_63_0_left_ant
+Identifiers:	BioSample: SAMEA104144421; SRA: ERS1803439
+Organism:	human metagenome
+Accession: SAMEA104144421	ID: 7653917
+
+17. 473
+Identifiers:	BioSample: SAMEA104144420; SRA: ERS1803438
+Organism:	human metagenome
+Accession: SAMEA104144420	ID: 7653916
+
+18. 471
+Identifiers:	BioSample: SAMEA104144419; SRA: ERS1803437
+Organism:	human metagenome
+Accession: SAMEA104144419	ID: 7653915
+
+19. 469; pigf_21_2_left_post
+Identifiers:	BioSample: SAMEA104144418; SRA: ERS1803436
+Organism:	human metagenome
+Accession: SAMEA104144418	ID: 7653914
+
+20. 467; pigf_21_2_left_ant
+Identifiers:	BioSample: SAMEA104144417; SRA: ERS1803435
+Organism:	human metagenome
+Accession: SAMEA104144417	ID: 7653913
+
+21. 465
+Identifiers:	BioSample: SAMEA104144416; SRA: ERS1803434
+Organism:	human metagenome
+Accession: SAMEA104144416	ID: 7653912
+
+22. 463; pigf_21_1_left_ant
+Identifiers:	BioSample: SAMEA104144415; SRA: ERS1803433
+Organism:	human metagenome
+Accession: SAMEA104144415	ID: 7653911
+
+23. 462
+Identifiers:	BioSample: SAMEA104144414; SRA: ERS1803432
+Organism:	air metagenome
+Accession: SAMEA104144414	ID: 7653910
+
+24. 461
+Identifiers:	BioSample: SAMEA104144413; SRA: ERS1803431
+Organism:	pig metagenome
+Accession: SAMEA104144413	ID: 7653909
+
+25. 460
+Identifiers:	BioSample: SAMEA104144412; SRA: ERS1803430
+Organism:	pig metagenome
+Accession: SAMEA104144412	ID: 7653908
+
+26. 452
+Identifiers:	BioSample: SAMEA104144411; SRA: ERS1803429
+Organism:	human metagenome
+Accession: SAMEA104144411	ID: 7653907
+
+27. 450
+Identifiers:	BioSample: SAMEA104144410; SRA: ERS1803428
+Organism:	human metagenome
+Accession: SAMEA104144410	ID: 7653906
+
+28. 444
+Identifiers:	BioSample: SAMEA104144409; SRA: ERS1803427
+Organism:	human metagenome
+Accession: SAMEA104144409	ID: 7653905
+
+29. 442
+Identifiers:	BioSample: SAMEA104144408; SRA: ERS1803426
+Organism:	human metagenome
+Accession: SAMEA104144408	ID: 7653904
+
+30. 439
+Identifiers:	BioSample: SAMEA104144407; SRA: ERS1803425
+Organism:	human metagenome
+Accession: SAMEA104144407	ID: 7653903
+
+31. 437
+Identifiers:	BioSample: SAMEA104144406; SRA: ERS1803424
+Organism:	human metagenome
+Accession: SAMEA104144406	ID: 7653902
+
+32. 436
+Identifiers:	BioSample: SAMEA104144405; SRA: ERS1803423
+Organism:	air metagenome
+Accession: SAMEA104144405	ID: 7653901
+
+33. 435
+Identifiers:	BioSample: SAMEA104144404; SRA: ERS1803422
+Organism:	pig metagenome
+Accession: SAMEA104144404	ID: 7653900
+
+34. 415
+Identifiers:	BioSample: SAMEA104144403; SRA: ERS1803421
+Organism:	human metagenome
+Accession: SAMEA104144403	ID: 7653899
+
+35. 413
+Identifiers:	BioSample: SAMEA104144402; SRA: ERS1803420
+Organism:	human metagenome
+Accession: SAMEA104144402	ID: 7653898
+
+36. 412
+Identifiers:	BioSample: SAMEA104144401; SRA: ERS1803419
+Organism:	air metagenome
+Accession: SAMEA104144401	ID: 7653897
+
+37. 411; pig_18_2__
+Identifiers:	BioSample: SAMEA104144400; SRA: ERS1803418
+Organism:	pig metagenome
+Accession: SAMEA104144400	ID: 7653896
+
+38. 410
+Identifiers:	BioSample: SAMEA104144399; SRA: ERS1803417
+Organism:	pig metagenome
+Accession: SAMEA104144399	ID: 7653895
+
+39. 379
+Identifiers:	BioSample: SAMEA104144398; SRA: ERS1803416
+Organism:	human metagenome
+Accession: SAMEA104144398	ID: 7653894
+
+40. 377
+Identifiers:	BioSample: SAMEA104144397; SRA: ERS1803415
+Organism:	human metagenome
+Accession: SAMEA104144397	ID: 7653893
+
+41. 376
+Identifiers:	BioSample: SAMEA104144396; SRA: ERS1803414
+Organism:	air metagenome
+Accession: SAMEA104144396	ID: 7653892
+
+42. 375
+Identifiers:	BioSample: SAMEA104144395; SRA: ERS1803413
+Organism:	pig metagenome
+Accession: SAMEA104144395	ID: 7653891
+
+43. 374
+Identifiers:	BioSample: SAMEA104144394; SRA: ERS1803412
+Organism:	pig metagenome
+Accession: SAMEA104144394	ID: 7653890
+
+44. 371
+Identifiers:	BioSample: SAMEA104144393; SRA: ERS1803411
+Organism:	human metagenome
+Accession: SAMEA104144393	ID: 7653889
+
+45. 369
+Identifiers:	BioSample: SAMEA104144392; SRA: ERS1803410
+Organism:	human metagenome
+Accession: SAMEA104144392	ID: 7653888
+
+46. 368
+Identifiers:	BioSample: SAMEA104144391; SRA: ERS1803409
+Organism:	air metagenome
+Accession: SAMEA104144391	ID: 7653887
+
+47. 367; pig_15_2__
+Identifiers:	BioSample: SAMEA104144390; SRA: ERS1803408
+Organism:	pig metagenome
+Accession: SAMEA104144390	ID: 7653886
+
+48. 366
+Identifiers:	BioSample: SAMEA104144389; SRA: ERS1803407
+Organism:	pig metagenome
+Accession: SAMEA104144389	ID: 7653885
+
+49. 355; ne_61_0_left_post
+Identifiers:	BioSample: SAMEA104144388; SRA: ERS1803406
+Organism:	human metagenome
+Accession: SAMEA104144388	ID: 7653884
+
+50. 353
+Identifiers:	BioSample: SAMEA104144387; SRA: ERS1803405
+Organism:	human metagenome
+Accession: SAMEA104144387	ID: 7653883
+
+51. 351
+Identifiers:	BioSample: SAMEA104144386; SRA: ERS1803404
+Organism:	human metagenome
+Accession: SAMEA104144386	ID: 7653882
+
+52. 349
+Identifiers:	BioSample: SAMEA104144385; SRA: ERS1803403
+Organism:	human metagenome
+Accession: SAMEA104144385	ID: 7653881
+
+53. 347
+Identifiers:	BioSample: SAMEA104144384; SRA: ERS1803402
+Organism:	human metagenome
+Accession: SAMEA104144384	ID: 7653880
+
+54. 345
+Identifiers:	BioSample: SAMEA104144383; SRA: ERS1803401
+Organism:	human metagenome
+Accession: SAMEA104144383	ID: 7653879
+
+55. 343
+Identifiers:	BioSample: SAMEA104144382; SRA: ERS1803400
+Organism:	human metagenome
+Accession: SAMEA104144382	ID: 7653878
+
+56. 341
+Identifiers:	BioSample: SAMEA104144381; SRA: ERS1803399
+Organism:	human metagenome
+Accession: SAMEA104144381	ID: 7653877
+
+57. 339
+Identifiers:	BioSample: SAMEA104144380; SRA: ERS1803398
+Organism:	human metagenome
+Accession: SAMEA104144380	ID: 7653876
+
+58. 337
+Identifiers:	BioSample: SAMEA104144379; SRA: ERS1803397
+Organism:	human metagenome
+Accession: SAMEA104144379	ID: 7653875
+
+59. 335
+Identifiers:	BioSample: SAMEA104144378; SRA: ERS1803396
+Organism:	human metagenome
+Accession: SAMEA104144378	ID: 7653874
+
+60. 333
+Identifiers:	BioSample: SAMEA104144377; SRA: ERS1803395
+Organism:	human metagenome
+Accession: SAMEA104144377	ID: 7653873
+
+61. 331
+Identifiers:	BioSample: SAMEA104144376; SRA: ERS1803394
+Organism:	human metagenome
+Accession: SAMEA104144376	ID: 7653872
+
+62. 329
+Identifiers:	BioSample: SAMEA104144375; SRA: ERS1803393
+Organism:	human metagenome
+Accession: SAMEA104144375	ID: 7653871
+
+63. 327
+Identifiers:	BioSample: SAMEA104144374; SRA: ERS1803392
+Organism:	human metagenome
+Accession: SAMEA104144374	ID: 7653870
+
+64. 325
+Identifiers:	BioSample: SAMEA104144373; SRA: ERS1803391
+Organism:	human metagenome
+Accession: SAMEA104144373	ID: 7653869
+
+65. 294
+Identifiers:	BioSample: SAMEA104144372; SRA: ERS1803390
+Organism:	human metagenome
+Accession: SAMEA104144372	ID: 7653868
+
+66. 292
+Identifiers:	BioSample: SAMEA104144371; SRA: ERS1803389
+Organism:	human metagenome
+Accession: SAMEA104144371	ID: 7653867
+
+67. 290; cowf_31_8_left_post
+Identifiers:	BioSample: SAMEA104144370; SRA: ERS1803388
+Organism:	human metagenome
+Accession: SAMEA104144370	ID: 7653866
+
+68. 288
+Identifiers:	BioSample: SAMEA104144369; SRA: ERS1803387
+Organism:	human metagenome
+Accession: SAMEA104144369	ID: 7653865
+
+69. 26
+Identifiers:	BioSample: SAMEA104144368; SRA: ERS1803386
+Organism:	air metagenome
+Accession: SAMEA104144368	ID: 7653864
+
+70. 257
+Identifiers:	BioSample: SAMEA104144367; SRA: ERS1803385
+Organism:	human metagenome
+Accession: SAMEA104144367	ID: 7653863
+
+71. 255
+Identifiers:	BioSample: SAMEA104144366; SRA: ERS1803384
+Organism:	human metagenome
+Accession: SAMEA104144366	ID: 7653862
+
+72. 253
+Identifiers:	BioSample: SAMEA104144365; SRA: ERS1803383
+Organism:	air metagenome
+Accession: SAMEA104144365	ID: 7653861
+
+73. 252
+Identifiers:	BioSample: SAMEA104144364; SRA: ERS1803382
+Organism:	pig metagenome
+Accession: SAMEA104144364	ID: 7653860
+
+74. 251
+Identifiers:	BioSample: SAMEA104144363; SRA: ERS1803381
+Organism:	pig metagenome
+Accession: SAMEA104144363	ID: 7653859
+
+75. 25
+Identifiers:	BioSample: SAMEA104144362; SRA: ERS1803380
+Organism:	pig metagenome
+Accession: SAMEA104144362	ID: 7653858
+
+76. 24; pig_2_1__
+Identifiers:	BioSample: SAMEA104144361; SRA: ERS1803379
+Organism:	pig metagenome
+Accession: SAMEA104144361	ID: 7653857
+
+77. 22
+Identifiers:	BioSample: SAMEA104144360; SRA: ERS1803378
+Organism:	human metagenome
+Accession: SAMEA104144360	ID: 7653856
+
+78. 20
+Identifiers:	BioSample: SAMEA104144359; SRA: ERS1803377
+Organism:	human metagenome
+Accession: SAMEA104144359	ID: 7653855
+
+79. 186
+Identifiers:	BioSample: SAMEA104144358; SRA: ERS1803376
+Organism:	human metagenome
+Accession: SAMEA104144358	ID: 7653854
+
+80. 184
+Identifiers:	BioSample: SAMEA104144357; SRA: ERS1803375
+Organism:	human metagenome
+Accession: SAMEA104144357	ID: 7653853
+
+81. 87
+Identifiers:	BioSample: SAMEA104144356; SRA: ERS1803374
+Organism:	human metagenome
+Accession: SAMEA104144356	ID: 7653852
+
+82. 85
+Identifiers:	BioSample: SAMEA104144355; SRA: ERS1803373
+Organism:	human metagenome
+Accession: SAMEA104144355	ID: 7653851
+
+83. 84
+Identifiers:	BioSample: SAMEA104144354; SRA: ERS1803372
+Organism:	air metagenome
+Accession: SAMEA104144354	ID: 7653850
+
+84. 83; pig_9_2__
+Identifiers:	BioSample: SAMEA104144353; SRA: ERS1803371
+Organism:	pig metagenome
+Accession: SAMEA104144353	ID: 7653849
+
+85. 82
+Identifiers:	BioSample: SAMEA104144352; SRA: ERS1803370
+Organism:	pig metagenome
+Accession: SAMEA104144352	ID: 7653848
+
+86. 8
+Identifiers:	BioSample: SAMEA104144351; SRA: ERS1803369
+Organism:	human metagenome
+Accession: SAMEA104144351	ID: 7653847
+
+87. 79
+Identifiers:	BioSample: SAMEA104144350; SRA: ERS1803368
+Organism:	human metagenome
+Accession: SAMEA104144350	ID: 7653846
+
+88. 77
+Identifiers:	BioSample: SAMEA104144349; SRA: ERS1803367
+Organism:	human metagenome
+Accession: SAMEA104144349	ID: 7653845
+
+89. 76
+Identifiers:	BioSample: SAMEA104144348; SRA: ERS1803366
+Organism:	air metagenome
+Accession: SAMEA104144348	ID: 7653844
+
+90. 75
+Identifiers:	BioSample: SAMEA104144347; SRA: ERS1803365
+Organism:	pig metagenome
+Accession: SAMEA104144347	ID: 7653843
+
+91. 74
+Identifiers:	BioSample: SAMEA104144346; SRA: ERS1803364
+Organism:	pig metagenome
+Accession: SAMEA104144346	ID: 7653842
+
+92. 71
+Identifiers:	BioSample: SAMEA104144345; SRA: ERS1803363
+Organism:	human metagenome
+Accession: SAMEA104144345	ID: 7653841
+
+93. 69
+Identifiers:	BioSample: SAMEA104144344; SRA: ERS1803362
+Organism:	human metagenome
+Accession: SAMEA104144344	ID: 7653840
+
+94. 68
+Identifiers:	BioSample: SAMEA104144343; SRA: ERS1803361
+Organism:	air metagenome
+Accession: SAMEA104144343	ID: 7653839
+
+95. 67
+Identifiers:	BioSample: SAMEA104144342; SRA: ERS1803360
+Organism:	pig metagenome
+Accession: SAMEA104144342	ID: 7653838
+
+96. 66
+Identifiers:	BioSample: SAMEA104144341; SRA: ERS1803359
+Organism:	pig metagenome
+Accession: SAMEA104144341	ID: 7653837
+
+97. 63
+Identifiers:	BioSample: SAMEA104144340; SRA: ERS1803358
+Organism:	human metagenome
+Accession: SAMEA104144340	ID: 7653836
+
+98. 61
+Identifiers:	BioSample: SAMEA104144339; SRA: ERS1803357
+Organism:	human metagenome
+Accession: SAMEA104144339	ID: 7653835
+
+99. 60; air sample from pig farm_6_0__
+Identifiers:	BioSample: SAMEA104144338; SRA: ERS1803356
+Organism:	air metagenome
+Accession: SAMEA104144338	ID: 7653834
+
+100. 6
+Identifiers:	BioSample: SAMEA104144337; SRA: ERS1803355
+Organism:	human metagenome
+Accession: SAMEA104144337	ID: 7653833
+
+101. 59
+Identifiers:	BioSample: SAMEA104144336; SRA: ERS1803354
+Organism:	pig metagenome
+Accession: SAMEA104144336	ID: 7653832
+
+102. 58
+Identifiers:	BioSample: SAMEA104144335; SRA: ERS1803353
+Organism:	pig metagenome
+Accession: SAMEA104144335	ID: 7653831
+
+103. 576
+Identifiers:	BioSample: SAMEA104144334; SRA: ERS1803352
+Organism:	human metagenome
+Accession: SAMEA104144334	ID: 7653830
+
+104. 574
+Identifiers:	BioSample: SAMEA104144333; SRA: ERS1803351
+Organism:	human metagenome
+Accession: SAMEA104144333	ID: 7653829
+
+105. 572
+Identifiers:	BioSample: SAMEA104144332; SRA: ERS1803350
+Organism:	human metagenome
+Accession: SAMEA104144332	ID: 7653828
+
+106. 570
+Identifiers:	BioSample: SAMEA104144331; SRA: ERS1803349
+Organism:	human metagenome
+Accession: SAMEA104144331	ID: 7653827
+
+107. 568
+Identifiers:	BioSample: SAMEA104144330; SRA: ERS1803348
+Organism:	human metagenome
+Accession: SAMEA104144330	ID: 7653826
+
+108. 566
+Identifiers:	BioSample: SAMEA104144329; SRA: ERS1803347
+Organism:	human metagenome
+Accession: SAMEA104144329	ID: 7653825
+
+109. 565
+Identifiers:	BioSample: SAMEA104144328; SRA: ERS1803346
+Organism:	air metagenome
+Accession: SAMEA104144328	ID: 7653824
+
+110. 564
+Identifiers:	BioSample: SAMEA104144327; SRA: ERS1803345
+Organism:	pig metagenome
+Accession: SAMEA104144327	ID: 7653823
+
+111. 563
+Identifiers:	BioSample: SAMEA104144326; SRA: ERS1803344
+Organism:	pig metagenome
+Accession: SAMEA104144326	ID: 7653822
+
+112. 560
+Identifiers:	BioSample: SAMEA104144325; SRA: ERS1803343
+Organism:	human metagenome
+Accession: SAMEA104144325	ID: 7653821
+
+113. 557
+Identifiers:	BioSample: SAMEA104144324; SRA: ERS1803342
+Organism:	air metagenome
+Accession: SAMEA104144324	ID: 7653820
+
+114. 556; pig_25_2__
+Identifiers:	BioSample: SAMEA104144323; SRA: ERS1803341
+Organism:	pig metagenome
+Accession: SAMEA104144323	ID: 7653819
+
+115. 555
+Identifiers:	BioSample: SAMEA104144322; SRA: ERS1803340
+Organism:	pig metagenome
+Accession: SAMEA104144322	ID: 7653818
+
+116. 552
+Identifiers:	BioSample: SAMEA104144321; SRA: ERS1803339
+Organism:	human metagenome
+Accession: SAMEA104144321	ID: 7653817
+
+117. 550
+Identifiers:	BioSample: SAMEA104144320; SRA: ERS1803338
+Organism:	human metagenome
+Accession: SAMEA104144320	ID: 7653816
+
+118. 55
+Identifiers:	BioSample: SAMEA104144319; SRA: ERS1803337
+Organism:	human metagenome
+Accession: SAMEA104144319	ID: 7653815
+
+119. 548
+Identifiers:	BioSample: SAMEA104144318; SRA: ERS1803336
+Organism:	human metagenome
+Accession: SAMEA104144318	ID: 7653814
+
+120. 546
+Identifiers:	BioSample: SAMEA104144317; SRA: ERS1803335
+Organism:	human metagenome
+Accession: SAMEA104144317	ID: 7653813
+
+121. 545
+Identifiers:	BioSample: SAMEA104144316; SRA: ERS1803334
+Organism:	air metagenome
+Accession: SAMEA104144316	ID: 7653812
+
+122. 544
+Identifiers:	BioSample: SAMEA104144315; SRA: ERS1803333
+Organism:	pig metagenome
+Accession: SAMEA104144315	ID: 7653811
+
+123. 543
+Identifiers:	BioSample: SAMEA104144314; SRA: ERS1803332
+Organism:	pig metagenome
+Accession: SAMEA104144314	ID: 7653810
+
+124. 540
+Identifiers:	BioSample: SAMEA104144313; SRA: ERS1803331
+Organism:	human metagenome
+Accession: SAMEA104144313	ID: 7653809
+
+125. 54; pigf_5_0_left_ant
+Identifiers:	BioSample: SAMEA104144312; SRA: ERS1803330
+Organism:	human metagenome
+Accession: SAMEA104144312	ID: 7653808
+
+126. 538
+Identifiers:	BioSample: SAMEA104144311; SRA: ERS1803329
+Organism:	human metagenome
+Accession: SAMEA104144311	ID: 7653807
+
+127. 536
+Identifiers:	BioSample: SAMEA104144310; SRA: ERS1803328
+Organism:	human metagenome
+Accession: SAMEA104144310	ID: 7653806
+
+128. 534
+Identifiers:	BioSample: SAMEA104144309; SRA: ERS1803327
+Organism:	human metagenome
+Accession: SAMEA104144309	ID: 7653805
+
+129. 532
+Identifiers:	BioSample: SAMEA104144308; SRA: ERS1803326
+Organism:	human metagenome
+Accession: SAMEA104144308	ID: 7653804
+
+130. 530
+Identifiers:	BioSample: SAMEA104144307; SRA: ERS1803325
+Organism:	human metagenome
+Accession: SAMEA104144307	ID: 7653803
+
+131. 529
+Identifiers:	BioSample: SAMEA104144306; SRA: ERS1803324
+Organism:	air metagenome
+Accession: SAMEA104144306	ID: 7653802
+
+132. 528
+Identifiers:	BioSample: SAMEA104144305; SRA: ERS1803323
+Organism:	pig metagenome
+Accession: SAMEA104144305	ID: 7653801
+
+133. 527
+Identifiers:	BioSample: SAMEA104144304; SRA: ERS1803322
+Organism:	pig metagenome
+Accession: SAMEA104144304	ID: 7653800
+
+134. 520
+Identifiers:	BioSample: SAMEA104144303; SRA: ERS1803321
+Organism:	human metagenome
+Accession: SAMEA104144303	ID: 7653799
+
+135. 52
+Identifiers:	BioSample: SAMEA104144302; SRA: ERS1803320
+Organism:	air metagenome
+Accession: SAMEA104144302	ID: 7653798
+
+136. 518
+Identifiers:	BioSample: SAMEA104144301; SRA: ERS1803319
+Organism:	human metagenome
+Accession: SAMEA104144301	ID: 7653797
+
+137. 511
+Identifiers:	BioSample: SAMEA104144300; SRA: ERS1803318
+Organism:	human metagenome
+Accession: SAMEA104144300	ID: 7653796
+
+138. 51
+Identifiers:	BioSample: SAMEA104144299; SRA: ERS1803317
+Organism:	pig metagenome
+Accession: SAMEA104144299	ID: 7653795
+
+139. 509
+Identifiers:	BioSample: SAMEA104144298; SRA: ERS1803316
+Organism:	human metagenome
+Accession: SAMEA104144298	ID: 7653794
+
+140. 502
+Identifiers:	BioSample: SAMEA104144297; SRA: ERS1803315
+Organism:	human metagenome
+Accession: SAMEA104144297	ID: 7653793
+
+141. 500
+Identifiers:	BioSample: SAMEA104144296; SRA: ERS1803314
+Organism:	human metagenome
+Accession: SAMEA104144296	ID: 7653792
+
+142. 50; pig_5_1__
+Identifiers:	BioSample: SAMEA104144295; SRA: ERS1803313
+Organism:	pig metagenome
+Accession: SAMEA104144295	ID: 7653791
+
+143. 498
+Identifiers:	BioSample: SAMEA104144294; SRA: ERS1803312
+Organism:	human metagenome
+Accession: SAMEA104144294	ID: 7653790
+
+144. 496
+Identifiers:	BioSample: SAMEA104144293; SRA: ERS1803311
+Organism:	human metagenome
+Accession: SAMEA104144293	ID: 7653789
+
+145. 495
+Identifiers:	BioSample: SAMEA104144292; SRA: ERS1803310
+Organism:	air metagenome
+Accession: SAMEA104144292	ID: 7653788
+
+146. 494
+Identifiers:	BioSample: SAMEA104144291; SRA: ERS1803309
+Organism:	pig metagenome
+Accession: SAMEA104144291	ID: 7653787
+
+147. 493; pig_22_1__
+Identifiers:	BioSample: SAMEA104144290; SRA: ERS1803308
+Organism:	pig metagenome
+Accession: SAMEA104144290	ID: 7653786
+
+148. 490
+Identifiers:	BioSample: SAMEA104144289; SRA: ERS1803307
+Organism:	human metagenome
+Accession: SAMEA104144289	ID: 7653785
+
+149. 488
+Identifiers:	BioSample: SAMEA104144288; SRA: ERS1803306
+Organism:	human metagenome
+Accession: SAMEA104144288	ID: 7653784
+
+150. 487
+Identifiers:	BioSample: SAMEA104144287; SRA: ERS1803305
+Organism:	human metagenome
+Accession: SAMEA104144287	ID: 7653783
+
+151. 484
+Identifiers:	BioSample: SAMEA104144286; SRA: ERS1803304
+Organism:	human metagenome
+Accession: SAMEA104144286	ID: 7653782
+
+152. 47
+Identifiers:	BioSample: SAMEA104144285; SRA: ERS1803303
+Organism:	human metagenome
+Accession: SAMEA104144285	ID: 7653781
+
+153. 45
+Identifiers:	BioSample: SAMEA104144284; SRA: ERS1803302
+Organism:	human metagenome
+Accession: SAMEA104144284	ID: 7653780
+
+154. 44
+Identifiers:	BioSample: SAMEA104144283; SRA: ERS1803301
+Organism:	air metagenome
+Accession: SAMEA104144283	ID: 7653779
+
+155. 431
+Identifiers:	BioSample: SAMEA104144282; SRA: ERS1803300
+Organism:	human metagenome
+Accession: SAMEA104144282	ID: 7653778
+
+156. 43
+Identifiers:	BioSample: SAMEA104144281; SRA: ERS1803299
+Organism:	pig metagenome
+Accession: SAMEA104144281	ID: 7653777
+
+157. 429
+Identifiers:	BioSample: SAMEA104144280; SRA: ERS1803298
+Organism:	human metagenome
+Accession: SAMEA104144280	ID: 7653776
+
+158. 427
+Identifiers:	BioSample: SAMEA104144279; SRA: ERS1803297
+Organism:	human metagenome
+Accession: SAMEA104144279	ID: 7653775
+
+159. 425
+Identifiers:	BioSample: SAMEA104144278; SRA: ERS1803296
+Organism:	human metagenome
+Accession: SAMEA104144278	ID: 7653774
+
+160. 423
+Identifiers:	BioSample: SAMEA104144277; SRA: ERS1803295
+Organism:	human metagenome
+Accession: SAMEA104144277	ID: 7653773
+
+161. 421
+Identifiers:	BioSample: SAMEA104144276; SRA: ERS1803294
+Organism:	human metagenome
+Accession: SAMEA104144276	ID: 7653772
+
+162. 42
+Identifiers:	BioSample: SAMEA104144275; SRA: ERS1803293
+Organism:	pig metagenome
+Accession: SAMEA104144275	ID: 7653771
+
+163. 419
+Identifiers:	BioSample: SAMEA104144274; SRA: ERS1803292
+Organism:	pig metagenome
+Accession: SAMEA104144274	ID: 7653770
+
+164. 418
+Identifiers:	BioSample: SAMEA104144273; SRA: ERS1803291
+Organism:	pig metagenome
+Accession: SAMEA104144273	ID: 7653769
+
+165. 4
+Identifiers:	BioSample: SAMEA104144272; SRA: ERS1803290
+Organism:	human metagenome
+Accession: SAMEA104144272	ID: 7653768
+
+166. 391
+Identifiers:	BioSample: SAMEA104144271; SRA: ERS1803289
+Organism:	human metagenome
+Accession: SAMEA104144271	ID: 7653767
+
+167. 39; pigf_3_2_left_post
+Identifiers:	BioSample: SAMEA104144270; SRA: ERS1803288
+Organism:	human metagenome
+Accession: SAMEA104144270	ID: 7653766
+
+168. 389
+Identifiers:	BioSample: SAMEA104144269; SRA: ERS1803287
+Organism:	human metagenome
+Accession: SAMEA104144269	ID: 7653765
+
+169. 387
+Identifiers:	BioSample: SAMEA104144268; SRA: ERS1803286
+Organism:	human metagenome
+Accession: SAMEA104144268	ID: 7653764
+
+170. 385
+Identifiers:	BioSample: SAMEA104144267; SRA: ERS1803285
+Organism:	human metagenome
+Accession: SAMEA104144267	ID: 7653763
+
+171. 384
+Identifiers:	BioSample: SAMEA104144266; SRA: ERS1803284
+Organism:	air metagenome
+Accession: SAMEA104144266	ID: 7653762
+
+172. 383
+Identifiers:	BioSample: SAMEA104144265; SRA: ERS1803283
+Organism:	pig metagenome
+Accession: SAMEA104144265	ID: 7653761
+
+173. 382
+Identifiers:	BioSample: SAMEA104144264; SRA: ERS1803282
+Organism:	pig metagenome
+Accession: SAMEA104144264	ID: 7653760
+
+174. 37
+Identifiers:	BioSample: SAMEA104144263; SRA: ERS1803281
+Organism:	human metagenome
+Accession: SAMEA104144263	ID: 7653759
+
+175. 35
+Identifiers:	BioSample: SAMEA104144262; SRA: ERS1803280
+Organism:	human metagenome
+Accession: SAMEA104144262	ID: 7653758
+
+176. 33; pigf_3_1_left_ant
+Identifiers:	BioSample: SAMEA104144261; SRA: ERS1803279
+Organism:	human metagenome
+Accession: SAMEA104144261	ID: 7653757
+
+177. 32
+Identifiers:	BioSample: SAMEA104144260; SRA: ERS1803278
+Organism:	air metagenome
+Accession: SAMEA104144260	ID: 7653756
+
+178. 315
+Identifiers:	BioSample: SAMEA104144259; SRA: ERS1803277
+Organism:	human metagenome
+Accession: SAMEA104144259	ID: 7653755
+
+179. 313
+Identifiers:	BioSample: SAMEA104144258; SRA: ERS1803276
+Organism:	human metagenome
+Accession: SAMEA104144258	ID: 7653754
+
+180. 312
+Identifiers:	BioSample: SAMEA104144257; SRA: ERS1803275
+Organism:	human metagenome
+Accession: SAMEA104144257	ID: 7653753
+
+181. 31
+Identifiers:	BioSample: SAMEA104144256; SRA: ERS1803274
+Organism:	pig metagenome
+Accession: SAMEA104144256	ID: 7653752
+
+182. 309
+Identifiers:	BioSample: SAMEA104144255; SRA: ERS1803273
+Organism:	human metagenome
+Accession: SAMEA104144255	ID: 7653751
+
+183. 304
+Identifiers:	BioSample: SAMEA104144254; SRA: ERS1803272
+Organism:	human metagenome
+Accession: SAMEA104144254	ID: 7653750
+
+184. 301
+Identifiers:	BioSample: SAMEA104144253; SRA: ERS1803271
+Organism:	human metagenome
+Accession: SAMEA104144253	ID: 7653749
+
+185. 30
+Identifiers:	BioSample: SAMEA104144252; SRA: ERS1803270
+Organism:	pig metagenome
+Accession: SAMEA104144252	ID: 7653748
+
+186. 299
+Identifiers:	BioSample: SAMEA104144251; SRA: ERS1803269
+Organism:	human metagenome
+Accession: SAMEA104144251	ID: 7653747
+
+187. 297
+Identifiers:	BioSample: SAMEA104144250; SRA: ERS1803268
+Organism:	human metagenome
+Accession: SAMEA104144250	ID: 7653746
+
+188. 286; cowf_31_7_left_post
+Identifiers:	BioSample: SAMEA104144249; SRA: ERS1803267
+Organism:	human metagenome
+Accession: SAMEA104144249	ID: 7653745
+
+189. 284
+Identifiers:	BioSample: SAMEA104144248; SRA: ERS1803266
+Organism:	human metagenome
+Accession: SAMEA104144248	ID: 7653744
+
+190. 282
+Identifiers:	BioSample: SAMEA104144247; SRA: ERS1803265
+Organism:	human metagenome
+Accession: SAMEA104144247	ID: 7653743
+
+191. 280
+Identifiers:	BioSample: SAMEA104144246; SRA: ERS1803264
+Organism:	human metagenome
+Accession: SAMEA104144246	ID: 7653742
+
+192. 278; cowf_31_5_left_post
+Identifiers:	BioSample: SAMEA104144245; SRA: ERS1803263
+Organism:	human metagenome
+Accession: SAMEA104144245	ID: 7653741
+
+193. 276
+Identifiers:	BioSample: SAMEA104144244; SRA: ERS1803262
+Organism:	human metagenome
+Accession: SAMEA104144244	ID: 7653740
+
+194. 270
+Identifiers:	BioSample: SAMEA104144243; SRA: ERS1803261
+Organism:	human metagenome
+Accession: SAMEA104144243	ID: 7653739
+
+195. 268
+Identifiers:	BioSample: SAMEA104144242; SRA: ERS1803260
+Organism:	human metagenome
+Accession: SAMEA104144242	ID: 7653738
+
+196. 266; cowf_31_2_left_post
+Identifiers:	BioSample: SAMEA104144241; SRA: ERS1803259
+Organism:	human metagenome
+Accession: SAMEA104144241	ID: 7653737
+
+197. 264
+Identifiers:	BioSample: SAMEA104144240; SRA: ERS1803258
+Organism:	human metagenome
+Accession: SAMEA104144240	ID: 7653736
+
+198. 248
+Identifiers:	BioSample: SAMEA104144239; SRA: ERS1803257
+Organism:	human metagenome
+Accession: SAMEA104144239	ID: 7653735
+
+199. 246
+Identifiers:	BioSample: SAMEA104144238; SRA: ERS1803256
+Organism:	human metagenome
+Accession: SAMEA104144238	ID: 7653734
+
+200. 244
+Identifiers:	BioSample: SAMEA104144237; SRA: ERS1803255
+Organism:	human metagenome
+Accession: SAMEA104144237	ID: 7653733
+
+201. 242
+Identifiers:	BioSample: SAMEA104144236; SRA: ERS1803254
+Organism:	human metagenome
+Accession: SAMEA104144236	ID: 7653732
+
+202. 240
+Identifiers:	BioSample: SAMEA104144235; SRA: ERS1803253
+Organism:	human metagenome
+Accession: SAMEA104144235	ID: 7653731
+
+203. 238
+Identifiers:	BioSample: SAMEA104144234; SRA: ERS1803252
+Organism:	human metagenome
+Accession: SAMEA104144234	ID: 7653730
+
+204. 235
+Identifiers:	BioSample: SAMEA104144233; SRA: ERS1803251
+Organism:	human metagenome
+Accession: SAMEA104144233	ID: 7653729
+
+205. 233
+Identifiers:	BioSample: SAMEA104144232; SRA: ERS1803250
+Organism:	human metagenome
+Accession: SAMEA104144232	ID: 7653728
+
+206. 228
+Identifiers:	BioSample: SAMEA104144231; SRA: ERS1803249
+Organism:	air metagenome
+Accession: SAMEA104144231	ID: 7653727
+
+207. 227; pig_13_2__
+Identifiers:	BioSample: SAMEA104144230; SRA: ERS1803248
+Organism:	pig metagenome
+Accession: SAMEA104144230	ID: 7653726
+
+208. 226; pig_13_1__
+Identifiers:	BioSample: SAMEA104144229; SRA: ERS1803247
+Organism:	pig metagenome
+Accession: SAMEA104144229	ID: 7653725
+
+209. 223; pigf_12_3_left_post
+Identifiers:	BioSample: SAMEA104144228; SRA: ERS1803246
+Organism:	human metagenome
+Accession: SAMEA104144228	ID: 7653724
+
+210. 221
+Identifiers:	BioSample: SAMEA104144227; SRA: ERS1803245
+Organism:	human metagenome
+Accession: SAMEA104144227	ID: 7653723
+
+211. 219
+Identifiers:	BioSample: SAMEA104144226; SRA: ERS1803244
+Organism:	human metagenome
+Accession: SAMEA104144226	ID: 7653722
+
+212. 217
+Identifiers:	BioSample: SAMEA104144225; SRA: ERS1803243
+Organism:	human metagenome
+Accession: SAMEA104144225	ID: 7653721
+
+213. 211
+Identifiers:	BioSample: SAMEA104144224; SRA: ERS1803242
+Organism:	pig metagenome
+Accession: SAMEA104144224	ID: 7653720
+
+214. 210
+Identifiers:	BioSample: SAMEA104144223; SRA: ERS1803241
+Organism:	pig metagenome
+Accession: SAMEA104144223	ID: 7653719
+
+215. 207; cowf_30_4_left_post
+Identifiers:	BioSample: SAMEA104144222; SRA: ERS1803240
+Organism:	human metagenome
+Accession: SAMEA104144222	ID: 7653718
+
+216. 205
+Identifiers:	BioSample: SAMEA104144221; SRA: ERS1803239
+Organism:	human metagenome
+Accession: SAMEA104144221	ID: 7653717
+
+217. 203
+Identifiers:	BioSample: SAMEA104144220; SRA: ERS1803238
+Organism:	human metagenome
+Accession: SAMEA104144220	ID: 7653716
+
+218. 201
+Identifiers:	BioSample: SAMEA104144219; SRA: ERS1803237
+Organism:	human metagenome
+Accession: SAMEA104144219	ID: 7653715
+
+219. 2; pigf_1_1_left_ant
+Identifiers:	BioSample: SAMEA104144218; SRA: ERS1803236
+Organism:	human metagenome
+Accession: SAMEA104144218	ID: 7653714
+
+220. 199
+Identifiers:	BioSample: SAMEA104144217; SRA: ERS1803235
+Organism:	human metagenome
+Accession: SAMEA104144217	ID: 7653713
+
+221. 197
+Identifiers:	BioSample: SAMEA104144216; SRA: ERS1803234
+Organism:	human metagenome
+Accession: SAMEA104144216	ID: 7653712
+
+222. 195
+Identifiers:	BioSample: SAMEA104144215; SRA: ERS1803233
+Organism:	human metagenome
+Accession: SAMEA104144215	ID: 7653711
+
+223. 193; cowf_30_1_left_ant
+Identifiers:	BioSample: SAMEA104144214; SRA: ERS1803232
+Organism:	human metagenome
+Accession: SAMEA104144214	ID: 7653710
+
+224. 158
+Identifiers:	BioSample: SAMEA104144213; SRA: ERS1803231
+Organism:	human metagenome
+Accession: SAMEA104144213	ID: 7653709
+
+225. 157
+Identifiers:	BioSample: SAMEA104144212; SRA: ERS1803230
+Organism:	human metagenome
+Accession: SAMEA104144212	ID: 7653708
+
+226. 154
+Identifiers:	BioSample: SAMEA104144211; SRA: ERS1803229
+Organism:	human metagenome
+Accession: SAMEA104144211	ID: 7653707
+
+227. 152
+Identifiers:	BioSample: SAMEA104144210; SRA: ERS1803228
+Organism:	human metagenome
+Accession: SAMEA104144210	ID: 7653706
+
+228. 150; ne_46_0_left_post
+Identifiers:	BioSample: SAMEA104144209; SRA: ERS1803227
+Organism:	human metagenome
+Accession: SAMEA104144209	ID: 7653705
+
+229. 148
+Identifiers:	BioSample: SAMEA104144208; SRA: ERS1803226
+Organism:	human metagenome
+Accession: SAMEA104144208	ID: 7653704
+
+230. 145
+Identifiers:	BioSample: SAMEA104144207; SRA: ERS1803225
+Organism:	human metagenome
+Accession: SAMEA104144207	ID: 7653703
+
+231. 143
+Identifiers:	BioSample: SAMEA104144206; SRA: ERS1803224
+Organism:	human metagenome
+Accession: SAMEA104144206	ID: 7653702
+
+232. 137; ne_44_0_left_post
+Identifiers:	BioSample: SAMEA104144205; SRA: ERS1803223
+Organism:	human metagenome
+Accession: SAMEA104144205	ID: 7653701
+
+233. 135; ne_44_0_left_ant
+Identifiers:	BioSample: SAMEA104144204; SRA: ERS1803222
+Organism:	human metagenome
+Accession: SAMEA104144204	ID: 7653700
+
+234. 133; ne_43_0_left_post
+Identifiers:	BioSample: SAMEA104144203; SRA: ERS1803221
+Organism:	human metagenome
+Accession: SAMEA104144203	ID: 7653699
+
+235. 131
+Identifiers:	BioSample: SAMEA104144202; SRA: ERS1803220
+Organism:	human metagenome
+Accession: SAMEA104144202	ID: 7653698
+
+236. 13; air sample from pig farm_1_0__
+Identifiers:	BioSample: SAMEA104144201; SRA: ERS1803219
+Organism:	air metagenome
+Accession: SAMEA104144201	ID: 7653697
+
+237. 129
+Identifiers:	BioSample: SAMEA104144200; SRA: ERS1803218
+Organism:	human metagenome
+Accession: SAMEA104144200	ID: 7653696
+
+238. 127
+Identifiers:	BioSample: SAMEA104144199; SRA: ERS1803217
+Organism:	human metagenome
+Accession: SAMEA104144199	ID: 7653695
+
+239. 125
+Identifiers:	BioSample: SAMEA104144198; SRA: ERS1803216
+Organism:	human metagenome
+Accession: SAMEA104144198	ID: 7653694
+
+240. 123
+Identifiers:	BioSample: SAMEA104144197; SRA: ERS1803215
+Organism:	human metagenome
+Accession: SAMEA104144197	ID: 7653693
+
+241. 122
+Identifiers:	BioSample: SAMEA104144196; SRA: ERS1803214
+Organism:	air metagenome
+Accession: SAMEA104144196	ID: 7653692
+
+242. 121
+Identifiers:	BioSample: SAMEA104144195; SRA: ERS1803213
+Organism:	pig metagenome
+Accession: SAMEA104144195	ID: 7653691
+
+243. 120; pig_11_1__
+Identifiers:	BioSample: SAMEA104144194; SRA: ERS1803212
+Organism:	pig metagenome
+Accession: SAMEA104144194	ID: 7653690
+
+244. 12
+Identifiers:	BioSample: SAMEA104144193; SRA: ERS1803211
+Organism:	pig metagenome
+Accession: SAMEA104144193	ID: 7653689
+
+245. 117
+Identifiers:	BioSample: SAMEA104144192; SRA: ERS1803210
+Organism:	human metagenome
+Accession: SAMEA104144192	ID: 7653688
+
+246. 115
+Identifiers:	BioSample: SAMEA104144191; SRA: ERS1803209
+Organism:	human metagenome
+Accession: SAMEA104144191	ID: 7653687
+
+247. 114
+Identifiers:	BioSample: SAMEA104144190; SRA: ERS1803208
+Organism:	air metagenome
+Accession: SAMEA104144190	ID: 7653686
+
+248. 113
+Identifiers:	BioSample: SAMEA104144189; SRA: ERS1803207
+Organism:	pig metagenome
+Accession: SAMEA104144189	ID: 7653685
+
+249. 112
+Identifiers:	BioSample: SAMEA104144188; SRA: ERS1803206
+Organism:	pig metagenome
+Accession: SAMEA104144188	ID: 7653684
+
+250. 11
+Identifiers:	BioSample: SAMEA104144187; SRA: ERS1803205
+Organism:	pig metagenome
+Accession: SAMEA104144187	ID: 7653683
+
+251. 109
+Identifiers:	BioSample: SAMEA104144186; SRA: ERS1803204
+Organism:	human metagenome
+Accession: SAMEA104144186	ID: 7653682
+
+252. 107
+Identifiers:	BioSample: SAMEA104144185; SRA: ERS1803203
+Organism:	human metagenome
+Accession: SAMEA104144185	ID: 7653681
+
+253. 105
+Identifiers:	BioSample: SAMEA104144184; SRA: ERS1803202
+Organism:	human metagenome
+Accession: SAMEA104144184	ID: 7653680
+
+254. 103
+Identifiers:	BioSample: SAMEA104144183; SRA: ERS1803201
+Organism:	human metagenome
+Accession: SAMEA104144183	ID: 7653679
+
+255. 10
+Identifiers:	BioSample: SAMEA104144182; SRA: ERS1803200
+Organism:	pig metagenome
+Accession: SAMEA104144182	ID: 7653678
