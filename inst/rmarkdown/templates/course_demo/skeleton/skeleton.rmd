@@ -219,11 +219,6 @@ $\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n
 $\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
 $\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
 
-```{r,echo=FALSE}
-bs_accordion(id="answer1") %>%
-  bs_append(title="Answer", content="The answer is bla bla.")
-```
-
 # R tables  
 ## Paged  
 

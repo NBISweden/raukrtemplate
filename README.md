@@ -1,7 +1,7 @@
 
 <img src="docs/assets/logo.svg" align="right" width="96" height="96">
 
-# RaukR
+# RaukR v1.0.3
 
 This is an R package for the RaukR R course. This package contains presentation and coursework R Markdown templates.
 

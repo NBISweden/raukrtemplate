@@ -92,11 +92,11 @@ a:hover {
 /* code style */
 code {
   font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 14px;
 }
 
 pre {
     background-color: var(--code-bg-color);
+    font-size: 14px;
 }
 
 /* abstract paragraph style */

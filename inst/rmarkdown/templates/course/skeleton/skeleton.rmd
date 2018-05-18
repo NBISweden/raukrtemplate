@@ -30,7 +30,6 @@ source("assets/setup.R")
 
 #library(ggplot2)
 #library(tidyverse)
-library(bsplus)
 
 # variables needed in this document
 # raukr colours

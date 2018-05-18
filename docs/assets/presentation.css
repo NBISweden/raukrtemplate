@@ -4,9 +4,10 @@
 
 :root {
   --primary-color: #125687;
-  --border-color: #375D81;
+  --border-color: #e8e8e8;
   --text-color: #1A1A1A;
-  --code-bg-color: #f1f1f1;
+  --code-bg-color: #f9f9f9;
+  --code-inline-color: #d72b3f;
 }
 
 /* FONTS -------------------------------------------------------------------- */
@@ -68,13 +69,14 @@ h6 {
 
 /* code inline */
 .remark-inline-code{
-  /* background: var(--code-bg-color);  lighter */
+  /* background: var(--code-bg-color); */
+  /* border: 1px solid var(--border-color); */
   border-radius: 3px;
-  /* border: 1px solid #e1e1e8; */
+  
   margin-right: 2px;
-  padding: 2px 4px;
+  padding: 2px 3px 1px;
   font-size: 80% !important;
-  color: #d14;
+  color: var(--code-inline-color);
 }
 
 /* new font size classes */
@@ -98,6 +100,26 @@ a:hover {
   text-decoration: underline;
 }
 
+/* MARGINS ------------------------------------------------------------------ */
+
+/* list margin */
+ul {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* pre margin */
+pre {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* p margin */
+p {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
 /* COVER SLIDES ------------------------------------------------------------- */
 
 /* title slide image */
@@ -119,13 +141,14 @@ a:hover {
   
 }
 
+/* raukr logo right */
 .title-slide.remark-slide-content:before{
   position: absolute;
-  content:url(logo.svg);
-  height:96px;
-  width:96px;
-  -webkit-filter: drop-shadow(1px 1px 3px grey);
-  filter: drop-shadow(1px 1px 3px grey);
+  content:url(logo_nsr.svg);
+  /* height:96px; */
+  width:300px;
+  /* -webkit-filter: drop-shadow(1px 1px 3px grey); */
+  /* filter: drop-shadow(1px 1px 3px grey); */
 }
 
 .end-slide.remark-slide-content:before{
@@ -177,8 +200,8 @@ a:hover {
 
 /* set images to 100% width */
 img, video, iframe {
-  max-width: 100%;
-  margin: 8px;
+  max-width: 99%;
+  /* margin: 8px; */
 }
 
 /* image styling */
@@ -197,6 +220,26 @@ img, video, iframe {
   top: 1em;
 }
 
+/* image size classes */
+.size-95 {max-width: 95%;}
+.size-90 {max-width: 90%;}
+.size-85 {max-width: 85%;}
+.size-80 {max-width: 80%;}
+.size-75 {max-width: 75%;}
+.size-70 {max-width: 70%;}
+.size-65 {max-width: 65%;}
+.size-60 {max-width: 60%;}
+.size-55 {max-width: 55%;}
+.size-50 {max-width: 50%;}
+.size-45 {max-width: 45%;}
+.size-40 {max-width: 40%;}
+.size-35 {max-width: 35%;}
+.size-30 {max-width: 30%;}
+.size-25 {max-width: 25%;}
+.size-20 {max-width: 20%;}
+.size-15 {max-width: 15%;}
+.size-10 {max-width: 10%;}
+
 /* TABLES ------------------------------------------------------------------- */
 
 /* table even shading */
@@ -214,7 +257,7 @@ img, video, iframe {
   font-size: 0.8em;
 }
 
-/* LAYOUT ------------------------------------------------------------------- */
+/* COLUMNS ------------------------------------------------------------------- */
 
 .pull-center{
   width: 100%;

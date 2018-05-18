@@ -1,3 +1,15 @@
+RaukR 1.0.3
+===========
+* 18-May-2018
+* Logo
+  + Original RaukR logo with flattened text
+  + RaukR logo + SciLifeLab logo for presentation (flattened text)
+* Increased font size for code in course.css
+* Several changes in presentation.css
+  + Cosmetic changes
+  + Additional images size classes
+  + Additional column size classes
+
 RaukR 1.0.2
 ===========
 * 12-Apr-2018
