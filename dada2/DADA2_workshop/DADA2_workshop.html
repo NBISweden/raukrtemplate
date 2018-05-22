@@ -303,7 +303,7 @@ Some code is hidden by default. Click on the ‘Code’ button on the right side
 <p>Let’s go ahead and load the R packages we will need</p>
 <pre><code>library(dada2)
 library(vegan)
-library(ggplot)
+library(ggplot2)
 packageVersion(&quot;dada2&quot;)</code></pre>
 </div>
 <div id="download-the-example-data" class="section level2">
@@ -312,8 +312,8 @@ packageVersion(&quot;dada2&quot;)</code></pre>
 <pre><code>df &lt;- read.table(&quot;https://raw.githubusercontent.com/johnne/RaukR/master/dada2/DADA2_workshop/info/example_subset_info.tsv&quot;, sep=&quot;\t&quot;, header = TRUE)</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;https://raw.githubusercontent.com/johnne/RaukR/master/dada2/DADA2_workshop/info/example_subset_info.tsv&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
 <span class="kw">datatable</span>(df[,<span class="kw">c</span>(<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">11</span>,<span class="dv">14</span>,<span class="dv">15</span>)], <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">pageLength=</span><span class="dv">26</span>, <span class="dt">order=</span><span class="kw">list</span>(<span class="dv">5</span>, <span class="st">'asc'</span>)))</code></pre></div>
-<div id="htmlwidget-8f3d0669fa4d5511e988" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8f3d0669fa4d5511e988">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],[44,43,45,47,589,588,590,592,212,211,221,223,193,195,276,278,509,511,103,105,131,315,133,313],[16,24,23,23,24,21,24,15,10,15,16,30,24,30,19,15,12,14,11,29,24,38,16,21],[7,11,11,11,13,12,13,8,5,7,7,14,11,14,9,7,5,6,5,13,11,18,7,9],["air metagenome","pig metagenome","human metagenome","human metagenome","air metagenome","pig metagenome","human metagenome","human metagenome","air metagenome","pig metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome"],[4,4,4,4,27,27,27,27,12,12,12,12,30,30,31,31,34,34,40,40,43,53,43,53],["air","pig","pigf","pigf","air","pig","pigf","pigf","air","pig","pigf","pigf","cowf","cowf","cowf","cowf","cowf","cowf","ne","ne","ne","ne","ne","ne"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample_alias<\/th>\n      <th>MBases<\/th>\n      <th>MBytes<\/th>\n      <th>scientific_name<\/th>\n      <th>location.number<\/th>\n      <th>sample_type<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":26,"order":[5,"asc"],"columnDefs":[{"className":"dt-right","targets":[1,2,3,5]},{"orderable":false,"targets":0}],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,25,26,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5900ac859fe778bd2d36" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5900ac859fe778bd2d36">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],[44,43,45,47,589,588,590,592,212,211,221,223,193,195,276,278,509,511,103,105,131,315,133,313],[16,24,23,23,24,21,24,15,10,15,16,30,24,30,19,15,12,14,11,29,24,38,16,21],[7,11,11,11,13,12,13,8,5,7,7,14,11,14,9,7,5,6,5,13,11,18,7,9],["air metagenome","pig metagenome","human metagenome","human metagenome","air metagenome","pig metagenome","human metagenome","human metagenome","air metagenome","pig metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome","human metagenome"],[4,4,4,4,27,27,27,27,12,12,12,12,30,30,31,31,34,34,40,40,43,53,43,53],["air","pig","pigf","pigf","air","pig","pigf","pigf","air","pig","pigf","pigf","cowf","cowf","cowf","cowf","cowf","cowf","ne","ne","ne","ne","ne","ne"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample_alias<\/th>\n      <th>MBases<\/th>\n      <th>MBytes<\/th>\n      <th>scientific_name<\/th>\n      <th>location.number<\/th>\n      <th>sample_type<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":26,"order":[5,"asc"],"columnDefs":[{"className":"dt-right","targets":[1,2,3,5]},{"orderable":false,"targets":0}],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,25,26,50,100]}},"evals":[],"jsHooks":[]}</script>
 <p>The raw data for these samples can be downloaded from here: <a href="https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0">Dropbox link</a></p>
 <p>See code below for how to download and unpack the samples from the terminal:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">curl</span> -o data/example_data.tar.gz -L https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0
@@ -454,40 +454,36 @@ mds &lt;- metaMDS(seqtab.prop, k=3)
 df$MDS1 &lt;- mds$points[as.character(df$sample_alias),1]
 df$MDS2 &lt;- mds$points[as.character(df$sample_alias),2]</code></pre>
 <pre><code>## Run 0 stress 0.06738849 
-## Run 1 stress 0.07801833 
-## Run 2 stress 0.07469057 
-## Run 3 stress 0.06752465 
-## ... Procrustes: rmse 0.00553845  max resid 0.01882921 
-## Run 4 stress 0.06739163 
-## ... Procrustes: rmse 0.001699285  max resid 0.005902122 
+## Run 1 stress 0.08077091 
+## Run 2 stress 0.06738915 
+## ... Procrustes: rmse 0.0003669621  max resid 0.001430826 
 ## ... Similar to previous best
-## Run 5 stress 0.0673889 
-## ... Procrustes: rmse 0.0004253613  max resid 0.001690222 
+## Run 3 stress 0.08073407 
+## Run 4 stress 0.08077 
+## Run 5 stress 0.06738894 
+## ... Procrustes: rmse 0.0003502606  max resid 0.001319307 
 ## ... Similar to previous best
-## Run 6 stress 0.06739154 
-## ... Procrustes: rmse 0.001737462  max resid 0.005686081 
+## Run 6 stress 0.07801814 
+## Run 7 stress 0.07801809 
+## Run 8 stress 0.2833559 
+## Run 9 stress 0.0780186 
+## Run 10 stress 0.06738922 
+## ... Procrustes: rmse 0.0005172153  max resid 0.002074345 
 ## ... Similar to previous best
-## Run 7 stress 0.07469335 
-## Run 8 stress 0.06752511 
-## ... Procrustes: rmse 0.005764394  max resid 0.01906041 
-## Run 9 stress 0.07801916 
-## Run 10 stress 0.07468805 
-## Run 11 stress 0.06739101 
-## ... Procrustes: rmse 0.001739035  max resid 0.005678822 
+## Run 11 stress 0.06738916 
+## ... Procrustes: rmse 0.0002627055  max resid 0.001057475 
 ## ... Similar to previous best
-## Run 12 stress 0.06752594 
-## ... Procrustes: rmse 0.005633609  max resid 0.01862329 
-## Run 13 stress 0.06739013 
-## ... Procrustes: rmse 0.0006405041  max resid 0.002335068 
+## Run 12 stress 0.07801936 
+## Run 13 stress 0.07801832 
+## Run 14 stress 0.08077311 
+## Run 15 stress 0.07470431 
+## Run 16 stress 0.07468696 
+## Run 17 stress 0.07469006 
+## Run 18 stress 0.0780181 
+## Run 19 stress 0.07801834 
+## Run 20 stress 0.06738857 
+## ... Procrustes: rmse 0.0001270368  max resid 0.0005059972 
 ## ... Similar to previous best
-## Run 14 stress 0.07801834 
-## Run 15 stress 0.07801806 
-## Run 16 stress 0.07469414 
-## Run 17 stress 0.07801914 
-## Run 18 stress 0.07801826 
-## Run 19 stress 0.08560901 
-## Run 20 stress 0.06752518 
-## ... Procrustes: rmse 0.00561638  max resid 0.01947122 
 ## *** Solution reached</code></pre>
 <p>Then we can plot the first two dimensions, color samples by sample type and label them with sample_id.</p>
 <pre><code>ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(size=3) +   geom_text(aes(label=sample_id,hjust=0),nudge_x=0.05,size=3)</code></pre>

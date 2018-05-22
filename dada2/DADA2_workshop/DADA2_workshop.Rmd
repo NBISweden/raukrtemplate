@@ -107,7 +107,7 @@ Let's go ahead and load the R packages we will need
 ```
 library(dada2)
 library(vegan)
-library(ggplot)
+library(ggplot2)
 packageVersion("dada2")
 ```
 
