@@ -125,18 +125,21 @@ The original [Kraemer et al (2018)](http://aem.asm.org/content/early/2018/01/08/
 df <- read.table("https://raw.githubusercontent.com/johnne/RaukR/master/dada2/DADA2_workshop/info/example_subset_info.tsv", sep="\t", header = TRUE)
 ```
 
-```{r, eval=TRUE, include=TRUE, echo=TRUE}
+```{r, eval=TRUE, include=FALSE}
 df <- read.table("https://raw.githubusercontent.com/johnne/RaukR/master/dada2/DADA2_workshop/info/example_subset_info.tsv", sep="\t", header = TRUE)
+```
+
+```{r, eval=TRUE, include=TRUE, echo=TRUE}
 datatable(df[,c(9,3,4,11,14,15)], options = list(pageLength=26, order=list(5, 'asc')))
 ```
 
 The raw data for these samples can be downloaded from here: [Dropbox link](https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0)
 
-See code below for how to download and unpack the samples from the terminal:
+Run the following to download the example data and unpack in the `data/` directory.
 
-```{bash echo=TRUE, eval=FALSE, include=TRUE}
-curl -o data/example_data.tar.gz -L https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0
-tar -C data -xvf data/example_data.tar.gz
+```
+system("curl -o data/example_data.tar.gz -L https://www.dropbox.com/s/rewj8p08y1xc8np/example_data.tar.gz?dl=0")
+system("tar -C data -xvf data/example_data.tar.gz")
 ```
 
 # DADA2 pipeline
@@ -331,8 +334,11 @@ colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "n
 
 You should see something like this:
 
-```{r, eval=TRUE, echo=TRUE, include=FALSE}
+```{r, eval=TRUE, echo=FALSE, include=FALSE}
 track <- read.table("results/track.tsv")
+```
+
+```{r, eval=TRUE, echo=TRUE, include=TRUE}
 datatable(track, options = list(pageLength=24))
 ```
 
@@ -341,8 +347,8 @@ datatable(track, options = list(pageLength=24))
 DADA2 can assign a taxonomy to the inferred ASVs. Here we'll do it using the formatted data from the Ribosomal Database Project (RDP). For other database see [here](https://benjjneb.github.io/dada2/training.html).
 
 ```
-curl -o data/rdp_species_assignment_16.fa.gz https://zenodo.org/record/801828/files/rdp_species_assignment_16.fa.gz
-curl -o data/rdp_train_set_16.fa.gz https://zenodo.org/record/801828/files/rdp_train_set_16.fa.gz
+system("curl -o data/rdp_species_assignment_16.fa.gz https://zenodo.org/record/801828/files/rdp_species_assignment_16.fa.gz")
+system("curl -o data/rdp_train_set_16.fa.gz https://zenodo.org/record/801828/files/rdp_train_set_16.fa.gz")
 ```
 
 ```
@@ -372,20 +378,17 @@ df$MDS1 <- mds$points[as.character(df$sample_alias),1]
 df$MDS2 <- mds$points[as.character(df$sample_alias),2]
 ```
 
-```{r, eval=TRUE, echo=FALSE}
+```{r, eval=TRUE, include=FALSE}
 # Transform to proportions
 seqtab.prop <- seqtab.nochim/rowSums(seqtab.nochim)
-mds <- metaMDS(seqtab.prop, k=3)
+invisible(mds <- metaMDS(seqtab.prop, k=3))
 df$MDS1 <- mds$points[as.character(df$sample_alias),1]
 df$MDS2 <- mds$points[as.character(df$sample_alias),2]
 ```
 
 Then we can plot the first two dimensions, color samples by sample type and label them with sample_id.
-```
-ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(size=3) +   geom_text(aes(label=sample_id,hjust=0),nudge_x=0.05,size=3)
-```
 
-```{r, eval=TRUE, echo=TRUE, include=FALSE}
+```{r, eval=TRUE, echo=TRUE, include=TRUE}
 ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(size=3) +   geom_text(aes(label=sample_id,hjust=0),nudge_x=0.05,size=3)
 ```
 
@@ -397,7 +400,7 @@ The `metaMDS` function also provides so called 'species scores' so that we can p
 taxa <- read.table("results/taxa.tsv", header=TRUE, sep="\t", row.names = 1)
 ```
 
-```{r, eval=TRUE, echo=TRUE, include=TRUE}
+```{r, eval=TRUE, include=TRUE}
 # Merge sequence table with taxonomy
 seqtab.prop_t <- t(seqtab.prop)
 seqtab.prop_taxa <- merge(taxa, seqtab.prop_t[rownames(taxa),], by=0)
