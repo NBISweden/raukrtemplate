@@ -102,15 +102,20 @@ Some code is hidden by default. Click on the 'Code' button on the right side to 
 
 # Setup
 
-## Loading DADA2
-Load the R package and check the version
+## Loading packages
+Let's go ahead and load the R packages we will need
 ```
 library(dada2)
+library(vegan)
+library(ggplot)
 packageVersion("dada2")
 ```
 
 ```{r, eval=TRUE, include=FALSE}
 library(dada2)
+library(vegan)
+library(ggplot2)
+library(reshape2)
 ```
 
 ## Download the example data
@@ -227,8 +232,12 @@ error_ratesR1_sample1 <- learnErrors(derepR1[[1]], multithread=TRUE)
 error_ratesR2_sample1 <- learnErrors(derepR2[[1]], multithread=TRUE)
 ```
 
-### Plotting the estimated error rates
 `plotErrors` can be used to plot the observed nucleotide transitions as a function of quality. This is what forms the error model of DADA2. The plot can be used to check how well the error model fits your data. Run the function on the forward and reverse reads. 
+
+```{r, eval=FALSE, include=TRUE}
+plotErrors(error_ratesR1)
+plotErrors(error_ratesR2)
+```
 
 **QUESTION:** Does the model (the fitted line) seem to match the observed error rates? Try plotting error rates estimated from just one sample and compare to the pooled estimates. Is there any difference?
 
@@ -322,7 +331,7 @@ colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "n
 
 You should see something like this:
 
-```{r, eval=TRUE, echo=TRUE, include=TRUE}
+```{r, eval=TRUE, echo=TRUE, include=FALSE}
 track <- read.table("results/track.tsv")
 datatable(track, options = list(pageLength=24))
 ```
@@ -355,8 +364,15 @@ taxa <- addSpecies(taxa, "data/rdp_species_assignment_16.fa.gz")
 seqtab.nochim <- read.table("results/seqtab.nochim.tsv", sep="\t", header=TRUE)
 ```
 
-```{r, eval=TRUE, include=TRUE, echo=FALSE}
-library(vegan)
+```
+# Transform to proportions
+seqtab.prop <- seqtab.nochim/rowSums(seqtab.nochim)
+mds <- metaMDS(seqtab.prop, k=3)
+df$MDS1 <- mds$points[as.character(df$sample_alias),1]
+df$MDS2 <- mds$points[as.character(df$sample_alias),2]
+```
+
+```{r, eval=TRUE, echo=FALSE}
 # Transform to proportions
 seqtab.prop <- seqtab.nochim/rowSums(seqtab.nochim)
 mds <- metaMDS(seqtab.prop, k=3)
@@ -365,7 +381,11 @@ df$MDS2 <- mds$points[as.character(df$sample_alias),2]
 ```
 
 Then we can plot the first two dimensions, color samples by sample type and label them with sample_id.
-```{r, eval=TRUE, include=TRUE, echo=TRUE}
+```
+ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(size=3) +   geom_text(aes(label=sample_id,hjust=0),nudge_x=0.05,size=3)
+```
+
+```{r, eval=TRUE, echo=TRUE, include=FALSE}
 ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(size=3) +   geom_text(aes(label=sample_id,hjust=0),nudge_x=0.05,size=3)
 ```
 
@@ -377,7 +397,7 @@ The `metaMDS` function also provides so called 'species scores' so that we can p
 taxa <- read.table("results/taxa.tsv", header=TRUE, sep="\t", row.names = 1)
 ```
 
-```{r, eval=TRUE, include=TRUE, echo=TRUE}
+```{r, eval=TRUE, echo=TRUE, include=TRUE}
 # Merge sequence table with taxonomy
 seqtab.prop_t <- t(seqtab.prop)
 seqtab.prop_taxa <- merge(taxa, seqtab.prop_t[rownames(taxa),], by=0)
@@ -401,7 +421,6 @@ ggplot() + geom_point(data = species_df, mapping=aes(x=MDS1, y=MDS2, color=phylu
 
 Let's also take a quick glance at the differences with a bar plot.
 ```{r, eval=TRUE, echo=TRUE, include=TRUE}
-library(reshape2)
 seqtab_tmp <- seqtab.prop_rank
 seqtab_tmp$Phylum <- rownames(seqtab.prop_rank)
 seqtab.prop_rank_melt <- melt(seqtab_tmp[top_phyla,], id.vars = c("Phylum"), variable.name = "Sample", value.name = "proportion")
@@ -416,16 +435,31 @@ ggplot(data=seqtab.prop_rank_melt, mapping=aes(x=Sample, y=proportion, fill=Phyl
 ## $\alpha$ diversity (using Phyloseq)
 Results from DADA2 can be directly imported into the [phyloseq](https://joey711.github.io/phyloseq/) package. Let's give it a quick try.
 
-First create the phyloseq object by supplying a DADA2 sequence table and a dataframe of metadata.
-```{r, eval=TRUE, include=TRUE}
+First install and load the phyloseq package.
+```
+install.packages("phyloseq")
 library(phyloseq)
+```
+
+```{r, eval=TRUE, include=FALSE}
+library(phyloseq)
+```
+
+Then create the phyloseq object by supplying a DADA2 sequence table and a dataframe of metadata.
+``` 
+ps_sample_df <- df
+rownames(ps_sample_df) <- as.character(df$sample_alias)
+ps <- phyloseq(otu_table(seqtab.nochim[as.character(df$sample_alias),], taxa_are_rows=FALSE), sample_data(ps_sample_df,tax_table(taxa)))
+```
+
+```{r, eval=TRUE, include=FALSE}
 ps_sample_df <- df
 rownames(ps_sample_df) <- as.character(df$sample_alias)
 ps <- phyloseq(otu_table(seqtab.nochim[as.character(df$sample_alias),], taxa_are_rows=FALSE), sample_data(ps_sample_df,tax_table(taxa)))
 ```
 
 Plot Richness and Shannon diversity metrics by sample type. Essentially we are recreating Fig. 1A in the original article. Do the results that we get from this limited study appear to be similar?
-```{r,eval=TRUE, echo=TRUE}
+```{r, eval=TRUE, echo=TRUE, include=TRUE}
 plot_richness(ps, x="sample_type", measures=c("Observed")) + geom_boxplot(aes(fill=sample_type)) + scale_x_discrete(limits=c("pig","air","pigf","cowf","ne"), labels = c("pig","air","pig farmer","cow farmer","non-exposed"))
 ```
 
