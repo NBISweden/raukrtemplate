@@ -346,16 +346,18 @@ datatable(track, options = list(pageLength=24))
 
 DADA2 can assign a taxonomy to the inferred ASVs. Here we'll do it using the formatted data from the Ribosomal Database Project (RDP). For other database see [here](https://benjjneb.github.io/dada2/training.html).
 
+First download the training data for the RDP classifier:
 ```
 system("curl -o data/rdp_species_assignment_16.fa.gz https://zenodo.org/record/801828/files/rdp_species_assignment_16.fa.gz")
 system("curl -o data/rdp_train_set_16.fa.gz https://zenodo.org/record/801828/files/rdp_train_set_16.fa.gz")
 ```
 
+Then run the assign taxonomy step:
 ```
 taxa <- assignTaxonomy(seqtab.nochim, "data/rdp_train_set_16.fa.gz", multithread=TRUE)
 ```
 
-Add species level assignments.
+And add species level assignments.
 
 ```
 taxa <- addSpecies(taxa, "data/rdp_species_assignment_16.fa.gz")
