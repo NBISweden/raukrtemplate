@@ -401,6 +401,7 @@ taxa <- read.table("results/taxa.tsv", header=TRUE, sep="\t", row.names = 1)
 ```
 
 ```{r, eval=TRUE, include=TRUE}
+taxa <- as.data.frame(taxa)
 # Merge sequence table with taxonomy
 seqtab.prop_t <- t(seqtab.prop)
 seqtab.prop_taxa <- merge(taxa, seqtab.prop_t[rownames(taxa),], by=0)
@@ -424,6 +425,7 @@ ggplot() + geom_point(data = species_df, mapping=aes(x=MDS1, y=MDS2, color=phylu
 
 Let's also take a quick glance at the differences with a bar plot.
 ```{r, eval=TRUE, echo=TRUE, include=TRUE}
+library(reshape2)
 seqtab_tmp <- seqtab.prop_rank
 seqtab_tmp$Phylum <- rownames(seqtab.prop_rank)
 seqtab.prop_rank_melt <- melt(seqtab_tmp[top_phyla,], id.vars = c("Phylum"), variable.name = "Sample", value.name = "proportion")
