@@ -133,8 +133,11 @@ name: report
 
 ## Workshop
 ### Data
+[!["Kraemer publication"](assets/kraemer_pub.png)](http://aem.asm.org/content/early/2018/01/08/AEM.02470-17.short?rss=1)
+* Studied microbiota in pigs, pig farmers and controls.
+* Used DADA2 to process amplicon sequences
 
-
+The workshop can be accessed [here](https://johnne.github.io/raukr_dada2/DADA2_workshop.html).
 ---
 name: report
 
