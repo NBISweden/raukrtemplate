@@ -190,7 +190,7 @@ filtfR1 <- file.path(filt_path, paste0(sample.names, "_R1_filt.fastq.gz"))
 filtfR2 <- file.path(filt_path, paste0(sample.names, "_R2_filt.fastq.gz"))
 ```
 
-```{r, eval=FALSE, include=FALSE}
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
 filt_path <- file.path(path, "filtered")
 filtfR1 <- file.path(filt_path, paste0(sample.names, "_R1_filt.fastq.gz"))
 filtfR2 <- file.path(filt_path, paste0(sample.names, "_R2_filt.fastq.gz"))
@@ -202,7 +202,7 @@ In the study by Kraemer the Methods section in the supplementary material states
 
 **QUESTION:** How would you use the `filterAndTrim` function to process the reads like the original study? Take a look at the documentation for the function using `help(filterAndTrim)`. Give it some thought and then check the code below.
 
-```{r, eval=FALSE, include=TRUE}
+```{r, eval=TRUE, include=TRUE, cache=TRUE}
 filt_trim <- filterAndTrim(fR1, filtfR1, fR2, filtfR2, truncLen=c(200,150), trimLeft = 20,
               maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE,
               compress=TRUE, multithread=TRUE)
@@ -219,11 +219,23 @@ derepR2 <- derepFastq(filtfR2, verbose=TRUE)
 names(derepR2) <- sample.names
 ```
 
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
+derepR1 <- derepFastq(filtfR1, verbose=TRUE)
+names(derepR1) <- sample.names
+derepR2 <- derepFastq(filtfR2, verbose=TRUE)
+names(derepR2) <- sample.names
+```
+
 ## Estimating the error model
 
 The error model used by DADA2 to infer the correct sequences is made up of transition probabilities and is estimated, or *learned*, from the data. This is done with the function `learnErrors`.
 
 ```
+error_ratesR1 <- learnErrors(derepR1, multithread=TRUE)
+error_ratesR2 <- learnErrors(derepR2, multithread=TRUE)
+```
+
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
 error_ratesR1 <- learnErrors(derepR1, multithread=TRUE)
 error_ratesR2 <- learnErrors(derepR2, multithread=TRUE)
 ```
@@ -253,6 +265,11 @@ dadaR1 <- dada(derepR1, err=error_ratesR1, multithread=TRUE)
 dadaR2 <- dada(derepR2, err=error_ratesR2, multithread=TRUE)
 ```
 
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
+dadaR1 <- dada(derepR1, err=error_ratesR1, multithread=TRUE)
+dadaR2 <- dada(derepR2, err=error_ratesR2, multithread=TRUE)
+```
+
 Typically, it's fine to use the default settings of the `dada` function but it's always good to know about the parameters. Three important parameters of DADA2 are:
 
 * `OMEGA_A`: This sets the threshold for the 'abundance p-value', a measure of the probability that a sequence is the result of sequencing errors. During the partitioning of sequences, if the abundance p-value drops below the `OMEGA_A` threshold a new partition is created and all unique sequences are compared to that new partition. By default it is set to 1e-40.
@@ -267,10 +284,20 @@ dadaR1_pooled <- dada(derepR1, err=error_ratesR1, multithread=TRUE, pool=TRUE)
 dadaR2_pooled <- dada(derepR2, err=error_ratesR2, multithread=TRUE, pool=TRUE)
 ```
 
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
+dadaR1_pooled <- dada(derepR1, err=error_ratesR1, multithread=TRUE, pool=TRUE)
+dadaR2_pooled <- dada(derepR2, err=error_ratesR2, multithread=TRUE, pool=TRUE)
+```
+
 ### Merging reads
 After ASVs have been inferred for each read the pairs are merged and potential pairs with insufficient overlap or too many mismatches in the overlapping regions are removed.
 
 ```
+mergers <- mergePairs(dadaR1, derepR1, dadaR2, derepR2, verbose=TRUE)
+mergers_pooled <- mergePairs(dadaR1_pooled, derepR1, dadaR2_pooled, derepR2, verbose=TRUE)
+```
+
+```{r, eval=TRUE, include=TRUE, cache=TRUE}
 mergers <- mergePairs(dadaR1, derepR1, dadaR2, derepR2, verbose=TRUE)
 mergers_pooled <- mergePairs(dadaR1_pooled, derepR1, dadaR2_pooled, derepR2, verbose=TRUE)
 ```
@@ -285,6 +312,12 @@ seqtab <- makeSequenceTable(mergers)
 seqtab_pooled <- makeSequenceTable(mergers_pooled)
 ```
 
+```{r, eval=TRUE, include=TRUE, cache=TRUE}
+seqtab <- makeSequenceTable(mergers)
+seqtab_pooled <- makeSequenceTable(mergers_pooled)
+```
+
+
 **QUESTION**: How many sequences in total are in the non-pooled and pooled sequence tables, respectively?
 
 ```{r, eval=FALSE}
@@ -292,7 +325,7 @@ ncol(seqtab)
 ncol(seqtab_pooled)
 ```
 
-**QUESTION**: How much do the extra ASVs inferred from pooling contribute to the total abundance in each sample?
+**QUESTION**: How much do the extra ASVs inferred from pooling contribute to the total abundance in each sample? (See below for an example on how to answer this)
 
 ```{r, eval=FALSE}
 ASV_diff <- setdiff(colnames(seqtab_pooled),colnames(seqtab))
@@ -312,15 +345,22 @@ DADA2 has now performed error correction on the sequences but *chimeras* may sti
 seqtab.nochim <- removeBimeraDenovo(seqtab, method="pooled", multithread=TRUE, verbose=TRUE)
 ```
 
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="pooled", multithread=TRUE, verbose=TRUE)
+```
+
 It may be interesting to see what proportion of the sequences are identified as chimeric:
+
 ```
 print(1-dim(seqtab.nochim)[2] / dim(seqtab)[2])
 ```
 
 That may seem like a high proportion of chimeric sequences. Let's take a look at how much they contribute to the total:
+
 ```
 print((1-sum(seqtab.nochim)/sum(seqtab))*100)
 ```
+
 However, the chimeras make up roughly 4% of the total sequences.
 
 ### Check sequences throughout the pipeline
@@ -332,11 +372,13 @@ track <- cbind(filt_trim, sapply(dadaR1, getN), sapply(dadaR2, getN), sapply(mer
 colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
 ```
 
-You should see something like this:
-
-```{r, eval=TRUE, echo=FALSE, include=FALSE}
-track <- read.table("results/track.tsv")
+```{r, eval=TRUE, include=FALSE}
+getN <- function(x) sum(getUniques(x))
+track <- cbind(filt_trim, sapply(dadaR1, getN), sapply(dadaR2, getN), sapply(mergers, getN), rowSums(seqtab.nochim))
+colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
 ```
+
+You should see something like this:
 
 ```{r, eval=TRUE, echo=TRUE, include=TRUE}
 datatable(track, options = list(pageLength=24))
@@ -357,9 +399,17 @@ Then run the assign taxonomy step:
 taxa <- assignTaxonomy(seqtab.nochim, "data/rdp_train_set_16.fa.gz", multithread=TRUE)
 ```
 
+```{r, eval=TRUE, cache=TRUE, include=FALSE}
+taxa <- assignTaxonomy(seqtab.nochim, "data/rdp_train_set_16.fa.gz", multithread=TRUE)
+```
+
 And add species level assignments.
 
 ```
+taxa <- addSpecies(taxa, "data/rdp_species_assignment_16.fa.gz")
+```
+
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
 taxa <- addSpecies(taxa, "data/rdp_species_assignment_16.fa.gz")
 ```
 
@@ -367,10 +417,6 @@ taxa <- addSpecies(taxa, "data/rdp_species_assignment_16.fa.gz")
 
 ## Sample differences ($\beta$ diversity)
 *Beta diversity* refers to the the difference in community composition between samples. We can take the sequence abundance table `seqtab` and plot the dissimilarities in a reduced space using Nonmetric Multidimensional Scaling (NMDS). There are several ways of doing this type of analysis but here we'll use function `metaMDS` from the `vegan` package
-
-```{r, eval=TRUE, include=FALSE}
-seqtab.nochim <- read.table("results/seqtab.nochim.tsv", sep="\t", header=TRUE)
-```
 
 ```
 # Transform to proportions
@@ -397,10 +443,6 @@ ggplot(data=df, mapping=aes(x=MDS1, y=MDS2, color=sample_type)) + geom_point(siz
 **QUESTION**: What conclusions regarding the community compositions would you draw from this plot?
 
 The `metaMDS` function also provides so called 'species scores' so that we can plot how the sequences themselves are spread in this reduced space. Let's add some taxonomic information on top of that plot as well.
-
-```{r, eval=TRUE, include=FALSE}
-taxa <- read.table("results/taxa.tsv", header=TRUE, sep="\t", row.names = 1)
-```
 
 ```{r, eval=TRUE, include=TRUE}
 taxa <- as.data.frame(taxa)
@@ -459,13 +501,14 @@ rownames(ps_sample_df) <- as.character(df$sample_alias)
 ps <- phyloseq(otu_table(seqtab.nochim[as.character(df$sample_alias),], taxa_are_rows=FALSE), sample_data(ps_sample_df,tax_table(taxa)))
 ```
 
-```{r, eval=TRUE, include=FALSE}
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
 ps_sample_df <- df
 rownames(ps_sample_df) <- as.character(df$sample_alias)
 ps <- phyloseq(otu_table(seqtab.nochim[as.character(df$sample_alias),], taxa_are_rows=FALSE), sample_data(ps_sample_df,tax_table(taxa)))
 ```
 
 Plot Richness and Shannon diversity metrics by sample type. Essentially we are recreating Fig. 1A in the original article. Do the results that we get from this limited study appear to be similar?
+
 ```{r, eval=TRUE, echo=TRUE, include=TRUE}
 plot_richness(ps, x="sample_type", measures=c("Observed")) + geom_boxplot(aes(fill=sample_type)) + scale_x_discrete(limits=c("pig","air","pigf","cowf","ne"), labels = c("pig","air","pig farmer","cow farmer","non-exposed"))
 ```
