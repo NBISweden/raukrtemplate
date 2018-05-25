@@ -297,7 +297,7 @@ mergers <- mergePairs(dadaR1, derepR1, dadaR2, derepR2, verbose=TRUE)
 mergers_pooled <- mergePairs(dadaR1_pooled, derepR1, dadaR2_pooled, derepR2, verbose=TRUE)
 ```
 
-```{r, eval=TRUE, include=TRUE, cache=TRUE}
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
 mergers <- mergePairs(dadaR1, derepR1, dadaR2, derepR2, verbose=TRUE)
 mergers_pooled <- mergePairs(dadaR1_pooled, derepR1, dadaR2_pooled, derepR2, verbose=TRUE)
 ```
@@ -312,7 +312,7 @@ seqtab <- makeSequenceTable(mergers)
 seqtab_pooled <- makeSequenceTable(mergers_pooled)
 ```
 
-```{r, eval=TRUE, include=TRUE, cache=TRUE}
+```{r, eval=TRUE, include=FALSE, cache=TRUE}
 seqtab <- makeSequenceTable(mergers)
 seqtab_pooled <- makeSequenceTable(mergers_pooled)
 ```
