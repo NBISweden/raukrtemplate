@@ -1,0 +1,258 @@
+#checklist_accession	ERC000011				
+#unique_name_prefix					
+sample_alias	tax_id	scientific_name	sample_title	sample_description	location number
+10	1176744	pig metagenome	pig_1_1__	nasal swab from pig	1
+103	646099	human metagenome	ne_40_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	40
+105	646099	human metagenome	ne_40_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	40
+107	646099	human metagenome	ne_41_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	41
+109	646099	human metagenome	ne_41_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	41
+11	1176744	pig metagenome	pig_1_2__	nasal swab from pig	1
+112	1176744	pig metagenome	pig_10_1__	nasal swab from pig	10
+113	1176744	pig metagenome	pig_10_2__	nasal swab from pig	10
+114	655179	air metagenome	air sample from pig farm_10_0__	air sample from pig farm	10
+115	646099	human metagenome	pigf_10_0_left_ant	nasal swab from pig farmer left nare anterior	10
+117	646099	human metagenome	pigf_10_0_left_post	nasal swab from pig farmer left nare posterior	10
+12	1176744	pig metagenome	pig_1_3__	nasal swab from pig	1
+120	1176744	pig metagenome	pig_11_1__	nasal swab from pig	11
+121	1176744	pig metagenome	pig_11_2__	nasal swab from pig	11
+122	655179	air metagenome	air sample from pig farm_11_0__	air sample from pig farm	11
+123	646099	human metagenome	pigf_11_0_left_ant	nasal swab from pig farmer left nare anterior	11
+125	646099	human metagenome	pigf_11_0_left_post	nasal swab from pig farmer left nare posterior	11
+127	646099	human metagenome	ne_42_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	42
+129	646099	human metagenome	ne_42_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	42
+13	655179	air metagenome	air sample from pig farm_1_0__	air sample from pig farm	1
+131	646099	human metagenome	ne_43_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	43
+133	646099	human metagenome	ne_43_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	43
+135	646099	human metagenome	ne_44_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	44
+137	646099	human metagenome	ne_44_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	44
+143	646099	human metagenome	ne_45_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	45
+145	646099	human metagenome	ne_45_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	45
+148	646099	human metagenome	ne_46_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	46
+150	646099	human metagenome	ne_46_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	46
+152	646099	human metagenome	ne_47_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	47
+154	646099	human metagenome	ne_47_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	47
+157	646099	human metagenome	ne_48_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	48
+158	646099	human metagenome	ne_48_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	48
+193	646099	human metagenome	cowf_30_1_left_ant	nasal swab from cow farmer left nare anterior	30
+195	646099	human metagenome	cowf_30_1_left_post	nasal swab from cow farmer left nare posterior	30
+197	646099	human metagenome	cowf_30_2_left_ant	nasal swab from cow farmer left nare anterior	30
+199	646099	human metagenome	cowf_30_2_left_post	nasal swab from cow farmer left nare posterior	30
+2	646099	human metagenome	pigf_1_1_left_ant	nasal swab from pig farmer left nare anterior	1
+201	646099	human metagenome	cowf_30_3_left_ant	nasal swab from cow farmer left nare anterior	30
+203	646099	human metagenome	cowf_30_3_left_post	nasal swab from cow farmer left nare posterior	30
+205	646099	human metagenome	cowf_30_4_left_ant	nasal swab from cow farmer left nare anterior	30
+207	646099	human metagenome	cowf_30_4_left_post	nasal swab from cow farmer left nare posterior	30
+210	1176744	pig metagenome	pig_12_1__	nasal swab from pig	12
+211	1176744	pig metagenome	pig_12_2__	nasal swab from pig	12
+217	646099	human metagenome	pigf_12_2_left_ant	nasal swab from pig farmer left nare anterior	12
+219	646099	human metagenome	pigf_12_2_left_post	nasal swab from pig farmer left nare posterior	12
+221	646099	human metagenome	pigf_12_3_left_ant	nasal swab from pig farmer left nare anterior	12
+223	646099	human metagenome	pigf_12_3_left_post	nasal swab from pig farmer left nare posterior	12
+226	1176744	pig metagenome	pig_13_1__	nasal swab from pig	13
+227	1176744	pig metagenome	pig_13_2__	nasal swab from pig	13
+228	655179	air metagenome	air sample from pig farm_13_0__	air sample from pig farm	13
+233	646099	human metagenome	pigf_13_2_left_ant	nasal swab from pig farmer left nare anterior	13
+235	646099	human metagenome	pigf_13_2_left_post	nasal swab from pig farmer left nare posterior	13
+238	646099	human metagenome	pigf_13_3_left_ant	nasal swab from pig farmer left nare anterior	13
+240	646099	human metagenome	pigf_13_3_left_post	nasal swab from pig farmer left nare posterior	13
+242	646099	human metagenome	pigf_13_4_left_ant	nasal swab from pig farmer left nare anterior	13
+244	646099	human metagenome	pigf_13_4_left_post	nasal swab from pig farmer left nare posterior	13
+246	646099	human metagenome	pigf_13_5_left_ant	nasal swab from pig farmer left nare anterior	13
+248	646099	human metagenome	pigf_13_5_left_post	nasal swab from pig farmer left nare posterior	13
+264	646099	human metagenome	cowf_31_2_left_ant	nasal swab from cow farmer left nare anterior	31
+266	646099	human metagenome	cowf_31_2_left_post	nasal swab from cow farmer left nare posterior	31
+268	646099	human metagenome	cowf_31_3_left_ant	nasal swab from cow farmer left nare anterior	31
+270	646099	human metagenome	cowf_31_3_left_post	nasal swab from cow farmer left nare posterior	31
+276	646099	human metagenome	cowf_31_5_left_ant	nasal swab from cow farmer left nare anterior	31
+278	646099	human metagenome	cowf_31_5_left_post	nasal swab from cow farmer left nare posterior	31
+280	646099	human metagenome	cowf_31_6_left_ant	nasal swab from cow farmer left nare anterior	31
+282	646099	human metagenome	cowf_31_6_left_post	nasal swab from cow farmer left nare posterior	31
+284	646099	human metagenome	cowf_31_7_left_ant	nasal swab from cow farmer left nare anterior	31
+286	646099	human metagenome	cowf_31_7_left_post	nasal swab from cow farmer left nare posterior	31
+297	646099	human metagenome	ne_50_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	50
+299	646099	human metagenome	ne_50_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	50
+30	1176744	pig metagenome	pig_3_1__	nasal swab from pig	3
+301	646099	human metagenome	ne_51_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	51
+304	646099	human metagenome	ne_51_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	51
+309	646099	human metagenome	ne_52_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	52
+31	1176744	pig metagenome	pig_3_2__	nasal swab from pig	3
+312	646099	human metagenome	ne_52_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	52
+313	646099	human metagenome	ne_53_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	53
+315	646099	human metagenome	ne_53_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	53
+32	655179	air metagenome	air sample from pig farm_3_0__	air sample from pig farm	3
+33	646099	human metagenome	pigf_3_1_left_ant	nasal swab from pig farmer left nare anterior	3
+35	646099	human metagenome	pigf_3_1_left_post	nasal swab from pig farmer left nare posterior	3
+37	646099	human metagenome	pigf_3_2_left_ant	nasal swab from pig farmer left nare anterior	3
+382	1176744	pig metagenome	pig_17_1__	nasal swab from pig	17
+383	1176744	pig metagenome	pig_17_2__	nasal swab from pig	17
+384	655179	air metagenome	air sample from pig farm_17_0__	air sample from pig farm	17
+385	646099	human metagenome	pigf_17_1_left_ant	nasal swab from pig farmer left nare anterior	17
+387	646099	human metagenome	pigf_17_1_left_post	nasal swab from pig farmer left nare posterior	17
+389	646099	human metagenome	pigf_17_2_left_ant	nasal swab from pig farmer left nare anterior	17
+39	646099	human metagenome	pigf_3_2_left_post	nasal swab from pig farmer left nare posterior	3
+391	646099	human metagenome	pigf_17_2_left_post	nasal swab from pig farmer left nare posterior	17
+4	646099	human metagenome	pigf_1_1_left_post	nasal swab from pig farmer left nare posterior	1
+418	1176744	pig metagenome	pig_19_1__	nasal swab from pig	19
+419	1176744	pig metagenome	pig_19_2__	nasal swab from pig	19
+42	1176744	pig metagenome	pig_4_1__	nasal swab from pig	4
+421	646099	human metagenome	pigf_19_1_left_ant	nasal swab from pig farmer left nare anterior	19
+423	646099	human metagenome	pigf_19_1_left_post	nasal swab from pig farmer left nare posterior	19
+425	646099	human metagenome	pigf_19_2_left_ant	nasal swab from pig farmer left nare anterior	19
+427	646099	human metagenome	pigf_19_2_left_post	nasal swab from pig farmer left nare posterior	19
+429	646099	human metagenome	cowf_32_0_left_ant	nasal swab from cow farmer left nare anterior	32
+43	1176744	pig metagenome	pig_4_2__	nasal swab from pig	4
+431	646099	human metagenome	cowf_32_0_left_post	nasal swab from cow farmer left nare posterior	32
+44	655179	air metagenome	air sample from pig farm_4_0__	air sample from pig farm	4
+45	646099	human metagenome	pigf_4_0_left_ant	nasal swab from pig farmer left nare anterior	4
+47	646099	human metagenome	pigf_4_0_left_post	nasal swab from pig farmer left nare posterior	4
+484	646099	human metagenome	cowf_33_1_left_ant	nasal swab from cow farmer left nare anterior	33
+487	646099	human metagenome	cowf_33_1_left_post	nasal swab from cow farmer left nare posterior	33
+488	646099	human metagenome	cowf_33_2_left_ant	nasal swab from cow farmer left nare anterior	33
+490	646099	human metagenome	cowf_33_2_left_post	nasal swab from cow farmer left nare posterior	33
+493	1176744	pig metagenome	pig_22_1__	nasal swab from pig	22
+494	1176744	pig metagenome	pig_22_2__	nasal swab from pig	22
+495	655179	air metagenome	air sample from pig farm_22_0__	air sample from pig farm	22
+496	646099	human metagenome	pigf_22_1_left_ant	nasal swab from pig farmer left nare anterior	22
+498	646099	human metagenome	pigf_22_1_left_post	nasal swab from pig farmer left nare posterior	22
+50	1176744	pig metagenome	pig_5_1__	nasal swab from pig	5
+500	646099	human metagenome	pigf_22_2_left_ant	nasal swab from pig farmer left nare anterior	22
+502	646099	human metagenome	pigf_22_2_left_post	nasal swab from pig farmer left nare posterior	22
+509	646099	human metagenome	cowf_34_2_left_ant	nasal swab from cow farmer left nare anterior	34
+51	1176744	pig metagenome	pig_5_2__	nasal swab from pig	5
+511	646099	human metagenome	cowf_34_2_left_post	nasal swab from cow farmer left nare posterior	34
+518	646099	human metagenome	ne_65_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	65
+52	655179	air metagenome	air sample from pig farm_5_0__	air sample from pig farm	5
+520	646099	human metagenome	ne_65_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	65
+527	1176744	pig metagenome	pig_23_1__	nasal swab from pig	23
+528	1176744	pig metagenome	pig_23_2__	nasal swab from pig	23
+529	655179	air metagenome	air sample from pig farm_23_0__	air sample from pig farm	23
+530	646099	human metagenome	pigf_23_1_left_ant	nasal swab from pig farmer left nare anterior	23
+532	646099	human metagenome	pigf_23_1_left_post	nasal swab from pig farmer left nare posterior	23
+534	646099	human metagenome	pigf_23_2_left_ant	nasal swab from pig farmer left nare anterior	23
+536	646099	human metagenome	pigf_23_2_left_post	nasal swab from pig farmer left nare posterior	23
+538	646099	human metagenome	pigf_23_3_left_ant	nasal swab from pig farmer left nare anterior	23
+54	646099	human metagenome	pigf_5_0_left_ant	nasal swab from pig farmer left nare anterior	5
+540	646099	human metagenome	pigf_23_3_left_post	nasal swab from pig farmer left nare posterior	23
+543	1176744	pig metagenome	pig_24_1__	nasal swab from pig	24
+544	1176744	pig metagenome	pig_24_2__	nasal swab from pig	24
+545	655179	air metagenome	air sample from pig farm_24_0__	air sample from pig farm	24
+546	646099	human metagenome	pigf_24_1_left_ant	nasal swab from pig farmer left nare anterior	24
+548	646099	human metagenome	pigf_24_1_left_post	nasal swab from pig farmer left nare posterior	24
+55	646099	human metagenome	pigf_5_0_left_post	nasal swab from pig farmer left nare posterior	5
+550	646099	human metagenome	pigf_24_2_left_ant	nasal swab from pig farmer left nare anterior	24
+552	646099	human metagenome	pigf_24_2_left_post	nasal swab from pig farmer left nare posterior	24
+555	1176744	pig metagenome	pig_25_1__	nasal swab from pig	25
+556	1176744	pig metagenome	pig_25_2__	nasal swab from pig	25
+557	655179	air metagenome	air sample from pig farm_25_0__	air sample from pig farm	25
+560	646099	human metagenome	pigf_25_0_left_post	nasal swab from pig farmer left nare posterior	25
+563	1176744	pig metagenome	pig_26_1__	nasal swab from pig	26
+564	1176744	pig metagenome	pig_26_2__	nasal swab from pig	26
+565	655179	air metagenome	air sample from pig farm_26_0__	air sample from pig farm	26
+566	646099	human metagenome	pigf_26_1_left_ant	nasal swab from pig farmer left nare anterior	26
+568	646099	human metagenome	pigf_26_1_left_post	nasal swab from pig farmer left nare posterior	26
+570	646099	human metagenome	pigf_26_2_left_ant	nasal swab from pig farmer left nare anterior	26
+572	646099	human metagenome	pigf_26_2_left_post	nasal swab from pig farmer left nare posterior	26
+574	646099	human metagenome	pigf_26_3_left_ant	nasal swab from pig farmer left nare anterior	26
+576	646099	human metagenome	pigf_26_3_left_post	nasal swab from pig farmer left nare posterior	26
+58	1176744	pig metagenome	pig_6_1__	nasal swab from pig	6
+59	1176744	pig metagenome	pig_6_2__	nasal swab from pig	6
+6	646099	human metagenome	pigf_1_2_left_ant	nasal swab from pig farmer left nare anterior	1
+60	655179	air metagenome	air sample from pig farm_6_0__	air sample from pig farm	6
+61	646099	human metagenome	pigf_6_0_left_ant	nasal swab from pig farmer left nare anterior	6
+63	646099	human metagenome	pigf_6_0_left_post	nasal swab from pig farmer left nare posterior	6
+66	1176744	pig metagenome	pig_7_1__	nasal swab from pig	7
+67	1176744	pig metagenome	pig_7_2__	nasal swab from pig	7
+68	655179	air metagenome	air sample from pig farm_7_0__	air sample from pig farm	7
+69	646099	human metagenome	pigf_7_0_left_ant	nasal swab from pig farmer left nare anterior	7
+71	646099	human metagenome	pigf_7_0_left_post	nasal swab from pig farmer left nare posterior	7
+74	1176744	pig metagenome	pig_8_1__	nasal swab from pig	8
+75	1176744	pig metagenome	pig_8_2__	nasal swab from pig	8
+76	655179	air metagenome	air sample from pig farm_8_0__	air sample from pig farm	8
+77	646099	human metagenome	pigf_8_0_left_ant	nasal swab from pig farmer left nare anterior	8
+79	646099	human metagenome	pigf_8_0_left_post	nasal swab from pig farmer left nare posterior	8
+8	646099	human metagenome	pigf_1_2_left_post	nasal swab from pig farmer left nare posterior	1
+82	1176744	pig metagenome	pig_9_1__	nasal swab from pig	9
+83	1176744	pig metagenome	pig_9_2__	nasal swab from pig	9
+84	655179	air metagenome	air sample from pig farm_9_0__	air sample from pig farm	9
+85	646099	human metagenome	pigf_9_0_left_ant	nasal swab from pig farmer left nare anterior	9
+87	646099	human metagenome	pigf_9_0_left_post	nasal swab from pig farmer left nare posterior	9
+184	646099	human metagenome	ne_49_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	49
+186	646099	human metagenome	ne_49_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	49
+20	646099	human metagenome	pigf_2_0_left_ant	nasal swab from pig farmer left nare anterior	2
+22	646099	human metagenome	pigf_2_0_left_post	nasal swab from pig farmer left nare posterior	2
+24	1176744	pig metagenome	pig_2_1__	nasal swab from pig	2
+25	1176744	pig metagenome	pig_2_2__	nasal swab from pig	2
+251	1176744	pig metagenome	pig_14_1__	nasal swab from pig	14
+252	1176744	pig metagenome	pig_14_2__	nasal swab from pig	14
+253	655179	air metagenome	air sample from pig farm_14_0__	air sample from pig farm	14
+255	646099	human metagenome	pigf_14_0_left_ant	nasal swab from pig farmer left nare anterior	14
+257	646099	human metagenome	pigf_14_0_left_post	nasal swab from pig farmer left nare posterior	14
+26	655179	air metagenome	air sample from pig farm_2_0__	air sample from pig farm	2
+288	646099	human metagenome	cowf_31_8_left_ant	nasal swab from cow farmer left nare anterior	31
+290	646099	human metagenome	cowf_31_8_left_post	nasal swab from cow farmer left nare posterior	31
+292	646099	human metagenome	cowf_31_9_left_ant	nasal swab from cow farmer left nare anterior	31
+294	646099	human metagenome	cowf_31_9_left_post	nasal swab from cow farmer left nare posterior	31
+325	646099	human metagenome	ne_54_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	54
+327	646099	human metagenome	ne_54_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	54
+329	646099	human metagenome	ne_55_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	55
+331	646099	human metagenome	ne_55_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	55
+333	646099	human metagenome	ne_56_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	56
+335	646099	human metagenome	ne_56_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	56
+337	646099	human metagenome	ne_57_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	57
+339	646099	human metagenome	ne_57_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	57
+341	646099	human metagenome	ne_58_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	58
+343	646099	human metagenome	ne_58_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	58
+345	646099	human metagenome	ne_59_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	59
+347	646099	human metagenome	ne_59_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	59
+349	646099	human metagenome	ne_60_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	60
+351	646099	human metagenome	ne_60_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	60
+353	646099	human metagenome	ne_61_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	61
+355	646099	human metagenome	ne_61_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	61
+366	1176744	pig metagenome	pig_15_1__	nasal swab from pig	15
+367	1176744	pig metagenome	pig_15_2__	nasal swab from pig	15
+368	655179	air metagenome	air sample from pig farm_15_0__	air sample from pig farm	15
+369	646099	human metagenome	pigf_15_0_left_ant	nasal swab from pig farmer left nare anterior	15
+371	646099	human metagenome	pigf_15_0_left_post	nasal swab from pig farmer left nare posterior	15
+374	1176744	pig metagenome	pig_16_1__	nasal swab from pig	16
+375	1176744	pig metagenome	pig_16_2__	nasal swab from pig	16
+376	655179	air metagenome	air sample from pig farm_16_0__	air sample from pig farm	16
+377	646099	human metagenome	pigf_16_0_left_ant	nasal swab from pig farmer left nare anterior	16
+379	646099	human metagenome	pigf_16_0_left_post	nasal swab from pig farmer left nare posterior	16
+410	1176744	pig metagenome	pig_18_1__	nasal swab from pig	18
+411	1176744	pig metagenome	pig_18_2__	nasal swab from pig	18
+412	655179	air metagenome	air sample from pig farm_18_0__	air sample from pig farm	18
+413	646099	human metagenome	pigf_18_0_left_ant	nasal swab from pig farmer left nare anterior	18
+415	646099	human metagenome	pigf_18_0_left_post	nasal swab from pig farmer left nare posterior	18
+435	1176744	pig metagenome	pig_20_2__	nasal swab from pig	20
+436	655179	air metagenome	air sample from pig farm_20_0__	air sample from pig farm	20
+437	646099	human metagenome	pigf_20_0_left_ant	nasal swab from pig farmer left nare anterior	20
+439	646099	human metagenome	pigf_20_0_left_post	nasal swab from pig farmer left nare posterior	20
+442	646099	human metagenome	cowf_31_10_left_ant	nasal swab from cow farmer left nare anterior	31
+444	646099	human metagenome	cowf_31_10_left_post	nasal swab from cow farmer left nare posterior	31
+450	646099	human metagenome	cowf_31_12_left_ant	nasal swab from cow farmer left nare anterior	31
+452	646099	human metagenome	cowf_31_12_left_post	nasal swab from cow farmer left nare posterior	31
+460	1176744	pig metagenome	pig_21_1__	nasal swab from pig	21
+461	1176744	pig metagenome	pig_21_2__	nasal swab from pig	21
+462	655179	air metagenome	air sample from pig farm_21_0__	air sample from pig farm	21
+463	646099	human metagenome	pigf_21_1_left_ant	nasal swab from pig farmer left nare anterior	21
+465	646099	human metagenome	pigf_21_1_left_post	nasal swab from pig farmer left nare posterior	21
+467	646099	human metagenome	pigf_21_2_left_ant	nasal swab from pig farmer left nare anterior	21
+469	646099	human metagenome	pigf_21_2_left_post	nasal swab from pig farmer left nare posterior	21
+471	646099	human metagenome	ne_62_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	62
+473	646099	human metagenome	ne_62_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	62
+475	646099	human metagenome	ne_63_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	63
+477	646099	human metagenome	ne_63_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	63
+479	646099	human metagenome	ne_64_0_left_ant	nasal swab from individual without contact to farm animals left nare anterior	64
+481	646099	human metagenome	ne_64_0_left_post	nasal swab from individual without contact to farm animals left nare posterior	64
+558	646099	human metagenome	pigf_25_0_left_ant	nasal swab from pig farmer left nare anterior	25
+587	1176744	pig metagenome	pig_27_1__	nasal swab from pig	27
+588	1176744	pig metagenome	pig_27_2__	nasal swab from pig	27
+589	655179	air metagenome	air sample from pig farm_27_0__	air sample from pig farm	27
+590	646099	human metagenome	pigf_27_0_left_ant	nasal swab from pig farmer left nare anterior	27
+592	646099	human metagenome	pigf_27_0_left_post	nasal swab from pig farmer left nare posterior	27
+603	1176744	pig metagenome	pig_28_1__	nasal swab from pig	28
+604	1176744	pig metagenome	pig_28_2__	nasal swab from pig	28
+605	655179	air metagenome	air sample from pig farm_28_0__	air sample from pig farm	28
+606	646099	human metagenome	pigf_28_0_left_ant	nasal swab from pig farmer left nare anterior	28
+608	646099	human metagenome	pigf_28_0_left_post	nasal swab from pig farmer left nare posterior	28
+212	655179	air metagenome	air sample from pig farm_12_0__	air sample from pig farm	12
