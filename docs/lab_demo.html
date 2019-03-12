@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Roy Francis" />
+
+
+<title>RaukR lab demo</title>
+
+<script src="lab_demo_files/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lab_demo_files/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="lab_demo_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lab_demo_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lab_demo_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="lab_demo_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="lab_demo_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="lab_demo_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="lab_demo_files/navigation-1.1/tabsets.js"></script>
+<link href="lab_demo_files/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="lab_demo_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="lab_demo_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="lab_demo_files/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="lab_demo_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="lab_demo_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link id="font-awesome-1-attachment" rel="attachment" href="lab_demo_files/font-awesome-5.1.0/fonts/fontawesome-webfont.ttf"/>
+<script src="lab_demo_files/kePrint-0.0.1/kePrint.js"></script>
+<script src="lab_demo_files/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="lab_demo_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="lab_demo_files/datatables-binding-0.5/datatables.js"></script>
+<link href="lab_demo_files/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="lab_demo_files/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="lab_demo_files/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="lab_demo_files/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="lab_demo_files/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<script src="lab_demo_files/proj4js-2.3.15/proj4.js"></script>
+<link href="lab_demo_files/highcharts-7.0.1/css/motion.css" rel="stylesheet" />
+<link href="lab_demo_files/highcharts-7.0.1/css/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="lab_demo_files/highcharts-7.0.1/highcharts.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/highcharts-3d.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/highcharts-more.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/stock.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/map.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/annotations.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/boost.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/data.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/drag-panes.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/drilldown.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/item-series.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/offline-exporting.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/overlapping-datalabels.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/exporting.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/export-data.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/funnel.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/heatmap.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/treemap.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/sankey.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/solid-gauge.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/streamgraph.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/sunburst.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/vector.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/wordcloud.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/xrange.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/tilemap.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/venn.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/gantt.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/timeline.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/modules/parallel-coordinates.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/plugins/grouped-categories.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/plugins/motion.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/plugins/multicolor_series.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/custom/reset.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/custom/symbols-extra.js"></script>
+<script src="lab_demo_files/highcharts-7.0.1/custom/text-symbols.js"></script>
+<script src="lab_demo_files/highchart-binding-0.7.0/highchart.js"></script>
+<script src="lab_demo_files/plotly-binding-4.8.0/plotly.js"></script>
+<script src="lab_demo_files/typedarray-0.1/typedarray.min.js"></script>
+<link href="lab_demo_files/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="lab_demo_files/plotly-main-1.39.2/plotly-latest.min.js"></script>
+<script src="lab_demo_files/d3-5.7.0/d3.min.js"></script>
+<script src="lab_demo_files/d3-lasso-0.0.5/d3-lasso.min.js"></script>
+<link href="lab_demo_files/ggiraphjs-0.1.0/styles.css" rel="stylesheet" />
+<script src="lab_demo_files/ggiraphjs-0.1.0/ggiraphjs.min.js"></script>
+<script src="lab_demo_files/girafe-binding-0.6.0/girafe.js"></script>
+<link href="lab_demo_files/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="lab_demo_files/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="lab_demo_files/dygraphs-1.1.1/shapes.js"></script>
+<script src="lab_demo_files/moment-2.8.4/moment.js"></script>
+<script src="lab_demo_files/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="lab_demo_files/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="lab_demo_files/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+<script src="lab_demo_files/forceNetwork-binding-0.4/forceNetwork.js"></script>
+<link href="lab_demo_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="lab_demo_files/leaflet-1.3.1/leaflet.js"></script>
+<link href="lab_demo_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="lab_demo_files/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="lab_demo_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="lab_demo_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="lab_demo_files/leaflet-binding-2.0.2/leaflet.js"></script>
+<link href="lab_demo_files/leaflet-easybutton-1.3.1/easy-button.css" rel="stylesheet" />
+<script src="lab_demo_files/leaflet-easybutton-1.3.1/easy-button.js"></script>
+<script src="lab_demo_files/leaflet-easybutton-1.3.1/EasyButton-binding.js"></script>
+<link href="lab_demo_files/leaflet-locationfilter2-0.1.1/locationfilter.css" rel="stylesheet" />
+<script src="lab_demo_files/leaflet-locationfilter2-0.1.1/locationfilter.js"></script>
+<script src="lab_demo_files/leaflet-locationfilter2-0.1.1/locationfilter-bindings.js"></script>
+<link href="lab_demo_files/ionicons-2.0.1/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="assets/lab.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">RaukR lab demo</h1>
+<h3 class="subtitle"><em>RaukR 2019 • Advanced R for Bioinformatics</em></h3>
+<h4 class="author"><em>Roy Francis</em></h4>
+
+</div>
+
+
+<p><link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:300,400,600|Ubuntu+Mono&amp;subset=latin-ext" rel="stylesheet"></p>
+<p><img src="assets/logo.svg" alt="logo_raukr" class="trlogo"></p>
+<!-- ------------ Only edit title, subtitle & author above this ------------ -->
+<br>
+<p class="abstract spaced">
+This is a demo rmarkdown lab document to showcase the RaukR 2019 lab theme, style and usage.
+</p>
+<p><br></p>
+<div id="rmarkdown" class="section level1">
+<h1><span class="header-section-number">1</span> RMarkdown</h1>
+<ul>
+<li>This is an RMarkdown document.</li>
+<li>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.</li>
+<li>Refer <a href="https://rmarkdown.rstudio.com/authoring_basics.html">here</a> for a guide.</li>
+<li>In RStudio, you create a <code>.Rmd</code> text file, then click the <strong>Knit</strong> button.</li>
+<li><code>.Rmd</code> documents can also be rendered as such:</li>
+</ul>
+<pre class="r"><code>rmarkdown::render(&quot;report.Rmd&quot;,output_format=&quot;html_document&quot;)</code></pre>
+</div>
+<div id="layout" class="section level1">
+<h1><span class="header-section-number">2</span> Layout</h1>
+<p>Use <code>&lt;div&gt;content&lt;/div&gt;</code> for block content and <code>&lt;span&gt;content&lt;/span&gt;</code> for inline content.</p>
+<p>For paragraphs, use <code>&lt;p&gt;content&lt;/p&gt;</code>. And use classes <code>text-left</code>, <code>text-center</code> and <code>text-right</code> to align text left, center and right respectively.</p>
+<pre><code>&lt;p class=&quot;text-right&quot; style=&quot;background-color: aliceblue&quot;&gt;This content is aligned right.&lt;/p&gt;
+&lt;p class=&quot;text-center&quot; style=&quot;background-color: aliceblue&quot;&gt;This content is aligned center.&lt;/p&gt;</code></pre>
+<p class="text-right" style="background-color: aliceblue">
+This content is aligned right.
+</p>
+<p class="text-center" style="background-color: aliceblue">
+This content is aligned center.
+</p>
+<p><br></p>
+<p>Content can be organised into columns using <code>pull-left-XX</code> or <code>pull-right-XX</code>. Classes for 30, 40, 50, 60 and 70 have been implemented for left and right. Note that the total width must sum to 100.</p>
+<pre><code>&lt;div class=&quot;pull-left-50&quot; style=&quot;background-color: aliceblue&quot;&gt;This content is pulled left.&lt;/div&gt;
+&lt;div class=&quot;pull-right-50 text-center&quot; style=&quot;background-color: aliceblue&quot;&gt;This content is pulled right and text centered.&lt;/div&gt;</code></pre>
+<div class="pull-left-50" style="background-color: aliceblue">
+This content is pulled left.
+</div>
+<div class="pull-right-50 text-center" style="background-color: aliceblue">
+This content is pulled right and text centered.
+</div>
+<p><br></p>
+<pre><code>&lt;div class=&quot;pull-left-30&quot; style=&quot;background-color: aliceblue&quot;&gt;This content is pulled left.&lt;/div&gt;
+&lt;div class=&quot;pull-right-70&quot; style=&quot;background-color: aliceblue&quot;&gt;This content is pulled right.&lt;/div&gt;</code></pre>
+<div class="pull-left-30" style="background-color: aliceblue">
+This content is pulled left.
+</div>
+<div class="pull-right-70" style="background-color: aliceblue">
+This content is pulled right.
+</div>
+<p><br></p>
+<p>This is an example of nested columns.</p>
+<pre><code>&lt;div class=&quot;pull-left-30&quot; style=&quot;background-color: aliceblue&quot;&gt;This column is pulled left.&lt;/div&gt;
+&lt;div class=&quot;pull-right-70&quot; style=&quot;background-color: aliceblue&quot;&gt;
+This column is pulled right.
+&lt;div class=&quot;pull-left-50&quot; style=&quot;background-color: #d0ece7&quot;&gt;
+Nested left.
+&lt;/div&gt;
+&lt;div class=&quot;pull-right-50&quot; style=&quot;background-color: #f2d7d5&quot;&gt;
+Nested right.
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="pull-left-30" style="background-color: aliceblue">
+This column is pulled left.
+</div>
+<div class="pull-right-70" style="background-color: aliceblue">
+This column is pulled right.
+<div class="pull-left-50" style="background-color: #d0ece7">
+<p>Nested left.</p>
+</div>
+<div class="pull-right-50" style="background-color: #f2d7d5">
+<p>Nested right.</p>
+</div>
+</div>
+<p><br></p>
+</div>
+<div id="text-formatting" class="section level1">
+<h1><span class="header-section-number">3</span> Text formatting</h1>
+<p>Headings can be defined as shown below.</p>
+<pre><code>## Level 2 heading  
+### Level 3 heading  
+#### Level 4 heading  
+##### Level 5 heading  
+###### Level 6 heading </code></pre>
+<div id="level-2-heading" class="section level2">
+<h2><span class="header-section-number">3.1</span> Level 2 heading</h2>
+<div id="level-3-heading" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Level 3 heading</h3>
+<div id="level-4-heading" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Level 4 heading</h4>
+<div id="level-5-heading" class="section level5">
+<h5><span class="header-section-number">3.1.1.1.1</span> Level 5 heading</h5>
+<div id="level-6-heading" class="section level6">
+<h6><span class="header-section-number">3.1.1.1.1.1</span> Level 6 heading</h6>
+<p>Six custom classes are defined for text scaling. This can be defined inside a paragraph (<code>&lt;p&gt;</code>) or <code>&lt;span&gt;</code>.</p>
+<pre><code>&lt;span class=&quot;largest&quot;&gt;Largest text.&lt;/span&gt;   
+&lt;span class=&quot;larger&quot;&gt;Larger text.&lt;/span&gt;  
+&lt;span class=&quot;large&quot;&gt;Large text.&lt;/span&gt;  
+Normal text.  
+&lt;span class=&quot;small&quot;&gt;Small text.&lt;/span&gt;  
+&lt;span class=&quot;smaller&quot;&gt;Smaller text.&lt;/span&gt;  
+&lt;span class=&quot;smallest&quot;&gt;Smallest text.&lt;/span&gt;  </code></pre>
+<p><span class="largest">Largest text.</span><br />
+<span class="larger">Larger text.</span><br />
+<span class="large">Large text.</span><br />
+Normal text.<br />
+<span class="small">Small text.</span><br />
+<span class="smaller">Smaller text.</span><br />
+<span class="smallest">Smallest text.</span></p>
+<p>A horizontal line can be created using three or more <code>*</code> or <code>-</code>.</p>
+<p><code>***</code></p>
+<hr />
+<p><code>This is __Bold text__</code> This is <strong>Bold text</strong><br />
+<code>This is _Italic text_</code> This is <em>Italic text</em><br />
+<code>~~Strikethrough~~ text</code> <del>Strikethrough</del> text<br />
+This is Subscript <code>H~2~O</code> displayed as H<sub>2</sub>O<br />
+This is Superscript <code>2^10^</code> displayed as 2<sup>10</sup><br />
+<code>This is a [link](r-project.org)</code> This is a <a href="r-project.org">link</a><br />
+An example of footnote reference <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<pre><code>&gt; This is a block quote. This
+&gt; paragraph has two lines.
+&gt;
+&gt; 1. This is a list inside a block quote.
+&gt; 2. Second item.</code></pre>
+<blockquote>
+<p>This is a block quote. This paragraph has two lines.</p>
+<ol style="list-style-type: decimal">
+<li>This is a list inside a block quote.</li>
+<li>Second item.</li>
+</ol>
+</blockquote>
+<p>Icons from <a href="https://fontawesome.com/v5.0.13/icons?d=gallery">FontAwesome</a> can be displayed using the HTML <code>&lt;i&gt;</code> tag. Note that not all icons may work.</p>
+<p><code>Here is a &lt;i class='fa fa-calendar'&gt;&lt;/i&gt; calendar and a &lt;i class='fa fa-couch'&gt;&lt;/i&gt; couch.</code></p>
+<p>Here is a <i class='fa fa-calendar'></i> calendar and a <i class='fa fa-couch'></i> couch.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="code-formatting" class="section level1">
+<h1><span class="header-section-number">4</span> Code formatting</h1>
+<p>Code can be defined inline where <code>`this`</code> looks like <code>this</code>. R code can be executed inline <code>`r Sys.Date()`</code> producing 2019-03-07. Code can also be defined inside code blocks.</p>
+<pre>
+```
+This is code
+```
+</pre>
+<pre><code>This is code</code></pre>
+<p>R code is executed inside code blocks like this</p>
+<pre><code>```{r}
+Sys.Date()
+``` </code></pre>
+<p>which shows the code and output.</p>
+<pre class="r"><code>Sys.Date()</code></pre>
+<pre><code>## [1] &quot;2019-03-07&quot;</code></pre>
+<p>The code and results can be hidden by <code>```{r,echo=FALSE,results='hide'}`</code>.</p>
+<p>Here is another example of executed R code with input and output.</p>
+<pre class="r"><code>data(iris)
+head(iris[,1:2])</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"5.1","2":"3.5","_rn_":"1"},{"1":"4.9","2":"3.0","_rn_":"2"},{"1":"4.7","2":"3.2","_rn_":"3"},{"1":"4.6","2":"3.1","_rn_":"4"},{"1":"5.0","2":"3.6","_rn_":"5"},{"1":"5.4","2":"3.9","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="lists" class="section level1">
+<h1><span class="header-section-number">5</span> Lists</h1>
+<div id="bulleted-list" class="section level2">
+<h2><span class="header-section-number">5.1</span> Bulleted List</h2>
+<p>Unordered lists are created using asterisks.</p>
+<ul>
+<li>Bullet 1<br />
+</li>
+<li>Bullet 2
+<ul>
+<li>Sub-bullet 2.1<br />
+</li>
+<li>Sub-bullet 2.2<br />
+</li>
+</ul></li>
+<li>Bullet 3</li>
+</ul>
+<p>Ordered lists are created using numbers.</p>
+<ol style="list-style-type: decimal">
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Point 3</li>
+</ol>
+</div>
+</div>
+<div id="images" class="section level1">
+<h1><span class="header-section-number">6</span> Images</h1>
+<div id="using-markdown" class="section level2">
+<h2><span class="header-section-number">6.1</span> Using Markdown</h2>
+<p>Using regular markdown.</p>
+<pre><code>![](assets/cover.jpg)</code></pre>
+<div class="figure">
+<img src="assets/cover.jpg" />
+
+</div>
+<p>The dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.</p>
+<pre><code>![](assets/cover.jpg){width=30%}  </code></pre>
+<div class="figure">
+<img src="assets/cover.jpg" style="width:30.0%" />
+
+</div>
+<p>This image above is now 30% of it’s original width.</p>
+</div>
+<div id="using-html" class="section level2">
+<h2><span class="header-section-number">6.2</span> Using HTML</h2>
+<p>This image below is 30% size.<br />
+<code>&lt;img src=&quot;assets/cover.jpg&quot; style=&quot;width:30%;&quot;/&gt;</code></p>
+<p><img src="assets/cover.jpg" style="width:30%;"/></p>
+<p>This image below is 30% size, has shadow and corners rounded.<br />
+<code>&lt;img src=&quot;assets/cover.jpg&quot; style=&quot;width:30%;&quot; class=&quot;fancyimage&quot;/&gt;</code></p>
+<p><img src="assets/cover.jpg" style="width:30%;" class="fancyimage"/></p>
+</div>
+<div id="using-r" class="section level2">
+<h2><span class="header-section-number">6.3</span> Using R</h2>
+<p>R chunks in RMarkdown can be used to control image display size using the arguemnt <code>out.width</code>.</p>
+<p>This image below is displayed at a size of 300 pixels.</p>
+<pre><code>```{r,out.width=300}
+knitr::include_graphics(&#39;assets/cover.jpg&#39;)
+``` </code></pre>
+<p><img src="assets/cover.jpg" width="300" style="display: block; margin: auto auto auto 0;" /></p>
+<p>This image below is displayed at a size of 75 pixels.</p>
+<pre><code>```{r,out.width=75}
+knitr::include_graphics(&#39;assets/cover.jpg&#39;)
+``` </code></pre>
+<p><img src="assets/cover.jpg" width="75" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+</div>
+<div id="math-expressions" class="section level1">
+<h1><span class="header-section-number">7</span> Math expressions</h1>
+<p>Some examples of rendering equations.</p>
+<pre><code>$e^{i\pi} + 1 = 0$</code></pre>
+<p><span class="math inline">\(e^{i\pi} + 1 = 0\)</span></p>
+<pre><code>$$\frac{E \times X^2 \prod I}{2+7} = 432$$</code></pre>
+<p><span class="math display">\[\frac{E \times X^2 \prod I}{2+7} = 432\]</span></p>
+<pre><code>$$\sum_{i=1}^n X_i$$</code></pre>
+<p><span class="math display">\[\sum_{i=1}^n X_i\]</span></p>
+<pre><code>$$\int_0^{2\pi} \sin x~dx$$</code></pre>
+<p><span class="math display">\[\int_0^{2\pi} \sin x~dx\]</span></p>
+<pre><code>$\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$</code></pre>
+<p><span class="math inline">\(\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}\)</span></p>
+<pre><code>$\begin{eqnarray} X &amp; \sim &amp; \mathrm{N}(0,1)\\ Y &amp; \sim &amp; \chi^2_{n-p}\\ R &amp; \equiv &amp; X/Y \sim t_{n-p} \end{eqnarray}$</code></pre>
+<p><span class="math inline">\(\begin{eqnarray} X &amp; \sim &amp; \mathrm{N}(0,1)\\ Y &amp; \sim &amp; \chi^2_{n-p}\\ R &amp; \equiv &amp; X/Y \sim t_{n-p} \end{eqnarray}\)</span></p>
+<pre><code>$\begin{eqnarray} P(|X-\mu| &gt; k) &amp; = &amp; P(|X-\mu|^2 &gt; k^2)\\ &amp; \leq &amp; \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ &amp; \leq &amp; \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$</code></pre>
+<p><span class="math inline">\(\begin{eqnarray} P(|X-\mu| &gt; k) &amp; = &amp; P(|X-\mu|^2 &gt; k^2)\\ &amp; \leq &amp; \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ &amp; \leq &amp; \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}\)</span></p>
+</div>
+<div id="tables" class="section level1">
+<h1><span class="header-section-number">8</span> Tables</h1>
+<div id="paged" class="section level2">
+<h2><span class="header-section-number">8.1</span> Paged</h2>
+<p>View of the data using paged tables. This is the default output for RMarkdown.</p>
+<p><b>Tab. </b> 1: <em>Table using paged tibble.</em></p>
+<pre class="r"><code>iris[1:15,]</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Petal.Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Petal.Width"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Species"],"name":[5],"type":["fctr"],"align":["left"]}],"data":[{"1":"5.1","2":"3.5","3":"1.4","4":"0.2","5":"setosa","_rn_":"1"},{"1":"4.9","2":"3.0","3":"1.4","4":"0.2","5":"setosa","_rn_":"2"},{"1":"4.7","2":"3.2","3":"1.3","4":"0.2","5":"setosa","_rn_":"3"},{"1":"4.6","2":"3.1","3":"1.5","4":"0.2","5":"setosa","_rn_":"4"},{"1":"5.0","2":"3.6","3":"1.4","4":"0.2","5":"setosa","_rn_":"5"},{"1":"5.4","2":"3.9","3":"1.7","4":"0.4","5":"setosa","_rn_":"6"},{"1":"4.6","2":"3.4","3":"1.4","4":"0.3","5":"setosa","_rn_":"7"},{"1":"5.0","2":"3.4","3":"1.5","4":"0.2","5":"setosa","_rn_":"8"},{"1":"4.4","2":"2.9","3":"1.4","4":"0.2","5":"setosa","_rn_":"9"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.1","5":"setosa","_rn_":"10"},{"1":"5.4","2":"3.7","3":"1.5","4":"0.2","5":"setosa","_rn_":"11"},{"1":"4.8","2":"3.4","3":"1.6","4":"0.2","5":"setosa","_rn_":"12"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.1","5":"setosa","_rn_":"13"},{"1":"4.3","2":"3.0","3":"1.1","4":"0.1","5":"setosa","_rn_":"14"},{"1":"5.8","2":"4.0","3":"1.2","4":"0.2","5":"setosa","_rn_":"15"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="kable" class="section level2">
+<h2><span class="header-section-number">8.2</span> kable</h2>
+<p>The most simple table using <code>kable</code> from R package <code>knitr</code>.</p>
+<pre class="r"><code>knitr::kable(head(iris), &#39;html&#39;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+Sepal.Length
+</th>
+<th style="text-align:right;">
+Sepal.Width
+</th>
+<th style="text-align:right;">
+Petal.Length
+</th>
+<th style="text-align:right;">
+Petal.Width
+</th>
+<th style="text-align:left;">
+Species
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+5.1
+</td>
+<td style="text-align:right;">
+3.5
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.7
+</td>
+<td style="text-align:right;">
+3.2
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.6
+</td>
+<td style="text-align:right;">
+3.1
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;">
+3.6
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.4
+</td>
+<td style="text-align:right;">
+3.9
+</td>
+<td style="text-align:right;">
+1.7
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="kableextra" class="section level2">
+<h2><span class="header-section-number">8.3</span> kableExtra</h2>
+<p>More advanced table using <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html"><code>kableExtra</code></a> and <a href="https://cran.r-project.org/web/packages/formattable/vignettes/formattable-data-frame.html"><code>formattable</code></a>.</p>
+<p><b>Tab. </b> 2: <em>Table using kableextra.</em></p>
+<pre class="r"><code> iris[c(1:4,51:53,105:108),] %&gt;%
+  mutate(Sepal.Length=color_bar(&quot;lightsteelblue&quot;)(Sepal.Length)) %&gt;%
+  mutate(Sepal.Width=color_tile(&quot;white&quot;,&quot;orange&quot;)(Sepal.Width)) %&gt;%
+  mutate(Species=cell_spec(Species,&quot;html&quot;,color=&quot;white&quot;,bold=T,
+    background=c(&quot;#8dd3c7&quot;,&quot;#fb8072&quot;,&quot;#bebada&quot;)[factor(.$Species)])) %&gt;%
+  kable(&quot;html&quot;,escape=F) %&gt;%
+  kable_styling(bootstrap_options=c(&quot;striped&quot;,&quot;hover&quot;,&quot;responsive&quot;),
+                full_width=F,position=&quot;left&quot;) %&gt;%
+  column_spec(5,width=&quot;3cm&quot;)</code></pre>
+<table class="table table-striped table-hover table-responsive" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Sepal.Length
+</th>
+<th style="text-align:left;">
+Sepal.Width
+</th>
+<th style="text-align:right;">
+Petal.Length
+</th>
+<th style="text-align:right;">
+Petal.Width
+</th>
+<th style="text-align:left;">
+Species
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 67.11%">5.1</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">3.5</span>
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #8dd3c7;">setosa</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 64.47%">4.9</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">3.0</span>
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #8dd3c7;">setosa</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 61.84%">4.7</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04c">3.2</span>
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #8dd3c7;">setosa</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 60.53%">4.6</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc965">3.1</span>
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #8dd3c7;">setosa</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 92.11%">7.0</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04c">3.2</span>
+</td>
+<td style="text-align:right;">
+4.7
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #fb8072;">versicolor</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 84.21%">6.4</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc04c">3.2</span>
+</td>
+<td style="text-align:right;">
+4.5
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #fb8072;">versicolor</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 90.79%">6.9</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc965">3.1</span>
+</td>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #fb8072;">versicolor</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 85.53%">6.5</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">3.0</span>
+</td>
+<td style="text-align:right;">
+5.8
+</td>
+<td style="text-align:right;">
+2.2
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #bebada;">virginica</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 100.00%">7.6</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">3.0</span>
+</td>
+<td style="text-align:right;">
+6.6
+</td>
+<td style="text-align:right;">
+2.1
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #bebada;">virginica</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 64.47%">4.9</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">2.5</span>
+</td>
+<td style="text-align:right;">
+4.5
+</td>
+<td style="text-align:right;">
+1.7
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #bebada;">virginica</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightsteelblue; width: 96.05%">7.3</span>
+</td>
+<td style="text-align:left;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">2.9</span>
+</td>
+<td style="text-align:right;">
+6.3
+</td>
+<td style="text-align:right;">
+1.8
+</td>
+<td style="text-align:left;width: 3cm; ">
+<span style=" font-weight: bold;    color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #bebada;">virginica</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dt" class="section level2">
+<h2><span class="header-section-number">8.4</span> DT</h2>
+<p>Interactive table using R package <a href="https://rstudio.github.io/DT/"><code>DT</code></a>.</p>
+<p><b>Tab. </b> 3: <em>Table using datatable.</em></p>
+<pre class="r"><code>iris %&gt;%
+  slice(1:15) %&gt;%
+  datatable(options=list(pageLength=7))</code></pre>
+<div id="htmlwidget-9d1fcdd54d49e5191ba2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d1fcdd54d49e5191ba2">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":7,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[7,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="static-plots" class="section level1">
+<h1><span class="header-section-number">9</span> Static plots</h1>
+<div id="base-plot" class="section level2">
+<h2><span class="header-section-number">9.1</span> Base plot</h2>
+<ul>
+<li>Plots using base R are widely used and may be good enough for most situations.</li>
+<li>But they lack a consistent coding framework.</li>
+</ul>
+<pre class="r"><code>{plot(x=iris$Sepal.Length,y=iris$Sepal.Width,
+      col=c(&quot;coral&quot;,&quot;steelblue&quot;,&quot;forestgreen&quot;)[iris$Species],
+      xlab=&quot;Sepal Length&quot;,ylab=&quot;Sepal Width&quot;,pch=19)
+legend(x=7,y=4.47,legend=c(&quot;setosa&quot;,&quot;versicolor&quot;,&quot;virginica&quot;),
+       col=c(&quot;coral&quot;,&quot;steelblue&quot;,&quot;forestgreen&quot;),pch=19)}</code></pre>
+<p><img src="lab_demo_files/figure-html/unnamed-chunk-16-1.svg" width="576" style="display: block; margin: auto auto auto 0;" /></p>
+<p><b>Fig. </b> 1: <em>Static plot using base plot.</em></p>
+</div>
+<div id="ggplot2" class="section level2">
+<h2><span class="header-section-number">9.2</span> ggplot2</h2>
+<p>R package <a href="http://ggplot2.org/"><code>ggplot2</code></a> is one of the most versatile and complete plotting solutions.</p>
+<pre class="r"><code>iris %&gt;%
+  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
+  geom_point(size=2)+
+  labs(x=&quot;Sepal Length&quot;,y=&quot;Sepal Width&quot;)+
+  theme_report()</code></pre>
+<p><img src="lab_demo_files/figure-html/unnamed-chunk-17-1.svg" width="768" style="display: block; margin: auto auto auto 0;" /></p>
+<p><b>Fig. </b> 2: <em>Static plot using ggplot2.</em></p>
+</div>
+</div>
+<div id="interactive-plots" class="section level1">
+<h1><span class="header-section-number">10</span> Interactive plots</h1>
+<div id="highcharter" class="section level2">
+<h2><span class="header-section-number">10.1</span> highcharter</h2>
+<p>R package <a href="http://jkunst.com/highcharter/"><code>highcharter</code></a> is a wrapper around javascript library <a href="https://www.highcharts.com/"><code>highcharts</code></a>.</p>
+<pre class="r"><code>h &lt;- iris %&gt;%
+  hchart(.,&quot;scatter&quot;,hcaes(x=&quot;Sepal.Length&quot;,y=&quot;Sepal.Width&quot;,group=&quot;Species&quot;)) %&gt;%
+  hc_xAxis(title=list(text=&quot;Sepal Length&quot;),crosshair=TRUE) %&gt;%
+  hc_yAxis(title=list(text=&quot;Sepal Width&quot;),crosshair=TRUE) %&gt;%
+  hc_chart(zoomType=&quot;xy&quot;,inverted=FALSE) %&gt;%
+  hc_legend(verticalAlign=&quot;top&quot;,align=&quot;right&quot;) %&gt;%
+  hc_size(height=400)
+
+htmltools::tagList(list(h))</code></pre>
+<div id="htmlwidget-f3980b91dea91c3e0471" style="width:100%;height:400px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f3980b91dea91c3e0471">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"Sepal Width"},"type":"linear","crosshair":true},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"setosa","data":[{"Sepal.Length":5.1,"Sepal.Width":3.5,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5.1,"y":3.5},{"Sepal.Length":4.9,"Sepal.Width":3,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":4.9,"y":3},{"Sepal.Length":4.7,"Sepal.Width":3.2,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":4.7,"y":3.2},{"Sepal.Length":4.6,"Sepal.Width":3.1,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":4.6,"y":3.1},{"Sepal.Length":5,"Sepal.Width":3.6,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.6},{"Sepal.Length":5.4,"Sepal.Width":3.9,"Petal.Length":1.7,"Petal.Width":0.4,"Species":"setosa","x":5.4,"y":3.9},{"Sepal.Length":4.6,"Sepal.Width":3.4,"Petal.Length":1.4,"Petal.Width":0.3,"Species":"setosa","x":4.6,"y":3.4},{"Sepal.Length":5,"Sepal.Width":3.4,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.4},{"Sepal.Length":4.4,"Sepal.Width":2.9,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":4.4,"y":2.9},{"Sepal.Length":4.9,"Sepal.Width":3.1,"Petal.Length":1.5,"Petal.Width":0.1,"Species":"setosa","x":4.9,"y":3.1},{"Sepal.Length":5.4,"Sepal.Width":3.7,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.4,"y":3.7},{"Sepal.Length":4.8,"Sepal.Width":3.4,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":4.8,"y":3.4},{"Sepal.Length":4.8,"Sepal.Width":3,"Petal.Length":1.4,"Petal.Width":0.1,"Species":"setosa","x":4.8,"y":3},{"Sepal.Length":4.3,"Sepal.Width":3,"Petal.Length":1.1,"Petal.Width":0.1,"Species":"setosa","x":4.3,"y":3},{"Sepal.Length":5.8,"Sepal.Width":4,"Petal.Length":1.2,"Petal.Width":0.2,"Species":"setosa","x":5.8,"y":4},{"Sepal.Length":5.7,"Sepal.Width":4.4,"Petal.Length":1.5,"Petal.Width":0.4,"Species":"setosa","x":5.7,"y":4.4},{"Sepal.Length":5.4,"Sepal.Width":3.9,"Petal.Length":1.3,"Petal.Width":0.4,"Species":"setosa","x":5.4,"y":3.9},{"Sepal.Length":5.1,"Sepal.Width":3.5,"Petal.Length":1.4,"Petal.Width":0.3,"Species":"setosa","x":5.1,"y":3.5},{"Sepal.Length":5.7,"Sepal.Width":3.8,"Petal.Length":1.7,"Petal.Width":0.3,"Species":"setosa","x":5.7,"y":3.8},{"Sepal.Length":5.1,"Sepal.Width":3.8,"Petal.Length":1.5,"Petal.Width":0.3,"Species":"setosa","x":5.1,"y":3.8},{"Sepal.Length":5.4,"Sepal.Width":3.4,"Petal.Length":1.7,"Petal.Width":0.2,"Species":"setosa","x":5.4,"y":3.4},{"Sepal.Length":5.1,"Sepal.Width":3.7,"Petal.Length":1.5,"Petal.Width":0.4,"Species":"setosa","x":5.1,"y":3.7},{"Sepal.Length":4.6,"Sepal.Width":3.6,"Petal.Length":1,"Petal.Width":0.2,"Species":"setosa","x":4.6,"y":3.6},{"Sepal.Length":5.1,"Sepal.Width":3.3,"Petal.Length":1.7,"Petal.Width":0.5,"Species":"setosa","x":5.1,"y":3.3},{"Sepal.Length":4.8,"Sepal.Width":3.4,"Petal.Length":1.9,"Petal.Width":0.2,"Species":"setosa","x":4.8,"y":3.4},{"Sepal.Length":5,"Sepal.Width":3,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3},{"Sepal.Length":5,"Sepal.Width":3.4,"Petal.Length":1.6,"Petal.Width":0.4,"Species":"setosa","x":5,"y":3.4},{"Sepal.Length":5.2,"Sepal.Width":3.5,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.2,"y":3.5},{"Sepal.Length":5.2,"Sepal.Width":3.4,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5.2,"y":3.4},{"Sepal.Length":4.7,"Sepal.Width":3.2,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":4.7,"y":3.2},{"Sepal.Length":4.8,"Sepal.Width":3.1,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":4.8,"y":3.1},{"Sepal.Length":5.4,"Sepal.Width":3.4,"Petal.Length":1.5,"Petal.Width":0.4,"Species":"setosa","x":5.4,"y":3.4},{"Sepal.Length":5.2,"Sepal.Width":4.1,"Petal.Length":1.5,"Petal.Width":0.1,"Species":"setosa","x":5.2,"y":4.1},{"Sepal.Length":5.5,"Sepal.Width":4.2,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5.5,"y":4.2},{"Sepal.Length":4.9,"Sepal.Width":3.1,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":4.9,"y":3.1},{"Sepal.Length":5,"Sepal.Width":3.2,"Petal.Length":1.2,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.2},{"Sepal.Length":5.5,"Sepal.Width":3.5,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":5.5,"y":3.5},{"Sepal.Length":4.9,"Sepal.Width":3.6,"Petal.Length":1.4,"Petal.Width":0.1,"Species":"setosa","x":4.9,"y":3.6},{"Sepal.Length":4.4,"Sepal.Width":3,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":4.4,"y":3},{"Sepal.Length":5.1,"Sepal.Width":3.4,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.1,"y":3.4},{"Sepal.Length":5,"Sepal.Width":3.5,"Petal.Length":1.3,"Petal.Width":0.3,"Species":"setosa","x":5,"y":3.5},{"Sepal.Length":4.5,"Sepal.Width":2.3,"Petal.Length":1.3,"Petal.Width":0.3,"Species":"setosa","x":4.5,"y":2.3},{"Sepal.Length":4.4,"Sepal.Width":3.2,"Petal.Length":1.3,"Petal.Width":0.2,"Species":"setosa","x":4.4,"y":3.2},{"Sepal.Length":5,"Sepal.Width":3.5,"Petal.Length":1.6,"Petal.Width":0.6,"Species":"setosa","x":5,"y":3.5},{"Sepal.Length":5.1,"Sepal.Width":3.8,"Petal.Length":1.9,"Petal.Width":0.4,"Species":"setosa","x":5.1,"y":3.8},{"Sepal.Length":4.8,"Sepal.Width":3,"Petal.Length":1.4,"Petal.Width":0.3,"Species":"setosa","x":4.8,"y":3},{"Sepal.Length":5.1,"Sepal.Width":3.8,"Petal.Length":1.6,"Petal.Width":0.2,"Species":"setosa","x":5.1,"y":3.8},{"Sepal.Length":4.6,"Sepal.Width":3.2,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":4.6,"y":3.2},{"Sepal.Length":5.3,"Sepal.Width":3.7,"Petal.Length":1.5,"Petal.Width":0.2,"Species":"setosa","x":5.3,"y":3.7},{"Sepal.Length":5,"Sepal.Width":3.3,"Petal.Length":1.4,"Petal.Width":0.2,"Species":"setosa","x":5,"y":3.3}],"type":"scatter"},{"name":"versicolor","data":[{"Sepal.Length":7,"Sepal.Width":3.2,"Petal.Length":4.7,"Petal.Width":1.4,"Species":"versicolor","x":7,"y":3.2},{"Sepal.Length":6.4,"Sepal.Width":3.2,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":6.4,"y":3.2},{"Sepal.Length":6.9,"Sepal.Width":3.1,"Petal.Length":4.9,"Petal.Width":1.5,"Species":"versicolor","x":6.9,"y":3.1},{"Sepal.Length":5.5,"Sepal.Width":2.3,"Petal.Length":4,"Petal.Width":1.3,"Species":"versicolor","x":5.5,"y":2.3},{"Sepal.Length":6.5,"Sepal.Width":2.8,"Petal.Length":4.6,"Petal.Width":1.5,"Species":"versicolor","x":6.5,"y":2.8},{"Sepal.Length":5.7,"Sepal.Width":2.8,"Petal.Length":4.5,"Petal.Width":1.3,"Species":"versicolor","x":5.7,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":3.3,"Petal.Length":4.7,"Petal.Width":1.6,"Species":"versicolor","x":6.3,"y":3.3},{"Sepal.Length":4.9,"Sepal.Width":2.4,"Petal.Length":3.3,"Petal.Width":1,"Species":"versicolor","x":4.9,"y":2.4},{"Sepal.Length":6.6,"Sepal.Width":2.9,"Petal.Length":4.6,"Petal.Width":1.3,"Species":"versicolor","x":6.6,"y":2.9},{"Sepal.Length":5.2,"Sepal.Width":2.7,"Petal.Length":3.9,"Petal.Width":1.4,"Species":"versicolor","x":5.2,"y":2.7},{"Sepal.Length":5,"Sepal.Width":2,"Petal.Length":3.5,"Petal.Width":1,"Species":"versicolor","x":5,"y":2},{"Sepal.Length":5.9,"Sepal.Width":3,"Petal.Length":4.2,"Petal.Width":1.5,"Species":"versicolor","x":5.9,"y":3},{"Sepal.Length":6,"Sepal.Width":2.2,"Petal.Length":4,"Petal.Width":1,"Species":"versicolor","x":6,"y":2.2},{"Sepal.Length":6.1,"Sepal.Width":2.9,"Petal.Length":4.7,"Petal.Width":1.4,"Species":"versicolor","x":6.1,"y":2.9},{"Sepal.Length":5.6,"Sepal.Width":2.9,"Petal.Length":3.6,"Petal.Width":1.3,"Species":"versicolor","x":5.6,"y":2.9},{"Sepal.Length":6.7,"Sepal.Width":3.1,"Petal.Length":4.4,"Petal.Width":1.4,"Species":"versicolor","x":6.7,"y":3.1},{"Sepal.Length":5.6,"Sepal.Width":3,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":5.6,"y":3},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":4.1,"Petal.Width":1,"Species":"versicolor","x":5.8,"y":2.7},{"Sepal.Length":6.2,"Sepal.Width":2.2,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":6.2,"y":2.2},{"Sepal.Length":5.6,"Sepal.Width":2.5,"Petal.Length":3.9,"Petal.Width":1.1,"Species":"versicolor","x":5.6,"y":2.5},{"Sepal.Length":5.9,"Sepal.Width":3.2,"Petal.Length":4.8,"Petal.Width":1.8,"Species":"versicolor","x":5.9,"y":3.2},{"Sepal.Length":6.1,"Sepal.Width":2.8,"Petal.Length":4,"Petal.Width":1.3,"Species":"versicolor","x":6.1,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":2.5,"Petal.Length":4.9,"Petal.Width":1.5,"Species":"versicolor","x":6.3,"y":2.5},{"Sepal.Length":6.1,"Sepal.Width":2.8,"Petal.Length":4.7,"Petal.Width":1.2,"Species":"versicolor","x":6.1,"y":2.8},{"Sepal.Length":6.4,"Sepal.Width":2.9,"Petal.Length":4.3,"Petal.Width":1.3,"Species":"versicolor","x":6.4,"y":2.9},{"Sepal.Length":6.6,"Sepal.Width":3,"Petal.Length":4.4,"Petal.Width":1.4,"Species":"versicolor","x":6.6,"y":3},{"Sepal.Length":6.8,"Sepal.Width":2.8,"Petal.Length":4.8,"Petal.Width":1.4,"Species":"versicolor","x":6.8,"y":2.8},{"Sepal.Length":6.7,"Sepal.Width":3,"Petal.Length":5,"Petal.Width":1.7,"Species":"versicolor","x":6.7,"y":3},{"Sepal.Length":6,"Sepal.Width":2.9,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":6,"y":2.9},{"Sepal.Length":5.7,"Sepal.Width":2.6,"Petal.Length":3.5,"Petal.Width":1,"Species":"versicolor","x":5.7,"y":2.6},{"Sepal.Length":5.5,"Sepal.Width":2.4,"Petal.Length":3.8,"Petal.Width":1.1,"Species":"versicolor","x":5.5,"y":2.4},{"Sepal.Length":5.5,"Sepal.Width":2.4,"Petal.Length":3.7,"Petal.Width":1,"Species":"versicolor","x":5.5,"y":2.4},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":3.9,"Petal.Width":1.2,"Species":"versicolor","x":5.8,"y":2.7},{"Sepal.Length":6,"Sepal.Width":2.7,"Petal.Length":5.1,"Petal.Width":1.6,"Species":"versicolor","x":6,"y":2.7},{"Sepal.Length":5.4,"Sepal.Width":3,"Petal.Length":4.5,"Petal.Width":1.5,"Species":"versicolor","x":5.4,"y":3},{"Sepal.Length":6,"Sepal.Width":3.4,"Petal.Length":4.5,"Petal.Width":1.6,"Species":"versicolor","x":6,"y":3.4},{"Sepal.Length":6.7,"Sepal.Width":3.1,"Petal.Length":4.7,"Petal.Width":1.5,"Species":"versicolor","x":6.7,"y":3.1},{"Sepal.Length":6.3,"Sepal.Width":2.3,"Petal.Length":4.4,"Petal.Width":1.3,"Species":"versicolor","x":6.3,"y":2.3},{"Sepal.Length":5.6,"Sepal.Width":3,"Petal.Length":4.1,"Petal.Width":1.3,"Species":"versicolor","x":5.6,"y":3},{"Sepal.Length":5.5,"Sepal.Width":2.5,"Petal.Length":4,"Petal.Width":1.3,"Species":"versicolor","x":5.5,"y":2.5},{"Sepal.Length":5.5,"Sepal.Width":2.6,"Petal.Length":4.4,"Petal.Width":1.2,"Species":"versicolor","x":5.5,"y":2.6},{"Sepal.Length":6.1,"Sepal.Width":3,"Petal.Length":4.6,"Petal.Width":1.4,"Species":"versicolor","x":6.1,"y":3},{"Sepal.Length":5.8,"Sepal.Width":2.6,"Petal.Length":4,"Petal.Width":1.2,"Species":"versicolor","x":5.8,"y":2.6},{"Sepal.Length":5,"Sepal.Width":2.3,"Petal.Length":3.3,"Petal.Width":1,"Species":"versicolor","x":5,"y":2.3},{"Sepal.Length":5.6,"Sepal.Width":2.7,"Petal.Length":4.2,"Petal.Width":1.3,"Species":"versicolor","x":5.6,"y":2.7},{"Sepal.Length":5.7,"Sepal.Width":3,"Petal.Length":4.2,"Petal.Width":1.2,"Species":"versicolor","x":5.7,"y":3},{"Sepal.Length":5.7,"Sepal.Width":2.9,"Petal.Length":4.2,"Petal.Width":1.3,"Species":"versicolor","x":5.7,"y":2.9},{"Sepal.Length":6.2,"Sepal.Width":2.9,"Petal.Length":4.3,"Petal.Width":1.3,"Species":"versicolor","x":6.2,"y":2.9},{"Sepal.Length":5.1,"Sepal.Width":2.5,"Petal.Length":3,"Petal.Width":1.1,"Species":"versicolor","x":5.1,"y":2.5},{"Sepal.Length":5.7,"Sepal.Width":2.8,"Petal.Length":4.1,"Petal.Width":1.3,"Species":"versicolor","x":5.7,"y":2.8}],"type":"scatter"},{"name":"virginica","data":[{"Sepal.Length":6.3,"Sepal.Width":3.3,"Petal.Length":6,"Petal.Width":2.5,"Species":"virginica","x":6.3,"y":3.3},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":5.1,"Petal.Width":1.9,"Species":"virginica","x":5.8,"y":2.7},{"Sepal.Length":7.1,"Sepal.Width":3,"Petal.Length":5.9,"Petal.Width":2.1,"Species":"virginica","x":7.1,"y":3},{"Sepal.Length":6.3,"Sepal.Width":2.9,"Petal.Length":5.6,"Petal.Width":1.8,"Species":"virginica","x":6.3,"y":2.9},{"Sepal.Length":6.5,"Sepal.Width":3,"Petal.Length":5.8,"Petal.Width":2.2,"Species":"virginica","x":6.5,"y":3},{"Sepal.Length":7.6,"Sepal.Width":3,"Petal.Length":6.6,"Petal.Width":2.1,"Species":"virginica","x":7.6,"y":3},{"Sepal.Length":4.9,"Sepal.Width":2.5,"Petal.Length":4.5,"Petal.Width":1.7,"Species":"virginica","x":4.9,"y":2.5},{"Sepal.Length":7.3,"Sepal.Width":2.9,"Petal.Length":6.3,"Petal.Width":1.8,"Species":"virginica","x":7.3,"y":2.9},{"Sepal.Length":6.7,"Sepal.Width":2.5,"Petal.Length":5.8,"Petal.Width":1.8,"Species":"virginica","x":6.7,"y":2.5},{"Sepal.Length":7.2,"Sepal.Width":3.6,"Petal.Length":6.1,"Petal.Width":2.5,"Species":"virginica","x":7.2,"y":3.6},{"Sepal.Length":6.5,"Sepal.Width":3.2,"Petal.Length":5.1,"Petal.Width":2,"Species":"virginica","x":6.5,"y":3.2},{"Sepal.Length":6.4,"Sepal.Width":2.7,"Petal.Length":5.3,"Petal.Width":1.9,"Species":"virginica","x":6.4,"y":2.7},{"Sepal.Length":6.8,"Sepal.Width":3,"Petal.Length":5.5,"Petal.Width":2.1,"Species":"virginica","x":6.8,"y":3},{"Sepal.Length":5.7,"Sepal.Width":2.5,"Petal.Length":5,"Petal.Width":2,"Species":"virginica","x":5.7,"y":2.5},{"Sepal.Length":5.8,"Sepal.Width":2.8,"Petal.Length":5.1,"Petal.Width":2.4,"Species":"virginica","x":5.8,"y":2.8},{"Sepal.Length":6.4,"Sepal.Width":3.2,"Petal.Length":5.3,"Petal.Width":2.3,"Species":"virginica","x":6.4,"y":3.2},{"Sepal.Length":6.5,"Sepal.Width":3,"Petal.Length":5.5,"Petal.Width":1.8,"Species":"virginica","x":6.5,"y":3},{"Sepal.Length":7.7,"Sepal.Width":3.8,"Petal.Length":6.7,"Petal.Width":2.2,"Species":"virginica","x":7.7,"y":3.8},{"Sepal.Length":7.7,"Sepal.Width":2.6,"Petal.Length":6.9,"Petal.Width":2.3,"Species":"virginica","x":7.7,"y":2.6},{"Sepal.Length":6,"Sepal.Width":2.2,"Petal.Length":5,"Petal.Width":1.5,"Species":"virginica","x":6,"y":2.2},{"Sepal.Length":6.9,"Sepal.Width":3.2,"Petal.Length":5.7,"Petal.Width":2.3,"Species":"virginica","x":6.9,"y":3.2},{"Sepal.Length":5.6,"Sepal.Width":2.8,"Petal.Length":4.9,"Petal.Width":2,"Species":"virginica","x":5.6,"y":2.8},{"Sepal.Length":7.7,"Sepal.Width":2.8,"Petal.Length":6.7,"Petal.Width":2,"Species":"virginica","x":7.7,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":2.7,"Petal.Length":4.9,"Petal.Width":1.8,"Species":"virginica","x":6.3,"y":2.7},{"Sepal.Length":6.7,"Sepal.Width":3.3,"Petal.Length":5.7,"Petal.Width":2.1,"Species":"virginica","x":6.7,"y":3.3},{"Sepal.Length":7.2,"Sepal.Width":3.2,"Petal.Length":6,"Petal.Width":1.8,"Species":"virginica","x":7.2,"y":3.2},{"Sepal.Length":6.2,"Sepal.Width":2.8,"Petal.Length":4.8,"Petal.Width":1.8,"Species":"virginica","x":6.2,"y":2.8},{"Sepal.Length":6.1,"Sepal.Width":3,"Petal.Length":4.9,"Petal.Width":1.8,"Species":"virginica","x":6.1,"y":3},{"Sepal.Length":6.4,"Sepal.Width":2.8,"Petal.Length":5.6,"Petal.Width":2.1,"Species":"virginica","x":6.4,"y":2.8},{"Sepal.Length":7.2,"Sepal.Width":3,"Petal.Length":5.8,"Petal.Width":1.6,"Species":"virginica","x":7.2,"y":3},{"Sepal.Length":7.4,"Sepal.Width":2.8,"Petal.Length":6.1,"Petal.Width":1.9,"Species":"virginica","x":7.4,"y":2.8},{"Sepal.Length":7.9,"Sepal.Width":3.8,"Petal.Length":6.4,"Petal.Width":2,"Species":"virginica","x":7.9,"y":3.8},{"Sepal.Length":6.4,"Sepal.Width":2.8,"Petal.Length":5.6,"Petal.Width":2.2,"Species":"virginica","x":6.4,"y":2.8},{"Sepal.Length":6.3,"Sepal.Width":2.8,"Petal.Length":5.1,"Petal.Width":1.5,"Species":"virginica","x":6.3,"y":2.8},{"Sepal.Length":6.1,"Sepal.Width":2.6,"Petal.Length":5.6,"Petal.Width":1.4,"Species":"virginica","x":6.1,"y":2.6},{"Sepal.Length":7.7,"Sepal.Width":3,"Petal.Length":6.1,"Petal.Width":2.3,"Species":"virginica","x":7.7,"y":3},{"Sepal.Length":6.3,"Sepal.Width":3.4,"Petal.Length":5.6,"Petal.Width":2.4,"Species":"virginica","x":6.3,"y":3.4},{"Sepal.Length":6.4,"Sepal.Width":3.1,"Petal.Length":5.5,"Petal.Width":1.8,"Species":"virginica","x":6.4,"y":3.1},{"Sepal.Length":6,"Sepal.Width":3,"Petal.Length":4.8,"Petal.Width":1.8,"Species":"virginica","x":6,"y":3},{"Sepal.Length":6.9,"Sepal.Width":3.1,"Petal.Length":5.4,"Petal.Width":2.1,"Species":"virginica","x":6.9,"y":3.1},{"Sepal.Length":6.7,"Sepal.Width":3.1,"Petal.Length":5.6,"Petal.Width":2.4,"Species":"virginica","x":6.7,"y":3.1},{"Sepal.Length":6.9,"Sepal.Width":3.1,"Petal.Length":5.1,"Petal.Width":2.3,"Species":"virginica","x":6.9,"y":3.1},{"Sepal.Length":5.8,"Sepal.Width":2.7,"Petal.Length":5.1,"Petal.Width":1.9,"Species":"virginica","x":5.8,"y":2.7},{"Sepal.Length":6.8,"Sepal.Width":3.2,"Petal.Length":5.9,"Petal.Width":2.3,"Species":"virginica","x":6.8,"y":3.2},{"Sepal.Length":6.7,"Sepal.Width":3.3,"Petal.Length":5.7,"Petal.Width":2.5,"Species":"virginica","x":6.7,"y":3.3},{"Sepal.Length":6.7,"Sepal.Width":3,"Petal.Length":5.2,"Petal.Width":2.3,"Species":"virginica","x":6.7,"y":3},{"Sepal.Length":6.3,"Sepal.Width":2.5,"Petal.Length":5,"Petal.Width":1.9,"Species":"virginica","x":6.3,"y":2.5},{"Sepal.Length":6.5,"Sepal.Width":3,"Petal.Length":5.2,"Petal.Width":2,"Species":"virginica","x":6.5,"y":3},{"Sepal.Length":6.2,"Sepal.Width":3.4,"Petal.Length":5.4,"Petal.Width":2.3,"Species":"virginica","x":6.2,"y":3.4},{"Sepal.Length":5.9,"Sepal.Width":3,"Petal.Length":5.1,"Petal.Width":1.8,"Species":"virginica","x":5.9,"y":3}],"type":"scatter"}],"xAxis":{"type":"linear","title":{"text":"Sepal Length"},"crosshair":true},"chart":{"zoomType":"xy","inverted":false},"legend":{"verticalAlign":"top","align":"right"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p><b>Fig. </b> 3: <em>Interactive scatterplot using highcharter.</em></p>
+</div>
+<div id="plotly" class="section level2">
+<h2><span class="header-section-number">10.2</span> plotly</h2>
+<p>R package <a href="https://plot.ly/r/"><code>plotly</code></a> provides R binding around javascript plotting library <a href="https://plot.ly"><code>plotly</code></a>.</p>
+<pre class="r"><code>p &lt;- iris %&gt;% 
+  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %&gt;% 
+  add_markers()
+p</code></pre>
+<div id="htmlwidget-730c8e725a5f1d011024" style="width:500px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-730c8e725a5f1d011024">{"x":{"visdat":{"6a1132a0e86":["function () ","plotlyVisDat"]},"cur_data":"6a1132a0e86","attrs":{"6a1132a0e86":{"x":{},"y":{},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"markers","inherit":true}},"layout":{"width":500,"height":400,"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Sepal.Length"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Sepal.Width"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"data":[{"x":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5],"y":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3],"type":"scatter","mode":"markers","name":"setosa","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"line":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7],"y":[3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8],"type":"scatter","mode":"markers","name":"versicolor","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"line":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"y":[3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"type":"scatter","mode":"markers","name":"virginica","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"line":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":[]}</script>
+<p><b>Fig. </b> 4: <em>Interactive scatterplot using plotly.</em></p>
+</div>
+<div id="ggplotly" class="section level2">
+<h2><span class="header-section-number">10.3</span> ggplotly</h2>
+<p><code>plotly</code> also has a function called <code>ggplotly</code> which converts a static ggplot2 object into an interactive plot.</p>
+<pre class="r"><code>p &lt;- iris %&gt;%
+  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
+  geom_point()+
+  labs(x=&quot;Sepal Length&quot;,y=&quot;Sepal Width&quot;)+
+  theme_bw(base_size=12)
+
+ggplotly(p,width=500,height=400)</code></pre>
+<div id="htmlwidget-79930cad971982077a3e" style="width:500px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-79930cad971982077a3e">{"x":{"data":[{"x":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5],"y":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3],"text":["Sepal.Length: 5.1<br />Sepal.Width: 3.5<br />Species: setosa","Sepal.Length: 4.9<br />Sepal.Width: 3.0<br />Species: setosa","Sepal.Length: 4.7<br />Sepal.Width: 3.2<br />Species: setosa","Sepal.Length: 4.6<br />Sepal.Width: 3.1<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.6<br />Species: setosa","Sepal.Length: 5.4<br />Sepal.Width: 3.9<br />Species: setosa","Sepal.Length: 4.6<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 4.4<br />Sepal.Width: 2.9<br />Species: setosa","Sepal.Length: 4.9<br />Sepal.Width: 3.1<br />Species: setosa","Sepal.Length: 5.4<br />Sepal.Width: 3.7<br />Species: setosa","Sepal.Length: 4.8<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 4.8<br />Sepal.Width: 3.0<br />Species: setosa","Sepal.Length: 4.3<br />Sepal.Width: 3.0<br />Species: setosa","Sepal.Length: 5.8<br />Sepal.Width: 4.0<br />Species: setosa","Sepal.Length: 5.7<br />Sepal.Width: 4.4<br />Species: setosa","Sepal.Length: 5.4<br />Sepal.Width: 3.9<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.5<br />Species: setosa","Sepal.Length: 5.7<br />Sepal.Width: 3.8<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.8<br />Species: setosa","Sepal.Length: 5.4<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.7<br />Species: setosa","Sepal.Length: 4.6<br />Sepal.Width: 3.6<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.3<br />Species: setosa","Sepal.Length: 4.8<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.0<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 5.2<br />Sepal.Width: 3.5<br />Species: setosa","Sepal.Length: 5.2<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 4.7<br />Sepal.Width: 3.2<br />Species: setosa","Sepal.Length: 4.8<br />Sepal.Width: 3.1<br />Species: setosa","Sepal.Length: 5.4<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 5.2<br />Sepal.Width: 4.1<br />Species: setosa","Sepal.Length: 5.5<br />Sepal.Width: 4.2<br />Species: setosa","Sepal.Length: 4.9<br />Sepal.Width: 3.1<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.2<br />Species: setosa","Sepal.Length: 5.5<br />Sepal.Width: 3.5<br />Species: setosa","Sepal.Length: 4.9<br />Sepal.Width: 3.6<br />Species: setosa","Sepal.Length: 4.4<br />Sepal.Width: 3.0<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.4<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.5<br />Species: setosa","Sepal.Length: 4.5<br />Sepal.Width: 2.3<br />Species: setosa","Sepal.Length: 4.4<br />Sepal.Width: 3.2<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.5<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.8<br />Species: setosa","Sepal.Length: 4.8<br />Sepal.Width: 3.0<br />Species: setosa","Sepal.Length: 5.1<br />Sepal.Width: 3.8<br />Species: setosa","Sepal.Length: 4.6<br />Sepal.Width: 3.2<br />Species: setosa","Sepal.Length: 5.3<br />Sepal.Width: 3.7<br />Species: setosa","Sepal.Length: 5.0<br />Sepal.Width: 3.3<br />Species: setosa"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"setosa","legendgroup":"setosa","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7],"y":[3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8],"text":["Sepal.Length: 7.0<br />Sepal.Width: 3.2<br />Species: versicolor","Sepal.Length: 6.4<br />Sepal.Width: 3.2<br />Species: versicolor","Sepal.Length: 6.9<br />Sepal.Width: 3.1<br />Species: versicolor","Sepal.Length: 5.5<br />Sepal.Width: 2.3<br />Species: versicolor","Sepal.Length: 6.5<br />Sepal.Width: 2.8<br />Species: versicolor","Sepal.Length: 5.7<br />Sepal.Width: 2.8<br />Species: versicolor","Sepal.Length: 6.3<br />Sepal.Width: 3.3<br />Species: versicolor","Sepal.Length: 4.9<br />Sepal.Width: 2.4<br />Species: versicolor","Sepal.Length: 6.6<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 5.2<br />Sepal.Width: 2.7<br />Species: versicolor","Sepal.Length: 5.0<br />Sepal.Width: 2.0<br />Species: versicolor","Sepal.Length: 5.9<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 6.0<br />Sepal.Width: 2.2<br />Species: versicolor","Sepal.Length: 6.1<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 5.6<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 6.7<br />Sepal.Width: 3.1<br />Species: versicolor","Sepal.Length: 5.6<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 5.8<br />Sepal.Width: 2.7<br />Species: versicolor","Sepal.Length: 6.2<br />Sepal.Width: 2.2<br />Species: versicolor","Sepal.Length: 5.6<br />Sepal.Width: 2.5<br />Species: versicolor","Sepal.Length: 5.9<br />Sepal.Width: 3.2<br />Species: versicolor","Sepal.Length: 6.1<br />Sepal.Width: 2.8<br />Species: versicolor","Sepal.Length: 6.3<br />Sepal.Width: 2.5<br />Species: versicolor","Sepal.Length: 6.1<br />Sepal.Width: 2.8<br />Species: versicolor","Sepal.Length: 6.4<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 6.6<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 6.8<br />Sepal.Width: 2.8<br />Species: versicolor","Sepal.Length: 6.7<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 6.0<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 5.7<br />Sepal.Width: 2.6<br />Species: versicolor","Sepal.Length: 5.5<br />Sepal.Width: 2.4<br />Species: versicolor","Sepal.Length: 5.5<br />Sepal.Width: 2.4<br />Species: versicolor","Sepal.Length: 5.8<br />Sepal.Width: 2.7<br />Species: versicolor","Sepal.Length: 6.0<br />Sepal.Width: 2.7<br />Species: versicolor","Sepal.Length: 5.4<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 6.0<br />Sepal.Width: 3.4<br />Species: versicolor","Sepal.Length: 6.7<br />Sepal.Width: 3.1<br />Species: versicolor","Sepal.Length: 6.3<br />Sepal.Width: 2.3<br />Species: versicolor","Sepal.Length: 5.6<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 5.5<br />Sepal.Width: 2.5<br />Species: versicolor","Sepal.Length: 5.5<br />Sepal.Width: 2.6<br />Species: versicolor","Sepal.Length: 6.1<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 5.8<br />Sepal.Width: 2.6<br />Species: versicolor","Sepal.Length: 5.0<br />Sepal.Width: 2.3<br />Species: versicolor","Sepal.Length: 5.6<br />Sepal.Width: 2.7<br />Species: versicolor","Sepal.Length: 5.7<br />Sepal.Width: 3.0<br />Species: versicolor","Sepal.Length: 5.7<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 6.2<br />Sepal.Width: 2.9<br />Species: versicolor","Sepal.Length: 5.1<br />Sepal.Width: 2.5<br />Species: versicolor","Sepal.Length: 5.7<br />Sepal.Width: 2.8<br />Species: versicolor"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"versicolor","legendgroup":"versicolor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"y":[3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"text":["Sepal.Length: 6.3<br />Sepal.Width: 3.3<br />Species: virginica","Sepal.Length: 5.8<br />Sepal.Width: 2.7<br />Species: virginica","Sepal.Length: 7.1<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 6.3<br />Sepal.Width: 2.9<br />Species: virginica","Sepal.Length: 6.5<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 7.6<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 4.9<br />Sepal.Width: 2.5<br />Species: virginica","Sepal.Length: 7.3<br />Sepal.Width: 2.9<br />Species: virginica","Sepal.Length: 6.7<br />Sepal.Width: 2.5<br />Species: virginica","Sepal.Length: 7.2<br />Sepal.Width: 3.6<br />Species: virginica","Sepal.Length: 6.5<br />Sepal.Width: 3.2<br />Species: virginica","Sepal.Length: 6.4<br />Sepal.Width: 2.7<br />Species: virginica","Sepal.Length: 6.8<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 5.7<br />Sepal.Width: 2.5<br />Species: virginica","Sepal.Length: 5.8<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 6.4<br />Sepal.Width: 3.2<br />Species: virginica","Sepal.Length: 6.5<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 7.7<br />Sepal.Width: 3.8<br />Species: virginica","Sepal.Length: 7.7<br />Sepal.Width: 2.6<br />Species: virginica","Sepal.Length: 6.0<br />Sepal.Width: 2.2<br />Species: virginica","Sepal.Length: 6.9<br />Sepal.Width: 3.2<br />Species: virginica","Sepal.Length: 5.6<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 7.7<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 6.3<br />Sepal.Width: 2.7<br />Species: virginica","Sepal.Length: 6.7<br />Sepal.Width: 3.3<br />Species: virginica","Sepal.Length: 7.2<br />Sepal.Width: 3.2<br />Species: virginica","Sepal.Length: 6.2<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 6.1<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 6.4<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 7.2<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 7.4<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 7.9<br />Sepal.Width: 3.8<br />Species: virginica","Sepal.Length: 6.4<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 6.3<br />Sepal.Width: 2.8<br />Species: virginica","Sepal.Length: 6.1<br />Sepal.Width: 2.6<br />Species: virginica","Sepal.Length: 7.7<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 6.3<br />Sepal.Width: 3.4<br />Species: virginica","Sepal.Length: 6.4<br />Sepal.Width: 3.1<br />Species: virginica","Sepal.Length: 6.0<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 6.9<br />Sepal.Width: 3.1<br />Species: virginica","Sepal.Length: 6.7<br />Sepal.Width: 3.1<br />Species: virginica","Sepal.Length: 6.9<br />Sepal.Width: 3.1<br />Species: virginica","Sepal.Length: 5.8<br />Sepal.Width: 2.7<br />Species: virginica","Sepal.Length: 6.8<br />Sepal.Width: 3.2<br />Species: virginica","Sepal.Length: 6.7<br />Sepal.Width: 3.3<br />Species: virginica","Sepal.Length: 6.7<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 6.3<br />Sepal.Width: 2.5<br />Species: virginica","Sepal.Length: 6.5<br />Sepal.Width: 3.0<br />Species: virginica","Sepal.Length: 6.2<br />Sepal.Width: 3.4<br />Species: virginica","Sepal.Length: 5.9<br />Sepal.Width: 3.0<br />Species: virginica"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"virginica","legendgroup":"virginica","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.9626400996264,"r":7.97011207970112,"b":42.640099626401,"l":47.0236612702366},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[4.12,8.08],"tickmode":"array","ticktext":["5","6","7","8"],"tickvals":[5,6,7,8],"categoryorder":"array","categoryarray":["5","6","7","8"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.98505603985056,"tickwidth":0.724555643609193,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"y","title":"Sepal Length","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.88,4.52],"tickmode":"array","ticktext":["2.0","2.5","3.0","3.5","4.0","4.5"],"tickvals":[2,2.5,3,3.5,4,4.5],"categoryorder":"array","categoryarray":["2.0","2.5","3.0","3.5","4.0","4.5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.98505603985056,"tickwidth":0.724555643609193,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"x","title":"Sepal Width","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.724555643609193,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.06156048675734,"font":{"color":"rgba(0,0,0,1)","family":"","size":12.7521793275218},"y":0.91496062992126},"annotations":[{"text":"Species","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.9402241594022},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","width":500,"height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"source":"A","attrs":{"6a114930a9b0":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"6a114930a9b0","visdat":{"6a114930a9b0":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":[]}</script>
+<p><b>Fig. </b> 5: <em>Interactive scatterplot using ggplotly.</em></p>
+</div>
+<div id="ggiraph" class="section level2">
+<h2><span class="header-section-number">10.4</span> ggiraph</h2>
+<p><code>ggiraph</code> is also an R package that can be used to convert a static ggplot2 object into an interactive plot.</p>
+<pre class="r"><code>p &lt;- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
+      geom_point_interactive(aes(tooltip=paste0(&quot;&lt;b&gt;Petal Length:&lt;/b&gt; &quot;,Petal.Length,&quot;\n&lt;b&gt;Sepal Length: &lt;/b&gt;&quot;,Sepal.Length,&quot;\n&lt;b&gt;Species: &lt;/b&gt;&quot;,Species)),size=2)+
+  theme_bw()
+
+tooltip_css &lt;- &quot;background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;&quot;
+
+ggiraph(code=print(p),hover_css=&quot;cursor:pointer;stroke:black;fill-opacity:0.3&quot;,zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9)</code></pre>
+<div id="htmlwidget-febb545f793f289d658e" style="width:672px;height:480px;" class="girafe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-febb545f793f289d658e">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" id=\"svg_6a1139c5dd920190307165724\" viewBox=\"0 0 432.00 360.00\">\n  <g>\n    <defs>\n      <clipPath id=\"cl_id6a11323f311720190307165724_2\">\n        <rect x=\"0.00\" y=\"360.00\" width=\"0.00\" height=\"72.00\"/>\n      <\/clipPath>\n    <\/defs>\n    <rect x=\"0.00\" y=\"0.00\" width=\"432.00\" height=\"360.00\" id=\"1\" clip-path=\"url(#cl_id6a11323f311720190307165724_2)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke-width=\"0.75\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <defs>\n      <clipPath id=\"cl_id6a11323f311720190307165724_3\">\n        <rect x=\"0.00\" y=\"0.00\" width=\"432.00\" height=\"360.00\"/>\n      <\/clipPath>\n    <\/defs>\n    <rect x=\"0.00\" y=\"0.00\" width=\"432.00\" height=\"360.00\" id=\"2\" clip-path=\"url(#cl_id6a11323f311720190307165724_3)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke-width=\"1.06698\" stroke=\"#FFFFFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <defs>\n      <clipPath id=\"cl_id6a11323f311720190307165724_4\">\n        <rect x=\"28.44\" y=\"5.48\" width=\"315.75\" height=\"322.15\"/>\n      <\/clipPath>\n    <\/defs>\n    <rect x=\"28.44\" y=\"5.48\" width=\"315.75\" height=\"322.15\" id=\"3\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke=\"none\"/>\n    <polyline points=\"28.44,312.98 344.19,312.98\" id=\"4\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"28.44,213.71 344.19,213.71\" id=\"5\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"28.44,114.43 344.19,114.43\" id=\"6\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"28.44,15.16 344.19,15.16\" id=\"7\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"58.74,327.63 58.74,5.48\" id=\"8\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"138.48,327.63 138.48,5.48\" id=\"9\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"218.21,327.63 218.21,5.48\" id=\"10\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"297.94,327.63 297.94,5.48\" id=\"11\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"0.533489\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"28.44,263.35 344.19,263.35\" id=\"12\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"28.44,164.07 344.19,164.07\" id=\"13\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"28.44,64.80 344.19,64.80\" id=\"14\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"98.61,327.63 98.61,5.48\" id=\"15\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"178.34,327.63 178.34,5.48\" id=\"16\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"258.08,327.63 258.08,5.48\" id=\"17\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"337.81,327.63 337.81,5.48\" id=\"18\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#EBEBEB\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <circle cx=\"106.58\" cy=\"293.13\" r=\"1.87pt\" id=\"19\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"90.64\" cy=\"293.13\" r=\"1.87pt\" id=\"20\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"74.69\" cy=\"298.09\" r=\"1.87pt\" id=\"21\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"66.72\" cy=\"288.16\" r=\"1.87pt\" id=\"22\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"293.13\" r=\"1.87pt\" id=\"23\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"130.50\" cy=\"278.24\" r=\"1.87pt\" id=\"24\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"66.72\" cy=\"293.13\" r=\"1.87pt\" id=\"25\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"288.16\" r=\"1.87pt\" id=\"26\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"50.77\" cy=\"293.13\" r=\"1.87pt\" id=\"27\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"90.64\" cy=\"288.16\" r=\"1.87pt\" id=\"28\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"130.50\" cy=\"288.16\" r=\"1.87pt\" id=\"29\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"82.66\" cy=\"283.20\" r=\"1.87pt\" id=\"30\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"82.66\" cy=\"293.13\" r=\"1.87pt\" id=\"31\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"42.80\" cy=\"308.02\" r=\"1.87pt\" id=\"32\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"303.05\" r=\"1.87pt\" id=\"33\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"288.16\" r=\"1.87pt\" id=\"34\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"130.50\" cy=\"298.09\" r=\"1.87pt\" id=\"35\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"293.13\" r=\"1.87pt\" id=\"36\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"278.24\" r=\"1.87pt\" id=\"37\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"288.16\" r=\"1.87pt\" id=\"38\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"130.50\" cy=\"278.24\" r=\"1.87pt\" id=\"39\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"288.16\" r=\"1.87pt\" id=\"40\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"66.72\" cy=\"312.98\" r=\"1.87pt\" id=\"41\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"278.24\" r=\"1.87pt\" id=\"42\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"82.66\" cy=\"268.31\" r=\"1.87pt\" id=\"43\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"283.20\" r=\"1.87pt\" id=\"44\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"283.20\" r=\"1.87pt\" id=\"45\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"114.56\" cy=\"288.16\" r=\"1.87pt\" id=\"46\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"114.56\" cy=\"293.13\" r=\"1.87pt\" id=\"47\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"74.69\" cy=\"283.20\" r=\"1.87pt\" id=\"48\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"82.66\" cy=\"283.20\" r=\"1.87pt\" id=\"49\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"130.50\" cy=\"288.16\" r=\"1.87pt\" id=\"50\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"114.56\" cy=\"288.16\" r=\"1.87pt\" id=\"51\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"293.13\" r=\"1.87pt\" id=\"52\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"90.64\" cy=\"288.16\" r=\"1.87pt\" id=\"53\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"303.05\" r=\"1.87pt\" id=\"54\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"298.09\" r=\"1.87pt\" id=\"55\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"90.64\" cy=\"293.13\" r=\"1.87pt\" id=\"56\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"50.77\" cy=\"298.09\" r=\"1.87pt\" id=\"57\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"288.16\" r=\"1.87pt\" id=\"58\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"298.09\" r=\"1.87pt\" id=\"59\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"58.74\" cy=\"298.09\" r=\"1.87pt\" id=\"60\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"50.77\" cy=\"298.09\" r=\"1.87pt\" id=\"61\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"283.20\" r=\"1.87pt\" id=\"62\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"268.31\" r=\"1.87pt\" id=\"63\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"82.66\" cy=\"293.13\" r=\"1.87pt\" id=\"64\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"283.20\" r=\"1.87pt\" id=\"65\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"66.72\" cy=\"293.13\" r=\"1.87pt\" id=\"66\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"122.53\" cy=\"288.16\" r=\"1.87pt\" id=\"67\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"293.13\" r=\"1.87pt\" id=\"68\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"258.08\" cy=\"129.32\" r=\"1.87pt\" id=\"69\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"139.25\" r=\"1.87pt\" id=\"70\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"250.10\" cy=\"119.40\" r=\"1.87pt\" id=\"71\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"164.07\" r=\"1.87pt\" id=\"72\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"218.21\" cy=\"134.29\" r=\"1.87pt\" id=\"73\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"139.25\" r=\"1.87pt\" id=\"74\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"129.32\" r=\"1.87pt\" id=\"75\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"90.64\" cy=\"198.82\" r=\"1.87pt\" id=\"76\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"226.18\" cy=\"134.29\" r=\"1.87pt\" id=\"77\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"114.56\" cy=\"169.03\" r=\"1.87pt\" id=\"78\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"188.89\" r=\"1.87pt\" id=\"79\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"170.37\" cy=\"154.14\" r=\"1.87pt\" id=\"80\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"178.34\" cy=\"164.07\" r=\"1.87pt\" id=\"81\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"186.32\" cy=\"129.32\" r=\"1.87pt\" id=\"82\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"146.45\" cy=\"183.93\" r=\"1.87pt\" id=\"83\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"144.22\" r=\"1.87pt\" id=\"84\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"146.45\" cy=\"139.25\" r=\"1.87pt\" id=\"85\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"159.11\" r=\"1.87pt\" id=\"86\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"194.29\" cy=\"139.25\" r=\"1.87pt\" id=\"87\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"146.45\" cy=\"169.03\" r=\"1.87pt\" id=\"88\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"170.37\" cy=\"124.36\" r=\"1.87pt\" id=\"89\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"186.32\" cy=\"164.07\" r=\"1.87pt\" id=\"90\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"119.40\" r=\"1.87pt\" id=\"91\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"186.32\" cy=\"129.32\" r=\"1.87pt\" id=\"92\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"149.18\" r=\"1.87pt\" id=\"93\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"226.18\" cy=\"144.22\" r=\"1.87pt\" id=\"94\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"242.13\" cy=\"124.36\" r=\"1.87pt\" id=\"95\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"114.43\" r=\"1.87pt\" id=\"96\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"178.34\" cy=\"139.25\" r=\"1.87pt\" id=\"97\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"188.89\" r=\"1.87pt\" id=\"98\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"174.00\" r=\"1.87pt\" id=\"99\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"178.96\" r=\"1.87pt\" id=\"100\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"169.03\" r=\"1.87pt\" id=\"101\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"178.34\" cy=\"109.47\" r=\"1.87pt\" id=\"102\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"130.50\" cy=\"139.25\" r=\"1.87pt\" id=\"103\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"178.34\" cy=\"139.25\" r=\"1.87pt\" id=\"104\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"129.32\" r=\"1.87pt\" id=\"105\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"144.22\" r=\"1.87pt\" id=\"106\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"146.45\" cy=\"159.11\" r=\"1.87pt\" id=\"107\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"164.07\" r=\"1.87pt\" id=\"108\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"138.48\" cy=\"144.22\" r=\"1.87pt\" id=\"109\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"186.32\" cy=\"134.29\" r=\"1.87pt\" id=\"110\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"164.07\" r=\"1.87pt\" id=\"111\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"98.61\" cy=\"198.82\" r=\"1.87pt\" id=\"112\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"146.45\" cy=\"154.14\" r=\"1.87pt\" id=\"113\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"154.14\" r=\"1.87pt\" id=\"114\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"154.14\" r=\"1.87pt\" id=\"115\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"194.29\" cy=\"149.18\" r=\"1.87pt\" id=\"116\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"106.58\" cy=\"213.71\" r=\"1.87pt\" id=\"117\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"159.11\" r=\"1.87pt\" id=\"118\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"64.80\" r=\"1.87pt\" id=\"119\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"109.47\" r=\"1.87pt\" id=\"120\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"266.05\" cy=\"69.76\" r=\"1.87pt\" id=\"121\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"84.65\" r=\"1.87pt\" id=\"122\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"218.21\" cy=\"74.72\" r=\"1.87pt\" id=\"123\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"305.92\" cy=\"35.01\" r=\"1.87pt\" id=\"124\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"90.64\" cy=\"139.25\" r=\"1.87pt\" id=\"125\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"282.00\" cy=\"49.90\" r=\"1.87pt\" id=\"126\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"74.72\" r=\"1.87pt\" id=\"127\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"274.02\" cy=\"59.83\" r=\"1.87pt\" id=\"128\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"218.21\" cy=\"109.47\" r=\"1.87pt\" id=\"129\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"99.54\" r=\"1.87pt\" id=\"130\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"242.13\" cy=\"89.61\" r=\"1.87pt\" id=\"131\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"154.42\" cy=\"114.43\" r=\"1.87pt\" id=\"132\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"109.47\" r=\"1.87pt\" id=\"133\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"99.54\" r=\"1.87pt\" id=\"134\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"218.21\" cy=\"89.61\" r=\"1.87pt\" id=\"135\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"313.89\" cy=\"30.05\" r=\"1.87pt\" id=\"136\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"313.89\" cy=\"20.12\" r=\"1.87pt\" id=\"137\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"178.34\" cy=\"114.43\" r=\"1.87pt\" id=\"138\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"250.10\" cy=\"79.69\" r=\"1.87pt\" id=\"139\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"146.45\" cy=\"119.40\" r=\"1.87pt\" id=\"140\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"313.89\" cy=\"30.05\" r=\"1.87pt\" id=\"141\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"119.40\" r=\"1.87pt\" id=\"142\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"79.69\" r=\"1.87pt\" id=\"143\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"274.02\" cy=\"64.80\" r=\"1.87pt\" id=\"144\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"194.29\" cy=\"124.36\" r=\"1.87pt\" id=\"145\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"186.32\" cy=\"119.40\" r=\"1.87pt\" id=\"146\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"84.65\" r=\"1.87pt\" id=\"147\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"274.02\" cy=\"74.72\" r=\"1.87pt\" id=\"148\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"289.97\" cy=\"59.83\" r=\"1.87pt\" id=\"149\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"329.84\" cy=\"44.94\" r=\"1.87pt\" id=\"150\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"84.65\" r=\"1.87pt\" id=\"151\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"109.47\" r=\"1.87pt\" id=\"152\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"186.32\" cy=\"84.65\" r=\"1.87pt\" id=\"153\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"313.89\" cy=\"59.83\" r=\"1.87pt\" id=\"154\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"84.65\" r=\"1.87pt\" id=\"155\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"210.24\" cy=\"89.61\" r=\"1.87pt\" id=\"156\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"178.34\" cy=\"124.36\" r=\"1.87pt\" id=\"157\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"250.10\" cy=\"94.58\" r=\"1.87pt\" id=\"158\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"84.65\" r=\"1.87pt\" id=\"159\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"250.10\" cy=\"109.47\" r=\"1.87pt\" id=\"160\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"162.40\" cy=\"109.47\" r=\"1.87pt\" id=\"161\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"242.13\" cy=\"69.76\" r=\"1.87pt\" id=\"162\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"79.69\" r=\"1.87pt\" id=\"163\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"234.16\" cy=\"104.51\" r=\"1.87pt\" id=\"164\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"202.26\" cy=\"114.43\" r=\"1.87pt\" id=\"165\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"218.21\" cy=\"104.51\" r=\"1.87pt\" id=\"166\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"194.29\" cy=\"94.58\" r=\"1.87pt\" id=\"167\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <circle cx=\"170.37\" cy=\"109.47\" r=\"1.87pt\" id=\"168\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <rect x=\"28.44\" y=\"5.48\" width=\"315.75\" height=\"322.15\" id=\"169\" clip-path=\"url(#cl_id6a11323f311720190307165724_4)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <defs>\n      <clipPath id=\"cl_id6a11323f311720190307165724_5\">\n        <rect x=\"0.00\" y=\"0.00\" width=\"432.00\" height=\"360.00\"/>\n      <\/clipPath>\n    <\/defs>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"18.62\" y=\"266.49\" id=\"170\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">2<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"18.62\" y=\"167.22\" id=\"171\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">4<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"18.62\" y=\"67.95\" id=\"172\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">6<\/text>\n    <\/g>\n    <polyline points=\"25.70,263.35 28.44,263.35\" id=\"173\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"25.70,164.07 28.44,164.07\" id=\"174\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"25.70,64.80 28.44,64.80\" id=\"175\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"98.61,330.37 98.61,327.63\" id=\"176\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"178.34,330.37 178.34,327.63\" id=\"177\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"258.08,330.37 258.08,327.63\" id=\"178\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <polyline points=\"337.81,330.37 337.81,327.63\" id=\"179\" clip-path=\"url(#cl_svg_6a1139c5dd920190307165724_5)\" fill=\"none\" stroke-width=\"1.06698\" stroke=\"#333333\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"butt\"/>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"96.16\" y=\"338.86\" id=\"180\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">5<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"175.90\" y=\"338.86\" id=\"181\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">6<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"255.63\" y=\"338.86\" id=\"182\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">7<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"335.36\" y=\"338.86\" id=\"183\" font-size=\"6.60pt\" fill=\"#4D4D4D\" fill-opacity=\"1\" font-family=\"Arial\">8<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"153.90\" y=\"352.00\" id=\"184\" font-size=\"8.25pt\" font-family=\"Arial\">Sepal.Length<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text transform=\"translate(13.35,197.44) rotate(-90)\" id=\"185\" font-size=\"8.25pt\" font-family=\"Arial\">Petal.Length<\/text>\n    <\/g>\n    <rect x=\"355.15\" y=\"127.21\" width=\"71.37\" height=\"78.68\" id=\"186\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke=\"none\"/>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"360.63\" y=\"141.83\" id=\"187\" font-size=\"8.25pt\" font-family=\"Arial\">Species<\/text>\n    <\/g>\n    <rect x=\"360.63\" y=\"148.57\" width=\"17.28\" height=\"17.28\" id=\"188\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke=\"none\"/>\n    <circle cx=\"369.27\" cy=\"157.21\" r=\"1.87pt\" id=\"189\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#F8766D\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#F8766D\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <rect x=\"360.63\" y=\"165.85\" width=\"17.28\" height=\"17.28\" id=\"190\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke=\"none\"/>\n    <circle cx=\"369.27\" cy=\"174.49\" r=\"1.87pt\" id=\"191\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#00BA38\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#00BA38\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <rect x=\"360.63\" y=\"183.13\" width=\"17.28\" height=\"17.28\" id=\"192\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#FFFFFF\" fill-opacity=\"1\" stroke=\"none\"/>\n    <circle cx=\"369.27\" cy=\"191.77\" r=\"1.87pt\" id=\"193\" clip-path=\"url(#cl_id6a11323f311720190307165724_5)\" fill=\"#619CFF\" fill-opacity=\"1\" stroke-width=\"0.708661\" stroke=\"#619CFF\" stroke-opacity=\"1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"383.39\" y=\"160.36\" id=\"194\" font-size=\"6.60pt\" font-family=\"Arial\">setosa<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"383.39\" y=\"177.64\" id=\"195\" font-size=\"6.60pt\" font-family=\"Arial\">versicolor<\/text>\n    <\/g>\n    <g clip-path=\"url(#cl_id6a11323f311720190307165724_5)\">\n      <text x=\"383.39\" y=\"194.92\" id=\"196\" font-size=\"6.60pt\" font-family=\"Arial\">virginica<\/text>\n    <\/g>\n  <\/g>\n<\/svg>\n","js":"function zzz(){document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('19').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('20').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.9<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('21').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>4.7<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('22').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>4.6<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('23').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('24').setAttribute('title','<b>Petal Length:<\/b> 1.7<br><b>Sepal Length: <\/b>5.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('25').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.6<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('26').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('27').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('28').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>4.9<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('29').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('30').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>4.8<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('31').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.8<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('32').setAttribute('title','<b>Petal Length:<\/b> 1.1<br><b>Sepal Length: <\/b>4.3<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('33').setAttribute('title','<b>Petal Length:<\/b> 1.2<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('34').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('35').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>5.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('36').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('37').setAttribute('title','<b>Petal Length:<\/b> 1.7<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('38').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('39').setAttribute('title','<b>Petal Length:<\/b> 1.7<br><b>Sepal Length: <\/b>5.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('40').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('41').setAttribute('title','<b>Petal Length:<\/b> 1<br><b>Sepal Length: <\/b>4.6<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('42').setAttribute('title','<b>Petal Length:<\/b> 1.7<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('43').setAttribute('title','<b>Petal Length:<\/b> 1.9<br><b>Sepal Length: <\/b>4.8<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('44').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('45').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('46').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.2<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('47').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>5.2<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('48').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>4.7<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('49').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>4.8<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('50').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('51').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.2<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('52').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('53').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>4.9<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('54').setAttribute('title','<b>Petal Length:<\/b> 1.2<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('55').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('56').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.9<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('57').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>4.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('58').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('59').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('60').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>4.5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('61').setAttribute('title','<b>Petal Length:<\/b> 1.3<br><b>Sepal Length: <\/b>4.4<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('62').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('63').setAttribute('title','<b>Petal Length:<\/b> 1.9<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('64').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.8<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('65').setAttribute('title','<b>Petal Length:<\/b> 1.6<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('66').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>4.6<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('67').setAttribute('title','<b>Petal Length:<\/b> 1.5<br><b>Sepal Length: <\/b>5.3<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('68').setAttribute('title','<b>Petal Length:<\/b> 1.4<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>setosa');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('69').setAttribute('title','<b>Petal Length:<\/b> 4.7<br><b>Sepal Length: <\/b>7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('70').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('71').setAttribute('title','<b>Petal Length:<\/b> 4.9<br><b>Sepal Length: <\/b>6.9<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('72').setAttribute('title','<b>Petal Length:<\/b> 4<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('73').setAttribute('title','<b>Petal Length:<\/b> 4.6<br><b>Sepal Length: <\/b>6.5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('74').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('75').setAttribute('title','<b>Petal Length:<\/b> 4.7<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('76').setAttribute('title','<b>Petal Length:<\/b> 3.3<br><b>Sepal Length: <\/b>4.9<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('77').setAttribute('title','<b>Petal Length:<\/b> 4.6<br><b>Sepal Length: <\/b>6.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('78').setAttribute('title','<b>Petal Length:<\/b> 3.9<br><b>Sepal Length: <\/b>5.2<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('79').setAttribute('title','<b>Petal Length:<\/b> 3.5<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('80').setAttribute('title','<b>Petal Length:<\/b> 4.2<br><b>Sepal Length: <\/b>5.9<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('81').setAttribute('title','<b>Petal Length:<\/b> 4<br><b>Sepal Length: <\/b>6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('82').setAttribute('title','<b>Petal Length:<\/b> 4.7<br><b>Sepal Length: <\/b>6.1<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('83').setAttribute('title','<b>Petal Length:<\/b> 3.6<br><b>Sepal Length: <\/b>5.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('84').setAttribute('title','<b>Petal Length:<\/b> 4.4<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('85').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>5.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('86').setAttribute('title','<b>Petal Length:<\/b> 4.1<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('87').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>6.2<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('88').setAttribute('title','<b>Petal Length:<\/b> 3.9<br><b>Sepal Length: <\/b>5.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('89').setAttribute('title','<b>Petal Length:<\/b> 4.8<br><b>Sepal Length: <\/b>5.9<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('90').setAttribute('title','<b>Petal Length:<\/b> 4<br><b>Sepal Length: <\/b>6.1<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('91').setAttribute('title','<b>Petal Length:<\/b> 4.9<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('92').setAttribute('title','<b>Petal Length:<\/b> 4.7<br><b>Sepal Length: <\/b>6.1<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('93').setAttribute('title','<b>Petal Length:<\/b> 4.3<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('94').setAttribute('title','<b>Petal Length:<\/b> 4.4<br><b>Sepal Length: <\/b>6.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('95').setAttribute('title','<b>Petal Length:<\/b> 4.8<br><b>Sepal Length: <\/b>6.8<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('96').setAttribute('title','<b>Petal Length:<\/b> 5<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('97').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('98').setAttribute('title','<b>Petal Length:<\/b> 3.5<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('99').setAttribute('title','<b>Petal Length:<\/b> 3.8<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('100').setAttribute('title','<b>Petal Length:<\/b> 3.7<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('101').setAttribute('title','<b>Petal Length:<\/b> 3.9<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('102').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('103').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>5.4<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('104').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('105').setAttribute('title','<b>Petal Length:<\/b> 4.7<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('106').setAttribute('title','<b>Petal Length:<\/b> 4.4<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('107').setAttribute('title','<b>Petal Length:<\/b> 4.1<br><b>Sepal Length: <\/b>5.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('108').setAttribute('title','<b>Petal Length:<\/b> 4<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('109').setAttribute('title','<b>Petal Length:<\/b> 4.4<br><b>Sepal Length: <\/b>5.5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('110').setAttribute('title','<b>Petal Length:<\/b> 4.6<br><b>Sepal Length: <\/b>6.1<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('111').setAttribute('title','<b>Petal Length:<\/b> 4<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('112').setAttribute('title','<b>Petal Length:<\/b> 3.3<br><b>Sepal Length: <\/b>5<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('113').setAttribute('title','<b>Petal Length:<\/b> 4.2<br><b>Sepal Length: <\/b>5.6<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('114').setAttribute('title','<b>Petal Length:<\/b> 4.2<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('115').setAttribute('title','<b>Petal Length:<\/b> 4.2<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('116').setAttribute('title','<b>Petal Length:<\/b> 4.3<br><b>Sepal Length: <\/b>6.2<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('117').setAttribute('title','<b>Petal Length:<\/b> 3<br><b>Sepal Length: <\/b>5.1<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('118').setAttribute('title','<b>Petal Length:<\/b> 4.1<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>versicolor');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('119').setAttribute('title','<b>Petal Length:<\/b> 6<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('120').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('121').setAttribute('title','<b>Petal Length:<\/b> 5.9<br><b>Sepal Length: <\/b>7.1<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('122').setAttribute('title','<b>Petal Length:<\/b> 5.6<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('123').setAttribute('title','<b>Petal Length:<\/b> 5.8<br><b>Sepal Length: <\/b>6.5<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('124').setAttribute('title','<b>Petal Length:<\/b> 6.6<br><b>Sepal Length: <\/b>7.6<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('125').setAttribute('title','<b>Petal Length:<\/b> 4.5<br><b>Sepal Length: <\/b>4.9<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('126').setAttribute('title','<b>Petal Length:<\/b> 6.3<br><b>Sepal Length: <\/b>7.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('127').setAttribute('title','<b>Petal Length:<\/b> 5.8<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('128').setAttribute('title','<b>Petal Length:<\/b> 6.1<br><b>Sepal Length: <\/b>7.2<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('129').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>6.5<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('130').setAttribute('title','<b>Petal Length:<\/b> 5.3<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('131').setAttribute('title','<b>Petal Length:<\/b> 5.5<br><b>Sepal Length: <\/b>6.8<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('132').setAttribute('title','<b>Petal Length:<\/b> 5<br><b>Sepal Length: <\/b>5.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('133').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('134').setAttribute('title','<b>Petal Length:<\/b> 5.3<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('135').setAttribute('title','<b>Petal Length:<\/b> 5.5<br><b>Sepal Length: <\/b>6.5<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('136').setAttribute('title','<b>Petal Length:<\/b> 6.7<br><b>Sepal Length: <\/b>7.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('137').setAttribute('title','<b>Petal Length:<\/b> 6.9<br><b>Sepal Length: <\/b>7.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('138').setAttribute('title','<b>Petal Length:<\/b> 5<br><b>Sepal Length: <\/b>6<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('139').setAttribute('title','<b>Petal Length:<\/b> 5.7<br><b>Sepal Length: <\/b>6.9<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('140').setAttribute('title','<b>Petal Length:<\/b> 4.9<br><b>Sepal Length: <\/b>5.6<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('141').setAttribute('title','<b>Petal Length:<\/b> 6.7<br><b>Sepal Length: <\/b>7.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('142').setAttribute('title','<b>Petal Length:<\/b> 4.9<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('143').setAttribute('title','<b>Petal Length:<\/b> 5.7<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('144').setAttribute('title','<b>Petal Length:<\/b> 6<br><b>Sepal Length: <\/b>7.2<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('145').setAttribute('title','<b>Petal Length:<\/b> 4.8<br><b>Sepal Length: <\/b>6.2<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('146').setAttribute('title','<b>Petal Length:<\/b> 4.9<br><b>Sepal Length: <\/b>6.1<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('147').setAttribute('title','<b>Petal Length:<\/b> 5.6<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('148').setAttribute('title','<b>Petal Length:<\/b> 5.8<br><b>Sepal Length: <\/b>7.2<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('149').setAttribute('title','<b>Petal Length:<\/b> 6.1<br><b>Sepal Length: <\/b>7.4<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('150').setAttribute('title','<b>Petal Length:<\/b> 6.4<br><b>Sepal Length: <\/b>7.9<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('151').setAttribute('title','<b>Petal Length:<\/b> 5.6<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('152').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('153').setAttribute('title','<b>Petal Length:<\/b> 5.6<br><b>Sepal Length: <\/b>6.1<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('154').setAttribute('title','<b>Petal Length:<\/b> 6.1<br><b>Sepal Length: <\/b>7.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('155').setAttribute('title','<b>Petal Length:<\/b> 5.6<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('156').setAttribute('title','<b>Petal Length:<\/b> 5.5<br><b>Sepal Length: <\/b>6.4<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('157').setAttribute('title','<b>Petal Length:<\/b> 4.8<br><b>Sepal Length: <\/b>6<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('158').setAttribute('title','<b>Petal Length:<\/b> 5.4<br><b>Sepal Length: <\/b>6.9<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('159').setAttribute('title','<b>Petal Length:<\/b> 5.6<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('160').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>6.9<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('161').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>5.8<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('162').setAttribute('title','<b>Petal Length:<\/b> 5.9<br><b>Sepal Length: <\/b>6.8<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('163').setAttribute('title','<b>Petal Length:<\/b> 5.7<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('164').setAttribute('title','<b>Petal Length:<\/b> 5.2<br><b>Sepal Length: <\/b>6.7<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('165').setAttribute('title','<b>Petal Length:<\/b> 5<br><b>Sepal Length: <\/b>6.3<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('166').setAttribute('title','<b>Petal Length:<\/b> 5.2<br><b>Sepal Length: <\/b>6.5<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('167').setAttribute('title','<b>Petal Length:<\/b> 5.4<br><b>Sepal Length: <\/b>6.2<br><b>Species: <\/b>virginica');document.querySelectorAll('#svg_6a1139c5dd920190307165724')[0].getElementById('168').setAttribute('title','<b>Petal Length:<\/b> 5.1<br><b>Sepal Length: <\/b>5.9<br><b>Species: <\/b>virginica');};","uid":"svg_6a1139c5dd920190307165724","width":0.75,"ratio":1.2,"settings":{"tooltip":{"css":"{position:absolute;pointer-events:none;z-index:999;background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;}","offx":10,"offy":0,"use_cursor_pos":true,"opacity":0.9,"usefill":false,"usestroke":false,"delay":{"over":200,"out":500}},"hover":{"css":"{cursor:pointer;stroke:black;fill-opacity:0.3}"},"zoom":{"min":1,"max":5},"capture":{"css":"{fill:red;stroke:gray;}","type":"multiple","only_shiny":true},"toolbar":{"position":"top","saveaspng":false}}},"evals":[],"jsHooks":[]}</script>
+<p><b>Fig. </b> 6: <em>Interactive scatterplot using ggiraph.</em></p>
+</div>
+<div id="dygraphs" class="section level2">
+<h2><span class="header-section-number">10.5</span> dygraphs</h2>
+<p>R package <a href="http://rstudio.github.io/dygraphs/"><code>dygraphs</code></a> provides R bindings for javascript library <a href="http://dygraphs.com/">dygraphs</a> for time series data.</p>
+<pre class="r"><code>lungDeaths &lt;- cbind(ldeaths, mdeaths, fdeaths)
+dygraph(lungDeaths,main=&quot;Deaths from Lung Disease (UK)&quot;) %&gt;%
+  dyOptions(colors=c(&quot;#66C2A5&quot;,&quot;#FC8D62&quot;,&quot;#8DA0CB&quot;))</code></pre>
+<div id="htmlwidget-a9935817eacacce7a234" style="width:864px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a9935817eacacce7a234">{"x":{"attrs":{"title":"Deaths from Lung Disease (UK)","labels":["month","ldeaths","mdeaths","fdeaths"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["#66C2A5","#FC8D62","#8DA0CB"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["1974-01-01T00:00:00.000Z","1974-02-01T00:00:00.000Z","1974-03-01T00:00:00.000Z","1974-04-01T00:00:00.000Z","1974-05-01T00:00:00.000Z","1974-06-01T00:00:00.000Z","1974-07-01T00:00:00.000Z","1974-08-01T00:00:00.000Z","1974-09-01T00:00:00.000Z","1974-10-01T00:00:00.000Z","1974-11-01T00:00:00.000Z","1974-12-01T00:00:00.000Z","1975-01-01T00:00:00.000Z","1975-02-01T00:00:00.000Z","1975-03-01T00:00:00.000Z","1975-04-01T00:00:00.000Z","1975-05-01T00:00:00.000Z","1975-06-01T00:00:00.000Z","1975-07-01T00:00:00.000Z","1975-08-01T00:00:00.000Z","1975-09-01T00:00:00.000Z","1975-10-01T00:00:00.000Z","1975-11-01T00:00:00.000Z","1975-12-01T00:00:00.000Z","1976-01-01T00:00:00.000Z","1976-02-01T00:00:00.000Z","1976-03-01T00:00:00.000Z","1976-04-01T00:00:00.000Z","1976-05-01T00:00:00.000Z","1976-06-01T00:00:00.000Z","1976-07-01T00:00:00.000Z","1976-08-01T00:00:00.000Z","1976-09-01T00:00:00.000Z","1976-10-01T00:00:00.000Z","1976-11-01T00:00:00.000Z","1976-12-01T00:00:00.000Z","1977-01-01T00:00:00.000Z","1977-02-01T00:00:00.000Z","1977-03-01T00:00:00.000Z","1977-04-01T00:00:00.000Z","1977-05-01T00:00:00.000Z","1977-06-01T00:00:00.000Z","1977-07-01T00:00:00.000Z","1977-08-01T00:00:00.000Z","1977-09-01T00:00:00.000Z","1977-10-01T00:00:00.000Z","1977-11-01T00:00:00.000Z","1977-12-01T00:00:00.000Z","1978-01-01T00:00:00.000Z","1978-02-01T00:00:00.000Z","1978-03-01T00:00:00.000Z","1978-04-01T00:00:00.000Z","1978-05-01T00:00:00.000Z","1978-06-01T00:00:00.000Z","1978-07-01T00:00:00.000Z","1978-08-01T00:00:00.000Z","1978-09-01T00:00:00.000Z","1978-10-01T00:00:00.000Z","1978-11-01T00:00:00.000Z","1978-12-01T00:00:00.000Z","1979-01-01T00:00:00.000Z","1979-02-01T00:00:00.000Z","1979-03-01T00:00:00.000Z","1979-04-01T00:00:00.000Z","1979-05-01T00:00:00.000Z","1979-06-01T00:00:00.000Z","1979-07-01T00:00:00.000Z","1979-08-01T00:00:00.000Z","1979-09-01T00:00:00.000Z","1979-10-01T00:00:00.000Z","1979-11-01T00:00:00.000Z","1979-12-01T00:00:00.000Z"],[3035,2552,2704,2554,2014,1655,1721,1524,1596,2074,2199,2512,2933,2889,2938,2497,1870,1726,1607,1545,1396,1787,2076,2837,2787,3891,3179,2011,1636,1580,1489,1300,1356,1653,2013,2823,3102,2294,2385,2444,1748,1554,1498,1361,1346,1564,1640,2293,2815,3137,2679,1969,1870,1633,1529,1366,1357,1570,1535,2491,3084,2605,2573,2143,1693,1504,1461,1354,1333,1492,1781,1915],[2134,1863,1877,1877,1492,1249,1280,1131,1209,1492,1621,1846,2103,2137,2153,1833,1403,1288,1186,1133,1053,1347,1545,2066,2020,2750,2283,1479,1189,1160,1113,970,999,1208,1467,2059,2240,1634,1722,1801,1246,1162,1087,1013,959,1179,1229,1655,2019,2284,1942,1423,1340,1187,1098,1004,970,1140,1110,1812,2263,1820,1846,1531,1215,1075,1056,975,940,1081,1294,1341],[901,689,827,677,522,406,441,393,387,582,578,666,830,752,785,664,467,438,421,412,343,440,531,771,767,1141,896,532,447,420,376,330,357,445,546,764,862,660,663,643,502,392,411,348,387,385,411,638,796,853,737,546,530,446,431,362,387,430,425,679,821,785,727,612,478,429,405,379,393,411,487,574]],"fixedtz":false,"tzone":""},"evals":[],"jsHooks":[]}</script>
+<p><b>Fig. </b> 7: <em>Interactive time series plot using dygraph.</em></p>
+</div>
+<div id="network-graph" class="section level2">
+<h2><span class="header-section-number">10.6</span> Network graph</h2>
+<p>R package <code>networkD3</code> allows the use of interactive network graphs from the <a href="https://d3js.org/">D3.js</a> javascript library.</p>
+<pre class="r"><code>data(MisLinks,MisNodes)
+forceNetwork(Links=MisLinks,Nodes=MisNodes,Source=&quot;source&quot;,
+             Target=&quot;target&quot;,Value=&quot;value&quot;,NodeID=&quot;name&quot;,
+             Group=&quot;group&quot;,opacity=0.4)</code></pre>
+<div id="htmlwidget-c9d7f77263091412288e" style="width:672px;height:480px;" class="forceNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c9d7f77263091412288e">{"x":{"links":{"source":[1,2,3,3,4,5,6,7,8,9,11,11,11,11,12,13,14,15,17,18,18,19,19,19,20,20,20,20,21,21,21,21,21,22,22,22,22,22,22,23,23,23,23,23,23,23,23,23,24,24,25,25,25,26,26,26,26,27,27,27,27,27,28,28,29,29,29,30,31,31,31,31,32,33,33,34,34,35,35,35,36,36,36,36,37,37,37,37,37,38,38,38,38,38,38,39,40,41,41,42,42,42,43,43,43,44,44,45,47,48,48,48,48,49,49,50,50,51,51,51,52,52,53,54,54,54,55,55,55,55,55,55,55,55,55,55,56,56,57,57,57,58,58,58,58,58,59,59,59,59,60,60,60,61,61,61,61,61,61,62,62,62,62,62,62,62,62,63,63,63,63,63,63,63,63,64,64,64,64,64,64,64,64,64,64,65,65,65,65,65,65,65,65,65,65,66,66,66,66,66,66,66,66,66,67,68,68,68,68,68,68,69,69,69,69,69,69,69,70,70,70,70,70,70,70,70,71,71,71,71,71,71,71,71,72,72,72,73,74,74,75,75,75,75,75,75,75,76,76,76,76,76,76,76],"target":[0,0,0,2,0,0,0,0,0,0,10,3,2,0,11,11,11,11,16,16,17,16,17,18,16,17,18,19,16,17,18,19,20,16,17,18,19,20,21,16,17,18,19,20,21,22,12,11,23,11,24,23,11,24,11,16,25,11,23,25,24,26,11,27,23,27,11,23,30,11,23,27,11,11,27,11,29,11,34,29,34,35,11,29,34,35,36,11,29,34,35,36,37,11,29,25,25,24,25,41,25,24,11,26,27,28,11,28,46,47,25,27,11,26,11,49,24,49,26,11,51,39,51,51,49,26,51,49,39,54,26,11,16,25,41,48,49,55,55,41,48,55,48,27,57,11,58,55,48,57,48,58,59,48,58,60,59,57,55,55,58,59,48,57,41,61,60,59,48,62,57,58,61,60,55,55,62,48,63,58,61,60,59,57,11,63,64,48,62,58,61,60,59,57,55,64,58,59,62,65,48,63,61,60,57,25,11,24,27,48,41,25,68,11,24,27,48,41,25,69,68,11,24,27,41,58,27,69,68,70,11,48,41,25,26,27,11,48,48,73,69,68,25,48,41,70,71,64,65,66,63,62,48,58],"value":[1,8,10,6,1,1,1,1,2,1,1,3,3,5,1,1,1,1,4,4,4,4,4,4,3,3,3,4,3,3,3,3,5,3,3,3,3,4,4,3,3,3,3,4,4,4,2,9,2,7,13,1,12,4,31,1,1,17,5,5,1,1,8,1,1,1,2,1,2,3,2,1,1,2,1,3,2,3,3,2,2,2,2,1,2,2,2,2,1,2,2,2,2,2,1,1,1,2,3,2,2,1,3,1,1,3,1,2,1,2,1,1,1,3,2,1,1,9,2,2,1,1,1,2,1,1,6,12,1,1,21,19,1,2,5,4,1,1,1,1,1,7,7,6,1,4,15,5,6,2,1,4,2,2,6,2,5,1,1,9,17,13,7,2,1,6,3,5,5,6,2,4,3,2,1,5,12,5,4,10,6,2,9,1,1,5,7,3,5,5,5,2,5,1,2,3,3,1,2,2,1,1,1,1,3,5,1,1,1,1,1,6,6,1,1,2,1,1,4,4,4,1,1,1,1,1,1,2,2,2,1,1,1,1,2,1,1,2,2,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Myriel","Napoleon","Mlle.Baptistine","Mme.Magloire","CountessdeLo","Geborand","Champtercier","Cravatte","Count","OldMan","Labarre","Valjean","Marguerite","Mme.deR","Isabeau","Gervais","Tholomyes","Listolier","Fameuil","Blacheville","Favourite","Dahlia","Zephine","Fantine","Mme.Thenardier","Thenardier","Cosette","Javert","Fauchelevent","Bamatabois","Perpetue","Simplice","Scaufflaire","Woman1","Judge","Champmathieu","Brevet","Chenildieu","Cochepaille","Pontmercy","Boulatruelle","Eponine","Anzelma","Woman2","MotherInnocent","Gribier","Jondrette","Mme.Burgon","Gavroche","Gillenormand","Magnon","Mlle.Gillenormand","Mme.Pontmercy","Mlle.Vaubois","Lt.Gillenormand","Marius","BaronessT","Mabeuf","Enjolras","Combeferre","Prouvaire","Feuilly","Courfeyrac","Bahorel","Bossuet","Joly","Grantaire","MotherPlutarch","Gueulemer","Babet","Claquesous","Montparnasse","Toussaint","Child1","Child2","Brujon","Mme.Hucheloup"],"group":[1,1,1,1,1,1,1,1,1,1,2,2,3,2,2,2,3,3,3,3,3,3,3,3,4,4,5,4,0,2,3,2,2,2,2,2,2,2,2,4,6,4,4,5,0,0,7,7,8,5,5,5,5,5,5,8,5,8,8,8,8,8,8,8,8,8,8,9,4,4,4,4,5,10,10,4,8]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":7,"fontFamily":"serif","clickTextSize":17.5,"linkDistance":50,"linkWidth":"function(d) { return Math.sqrt(d.value); }","charge":-30,"opacity":0.4,"zoom":false,"legend":false,"arrows":false,"nodesize":false,"radiusCalculation":" Math.sqrt(d.nodesize)+6","bounded":false,"opacityNoHover":0,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+<p><b>Fig. </b> 8: <em>Interactive network plot.</em></p>
+</div>
+<div id="leaflet" class="section level2">
+<h2><span class="header-section-number">10.7</span> leaflet</h2>
+<p>R package <a href="https://rstudio.github.io/leaflet/"><code>leaflet</code></a> provides R bindings for javascript mapping library; <a href="http://leafletjs.com/">leafletjs</a>.</p>
+<pre class="r"><code>leaflet(height=500,width=700) %&gt;% 
+  addTiles(urlTemplate=&#39;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;) %&gt;%
+  #addProviderTiles(providers$Esri.NatGeoWorldMap) %&gt;%
+  addMarkers(lat=57.639327,lng=18.288534,popup=&quot;RaukR&quot;) %&gt;%
+  setView(lat=57.639327,lng=18.288534,zoom=15)</code></pre>
+<div id="htmlwidget-2c1d0afdbd6a1270c75b" style="width:700px;height:500px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2c1d0afdbd6a1270c75b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[57.639327,18.288534,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"RaukR",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[57.639327,57.639327],"lng":[18.288534,18.288534]},"setView":[[57.639327,18.288534],15,[]]},"evals":[],"jsHooks":[]}</script>
+<p><b>Fig. </b> 9: <em>Interactive map using leaflet.</em></p>
+</div>
+<div id="crosstalk" class="section level2">
+<h2><span class="header-section-number">10.8</span> crosstalk</h2>
+<p>R package <a href="https://rstudio.github.io/crosstalk/index.html"><code>crosstalk</code></a> allows <code>crosstalk</code> enabled plotting libraries to be linked. Through the shared ‘key’ variable, data points can be manipulated simultaneously on two independent plots.</p>
+<pre class="r"><code>shared_quakes &lt;- SharedData$new(quakes[sample(nrow(quakes), 100),])
+lf &lt;- leaflet(shared_quakes,height=300) %&gt;%
+        addTiles(urlTemplate=&#39;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;) %&gt;%
+        addMarkers()
+py &lt;- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %&gt;% 
+        add_markers()
+
+htmltools::div(lf,py)</code></pre>
+<div>
+<div id="htmlwidget-882ba7682ce205cbbbf5" style="width:100%;height:300px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-882ba7682ce205cbbbf5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedDatac696b603"]},{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[[-18.82,-27.87,-20.09,-19.41,-14.99,-22.33,-13.79,-18.08,-15.71,-15.2,-22.42,-21.71,-21.53,-17.98,-15.87,-19.83,-13.66,-12.72,-27.08,-20.7,-17.1,-27.17,-18.4,-23.75,-24.57,-25.04,-20.94,-13.26,-13.34,-17.95,-19.02,-25.5,-17.56,-15.9,-24.96,-21.8,-26.11,-11.38,-22.09,-20.3,-15,-12.27,-16.09,-17.99,-17.43,-20.45,-19.6,-15.31,-21.07,-34.1,-28.98,-22.09,-17.82,-18.89,-20.9,-27.1,-38.59,-19.13,-20.9,-17.87,-34.12,-20.77,-20.61,-23.11,-15.49,-23.7,-25.2,-38.28,-17.8,-23.61,-22,-11.54,-20.21,-23.08,-17.47,-19.67,-15.43,-20.87,-17.82,-24.78,-30.69,-23.49,-21.33,-21.46,-22,-30.04,-21.8,-17.97,-11.7,-20.49,-21.06,-18.73,-19.72,-26.46,-20.24,-15.34,-23.93,-27.89,-15.18,-10.97],[169.33,183.4,168.75,182.3,171.39,171.66,166.56,180.7,166.91,184.68,171.4,183.58,170.52,180.5,188.13,182.04,166.54,166.28,183.44,169.92,182.68,183.68,184.84,184.5,178.4,180.97,181.58,167.01,166.2,181.37,184.23,182.82,181.59,167.16,179.87,183.6,178.3,167.05,180.58,181.4,184.62,167.41,184.89,181.62,185.43,182.1,181.87,186.1,181.13,181.8,181.11,180.38,181.83,181.24,181.51,182.18,175.7,184.97,169.84,182,181.75,181.16,182.6,179.15,186.04,179.6,182.6,177.1,181.2,180.27,185.5,166.18,181.9,183.45,180.96,182.18,185.19,181.7,181.49,179.22,182.1,180.06,180.69,181.02,180.52,181.2,183.2,181.48,166.3,181.69,183.81,169.23,169.71,182.5,169.49,167.1,180.18,182.92,167.23,166.26],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["40","786","587","506","305","987","852","463","545","174","721","960","908","161","398","323","99","594","957","15","358","392","881","972","297","565","216","528","292","994","261","383","540","581","588","777","114","872","874","739","785","766","257","841","131","798","614","42","489","419","80","272","171","687","262","340","744","806","159","193","627","939","428","679","44","396","139","890","875","788","607","547","793","918","430","201","698","864","387","278","563","955","105","631","279","498","435","731","884","578","503","37","94","451","108","675","640","948","853","251"],"ctGroup":"SharedDatac696b603"}]}],"limits":{"lat":[-38.59,-10.97],"lng":[166.18,188.13]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e2ecab85f3149b741bf4" style="width:100%;height:300px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e2ecab85f3149b741bf4">{"x":{"visdat":{"6a1152b99cfe":["function () ","plotlyVisDat"]},"cur_data":"6a1152b99cfe","attrs":{"6a1152b99cfe":{"x":{},"y":{},"size":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"markers","inherit":true}},"layout":{"height":300,"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"depth"},"yaxis":{"domain":[0,1],"automargin":true,"title":"mag"},"dragmode":"zoom","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"data":[{"x":[230,87,50,589,637,125,68,628,58,99,86,234,129,626,52,575,50,70,63,139,403,44,221,54,562,393,573,213,67,642,270,124,543,41,480,213,617,133,580,608,40,50,304,574,189,500,597,96,594,246,304,590,640,655,548,43,162,210,93,569,75,568,488,564,94,646,149,100,530,537,52,89,576,90,546,360,249,560,573,492,62,530,636,584,561,49,325,578,139,559,203,206,271,184,100,128,525,87,71,180],"y":[4.4,4.7,4.6,4.2,4.3,5.2,4.7,5.2,4.8,4.1,4.7,4.7,5.2,4.1,5,4.4,5.1,4.8,4.7,6.1,5.5,4.8,4.2,5.2,5.6,4.2,4.3,5.1,4.8,4,5.1,5,4.6,4.8,4.4,4.4,4.8,4.5,4.4,4.6,5.1,4.5,4.6,4.8,4.5,4.5,4.2,4.6,4.9,4.3,5.3,4.9,4.3,4.1,4.7,4.7,4.7,4.1,4.9,4.6,4.7,4.2,4.6,4.7,4.3,4.2,4.9,5.4,4,5,4.4,5.4,4.1,4.7,4.2,4.3,4,4.2,4.2,4.3,4.9,4,4.6,4.2,4.5,4.8,4.4,4.7,4.2,4.5,4.5,4.5,4.2,4.3,4.6,5.3,4.6,5.5,5.2,4.7],"type":"scatter","mode":"markers","key":["40","786","587","506","305","987","852","463","545","174","721","960","908","161","398","323","99","594","957","15","358","392","881","972","297","565","216","528","292","994","261","383","540","581","588","777","114","872","874","739","785","766","257","841","131","798","614","42","489","419","80","272","171","687","262","340","744","806","159","193","627","939","428","679","44","396","139","890","875","788","607","547","793","918","430","201","698","864","387","278","563","955","105","631","279","498","435","731","884","578","503","37","94","451","108","675","640","948","853","251"],"set":"SharedDatac696b603","marker":{"color":"rgba(31,119,180,1)","size":[10,34.9397590361446,23.0120481927711,18.6746987951807,20.8433734939759,53.3734939759036,42.5301204819277,76.144578313253,19.7590361445783,13.2530120481928,33.855421686747,57.710843373494,30.6024096385542,18.6746987951807,30.6024096385542,23.0120481927711,46.8674698795181,49.0361445783133,27.3493975903614,100,86.9879518072289,27.3493975903614,17.5903614457831,78.3132530120482,84.8192771084337,20.8433734939759,20.8433734939759,73.9759036144578,17.5903614457831,16.5060240963855,76.144578313253,25.1807228915663,34.9397590361446,43.6144578313253,25.1807228915663,16.5060240963855,40.3614457831325,32.7710843373494,21.9277108433735,12.1686746987952,56.6265060240964,29.5180722891566,34.9397590361446,39.2771084337349,21.9277108433735,38.1927710843374,17.5903614457831,32.7710843373494,44.6987951807229,23.0120481927711,63.1325301204819,36.0240963855422,24.0963855421687,13.2530120481928,32.7710843373494,16.5060240963855,37.1084337349398,21.9277108433735,31.6867469879518,11.0843373493976,42.5301204819277,11.0843373493976,11.0843373493976,16.5060240963855,26.2650602409639,20.8433734939759,31.6867469879518,75.0602409638554,14.3373493975904,66.3855421686747,17.5903614457831,84.8192771084337,15.421686746988,30.6024096385542,23.0120481927711,23.0120481927711,10,12.1686746987952,13.2530120481928,15.421686746988,25.1807228915663,23.0120481927711,29.5180722891566,17.5903614457831,18.6746987951807,19.7590361445783,18.6746987951807,44.6987951807229,14.3373493975904,24.0963855421687,34.9397590361446,16.5060240963855,13.2530120481928,10,21.9277108433735,17.5903614457831,31.6867469879518,70.722891566265,62.0481927710843,26.2650602409639],"sizemode":"area","line":{"color":"rgba(31,119,180,1)"}},"textfont":{"size":[10,34.9397590361446,23.0120481927711,18.6746987951807,20.8433734939759,53.3734939759036,42.5301204819277,76.144578313253,19.7590361445783,13.2530120481928,33.855421686747,57.710843373494,30.6024096385542,18.6746987951807,30.6024096385542,23.0120481927711,46.8674698795181,49.0361445783133,27.3493975903614,100,86.9879518072289,27.3493975903614,17.5903614457831,78.3132530120482,84.8192771084337,20.8433734939759,20.8433734939759,73.9759036144578,17.5903614457831,16.5060240963855,76.144578313253,25.1807228915663,34.9397590361446,43.6144578313253,25.1807228915663,16.5060240963855,40.3614457831325,32.7710843373494,21.9277108433735,12.1686746987952,56.6265060240964,29.5180722891566,34.9397590361446,39.2771084337349,21.9277108433735,38.1927710843374,17.5903614457831,32.7710843373494,44.6987951807229,23.0120481927711,63.1325301204819,36.0240963855422,24.0963855421687,13.2530120481928,32.7710843373494,16.5060240963855,37.1084337349398,21.9277108433735,31.6867469879518,11.0843373493976,42.5301204819277,11.0843373493976,11.0843373493976,16.5060240963855,26.2650602409639,20.8433734939759,31.6867469879518,75.0602409638554,14.3373493975904,66.3855421686747,17.5903614457831,84.8192771084337,15.421686746988,30.6024096385542,23.0120481927711,23.0120481927711,10,12.1686746987952,13.2530120481928,15.421686746988,25.1807228915663,23.0120481927711,29.5180722891566,17.5903614457831,18.6746987951807,19.7590361445783,18.6746987951807,44.6987951807229,14.3373493975904,24.0963855421687,34.9397590361446,16.5060240963855,13.2530120481928,10,21.9277108433735,17.5903614457831,31.6867469879518,70.722891566265,62.0481927710843,26.2650602409639]},"error_y":{"color":"rgba(31,119,180,1)","width":[]},"error_x":{"color":"rgba(31,119,180,1)","width":[]},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","_isNestedKey":false,"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedDatac696b603"]},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":[]}</script>
+</div>
+<p><b>Fig. </b> 10: <em>Linking independent plots using crosstalk.</em></p>
+</div>
+</div>
+<div id="general-tips" class="section level1">
+<h1><span class="header-section-number">11</span> General tips</h1>
+<ul>
+<li>Add custom css under YAML <code>css: [&quot;default&quot;, &quot;my-theme.css&quot;]</code><br />
+</li>
+<li>Export HTML to PDF using <strong>pkgdown</strong> and chrome <code>pagedown::chrome_print(&quot;slides.html&quot;,output=&quot;slides.pdf&quot;)</code></li>
+<li>Check out <strong>Rstudio</strong>’s RMarkdown <a href="https://rmarkdown.rstudio.com/lesson-1.html">tutorial</a><br />
+</li>
+<li>Input code from code chunks are displayed by default. Use <code>echo=FALSE</code> in code chunks to hide input code.</li>
+</ul>
+<!-- --------------------- Do not edit this and below ---------------------- -->
+</div>
+<div id="session-info" class="section level1">
+<h1><span class="header-section-number">12</span> Session info</h1>
+<pre><code>## R version 3.5.2 (2018-12-20)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 18.04.2 LTS
+## 
+## Matrix products: default
+## BLAS: /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.7.1
+## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.7.1
+## 
+## locale:
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] magrittr_1.5        forcats_0.3.0       purrr_0.3.1        
+##  [4] readr_1.3.1         tibble_2.0.1        tidyverse_1.2.1    
+##  [7] gridExtra_2.3       gdtools_0.1.7       bindrcpp_0.2.2     
+## [10] crosstalk_1.0.0     leaflet_2.0.2       networkD3_0.4      
+## [13] dygraphs_1.1.1.6    ggiraph_0.6.0       plotly_4.8.0       
+## [16] highcharter_0.7.0   htmltools_0.3.6     ggplot2_3.1.0      
+## [19] DT_0.5              formattable_0.2.0.1 kableExtra_1.0.1   
+## [22] stringr_1.4.0       tidyr_0.8.2         dplyr_0.7.8        
+## [25] captioner_2.2.3     bookdown_0.9        knitr_1.21         
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-137       fs_1.2.6           xts_0.11-2        
+##  [4] usethis_1.4.0      lubridate_1.7.4    devtools_2.0.1    
+##  [7] RColorBrewer_1.1-2 webshot_0.5.1      httr_1.4.0        
+## [10] rprojroot_1.3-2    tools_3.5.2        backports_1.1.3   
+## [13] R6_2.4.0           lazyeval_0.2.1     colorspace_1.4-0  
+## [16] withr_2.1.2        tidyselect_0.2.5   prettyunits_1.0.2 
+## [19] processx_3.2.1     curl_3.3           compiler_3.5.2    
+## [22] cli_1.0.1          rvest_0.3.2        Cairo_1.5-9       
+## [25] xml2_1.2.0         desc_1.2.0         labeling_0.3      
+## [28] scales_1.0.0       callr_3.1.1        digest_0.6.18     
+## [31] rmarkdown_1.11     pkgconfig_2.0.2    sessioninfo_1.1.1 
+## [34] highr_0.7          readxl_1.3.0       htmlwidgets_1.3   
+## [37] rlang_0.3.1        TTR_0.23-4         rstudioapi_0.9.0  
+## [40] quantmod_0.4-13    xaringan_0.9.2     shiny_1.2.0       
+## [43] bindr_0.1.1        generics_0.0.2     zoo_1.8-4         
+## [46] jsonlite_1.6       rlist_0.4.6.1      Rcpp_1.0.0        
+## [49] munsell_0.5.0      stringi_1.3.1      whisker_0.3-2     
+## [52] yaml_2.2.0         pkgbuild_1.0.2     plyr_1.8.4        
+## [55] grid_3.5.2         promises_1.0.1     crayon_1.3.4      
+## [58] lattice_0.20-38    haven_2.1.0        hms_0.4.2         
+## [61] ps_1.3.0           pillar_1.3.1       igraph_1.2.2      
+## [64] reshape2_1.4.3     pkgload_1.0.2      servr_0.13        
+## [67] glue_1.3.0         pagedown_0.1.15    evaluate_0.13     
+## [70] modelr_0.1.4       data.table_1.12.0  remotes_2.0.2     
+## [73] httpuv_1.4.5.1     cellranger_1.1.0   gtable_0.2.0      
+## [76] assertthat_0.2.0   xfun_0.5.1         mime_0.6          
+## [79] xtable_1.8-3       broom_0.5.1        later_0.8.0       
+## [82] rsconnect_0.8.13   viridisLite_0.3.0  memoise_1.1.0</code></pre>
+<p style="text-align: left; font-size: small;">
+Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 07-Mar-2019 at <i class="fa fa-clock-o" aria-hidden="true"></i> 16:57:25.
+</p>
+<hr/>
+<div style="padding-bottom: 1.5em">
+<p><span style="float:left; vertical-align:middle"> <b>2019</b> • <a href="https://www.scilifelab.se/">SciLifeLab</a> • <a href="https://nbis.se/">NBIS</a> • <a href="https://nbisweden.github.io/workshop-RaukR-1906/">RaukR</a> </span> <span style="float:right; vertical-align:middle"> <span class="footericon" style="padding-right:4px; padding-left:4px"> <a href="https://nbisweden.github.io/workshop-RaukR-1806/"><img src="assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a> </span> <span class="footericon" style="padding-right:4px; padding-left:4px"> <a href="https://twitter.com/hashtag/RaukR?src=hash"><img src="assets/icons8-twitter-26.png" alt="twitter" border="0" style="height:15px"></a> </span> </span></p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>That reference refers to this footnote.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+---
+title: "RaukR lab"
+subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+author: "John Doe"
+output:
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    theme: united
+    highlight: textmate
+    df_print: paged
+    code_folding: none
+    self_contained: false
+    keep_md: false
+    encoding: "UTF-8"
+    css: ["assets/lab.css"]
+---
+
+```{r,echo=FALSE,child="assets/header-lab.Rmd"}
+```
+
+<!-- ------------ Only edit title, subtitle & author above this ------------ -->
+
+```{r,echo=FALSE,results='hide',warning=FALSE,message=FALSE}
+## LIBRARIES AND VARIABLES
+# load the packages you need for this document
+
+#library(ggplot2)
+#library(tidyverse)
+
+# variables needed in this document
+# raukr colours
+#rv_col_dark <- "#125687"
+#rv_col_light <- "#e7eef3"
+```
+
+<br>
+<div class="abstract spaced">
+This is the lab work material for RaukR 2019. Your can write general instructions here. This font is larger and the line spacing is increased. This whole section can be removed if not required.
+</div>
+<br>
+
+# RMarkdown
+
+* This is an RMarkdown document. 
+* Markdown is a simple formatting syntax for authoring HTML documents.
+
+# R code  
+
+```{r}
+data(iris)
+str(iris)
+```
+
+<!-- --------------------- Do not edit this and below ---------------------- -->
+
+```{r,echo=FALSE,child="assets/footer-lab.Rmd"}
+```
+
+```{r,eval=FALSE,echo=FALSE}
+# manually run this to render this document to HTML
+rmarkdown::render("lab.Rmd")
+# manually run this to convert HTML to PDF
+#pagedown::chrome_print("lab.html",output="lab.pdf")
+```
+

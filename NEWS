@@ -1,3 +1,18 @@
+RaukR 1.1
+===========
+* 12-Mar-2019
+* RaukR 2019 theme
+* Decreased slide margins to increase content space
+* Text font family set to 'Source Sans Pro'
+* Code font family set to 'Ubuntu Mono'
+* Google web fonts defined in Rmd and css
+* New logo in use
+* Visual style changes
+* Default chunk image output changed from png to svg
+* Improved design guide and usage guide
+* Blockquotes restyled
+* FontAwesome can be used in slides and labs
+
 RaukR 1.0.3
 ===========
 * 18-May-2018

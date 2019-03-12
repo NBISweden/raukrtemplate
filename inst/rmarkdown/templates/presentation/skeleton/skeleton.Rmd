@@ -1,0 +1,69 @@
+---
+title: "RaukR presentation"
+subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+author: "<b>John Doe</b>"
+institute: NBIS, SciLifeLab
+keywords: r, RaukR, markdown
+output: 
+  xaringan::moon_reader:
+    encoding: 'UTF-8'
+    self_contained: false
+    chakra: 'assets/remark-latest.min.js'
+    css: 'assets/presentation.css'
+    lib_dir: libs
+    nature:
+      ratio: '4:3'
+      highlightLanguage: r
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "RaukR 2019 • %current%/%total%"
+---
+exclude: true
+count: false
+
+```{r,echo=FALSE,child="assets/header-presentation.Rmd"}
+```
+
+<!-- ----------------- Only edit title & author above this ----------------- -->
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+# load the packages you need
+
+#library(tidyverse)
+#library(ggplot2)
+```
+---
+name: contents
+
+## Contents
+
+* [Introduction](#intro)
+
+---
+name: intro
+
+## Introduction
+
+* This is an RMarkdown presentation. 
+* See demo presentation for usage guide and tips
+
+<!-- --------------------- Do not edit this and below --------------------- -->
+
+---
+name: end-slide
+class: end-slide, middle
+count: false
+
+# Thank you. Questions?
+
+```{r,echo=FALSE,child="assets/footer-presentation.Rmd"}
+```
+
+```{r,include=FALSE,eval=FALSE}
+# manually run this to render this document to HTML
+rmarkdown::render("presentation.Rmd")
+# manually run this to convert HTML to PDF
+#pagedown::chrome_print("presentation.html",output="presentation.pdf")
+```
+
