@@ -1,4 +1,4 @@
-<img src="docs/assets/logo.svg" align="right" width="96" height="96">
+<img src="assets/logo.svg" align="right" width="96" height="96">
 
 # raukrtemplate
 
