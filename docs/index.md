@@ -1,3 +1,5 @@
+<img src="docs/assets/logo.svg" align="right" width="96" height="96">
+
 # raukrtemplate
 
 Templates for RaukR R course.
