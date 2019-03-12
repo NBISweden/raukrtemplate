@@ -12,9 +12,9 @@ Templates for RaukR R course.
 
 ## Lab
 
-+ A rendered HTML view of the lab work template can be accessed [here](https://NBISweden.github.io/raukrtemplate/course.html).
++ A rendered HTML view of the lab work template can be accessed [here](https://NBISweden.github.io/raukrtemplate/lab.html).
 
-+ A rendered HTML view of the full demo lab work can be accessed [here](https://NBISweden.github.io/raukrtemplate/course_demo.html). Note that this is a heavy document and may take up to a minute to completely load.
++ A rendered HTML view of the full demo lab work can be accessed [here](https://NBISweden.github.io/raukrtemplate/lab_demo.html). Note that this is a heavy document and may take up to a minute to completely load.
 
 ---
 
