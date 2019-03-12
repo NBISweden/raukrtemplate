@@ -1,0 +1,717 @@
+---
+title: "RaukR presentation demo"
+subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+author: "<b>Roy Francis</b>"
+institute: NBIS, SciLifeLab
+keywords: r, RaukR, markdown
+output: 
+  xaringan::moon_reader:
+    encoding: 'UTF-8'
+    self_contained: false
+    chakra: 'assets/remark-latest.min.js'
+    css: 'assets/presentation.css'
+    lib_dir: libs
+    nature:
+      ratio: '4:3'
+      highlightLanguage: r
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "RaukR 2019 • %current%/%total%"
+---
+exclude: true
+count: false
+
+```{r,echo=FALSE,child="assets/header-presentation.Rmd"}
+```
+
+<!-- ----------------- Only edit title & author above this ----------------- -->
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+# only load the packages you need
+
+# data handling
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+# tables
+library(kableExtra) # complete table
+library(formattable) # table with conditional formatting
+library(DT) # interactive table
+
+# graphics
+library(ggplot2) # static graphics
+
+# interactive graphics
+library(htmltools)
+library(highcharter)
+library(plotly)
+library(ggiraph) # convert ggplot to interactive
+library(dygraphs) # time series
+library(networkD3) # network graph
+library(leaflet) # interactive maps
+library(crosstalk) # linking plots
+```
+
+---
+name: content
+class: spaced
+
+## Contents
+
+* [RMarkdown](#intro_rmarkdown)
+* [Slides](#slides)
+* [Layout](#layout)
+* [Text formatting](#text_formatting_1)
+* [Code formatting](#code)
+* [Lists](#lists)
+* [Images](#images_markdown)
+* [Math expressions](#math)
+* [Tables](#table_kable)
+* [Static plots](#plot_static_base)
+* [Interactive plots](#plot_interactive_highcharter)
+* [Maps](#plot_interactive_leaflet)
+* [Crosstalk](#plot_interactive_crosstalk)
+* [General tips](#tips)
+
+---
+name: intro
+class: middle, spaced
+
+## Introduction
+
+> .large[This is a demo to showcase the __RaukR presentation design guide__, __usage__ and capabilities of this presentation system. This presentation is created in RStudio using R package __[xaringan](https://github.com/yihui/xaringan)__. This package in turn utilises the javascript library __[remarkjs](https://github.com/yihui/xaringan)__ as the underlying framework. Note that the markdown interpreter used by remarkjs (blackfriday) is different from that used by knitr (pandoc). Therefore, several features that you may be familiar with in regular RMarkdown may not work here. There are also many new features here not available in regular RMarkdown.]
+
+> .large[Note that many of the classes used in this presentation are custom built and not part of any standard package.]
+
+---
+name: intro_rmarkdown
+
+## RMarkdown
+
+* This is an RMarkdown presentation. 
+* Markdown is a simple formatting syntax for authoring documents exported to HTML, PDF etc.
+* In RStudio, you create a `.Rmd` text file.
+* Add YAML matter to the top if not already there.
+
+```
+---
+title: "This is a title"
+output: 
+  xaringan::moon_reader
+---
+```
+
+* Click the **Knit** button.
+* `.Rmd` documents can also be rendered as such:
+
+```{r,echo=TRUE,eval=FALSE}
+rmarkdown::render("report.Rmd",output_format="html_document")
+```
+
+---
+name: slides
+
+## Slides
+
+__Slide separators__  
+Slides are separated by `---`.  
+Incremental content on same slide is separated by `--` like below.  
+
+--
+
+__Slide properties__  
+Slides can be named.  
+
+```
+---
+name: intro
+```
+
+and then hyperlinked from elsewhere. For eg: `go to [introduction](#intro)` displayed as go to [introduction](#intro).
+
+Custom classes can be defined for each slide.
+
+```
+---
+class: spaced
+```
+
+Few default options are _spaced_ (increases line spacing), _middle_ (center aligns content vertically) and _center_ (center aligns content horizontally).
+
+Slides can be hidden using `exclude: true`.  
+Slides can be dropped from page count using `count: false`.  
+
+--
+
+__Slide notes__  
+Any content below `???` on a slide are notes. This is only visible in presenter mode (by pressing __P__).  
+
+--
+
+__Keyboard shortcuts__  
+Press __H__ to view keyboard shorcuts. Pressing __C__  clones and creates two linked presentations.
+
+???
+
+Here are some slide notes. Press **P** again to exit presenter mode.
+
+---
+name: layout
+
+## Layout
+
+The slide content can be organised into columns which can be nested if needed. Classes for 30, 40, 50, 60 and 70 have been implemented for left and right. Note that the total width must sum to 100.
+
+```
+.pull-left-50[
+<div style="background-color:#fdebd0">Left content</div>
+]
+
+.pull-right-50[
+<div style="background-color:#eaf2f8">Right content</div>
+
+.pull-left-60[
+<div style="background-color:#d0ece7">Inner left content</div>
+]
+.pull-right-40[
+<div style="background-color:#f2d7d5">Inner right content</div>
+]
+]
+
+```
+
+.pull-left-50[
+<div style="background-color:#fdebd0">Left content</div>
+]
+
+.pull-right-50[
+<div style="background-color:#eaf2f8">Right content</div>
+
+.pull-left-60[
+<div style="background-color:#d0ece7">Inner left content</div>
+]
+.pull-right-40[
+<div style="background-color:#f2d7d5 ">Inner right content</div>
+]
+]
+
+---
+name: text_formatting_1
+
+## Text Formatting
+
+.pull-left-50[
+Headings can be defined as shown below.  
+
+```
+## Level 2 heading  
+### Level 3 heading  
+#### Level 4 heading  
+##### Level 5 heading  
+###### Level 6 heading 
+```
+
+## Level 2 heading  
+### Level 3 heading  
+#### Level 4 heading  
+##### Level 5 heading  
+###### Level 6 heading 
+
+Level 1 usage is not recommended. Use level 2 for slide titles. Use level 3 and below for other titles.  
+]
+
+.pull-right-50[
+Six custom classes are defined for text scaling.
+
+```
+.largest[Largest text.]  
+.larger[Larger text.]  
+.large[Large text.]  
+Normal text.  
+.small[Small text]  
+.smaller[Smaller text.]  
+.smallest[Smallest text.]
+```
+
+.largest[Largest text.]  
+.larger[Larger text.]  
+.large[Large text.]  
+Normal text.  
+.small[Small text.]  
+.smaller[Smaller text.]  
+.smallest[Smallest text.]
+]
+
+---
+name: text_formatting_2
+
+## Text Formatting
+
+.pull-left-50[
+
+Horizontal alignment of text can be adjusted as shown below.
+
+```
+.left[Left aligned text.]  
+.center[Center aligned text.]  
+.right[Right aligned text.] 
+```
+
+.left[Left aligned text.]  
+.center[Center aligned text.]  
+.right[Right aligned text.]  
+
+Indented quotes using `>`  
+> This line is blockquoted
+
+Icons from [FontAwesome](https://fontawesome.com/v5.0.13/icons?d=gallery) can be displayed using the HTML `<i>` tag. Note that not all icons may work.
+
+`Here is a <i class='fa fa-calendar'></i> calendar and a <i class='fa fa-couch'></i> couch.`
+
+Here is a <i class='fa fa-calendar'></i> calendar and a <i class='fa fa-couch'></i> couch.
+
+]
+
+.pull-right-50[
+
+A horizontal line can be created using `***`   
+***
+
+`This is __Bold text__` This is __Bold text__  
+`This is _Italic text_` This is _Italic text_  
+`~~Strikethrough~~ text` ~~Strikethrough~~ text   
+This is Subscript `H<sub>2</sub>O` displayed as H<sub>2</sub>O  
+This is Superscript `2<sup>10</sup>` displayed as 2<sup>10</sup>  
+`This is a [link](r-project.org)` This is a [link](r-project.org)  
+
+]
+
+---
+name: code
+
+## Code formatting 
+
+.pull-left-50[
+
+Code can be defined inline where `` `this` `` looks like `this`. R code can be executed inline `` `r "\u0060r Sys.Date()\u0060"` `` producing `r Sys.Date()`. Code can also be defined inside code blocks.
+
+<pre class="smaller">
+```
+This is code
+```
+</pre>
+
+```
+This is code
+```
+
+R code is executed inside code blocks like this  
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r}\n","Sys.Date()\n","``` \n"))
+```
+
+which shows the code and output.
+
+```{r}
+Sys.Date()
+```
+
+The code and results can be hidden by `` `r "\u0060\u0060\u0060{r,echo=FALSE,results='hide'}\u0060"` ``.
+]
+
+.pull-right-50[
+
+```{r,echo=TRUE}
+data(iris)
+head(iris[,1:2])
+```
+
+]
+
+---
+name: lists
+
+## Lists  
+
+__Bulleted List__  
+Bullet points are defined using the asterisk (*).  
+
+```
+** Bullet 1  
+** Bullet 2  
+    + Sub-bullet 2.1  
+```
+
+* Bullet 1  
+* Bullet 2  
+    + Sub-bullet 2.1  
+
+--
+
+__Incremental Bullets__  
+
+```
+** Incremental Bullet 1
+
+--
+** Incremental Bullet 2
+
+--
+** Incremental Bullet 3
+```
+
+Note that there is an empty line between the bullet point and the `--` below.
+
+--
+* Incremental Bullet 1
+
+--
+* Incremental Bullet 2
+
+--
+* Incremental Bullet 3
+
+---
+name: images_markdown
+
+## Images • Markdown
+
+__Using Markdown__
+
+.pull-left-50[
+Using regular markdown.  
+
+```
+![](assets/cover.jpg)
+```
+
+![](assets/cover.jpg)
+
+The dimensions are based on image and/or fill up the entire available space. You have no control over the displayed dimensions.
+]
+
+.pull-right[
+Custom classes can be used to control size.
+
+```
+.size-20[![](assets/cover.jpg)]  
+.size-10[![](assets/cover.jpg)]  
+```
+
+.size-20[![](assets/cover.jpg)]  
+.size-10[![](assets/cover.jpg)]  
+
+The number denotes % of the original dimension. The following size classes are implemented: `r seq(10,95,by=5)`.
+]
+
+---
+name: images_html
+
+## Images • HTML
+
+__Using Raw HTML__  
+
+This image is 30% size.  
+`<img src="assets/cover.jpg" style="width:30%;"/>`  
+
+<img src="assets/cover.jpg" style="width:30%;"/>  
+
+This image is 30% size, has shadow and corners rounded.  
+`<img src="assets/cover.jpg" style="width:30%;" class="fancyimage"/>`  
+
+<img src="assets/cover.jpg" style="width:30%;" class="fancyimage"/>  
+
+
+---
+name: images_r
+
+## Images • R
+
+__Using R__  
+R chunks in RMarkdown can be used to control image display size using the arguemnt `out.width`.
+
+This image is displayed at a size of 200 pixels.  
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,out.width=200}\n","knitr::include_graphics('assets/cover.jpg')\n","``` \n"))
+```
+
+```{r,echo=FALSE,fig.retina=NULL,out.width=200}
+knitr::include_graphics("assets/cover.jpg")
+```
+
+This image is displayed at a size of 75 pixels.  
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,out.width=75}\n","knitr::include_graphics('assets/cover.jpg')\n","``` \n"))
+```
+
+```{r,echo=FALSE,fig.retina=NULL,out.width=75}
+knitr::include_graphics("assets/cover.jpg")
+```
+
+---
+name: math
+
+## Math expressions  
+
+Some examples of rendering equations.
+
+.pull-left-40[
+
+$e^{i\pi} + 1 = 0$
+$$\frac{E \times X^2 \prod I}{2+7} = 432$$
+$$\sum_{i=1}^n X_i$$
+$$\int_0^{2\pi} \sin x~dx$$
+]
+
+.pull-right-60[
+
+$\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$
+$\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
+]
+
+$\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
+
+---
+name: table_kable
+
+## Tables • `kable`  
+
+The most simple table using `kable` from R package `knitr`.
+
+```{r}
+knitr::kable(head(iris),'html')
+```
+
+---
+name: table_kableextra
+
+## Tables • `kableExtra`  
+
+More advanced table using [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) and [`formattable`](https://cran.r-project.org/web/packages/formattable/vignettes/formattable-data-frame.html).
+
+```{r}
+ iris[c(1:4,51:53,105:108),] %>%
+  mutate(Sepal.Length=color_bar("lightsteelblue")(Sepal.Length)) %>%
+  mutate(Sepal.Width=color_tile("white","orange")(Sepal.Width)) %>%
+  mutate(Species=cell_spec(Species,"html",color="white",bold=T,
+    background=c("#8dd3c7","#fb8072","#bebada")[factor(.$Species)])) %>%
+  kable("html",escape=F) %>%
+  kable_styling(bootstrap_options=c("striped","hover","responsive"),
+                full_width=F,position="left") %>%
+  column_spec(5,width="3cm")
+```
+
+---
+name: table_dt
+
+## Tables • `DT`  
+
+Interactive table using R package [`DT`](https://rstudio.github.io/DT/).
+
+```{r}
+datatable(iris[1:20,],options=list(pageLength=7))
+```
+
+---
+name: plot_static_base
+
+## Static plots • Base Plot  
+
+Plots using base R are widely used and may be good enough for most situations. But they lack a consistent coding framework.  
+
+```{r,fig.height=3.8,fig.width=5}
+{par(mar=c(5,5,0,0))
+  plot(x=iris$Sepal.Length,y=iris$Sepal.Width,
+      col=c("coral","steelblue","forestgreen")[iris$Species],
+      xlab="Sepal Length",ylab="Sepal Width",pch=19)
+  legend(x=7,y=4.47,legend=c("setosa","versicolor","virginica"),
+       col=c("coral","steelblue","forestgreen"),pch=19)}
+```
+
+---
+name: plot_static_ggplot
+
+## Static plots • `ggplot2`  
+
+R package [`ggplot2`](http://ggplot2.org/) is a versatile and almost complete plotting solution.  
+
+```{r,fig.height=4,fig.width=6}
+iris %>%
+  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
+  geom_point(size=2)+
+  labs(x="Sepal Length",y="Sepal Width")+
+  theme_bw(base_size=18)
+```
+
+---
+name: plot_interactive_highcharter
+
+## Interactive plots • `highcharter`  
+
+R package [`highcharter`](http://jkunst.com/highcharter/) is a wrapper around javascript library [`highcharts`](https://www.highcharts.com/).
+
+```{r}
+h <- iris %>%
+  hchart("scatter",hcaes(x="Sepal.Length",y="Sepal.Width",group="Species")) %>%
+  hc_xAxis(title=list(text="Sepal Length"),crosshair=TRUE) %>%
+  hc_yAxis(title=list(text="Sepal Width"),crosshair=TRUE) %>%
+  hc_chart(zoomType="xy",inverted=FALSE) %>%
+  hc_legend(verticalAlign="top",align="right") %>% hc_size(height=350)
+
+htmltools::tagList(list(h))
+```
+
+---
+name: plot_interactive_plotly
+
+## Interactive plots • `plotly`  
+
+R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
+
+```{r}
+p <- iris %>% 
+  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>% 
+  add_markers()
+p
+```
+
+---
+name: plot_interactive_ggplotly
+
+## Interactive plots • `ggplotly`  
+
+`plotly` also has a function called `ggplotly` which converts a static ggplot2 object into an interactive plot.
+
+```{r,fig.height=5,fig.width=7}
+p <- ggplot(iris,aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
+  geom_point()+
+  labs(x="Sepal Length",y="Sepal Width")+
+  theme_bw(base_size=12)
+
+ggplotly(p,width=460,height=360)
+```
+
+---
+name: plot_interactive_ggiraph
+
+## Interactive plots • `ggiraph`  
+
+R package [`ggiraph`](https://github.com/davidgohel/ggiraph) converts a static ggplot2 object into an interactive plot.
+
+```{r,fig.height=4,fig.width=6}
+p <- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
+      geom_point_interactive(aes(tooltip=paste0("<b>Petal Length:</b> ",Petal.Length,"\n<b>Sepal Length: </b>",Sepal.Length,"\n<b>Species: </b>",Species)),size=2)+
+  theme_bw()
+
+tooltip_css <- "background-color:#f8f9f9;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;"
+
+ggiraph(code=print(p),hover_css="cursor:pointer;stroke:black;fill-opacity:0.3",zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9,height_svg=3,width_svg=4.5,width=0.6)
+```
+
+---
+name: plot_interactive_dygraphs
+
+## Interactive time series • `dygraphs`  
+
+R package [`dygraphs`](http://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.  
+
+```{r,fig.height=5,fig.width=9}
+lungDeaths <- cbind(ldeaths, mdeaths, fdeaths)
+dygraph(lungDeaths,main="Deaths from Lung Disease (UK)") %>%
+  dyOptions(colors=c("#66C2A5","#FC8D62","#8DA0CB"))
+```
+
+---
+name: plot_interactive_network
+
+## Network graph  
+
+R package `networkD3` allows the use of interactive network graphs from the [D3.js](https://d3js.org/) javascript library.
+
+```{r}
+data(MisLinks,MisNodes)
+forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
+             Target="target",Value="value",NodeID="name",
+             Group="group",opacity=0.4,
+             height=350,width=600)
+```
+
+---
+name: plot_interactive_leaflet
+
+## Interactive maps • `leaflet`
+
+R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).  
+
+```{r}
+leaflet(height=350,width=650) %>% 
+  addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
+  #addProviderTiles(providers$Esri.NatGeoWorldMap) %>%
+  addMarkers(lat=57.639327,lng=18.288534,popup="RaukR") %>%
+  setView(lat=57.639327,lng=18.288534,zoom=15)
+```
+
+---
+name: plot_interactive_crosstalk
+
+## Linking Plots • `crosstalk`
+
+R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows crosstalk enabled plotting libraries to be linked. Through the shared 'key' variable, data points can be manipulated simultaneously on two independent plots.
+
+```{r,message=FALSE,warning=FALSE}
+shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])
+lf <- leaflet(shared_quakes,height=280) %>%
+        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
+        addMarkers()
+py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=280) %>% 
+        add_markers()
+div(div(lf,style="float:left;width:49%"),div(py,style="float:right;width:49%"))
+```
+
+---
+name: tips
+
+## General tips
+
+* Replace _assets/cover.jpg_ to change cover slide picture  
+* Replace _assets/end.jpg_ to change end slide picture  
+* Add custom css under YAML `css: ["default", "my-theme.css"]`  
+* If content overflows the slide in vertical direction, this can be limited to specific height along with scroll bars using class `.limity`. Scroll bar limited containers are implemented for `r seq(100,500,50)` pixels. See usage below;
+
+.small[
+```{r,echo=FALSE,comment=""}
+cat(paste0(".limity150[\n","\u0060\u0060\u0060{r}\n","Sys.info()\n","\u0060\u0060\u0060\n","]\n"))
+```
+]
+
+.limity150[
+```{r,echo=FALSE}
+Sys.info()
+```
+]
+
+* Export HTML to PDF using __pkgdown__ and chrome
+`pagedown::chrome_print("slides.html",output="slides.pdf")`
+* Check out __Xaringan__'s [wiki page](https://github.com/yihui/xaringan/wiki) and __Remarkjs__ [wiki page](https://github.com/gnab/remark/wiki) for reference
+
+---
+name: end_slide
+class: end-slide, middle
+count: false
+
+# Thank you. Questions?
+
+```{r,echo=FALSE,child="assets/footer-presentation.Rmd"}
+```
+
+```{r,include=FALSE,eval=FALSE}
+# manually run this to render this document to HTML
+rmarkdown::render("presentation_demo.Rmd")
+# manually run this to convert HTML to PDF
+#pagedown::chrome_print("presentation_demo.html",output="presentation_demo.pdf")
+```
