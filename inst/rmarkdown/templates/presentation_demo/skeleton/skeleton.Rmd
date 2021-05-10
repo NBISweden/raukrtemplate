@@ -1,10 +1,10 @@
 ---
 title: "RaukR presentation demo"
-subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+subtitle: "RaukR 2021 • Advanced R for Bioinformatics"
 author: "<b>Roy Francis</b>"
 institute: NBIS, SciLifeLab
 keywords: r, RaukR, markdown
-output: 
+output:
   xaringan::moon_reader:
     encoding: 'UTF-8'
     self_contained: false
@@ -17,7 +17,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      slideNumberFormat: "RaukR 2019 • %current%/%total%"
+      slideNumberFormat: "RaukR 2021 • %current%/%total%"
 ---
 exclude: true
 count: false
@@ -81,16 +81,18 @@ class: middle, spaced
 
 ## Introduction
 
-> .large[This is a demo to showcase the __RaukR presentation design guide__, __usage__ and capabilities of this presentation system. This presentation is created in RStudio using R package __[xaringan](https://github.com/yihui/xaringan)__. This package in turn utilises the javascript library __[remarkjs](https://github.com/yihui/xaringan)__ as the underlying framework. Note that the markdown interpreter used by remarkjs (blackfriday) is different from that used by knitr (pandoc). Therefore, several features that you may be familiar with in regular RMarkdown may not work here. There are also many new features here not available in regular RMarkdown.]
+<div class="abstract">
+.medium[This is a demo to showcase the __RaukR presentation design guide__, __usage__ and capabilities of this presentation system. This presentation is created in RStudio using R package __[xaringan](https://github.com/yihui/xaringan)__. This package in turn utilises the javascript library __[remarkjs](https://github.com/yihui/xaringan)__ as the underlying framework. Note that the markdown interpreter used by remarkjs (blackfriday) is different from that used by knitr (pandoc). Therefore, some features that you may be familiar with in regular RMarkdown may not work here. There are also many new features here not available in regular RMarkdown.]
 
-> .large[Note that many of the classes used in this presentation are custom built and not part of any standard package.]
+.medium[Note that many of the classes used in this presentation are custom built and not part of any standard package.]
+</div>
 
 ---
 name: intro_rmarkdown
 
 ## RMarkdown
 
-* This is an RMarkdown presentation. 
+* This is an RMarkdown presentation.
 * Markdown is a simple formatting syntax for authoring documents exported to HTML, PDF etc.
 * In RStudio, you create a `.Rmd` text file.
 * Add YAML matter to the top if not already there.
@@ -98,13 +100,13 @@ name: intro_rmarkdown
 ```
 ---
 title: "This is a title"
-output: 
+output:
   xaringan::moon_reader
 ---
 ```
 
-* Click the **Knit** button.
-* `.Rmd` documents can also be rendered as such:
+* Click the **Knit** button for interactive render.
+* Or using `render()` as such:
 
 ```{r,echo=TRUE,eval=FALSE}
 rmarkdown::render("report.Rmd",output_format="html_document")
@@ -198,6 +200,21 @@ The slide content can be organised into columns which can be nested if needed. C
 ]
 
 ---
+name: layout-2
+
+## Custom Divs
+
+```
+<div class="abstract">
+This is a special box.
+</div>
+```
+
+<div class="abstract">
+This is a special box.
+</div>
+
+---
 name: text_formatting_1
 
 ## Text Formatting
@@ -210,14 +227,14 @@ Headings can be defined as shown below.
 ### Level 3 heading  
 #### Level 4 heading  
 ##### Level 5 heading  
-###### Level 6 heading 
+###### Level 6 heading
 ```
 
 ## Level 2 heading  
 ### Level 3 heading  
 #### Level 4 heading  
 ##### Level 5 heading  
-###### Level 6 heading 
+###### Level 6 heading
 
 Level 1 usage is not recommended. Use level 2 for slide titles. Use level 3 and below for other titles.  
 ]
@@ -256,7 +273,7 @@ Horizontal alignment of text can be adjusted as shown below.
 ```
 .left[Left aligned text.]  
 .center[Center aligned text.]  
-.right[Right aligned text.] 
+.right[Right aligned text.]
 ```
 
 .left[Left aligned text.]  
@@ -291,7 +308,7 @@ This is Superscript `2<sup>10</sup>` displayed as 2<sup>10</sup>
 ---
 name: code
 
-## Code formatting 
+## Code formatting
 
 .pull-left-50[
 
@@ -514,7 +531,8 @@ name: table_dt
 Interactive table using R package [`DT`](https://rstudio.github.io/DT/).
 
 ```{r}
-datatable(iris[1:20,],options=list(pageLength=7))
+library(DT)
+DT::datatable(iris[1:20,],options=list(pageLength=7))
 ```
 
 ---
@@ -556,6 +574,7 @@ name: plot_interactive_highcharter
 R package [`highcharter`](http://jkunst.com/highcharter/) is a wrapper around javascript library [`highcharts`](https://www.highcharts.com/).
 
 ```{r}
+library(highcharter)
 h <- iris %>%
   hchart("scatter",hcaes(x="Sepal.Length",y="Sepal.Width",group="Species")) %>%
   hc_xAxis(title=list(text="Sepal Length"),crosshair=TRUE) %>%
@@ -574,8 +593,9 @@ name: plot_interactive_plotly
 R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
 
 ```{r}
-p <- iris %>% 
-  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>% 
+library(plotly)
+p <- iris %>%
+  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>%
   add_markers()
 p
 ```
@@ -588,12 +608,13 @@ name: plot_interactive_ggplotly
 `plotly` also has a function called `ggplotly` which converts a static ggplot2 object into an interactive plot.
 
 ```{r,fig.height=5,fig.width=7}
+library(plotly)
 p <- ggplot(iris,aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
   geom_point()+
   labs(x="Sepal Length",y="Sepal Width")+
   theme_bw(base_size=12)
 
-ggplotly(p,width=460,height=360)
+plotly::ggplotly(p,width=460,height=360)
 ```
 
 ---
@@ -604,6 +625,7 @@ name: plot_interactive_ggiraph
 R package [`ggiraph`](https://github.com/davidgohel/ggiraph) converts a static ggplot2 object into an interactive plot.
 
 ```{r,fig.height=4,fig.width=6}
+library(ggiraph)
 p <- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
       geom_point_interactive(aes(tooltip=paste0("<b>Petal Length:</b> ",Petal.Length,"\n<b>Sepal Length: </b>",Sepal.Length,"\n<b>Species: </b>",Species)),size=2)+
   theme_bw()
@@ -621,6 +643,7 @@ name: plot_interactive_dygraphs
 R package [`dygraphs`](http://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.  
 
 ```{r,fig.height=5,fig.width=9}
+library(dygraphs)
 lungDeaths <- cbind(ldeaths, mdeaths, fdeaths)
 dygraph(lungDeaths,main="Deaths from Lung Disease (UK)") %>%
   dyOptions(colors=c("#66C2A5","#FC8D62","#8DA0CB"))
@@ -634,6 +657,7 @@ name: plot_interactive_network
 R package `networkD3` allows the use of interactive network graphs from the [D3.js](https://d3js.org/) javascript library.
 
 ```{r}
+library(networkD3)
 data(MisLinks,MisNodes)
 forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
              Target="target",Value="value",NodeID="name",
@@ -649,7 +673,8 @@ name: plot_interactive_leaflet
 R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).  
 
 ```{r}
-leaflet(height=350,width=650) %>% 
+library(leaflet)
+leaflet(height=350,width=650) %>%
   addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
   #addProviderTiles(providers$Esri.NatGeoWorldMap) %>%
   addMarkers(lat=57.639327,lng=18.288534,popup="RaukR") %>%
@@ -664,11 +689,12 @@ name: plot_interactive_crosstalk
 R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows crosstalk enabled plotting libraries to be linked. Through the shared 'key' variable, data points can be manipulated simultaneously on two independent plots.
 
 ```{r,message=FALSE,warning=FALSE}
+library(crosstalk)
 shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])
 lf <- leaflet(shared_quakes,height=280) %>%
         addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
         addMarkers()
-py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=280) %>% 
+py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=280) %>%
         add_markers()
 div(div(lf,style="float:left;width:49%"),div(py,style="float:right;width:49%"))
 ```

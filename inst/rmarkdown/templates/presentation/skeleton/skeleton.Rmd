@@ -1,10 +1,10 @@
 ---
 title: "RaukR presentation"
-subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+subtitle: "RaukR 2021 • Advanced R for Bioinformatics"
 author: "<b>John Doe</b>"
 institute: NBIS, SciLifeLab
 keywords: r, RaukR, markdown
-output: 
+output:
   xaringan::moon_reader:
     encoding: 'UTF-8'
     self_contained: false
@@ -17,7 +17,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      slideNumberFormat: "RaukR 2019 • %current%/%total%"
+      slideNumberFormat: "RaukR 2021 • %current%/%total%"
 ---
 exclude: true
 count: false
@@ -45,7 +45,7 @@ name: intro
 
 ## Introduction
 
-* This is an RMarkdown presentation. 
+* This is an RMarkdown presentation.
 * See demo presentation for usage guide and tips
 
 <!-- --------------------- Do not edit this and below --------------------- -->
@@ -66,4 +66,3 @@ rmarkdown::render("presentation.Rmd")
 # manually run this to convert HTML to PDF
 #pagedown::chrome_print("presentation.html",output="presentation.pdf")
 ```
-

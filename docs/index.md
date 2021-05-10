@@ -1,5 +1,7 @@
 <img src="assets/logo.svg" align="right" width="96" height="96">
 
+# raukrtemplate
+
 Templates for RaukR R course.
 
 + The GitHub repo for the templates can be accessed [here](https://github.com/NBISweden/raukrtemplate).
@@ -18,4 +20,4 @@ Templates for RaukR R course.
 
 ---
 
-**2019** | NBIS
+**2021** | NBIS

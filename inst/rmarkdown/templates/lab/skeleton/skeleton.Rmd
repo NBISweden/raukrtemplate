@@ -1,6 +1,6 @@
 ---
 title: "RaukR lab"
-subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+subtitle: "RaukR 2021 • Advanced R for Bioinformatics"
 author: "John Doe"
 output:
   bookdown::html_document2:
@@ -38,13 +38,13 @@ output:
 
 <br>
 <div class="abstract spaced">
-This is the lab work material for RaukR 2019. Your can write general instructions here. This font is larger and the line spacing is increased. This whole section can be removed if not required.
+This is the lab work template for RaukR 2021. You can write general instructions here. This whole block can be removed if not required.
 </div>
 <br>
 
 # RMarkdown
 
-* This is an RMarkdown document. 
+* This is an RMarkdown document.
 * Markdown is a simple formatting syntax for authoring HTML documents.
 
 # R code  
@@ -65,4 +65,3 @@ rmarkdown::render("lab.Rmd")
 # manually run this to convert HTML to PDF
 #pagedown::chrome_print("lab.html",output="lab.pdf")
 ```
-

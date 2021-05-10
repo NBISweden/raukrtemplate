@@ -1,6 +1,6 @@
 ---
 title: "RaukR lab demo"
-subtitle: "RaukR 2019 • Advanced R for Bioinformatics"
+subtitle: "RaukR 2021 • Advanced R for Bioinformatics"
 author: "Roy Francis"
 output:
   bookdown::html_document2:
@@ -50,8 +50,8 @@ library(leaflet) # interactive maps
 library(crosstalk) # linking plots
 
 # custom ggplot theme
-theme_report <- function (basesize=12) { 
-    theme_bw(base_size=basesize) %+replace% 
+theme_report <- function (basesize=12) {
+    theme_bw(base_size=basesize) %+replace%
         theme(
             panel.border=element_blank(),
             panel.grid.minor=element_blank(),
@@ -68,13 +68,13 @@ rv_col_light <- "#e7eef3"
 
 <br>
 <div class="abstract spaced">
-This is a demo rmarkdown lab document to showcase the RaukR 2019 lab theme, style and usage.
+This is a demo rmarkdown lab document to showcase the RaukR 2021 lab theme, style and usage.
 </div>
 <br>
 
 # RMarkdown
 
-* This is an RMarkdown document. 
+* This is an RMarkdown document.
 * Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
 * Refer [here](https://rmarkdown.rstudio.com/authoring_basics.html) for a guide.
 * In RStudio, you create a `.Rmd` text file, then click the **Knit** button.
@@ -86,7 +86,7 @@ rmarkdown::render("report.Rmd",output_format="html_document")
 
 # Layout  
 
-Use `<div>content</div>` for block content and `<span>content</span>` for inline content. 
+Use `<div>content</div>` for block content and `<span>content</span>` for inline content.
 
 For paragraphs, use `<p>content</p>`. And use classes `text-left`, `text-center` and `text-right` to align text left, center and right respectively.
 
@@ -159,14 +159,14 @@ Headings can be defined as shown below.
 ### Level 3 heading  
 #### Level 4 heading  
 ##### Level 5 heading  
-###### Level 6 heading 
+###### Level 6 heading
 ```
 
 ## Level 2 heading  
 ### Level 3 heading  
 #### Level 4 heading  
 ##### Level 5 heading  
-###### Level 6 heading 
+###### Level 6 heading
 
 Six custom classes are defined for text scaling. This can be defined inside a paragraph (`<p>`) or `<span>`.
 
@@ -269,7 +269,7 @@ Unordered lists are created using asterisks.
 * Bullet 2  
     + Sub-bullet 2.1  
     + Sub-bullet 2.2  
-* Bullet 3 
+* Bullet 3
 
 Ordered lists are created using numbers.
 
@@ -426,7 +426,7 @@ iris %>%
 # Static plots  
 ## Base plot  
 
-* Plots using base R are widely used and may be good enough for most situations. 
+* Plots using base R are widely used and may be good enough for most situations.
 * But they lack a consistent coding framework.  
 
 ```{r,fig.height=6,fig.width=6}
@@ -478,8 +478,8 @@ htmltools::tagList(list(h))
 R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
 
 ```{r}
-p <- iris %>% 
-  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>% 
+p <- iris %>%
+  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>%
   add_markers()
 p
 ```
@@ -548,7 +548,7 @@ forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
 R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).  
 
 ```{r}
-leaflet(height=500,width=700) %>% 
+leaflet(height=500,width=700) %>%
   addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
   #addProviderTiles(providers$Esri.NatGeoWorldMap) %>%
   addMarkers(lat=57.639327,lng=18.288534,popup="RaukR") %>%
@@ -566,20 +566,148 @@ shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])
 lf <- leaflet(shared_quakes,height=300) %>%
         addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
         addMarkers()
-py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %>% 
+py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %>%
         add_markers()
 
 htmltools::div(lf,py)
 ```
 
-`r fc(name="interactive_crosstalk",caption="_Linking independent plots using crosstalk._")` 
+`r fc(name="interactive_crosstalk",caption="_Linking independent plots using crosstalk._")`
 
+
+# Advanced
+
+These are features implemented in this workshop material.
+
+## Icons
+
+Icons can be placed directly into md or Rmd using HTML i-tag.
+
+`<i class="fas fa-lightbulb"></i>` <i class="fas fa-lightbulb"></i>  
+`<i class="fas fa-exclamation"></i>` <i class="fas fa-exclamation"></i>  
+`<i class="fas fa-clipboard-list"></i>` <i class="fas fa-clipboard-list"></i>  
+`<i class="fas fa-comments"></i>` <i class="fas fa-comments"></i>  
+`<i class="fas fa-desktop"></i>` <i class="fas fa-desktop"></i>  
+`<i class="fas fa-cloud"></i>` <i class="fas fa-cloud"></i>  
+`<i class="fas fa-check"></i>` <i class="fas fa-check"></i>  
+`<i class="fas fa-times"></i>` <i class="fas fa-times"></i>  
+`<i class="fas fa-skull"></i>` <i class="fas fa-skull"></i>  
+
+Icons can also be placed programatically through R using the R package [fontawesome](https://github.com/rstudio/fontawesome).
+
+`` `r "\u0060r fontawesome::fa('lightbulb')\u0060"` ``
+
+`r fontawesome::fa("lightbulb")`
+
+Optional arguments are height and fill.
+
+`` `r "\u0060r fontawesome::fa('lightbulb',height='30px',fill='steelblue')\u0060"` ``
+
+`r fontawesome::fa("lightbulb",height='30px',fill='steelblue')`
+
+For full list of icons check out [FontAwesome](https://fontawesome.com/icons).
+
+## Abstract
+
+Highlighted instruction boxes can be created using a div with class `abstract`.
+
+```
+<div class="abstract">
+This is some instruction.
+</div>
+```
+
+<div class="abstract">
+This is some instruction.
+</div>
+
+## Alerts
+
+```
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert—check it out!
+</div>
+```
+
+<div class="alert alert-success">
+  **Note:** This is a success alert!
+</div>
+<div class="alert alert-danger">
+  **Note:** This is a danger alert!
+</div>
+<div class="alert alert-warning">
+  **Note:** This is a warning alert!
+</div>
+<div class="alert alert-info">
+  **Note:** This is a info alert!
+</div>
+
+## Block title
+
+The code language can be displayed above input code by setting `block.title=TRUE`.
+
+It can be placed above source block with output.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,block.title=TRUE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,block.title=TRUE}
+Sys.Date()
+```
+
+Or it can be placed above source block without output.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,block.title=TRUE,eval=FALSE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,block.title=TRUE,eval=FALSE}
+Sys.Date()
+```
+
+Or above output block if the source is hidden. In this case, the title changes to OUTPUT.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,block.title=TRUE,echo=FALSE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,block.title=TRUE,echo=FALSE}
+Sys.Date()
+```
+
+For instruction, it might be necessary to run some code and print the output as input-source-code. `echo=FALSE` hides the source code. `comment=""` hides the `##` from print statements. `class.output="r"` code highlights the output block.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,block.title=TRUE,echo=FALSE,comment='',class.output='r'}\n","cat('Sys.Date()')\n","``` \n"))
+```
+
+```{r,block.title=TRUE,echo=FALSE,comment='',class.output='r'}
+cat("Sys.Date()")
+```
+
+## Blur panel
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,blur=TRUE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,blur=TRUE}
+Sys.Date()
+```
 
 # General tips
 
 * Add custom css under YAML `css: ["default", "my-theme.css"]`  
-* Export HTML to PDF using __pkgdown__ and chrome
-`pagedown::chrome_print("slides.html",output="slides.pdf")`
 * Check out __Rstudio__'s RMarkdown [tutorial](https://rmarkdown.rstudio.com/lesson-1.html)  
 * Input code from code chunks are displayed by default. Use `echo=FALSE` in code chunks to hide input code.
 

@@ -1,4 +1,9 @@
-RaukR 1.1
+raukrtemplate 1.2
+===========
+* 10-May-2021
+* New logo and colours
+
+raukrtemplate 1.1
 ===========
 * 12-Mar-2019
 * RaukR 2019 theme
@@ -13,7 +18,7 @@ RaukR 1.1
 * Blockquotes restyled
 * FontAwesome can be used in slides and labs
 
-RaukR 1.0.3
+raukrtemplate 1.0.3
 ===========
 * 18-May-2018
 * Logo
@@ -25,12 +30,12 @@ RaukR 1.0.3
   + Additional images size classes
   + Additional column size classes
 
-RaukR 1.0.2
+raukrtemplate 1.0.2
 ===========
 * 12-Apr-2018
 * Fixed typo in course.css and presentation.css
 
-RaukR 1.0.1
+raukrtemplate 1.0.1
 ===========
 * 11-Apr-2018
 * updated README.md
@@ -47,7 +52,7 @@ RaukR 1.0.1
 * presentation: fixed logo overlapping with title
 * presentation: updated css style
 
-RaukR 1.0.0
+raukrtemplate 1.0.0
 ===========
 * 10-Apr-2018
 * created the package with course and presentation rmarkdown templates

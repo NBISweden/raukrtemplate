@@ -1,12 +1,15 @@
 /* CSS style for RaukR presentation */
 /* Xaringen, remark.js */
-/* 2019 Roy Francis */
+/* 2021 Roy Francis */
 
 /* define font */
 @import url('https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:300,400,600|Ubuntu+Mono&subset=latin-ext');
 
 :root {
-  --color-primary: #DAE179;
+  --color-primary: #EB6291;
+  --color-primary-light: #fbdfe9;
+  --color-primary-lighter: #fdeff4;
+  --color-primary-dark: #d35882;
   --color-border: #e8e8e8;
   --color-text: #1A1A1A;
   --color-code-bg: #f9f9f9;
@@ -18,7 +21,7 @@
 
 /* FONTS -------------------------------------------------------------------- */
 /* body font family */
-body,p,h1,h2,h3,h4,h5,h6 { 
+body,p,h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-base, 'Roboto', 'DIN', 'Helvetica', sans-serif);
   color: var(--color-text);
   font-weight: 400;
@@ -26,7 +29,7 @@ body,p,h1,h2,h3,h4,h5,h6 {
 }
 
 /* title font family, weight and size */
-h1,h2 { 
+h1,h2 {
   font-family: var(--font-highlight, 'Roboto', 'DIN', 'Helvetica', sans-serif);
   color: var(--color-text);
   font-weight: 600;
@@ -81,6 +84,11 @@ h6 {
   margin-bottom: 0.3em;
 }
 
+/* code font family */
+.remark-code, .remark-inline-code {
+  font-family: var(--font-code);
+}
+
 /* code font size */
 .remark-code {
   font-size: 76% !important;
@@ -98,11 +106,6 @@ h6 {
   color: var(--color-code-inline);
 }
 
-/* code font family */
-.remark-code, .remark-inline-code {
-  font-family: var(--font-code);
-}
-
 /* new font size classes */
 .largest { font-size: 2.488em; }
 .larger { font-size: 2.074em; }
@@ -116,15 +119,27 @@ h6 {
     line-height: 150%;
 }
 
-/* link colour */
+/* blockquote */
+blockquote {
+  border-left: 5px solid var(--color-primary);
+  background: var(--color-code-bg);
+  padding: 10px;
+  padding-left: 12px;
+  margin-left: 16px;
+  margin-right: 0;
+  border-radius: 0px 4px 4px 0px;
+}
+
+
+/* links */
 a {
-  color: #aeb460;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
   color: var(--color-primary);
-  /* opacity: 0.6; */
+  opacity: 0.6;
   text-decoration: underline;
 }
 
@@ -156,23 +171,13 @@ p {
   margin-bottom: 0.8em;
 }
 
-blockquote {
-  border-left: 5px solid var(--color-primary);
-  background: var(--color-code-bg);
-  padding: 10px;
-  padding-left: 12px;
-  margin-left: 16px;
-  margin-right: 0;
-  border-radius: 0px 4px 4px 0px;
-}
-
 /* COVER SLIDES ------------------------------------------------------------- */
 
 /* title slide image */
 .title-slide {
   background-image: url(cover.jpg);
   background-size: cover;
-  vertical-align: bottom !important; 
+  vertical-align: bottom !important;
   text-align: left !important;
   padding-bottom: 5.5em;
 }
@@ -184,16 +189,27 @@ blockquote {
   /* vertical-align: bottom !important; */
   /* text-align: left !important; */
   /* padding-bottom: 11em; */
-  
+
 }
 
 /* raukr logo right */
 .title-slide.remark-slide-content:before{
   position: absolute;
-  content: url(logo_nsr.svg);
-  /* height:96px; */
-  width: 320px;
+  content: url(logo.svg);
+  width: 70px;
   right: 4em;
+  top: 1em;
+  /* -webkit-filter: drop-shadow(1px 1px 3px grey); */
+  /* filter: drop-shadow(1px 1px 3px grey); */
+}
+
+/* nbis logo left */
+.title-slide.remark-slide-content:after{
+  position: absolute;
+  content: url(nbis-lime.svg);
+  width: 80px;
+  left: 4em;
+  top: 2em;
   /* -webkit-filter: drop-shadow(1px 1px 3px grey); */
   /* filter: drop-shadow(1px 1px 3px grey); */
 }
@@ -267,6 +283,7 @@ h1:before {
 .end-slide p, .end-slide h1, .end-slide h2 {
  color: #cccccc;
 }
+
 .end-slide p {
  text-indent: 5%;
  margin-bottom: 0.1em;
@@ -293,46 +310,29 @@ img, video, iframe {
   height: 55px;
   width: 55px;
   position: fixed;
-  right: 1em;
+  right: 4em;
   top: 1.4em;
 }
 
 /* image size classes */
-.size-95 {display:inline-block; max-width:95%;}
-.size-90 {display:inline-block; max-width:90%;}
-.size-85 {display:inline-block; max-width:85%;}
-.size-80 {display:inline-block; max-width:80%;}
-.size-75 {display:inline-block; max-width:75%;}
-.size-70 {display:inline-block; max-width:70%;}
-.size-65 {display:inline-block; max-width:65%;}
-.size-60 {display:inline-block; max-width:60%;}
-.size-55 {display:inline-block; max-width:55%;}
-.size-50 {display:inline-block; max-width:50%;}
-.size-45 {display:inline-block; max-width:45%;}
-.size-40 {display:inline-block; max-width:40%;}
-.size-35 {display:inline-block; max-width:35%;}
-.size-30 {display:inline-block; max-width:30%;}
-.size-25 {display:inline-block; max-width:25%;}
-.size-20 {display:inline-block; max-width:20%;}
-.size-15 {display:inline-block; max-width:15%;}
-.size-10 {display:inline-block; max-width:10%;}
-
-/* TABLES ------------------------------------------------------------------- */
-
-/* table even shading */
-.pagedtable .even {
-    background-color: #F2F2F2;
-}
-
-/* DT table font size */
-.dataTables_wrapper{
-  font-size: 0.7em;
-}
-
-/* kableExtra font size */
-.table{
-  font-size: 0.8em;
-}
+.size-95 {display:block; max-width:95%;}
+.size-90 {display:block; max-width:90%;}
+.size-85 {display:block; max-width:85%;}
+.size-80 {display:block; max-width:80%;}
+.size-75 {display:block; max-width:75%;}
+.size-70 {display:block; max-width:70%;}
+.size-65 {display:block; max-width:65%;}
+.size-60 {display:block; max-width:60%;}
+.size-55 {display:block; max-width:55%;}
+.size-50 {display:block; max-width:50%;}
+.size-45 {display:block; max-width:45%;}
+.size-40 {display:block; max-width:40%;}
+.size-35 {display:block; max-width:35%;}
+.size-30 {display:block; max-width:30%;}
+.size-25 {display:block; max-width:25%;}
+.size-20 {display:block; max-width:20%;}
+.size-15 {display:block; max-width:15%;}
+.size-10 {display:block; max-width:10%;}
 
 /* COLUMNS ------------------------------------------------------------------- */
 
@@ -340,6 +340,7 @@ img, video, iframe {
   width: 100%;
 }
 
+/* float 50%-50% width */
 .pull-right {
   width: 49%;
   float: right;
@@ -419,7 +420,92 @@ img, video, iframe {
   margin-left: 0.5%;
 }
 
-/* special */
+/* float 45% 55% width */
+.pull-right-45 {
+  width: 44%;
+  float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-right-55 {
+  width: 54%;
+  float: right;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-left-45 {
+  width: 44%;
+  float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.pull-left-55 {
+  width: 54%;
+  float: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+
+/* SLIDE PROGRESS BAR -------------------------------------------------------- */
+
+/*.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+}
+*/
+
+/* TABLES ------------------------------------------------------------------- */
+
+/* table even shading */
+.pagedtable .even {
+    background-color: #F2F2F2;
+}
+
+/* DT table font size */
+.dataTables_wrapper{
+  font-size: 0.7em;
+}
+
+/* kableExtra font size */
+.table{
+  font-size: 0.8em;
+}
+
+/* MARKDOWN TABLE STYLE ------------------------------------------------------ */
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+th,td {padding: 8px; text-align: left;}
+
+/* div styles --------------------------------------------------------------- */
+
+/** div style for instructions **/
+
+.abstract {
+ color: var(--color-primary-dark);
+ background-color: var(--color-primary-lighter);
+ border: 1px solid var(--color-primary-light);
+ border-left: 6px solid var(--color-primary-dark);
+ border-radius: 0px 4px 4px 0px;
+ padding: 2px 5px 5px 10px;
+ margin: 10px 0px 10px 0px;
+ position: relative;
+}
+
+/* SPECIAL ------------------------------------------------------------------ */
+
 /* limit vertical size of a code chunk */
 
 .limity100 {
@@ -467,8 +553,8 @@ img, video, iframe {
   overflow-y: auto;
 }
 
+/* horizontal line style */
+
 hr {
   border: 2px solid var(--color-code-bg);
 }
-
-

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>RaukR presentation</title>
     <meta charset="utf-8" />
     <meta name="author" content="John Doe" />
     <meta name="keywords" content="r, RaukR, markdown" />
+    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
     <link href="libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
     <link href="libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
     <link id="font-awesome-1-attachment" rel="attachment" href="libs/font-awesome-5.1.0/fonts/fontawesome-webfont.ttf"/>
@@ -15,8 +16,9 @@
 class: center, middle, inverse, title-slide
 
 # RaukR presentation
-## RaukR 2019 • Advanced R for Bioinformatics
+## RaukR 2021 • Advanced R for Bioinformatics
 ### <b>John Doe</b>
+### NBIS, SciLifeLab
 
 ---
 
@@ -25,6 +27,7 @@ count: false
 
 
 &lt;link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:300,400,600|Ubuntu+Mono&amp;amp;subset=latin-ext" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"&gt;
 
 
 
@@ -45,7 +48,7 @@ name: intro
 
 ## Introduction
 
-* This is an RMarkdown presentation. 
+* This is an RMarkdown presentation.
 * See demo presentation for usage guide and tips
 
 &lt;!-- --------------------- Do not edit this and below --------------------- --&gt;
@@ -58,11 +61,13 @@ count: false
 # Thank you. Questions?
 
 
-&lt;p&gt;R version 3.5.2 (2018-12-20)&lt;br&gt;&lt;p&gt;Platform: x86_64-pc-linux-gnu (64-bit)&lt;/p&gt;&lt;p&gt;OS: Ubuntu 18.04.2 LTS&lt;/p&gt;&lt;br&gt;
+&lt;p&gt;R version 4.0.0 (2020-04-24)&lt;br&gt;&lt;p&gt;Platform: x86_64-pc-linux-gnu (64-bit)&lt;/p&gt;&lt;p&gt;OS: Ubuntu 20.04.2 LTS&lt;/p&gt;&lt;br&gt;
 
-Built on : &lt;i class='fa fa-calendar' aria-hidden='true'&gt;&lt;/i&gt; 07-Mar-2019 at &lt;i class='fa fa-clock-o' aria-hidden='true'&gt;&lt;/i&gt; 16:56:27  
+Built on : &lt;i class='fa fa-calendar' aria-hidden='true'&gt;&lt;/i&gt; 10-May-2021 at &lt;i class='fa fa-clock-o' aria-hidden='true'&gt;&lt;/i&gt; 12:01:42  
 
-__2019__ • [SciLifeLab](https://www.scilifelab.se/) • [NBIS](https://nbis.se/)
+&lt;b&gt;2021&lt;/b&gt; • [SciLifeLab](https://www.scilifelab.se/) • [NBIS](https://nbis.se/)
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="assets/remark-latest.min.js"></script>
@@ -72,7 +77,7 @@ __2019__ • [SciLifeLab](https://www.scilifelab.se/) • [NBIS](https://nbis.se
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false,
-"slideNumberFormat": "RaukR 2019 • %current%/%total%"
+"slideNumberFormat": "RaukR 2021 • %current%/%total%"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -112,9 +117,25 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
-
-<script>
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -123,7 +144,23 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
-</script>
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 slideshow._releaseMath = function(el) {

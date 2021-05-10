@@ -1,15 +1,16 @@
 Package: raukrtemplate
 Type: Package
 Title: Presentation and Lab RMarkdown templates for RaukR course
-Version: 1.1
+Version: 1.2
 Author: NBIS
 Maintainer: The package maintainer <roy.francis@nbis.se>
 Description: Course and presentation R Markdown templates for RaukR course.
 URL: https://github.com/NBISweden/raukrtemplate
 Depends:
-    R(>= 3.4.0),
+    R(>= 4.0.0),
     bookdown,
     captioner,
+    fontawesome,
     markdown,
     knitr,
     rmarkdown,
@@ -17,4 +18,4 @@ Depends:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

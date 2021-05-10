@@ -1,7 +1,7 @@
 
 <img src="docs/assets/logo.svg" align="right" width="96" height="96">
 
-# raukrtemplate v1.1
+# raukrtemplate
 
 This is an R package containing presentation and lab RMarkdown templates for the RaukR R course.
 
@@ -11,52 +11,65 @@ This package can be installed from R/RStudio as follows:
 
 ```r
 # install devtools from CRAN
-install.packages("devtools")
+install.packages("remotes")
 
 # install this package from GitHub
-devtools::install_github("NBISweden/raukrtemplate")
+remotes::install_github("NBISweden/raukrtemplate")
 ```
 
 Supporting packages should install automatically, otherwise install manually:
 
 ```
-# general
-install.packages("knitr","markdown","rmarkdown")
-
-# for course template
-install.packages("captioner","bookdown")
-
-# for presentation
-install.packages("xaringan")
+install.packages(c("knitr","markdown","rmarkdown","fontawesome","captioner","bookdown","xaringan"), repos="https://cloud.r-project.org/")
 ```
 
-The standard templates are to be used for preparing your own material. The 'demo' template contains detailed examples of RMarkdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several extra R packages listed below. If you just want to view the rendered demo output and not render it yourself, see section 'Rendering' below.
+The standard templates are to be used for preparing your own material.
+
+The 'demo' template contains examples of RMarkdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several extra R packages listed below.
 
 ```
 install.packages(c("dplyr", "tidyr", "stringr", "kableExtra",
 "formattable", "DT", "highcharter", "plotly","ggiraph", "dygraphs",
-"networkD3", "leaflet", "crosstalk"))
+"networkD3", "leaflet", "crosstalk"),repos="https://cloud.r-project.org/")
 ```
+
+If you just want to view the rendered demo output and not render it yourself, see section 'Rendering' below.
 
 ## Presentation Template  
 
-The presentation template for use can be accessed from within RStudio as shown below. Use this to prepare your own presentation slides.
+The presentation template for use can be accessed either interactively from RStudio:
 
-`File > New File > R Markdown... > From Template > RaukR Presentation Template`
+`File > New File > R Markdown... > From Template > RaukR 2021 Presentation Template`
+
+or using the following code:
+
+`rmarkdown::draft("presentation_topic.Rmd", template="presentation", package="raukrtemplate", edit=FALSE)`
 
 For demo, use the template below.
 
-`File > New File > R Markdown... > From Template > RaukR Presentation Demo`
+`File > New File > R Markdown... > From Template > RaukR 2021 Presentation Demo`
+
+or using the following code:
+
+`rmarkdown::draft("presentation_topic.Rmd", template="presentation_demo", package="raukrtemplate", edit=FALSE)`
 
 ## Lab Template  
 
-The lab template for use can be accessed from within RStudio as shown below. Use this to prepare your own lab work material/workshop.
+The lab template for use can be accessed either interactively from RStudio:
 
-`File > New File > R Markdown... > From Template > RaukR Lab Template`
+`File > New File > R Markdown... > From Template > RaukR 2021 Lab Template`
+
+or using the following code:
+
+`rmarkdown::draft("lab_topic.Rmd", template="lab", package="raukrtemplate", edit=FALSE)`
 
 For demo, use the template below.
 
-`File > New File > R Markdown... > From Template > RaukR Lab Demo`
+`File > New File > R Markdown... > From Template > RaukR 2021 Lab Demo`
+
+or using the following code:
+
+`rmarkdown::draft("lab_topic.Rmd", template="lab_demo", package="raukrtemplate", edit=FALSE)`
 
 ## Rendering
 
@@ -76,4 +89,4 @@ If you have corrections, comments or suggestions, feel free to submit a report o
 
 ---
 
-**2019** | NBIS
+**2021** | NBIS
