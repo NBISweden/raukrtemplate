@@ -206,8 +206,8 @@ p {
 /* nbis logo left */
 .title-slide.remark-slide-content:after{
   position: absolute;
-  content: url(nbis-lime.svg);
-  width: 80px;
+  content: url(nbis-scilifelab-lime.svg);
+  width: 250px;
   left: 4em;
   top: 2em;
   /* -webkit-filter: drop-shadow(1px 1px 3px grey); */

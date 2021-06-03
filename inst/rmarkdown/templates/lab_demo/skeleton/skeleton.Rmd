@@ -695,6 +695,16 @@ cat(paste0("```{r,block.title=TRUE,echo=FALSE,comment='',class.output='r'}\n","c
 cat("Sys.Date()")
 ```
 
+## Accordion
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,accordion=TRUE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
 ## Blur panel
 
 ```{r,echo=FALSE,comment=""}

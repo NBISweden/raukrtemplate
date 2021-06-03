@@ -1,7 +1,7 @@
 Package: raukrtemplate
 Type: Package
 Title: Presentation and Lab RMarkdown templates for RaukR course
-Version: 1.2
+Version: 1.2.1
 Author: NBIS
 Maintainer: The package maintainer <roy.francis@nbis.se>
 Description: Course and presentation R Markdown templates for RaukR course.

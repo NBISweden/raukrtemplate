@@ -14,13 +14,22 @@
 
 <title>RaukR lab</title>
 
-<script src="lab_files/header-attrs-2.6/header-attrs.js"></script>
+<script src="lab_files/header-attrs-2.8/header-attrs.js"></script>
 <script src="lab_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="lab_files/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
 <script src="lab_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="lab_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="lab_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="lab_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="lab_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="lab_files/tocify-1.9.1/jquery.tocify.js"></script>
@@ -43,11 +52,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -60,32 +64,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="assets/lab.css" type="text/css" />
@@ -97,10 +75,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -117,6 +91,9 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
@@ -129,7 +106,6 @@ summary {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -255,7 +231,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -266,7 +242,7 @@ div.tocify {
 
 
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -306,34 +282,50 @@ str(iris)</code></pre>
 </div>
 <div id="session-info" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Session info</h1>
-<pre><code>## R version 4.0.0 (2020-04-24)
-## Platform: x86_64-pc-linux-gnu (64-bit)
+<pre><code>## R version 4.0.2 (2020-06-22)
+## Platform: x86_64-conda_cos6-linux-gnu (64-bit)
 ## Running under: Ubuntu 20.04.2 LTS
 ## 
 ## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
-## LAPACK: /usr/local/R/4.0.0/lib/R/lib/libRlapack.so
+## BLAS/LAPACK: /home/roy/miniconda3/envs/r-4.0/lib/libopenblasp-r0.3.10.so
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
-##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
-##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C               LC_TIME=en_GB.UTF-8       
+##  [4] LC_COLLATE=en_GB.UTF-8     LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
+## [10] LC_TELEPHONE=C             LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] fontawesome_0.1.0 captioner_2.2.3   bookdown_0.21     knitr_1.30       
+##  [1] gdtools_0.2.3     crosstalk_1.1.1   leaflet_2.0.4.1   networkD3_0.4    
+##  [5] dygraphs_1.1.1.6  ggiraph_0.7.8     plotly_4.9.3      highcharter_0.8.2
+##  [9] ggplot2_3.3.3     DT_0.17           formattable_0.2.1 kableExtra_1.3.4 
+## [13] stringr_1.4.0     tidyr_1.1.2       dplyr_1.0.2       fontawesome_0.2.1
+## [17] captioner_2.2.3   bookdown_0.21     knitr_1.30       
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_4.0.0    magrittr_2.0.1    htmltools_0.5.1.1 tools_4.0.0      
-##  [5] yaml_2.2.1        stringi_1.5.3     rmarkdown_2.6     stringr_1.4.0    
-##  [9] xfun_0.19         digest_0.6.27     rlang_0.4.10      evaluate_0.14</code></pre>
+##  [1] httr_1.4.2         sass_0.3.1         jsonlite_1.7.2     viridisLite_0.3.0 
+##  [5] bslib_0.2.4        shiny_1.5.0        assertthat_0.2.1   TTR_0.24.2        
+##  [9] highr_0.8          yaml_2.2.1         pillar_1.4.7       backports_1.2.1   
+## [13] lattice_0.20-41    glue_1.4.2         rlist_0.4.6.1      uuid_0.1-4        
+## [17] digest_0.6.27      RColorBrewer_1.1-2 promises_1.1.1     rvest_1.0.0       
+## [21] colorspace_2.0-0   htmltools_0.5.1.1  httpuv_1.5.5       xaringan_0.20     
+## [25] pkgconfig_2.0.3    broom_0.7.3        xtable_1.8-4       purrr_0.3.4       
+## [29] scales_1.1.1       webshot_0.5.2      svglite_2.0.0      later_1.1.0.1     
+## [33] tibble_3.0.4       generics_0.1.0     farver_2.0.3       ellipsis_0.3.1    
+## [37] withr_2.3.0        lazyeval_0.2.2     quantmod_0.4.18    mime_0.9          
+## [41] magrittr_2.0.1     crayon_1.3.4       evaluate_0.14      xts_0.12.1        
+## [45] xml2_1.3.2         tools_4.0.2        data.table_1.13.6  lifecycle_1.0.0   
+## [49] munsell_0.5.0      compiler_4.0.2     jquerylib_0.1.3    systemfonts_1.0.1 
+## [53] rlang_0.4.11       grid_4.0.2         rstudioapi_0.13    htmlwidgets_1.5.3 
+## [57] igraph_1.2.6       labeling_0.4.2     rmarkdown_2.8      gtable_0.3.0      
+## [61] curl_4.3           R6_2.5.0           zoo_1.8-8          lubridate_1.7.9.2 
+## [65] fastmap_1.0.1      stringi_1.5.3      Rcpp_1.0.5         vctrs_0.3.6       
+## [69] tidyselect_1.1.0   xfun_0.22</code></pre>
 <p style="text-align: left; font-size: small;">
-Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 10-May-2021 at <i class="fa fa-clock-o" aria-hidden="true"></i> 12:51:24.
+Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 03-Jun-2021 at <i class="fa fa-clock-o" aria-hidden="true"></i> 16:59:49.
 </p>
 <hr/>
 <div style="padding-bottom: 1.5em">
@@ -380,7 +372,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
