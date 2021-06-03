@@ -17,7 +17,7 @@ install.packages("remotes")
 remotes::install_github("NBISweden/raukrtemplate")
 ```
 
-Supporting packages should install automatically, otherwise install manually:
+Dependency packages should install automatically, otherwise install manually:
 
 ```
 install.packages(c("knitr","markdown","rmarkdown","fontawesome","captioner","bookdown","xaringan"), repos="https://cloud.r-project.org/")
@@ -25,7 +25,7 @@ install.packages(c("knitr","markdown","rmarkdown","fontawesome","captioner","boo
 
 The standard templates are to be used for preparing your own material.
 
-The 'demo' template contains examples of RMarkdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several extra R packages listed below.
+The 'demo' template contains examples of RMarkdown syntax, features, formatting, alignment, graphics and interactive graphics. If you plan to use/render the demo template, note that it uses several dependency R packages listed below.
 
 ```
 install.packages(c("dplyr", "tidyr", "stringr", "kableExtra",
