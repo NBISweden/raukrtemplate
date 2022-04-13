@@ -6,10 +6,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:300,400,600|Ubuntu+Mono&subset=latin-ext');
 
 :root {
-  --color-primary: #EB6291;
-  --color-primary-light: #fbdfe9;
-  --color-primary-lighter: #fdeff4;
-  --color-primary-dark: #d35882;
+  --color-primary: #e4bf47;
+  --color-primary-light: #fee183;
+  --color-primary-lighter: #fefaed;
+  --color-primary-dark: #cbaa3f;
   --color-border: #e8e8e8;
   --color-text: #1A1A1A;
   --color-code-bg: #f9f9f9;
@@ -50,14 +50,6 @@ h2 {
   margin-bottom: 0.6em;
   /* border-left: var(--color-primary) 6px solid; */
   /* padding-left: 0.5em; */
-}
-
-h2:before {
-  content: url("motif.svg");
-  display: inline-block;
-  width: 0.65em;
-  height: 0.65em;
-  margin-right: 10px;
 }
 
 h3 {
@@ -194,13 +186,15 @@ p {
 
 /* raukr logo right */
 .title-slide.remark-slide-content:before{
-  position: absolute;
-  content: url(logo.svg);
-  width: 70px;
+  display: block;
+  content: ' ';
+  background-image: url('logo.svg');
+  background-size: 60px 60px;
+  height: 60px;
+  width: 60px;
   right: 4em;
-  top: 1em;
-  /* -webkit-filter: drop-shadow(1px 1px 3px grey); */
-  /* filter: drop-shadow(1px 1px 3px grey); */
+  top: 1.5em;
+  position: absolute;
 }
 
 /* nbis logo left */
@@ -227,19 +221,7 @@ p {
   /* padding-bottom: 0.3em; */
   margin-bottom: 0.3em;
   color: var(--color-text);
-  text-indent: -2%;
-}
-
-h1:before {
-  content: url("motif.svg");
-  display: inline-block;
-  width: 0.65em;
-  height: 0.65em;
-  margin-right: 10px;
-  /*webkit-clip-path: polygon(100% 0%, 0% 0%, 100% 100%);*/
-  /*clip-path: polygon(100% 0%, 0% 0%, 100% 100%);*/
-  /*background-color: var(--color-primary);*/
-  /*border-radius: 0.2em;*/
+  text-indent: 2.5%;
 }
 
 .title-slide h2 {
@@ -306,12 +288,15 @@ img, video, iframe {
 
 /* logo every slide top right */
 .remark-slide-content:before {
-  content: url(logo.svg);
-  height: 55px;
-  width: 55px;
-  position: fixed;
+  position: absolute;
+  display: block;
+  content: ' ';
+  background-image: url('logo.svg');
+  background-size: 48px 48px;
+  height: 48px;
+  width: 48px;
   right: 4em;
-  top: 1.4em;
+  top: 1.8em;
 }
 
 /* image size classes */

@@ -1,6 +1,6 @@
 ---
 title: "RaukR lab"
-subtitle: "RaukR 2021 • Advanced R for Bioinformatics"
+subtitle: "RaukR 2022 • Advanced R for Bioinformatics"
 author: "John Doe"
 output:
   bookdown::html_document2:
@@ -38,7 +38,7 @@ output:
 
 <br>
 <div class="abstract spaced">
-This is the lab work template for RaukR 2021. You can write general instructions here. This whole block can be removed if not required.
+This is the lab work template for RaukR 2022. You can write general instructions here. This whole block can be removed if not required.
 </div>
 <br>
 

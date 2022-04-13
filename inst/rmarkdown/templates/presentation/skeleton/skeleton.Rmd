@@ -1,6 +1,6 @@
 ---
 title: "RaukR presentation"
-subtitle: "RaukR 2021 • Advanced R for Bioinformatics"
+subtitle: "RaukR 2022 • Advanced R for Bioinformatics"
 author: "<b>John Doe</b>"
 institute: NBIS, SciLifeLab
 keywords: r, RaukR, markdown
@@ -17,7 +17,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      slideNumberFormat: "RaukR 2021 • %current%/%total%"
+      slideNumberFormat: "RaukR 2022 • %current%/%total%"
 ---
 exclude: true
 count: false

@@ -14,8 +14,7 @@
 
 <title>RaukR lab</title>
 
-<script src="lab_files/header-attrs-2.8/header-attrs.js"></script>
-<script src="lab_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="lab_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="lab_files/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
 <script src="lab_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -66,6 +65,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="assets/lab.css" type="text/css" />
 
 
@@ -90,6 +90,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -247,7 +250,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">RaukR lab</h1>
-<h3 class="subtitle">RaukR 2021 • Advanced R for Bioinformatics</h3>
+<h3 class="subtitle">RaukR 2022 • Advanced R for Bioinformatics</h3>
 <h4 class="author">John Doe</h4>
 
 </div>
@@ -258,7 +261,7 @@ div.tocify {
 <!-- ------------ Only edit title, subtitle & author above this ------------ -->
 <br>
 <div class="abstract spaced">
-<p>This is the lab work template for RaukR 2021. You can write general instructions here. This whole block can be removed if not required.</p>
+<p>This is the lab work template for RaukR 2022. You can write general instructions here. This whole block can be removed if not required.</p>
 </div>
 <p><br></p>
 <div id="rmarkdown" class="section level1" number="1">
@@ -282,59 +285,44 @@ str(iris)</code></pre>
 </div>
 <div id="session-info" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Session info</h1>
-<pre><code>## R version 4.0.2 (2020-06-22)
-## Platform: x86_64-conda_cos6-linux-gnu (64-bit)
-## Running under: Ubuntu 20.04.2 LTS
+<pre><code>## R version 4.1.0 (2021-05-18)
+## Platform: x86_64-conda-linux-gnu (64-bit)
+## Running under: Ubuntu 20.04.4 LTS
 ## 
 ## Matrix products: default
-## BLAS/LAPACK: /home/roy/miniconda3/envs/r-4.0/lib/libopenblasp-r0.3.10.so
+## BLAS/LAPACK: /home/roy/miniconda3/envs/r-4.1/lib/libopenblasp-r0.3.15.so
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C               LC_TIME=en_GB.UTF-8       
-##  [4] LC_COLLATE=en_GB.UTF-8     LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
-##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
-## [10] LC_TELEPHONE=C             LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] gdtools_0.2.3     crosstalk_1.1.1   leaflet_2.0.4.1   networkD3_0.4    
-##  [5] dygraphs_1.1.1.6  ggiraph_0.7.8     plotly_4.9.3      highcharter_0.8.2
-##  [9] ggplot2_3.3.3     DT_0.17           formattable_0.2.1 kableExtra_1.3.4 
-## [13] stringr_1.4.0     tidyr_1.1.2       dplyr_1.0.2       fontawesome_0.2.1
-## [17] captioner_2.2.3   bookdown_0.21     knitr_1.30       
+## [1] fontawesome_0.2.2 captioner_2.2.3   bookdown_0.25     knitr_1.38       
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] httr_1.4.2         sass_0.3.1         jsonlite_1.7.2     viridisLite_0.3.0 
-##  [5] bslib_0.2.4        shiny_1.5.0        assertthat_0.2.1   TTR_0.24.2        
-##  [9] highr_0.8          yaml_2.2.1         pillar_1.4.7       backports_1.2.1   
-## [13] lattice_0.20-41    glue_1.4.2         rlist_0.4.6.1      uuid_0.1-4        
-## [17] digest_0.6.27      RColorBrewer_1.1-2 promises_1.1.1     rvest_1.0.0       
-## [21] colorspace_2.0-0   htmltools_0.5.1.1  httpuv_1.5.5       xaringan_0.20     
-## [25] pkgconfig_2.0.3    broom_0.7.3        xtable_1.8-4       purrr_0.3.4       
-## [29] scales_1.1.1       webshot_0.5.2      svglite_2.0.0      later_1.1.0.1     
-## [33] tibble_3.0.4       generics_0.1.0     farver_2.0.3       ellipsis_0.3.1    
-## [37] withr_2.3.0        lazyeval_0.2.2     quantmod_0.4.18    mime_0.9          
-## [41] magrittr_2.0.1     crayon_1.3.4       evaluate_0.14      xts_0.12.1        
-## [45] xml2_1.3.2         tools_4.0.2        data.table_1.13.6  lifecycle_1.0.0   
-## [49] munsell_0.5.0      compiler_4.0.2     jquerylib_0.1.3    systemfonts_1.0.1 
-## [53] rlang_0.4.11       grid_4.0.2         rstudioapi_0.13    htmlwidgets_1.5.3 
-## [57] igraph_1.2.6       labeling_0.4.2     rmarkdown_2.8      gtable_0.3.0      
-## [61] curl_4.3           R6_2.5.0           zoo_1.8-8          lubridate_1.7.9.2 
-## [65] fastmap_1.0.1      stringi_1.5.3      Rcpp_1.0.5         vctrs_0.3.6       
-## [69] tidyselect_1.1.0   xfun_0.22</code></pre>
+##  [1] digest_0.6.29   R6_2.5.1        jsonlite_1.8.0  magrittr_2.0.3 
+##  [5] evaluate_0.15   stringi_1.7.6   rlang_1.0.2     cli_3.2.0      
+##  [9] jquerylib_0.1.4 bslib_0.3.1     rmarkdown_2.13  tools_4.1.0    
+## [13] stringr_1.4.0   xfun_0.30       yaml_2.3.5      fastmap_1.1.0  
+## [17] compiler_4.1.0  htmltools_0.5.2 sass_0.4.1</code></pre>
 <p style="text-align: left; font-size: small;">
-Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 03-Jun-2021 at <i class="fa fa-clock-o" aria-hidden="true"></i> 16:59:49.
+Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 13-Apr-2022 at <i class="fa fa-clock-o" aria-hidden="true"></i> 20:30:24.
 </p>
 <hr/>
 <div style="padding-bottom: 1.5em">
 <p><span style="float:left; vertical-align:middle">
-<b>2021</b> • <a href="https://www.scilifelab.se/">SciLifeLab</a> • <a href="https://nbis.se/">NBIS</a> • <a href="https://nbisweden.github.io/workshop-RaukR-2106/">RaukR</a>
+<b>2022</b> • <a href="https://www.scilifelab.se/">SciLifeLab</a> • <a href="https://nbis.se/">NBIS</a> • <a href="https://nbisweden.github.io/workshop-RaukR-2106/">RaukR</a>
 </span>
 <span style="float:right; vertical-align:middle">
 <span class="footericon" style="padding-right:4px; padding-left:4px">
-<a href="https://nbisweden.github.io/workshop-RaukR-2106/"><img src="assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a>
+<a href="https://nbisweden.github.io/workshop-RaukR-2206/"><img src="assets/icons8-globe-26.png" alt="website" border="0" style="height:15px"></a>
 </span>
 <span class="footericon" style="padding-right:4px; padding-left:4px">
 <a href="https://twitter.com/hashtag/RaukR?src=hash"><img src="assets/icons8-twitter-26.png" alt="twitter" border="0" style="height:15px"></a>
@@ -381,6 +369,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

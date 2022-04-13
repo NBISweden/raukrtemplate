@@ -17,7 +17,7 @@ install.packages("remotes")
 remotes::install_github("NBISweden/raukrtemplate")
 ```
 
-Dependency packages should install automatically, otherwise install manually:
+No dependencies are required to create the template. But, the following dependecies are required to render the basic templates.
 
 ```
 install.packages(c("knitr","markdown","rmarkdown","fontawesome","captioner","bookdown","xaringan"), repos="https://cloud.r-project.org/")
@@ -39,7 +39,7 @@ If you just want to view the rendered demo output and not render it yourself, se
 
 The presentation template for use can be accessed either interactively from RStudio:
 
-`File > New File > R Markdown... > From Template > RaukR 2021 Presentation Template`
+`File > New File > R Markdown... > From Template > RaukR 2022 Presentation Template`
 
 or using the following code:
 
@@ -47,7 +47,7 @@ or using the following code:
 
 For demo, use the template below.
 
-`File > New File > R Markdown... > From Template > RaukR 2021 Presentation Demo`
+`File > New File > R Markdown... > From Template > RaukR 2022 Presentation Demo`
 
 or using the following code:
 
@@ -57,7 +57,7 @@ or using the following code:
 
 The lab template for use can be accessed either interactively from RStudio:
 
-`File > New File > R Markdown... > From Template > RaukR 2021 Lab Template`
+`File > New File > R Markdown... > From Template > RaukR 2022 Lab Template`
 
 or using the following code:
 
@@ -65,7 +65,7 @@ or using the following code:
 
 For demo, use the template below.
 
-`File > New File > R Markdown... > From Template > RaukR 2021 Lab Demo`
+`File > New File > R Markdown... > From Template > RaukR 2022 Lab Demo`
 
 or using the following code:
 
@@ -89,4 +89,4 @@ If you have corrections, comments or suggestions, feel free to submit a report o
 
 ---
 
-**2021** | NBIS
+**2022** | NBIS

@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i|Ubuntu+Mono&display=swap&subset=latin-ext');
 
 :root {
-  --color-primary: #EB6291;
-  --color-primary-light: #fbdfe9;
-  --color-primary-lighter: #fdeff4;
-  --color-primary-dark: #d35882;
+  --color-primary: #e4bf47;
+  --color-primary-light: #fee183;
+  --color-primary-lighter: #fefaed;
+  --color-primary-dark: #cbaa3f;
   --color-border: #e8e8e8;
   --color-text: #1A1A1A;
   --color-code-bg: #f9f9f9;

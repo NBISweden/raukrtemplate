@@ -2,4 +2,4 @@
 
 `r paste0("Built on : <i class='fa fa-calendar' aria-hidden='true'></i> ",format(Sys.time(),format='%d-%b-%Y')," at <i class='fa fa-clock-o' aria-hidden='true'></i> ",format(Sys.time(),format='%X'))`  
 
-<b>`r format(Sys.time(), '%Y')`</b> • [SciLifeLab](https://www.scilifelab.se/) • [NBIS](https://nbis.se/) • [RaukR](https://nbisweden.github.io/workshop-RaukR-2106/)
+<b>`r format(Sys.time(), '%Y')`</b> • [SciLifeLab](https://www.scilifelab.se/) • [NBIS](https://nbis.se/) • [RaukR](https://nbisweden.github.io/workshop-RaukR-2206/)
