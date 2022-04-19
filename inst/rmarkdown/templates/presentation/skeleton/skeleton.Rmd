@@ -55,7 +55,7 @@ name: end-slide
 class: end-slide, middle
 count: false
 
-# Thank you. Questions?
+# Thank you! Questions?
 
 ```{r,echo=FALSE,child="assets/footer-presentation.Rmd"}
 ```
